@@ -23,63 +23,63 @@ namespace VehiclesControl
 	// public class HumveeController
 	public class HumveeController : MonoBehaviour
 	{
-	    // Input Customizations
+		// Input Customizations
 		[Header("Input Customizations")]
 
-	        [Tooltip("The vertical movement input string")]
-	        // string _verticalMoveInput
-		    [SerializeField] private string _verticalMoveInput = "Vertical";	
+			[Tooltip("The vertical movement input string")]
+			// string _verticalMoveInput
+			[SerializeField] private string _verticalMoveInput = "Vertical";	
 
-	        [Tooltip("The horizontal movement input string")]
-	        // string _horizontalMoveInput
-		    [SerializeField] private string _horizontalMoveInput = "Horizontal";	
+			[Tooltip("The horizontal movement input string")]
+			// string _horizontalMoveInput
+			[SerializeField] private string _horizontalMoveInput = "Horizontal";	
 		
-	    // Require Components
+		// Require Components
 		[Header("Require Components")]
 
-	        [Tooltip("The Rigidbody Component")]
+			[Tooltip("The Rigidbody Component")]
 			// Rigidbody _rigidbody
 			[SerializeField] private Rigidbody _rigidbody;
 
-	    // Wheel Transforms
+		// Wheel Transforms
 		[Header("Wheel Transforms")]
 
 			[Tooltip("The front left wheel transform")]
-		    // Transform _frontLeftTransform
-		    [SerializeField] private Transform _frontLeftTransform;
+			// Transform _frontLeftTransform
+			[SerializeField] private Transform _frontLeftTransform;
 
 			[Tooltip("The front right wheel transform")]
-		    // Transform _frontRightTransform
-		    [SerializeField] private Transform _frontRightTransform;
+			// Transform _frontRightTransform
+			[SerializeField] private Transform _frontRightTransform;
 
 			[Tooltip("The rear left wheel transform")]
-		    // Transform _rearLeftTransform
-		    [SerializeField] private Transform _rearLeftTransform;
+			// Transform _rearLeftTransform
+			[SerializeField] private Transform _rearLeftTransform;
 
 			[Tooltip("The rear right wheel transform")]
-		    // Transform _rearRightTransform
-		    [SerializeField] private Transform _rearRightTransform;
+			// Transform _rearRightTransform
+			[SerializeField] private Transform _rearRightTransform;
 
 		// Wheel Colliders
 		[Header("Wheel Colliders")]
 
 			[Tooltip("The front left wheel collider")]
-		    // WheelCollider _frontLeft
-		    [SerializeField] private WheelCollider _frontLeft;
+			// WheelCollider _frontLeft
+			[SerializeField] private WheelCollider _frontLeft;
 
 			[Tooltip("The front right wheel collider")]
-		    // WheelCollider _frontRight
-		    [SerializeField] private WheelCollider _frontRight;
+			// WheelCollider _frontRight
+			[SerializeField] private WheelCollider _frontRight;
 
 			[Tooltip("The rear left wheel collider")]
-		    // WheelCollider _rearLeft
-		    [SerializeField] private WheelCollider _rearLeft;
+			// WheelCollider _rearLeft
+			[SerializeField] private WheelCollider _rearLeft;
 
 			[Tooltip("The rear right wheel collider")]
-		    // WheelCollider _rearRight
-		    [SerializeField] private WheelCollider _rearRight;
+			// WheelCollider _rearRight
+			[SerializeField] private WheelCollider _rearRight;
 		    	    
-	    // Amounts
+		// Amounts
 		[Header("Amounts")]
 
 			[Tooltip("The acceleration amount")]
@@ -95,7 +95,7 @@ namespace VehiclesControl
 			[SerializeField] private float _maxTurnAngle = 15f;
 
 			[Tooltip("The center of gravity amount")]	    
-		    // _centerOfGravityOffset is -1
+			// _centerOfGravityOffset is -1
 			[SerializeField] private float _centerOfGravityOffset = -1f;
 
 			// _currentAcceleration is 0
@@ -107,7 +107,7 @@ namespace VehiclesControl
 		    // _currentTurnAngle is 0
 			private float _currentTurnAngle = 0f;
 	        
-	    // private void Awake
+		// private void Awake
 		private void Awake()
 		{
 			// _rigidbody is GetComponent Rigidbody
@@ -246,7 +246,7 @@ namespace VehiclesControl
 	        Vector3 _euler = _rightRotation.eulerAngles;
 	        _euler.z += 180;
 	        _rightRotation.eulerAngles = _euler;
-			_rightTransform.rotation = _rightRotation;     	
+	        _rightTransform.rotation = _rightRotation;     	
 
 	    } // close private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
 	    

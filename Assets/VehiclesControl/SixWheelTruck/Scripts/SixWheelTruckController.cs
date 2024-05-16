@@ -26,77 +26,77 @@ namespace VehiclesControl
 	// public class SixWheelTruckController
 	public class SixWheelTruckController : MonoBehaviour
 	{
-	    // Input Customizations
+		// Input Customizations
 		[Header("Input Customizations")]
 
-	        [Tooltip("The vertical movement input string")]
-	        // string _verticalMoveInput
-		    [SerializeField] private string _verticalMoveInput = "Vertical";	
+			[Tooltip("The vertical movement input string")]
+			// string _verticalMoveInput
+			[SerializeField] private string _verticalMoveInput = "Vertical";	
 
-	        [Tooltip("The horizontal movement input string")]
-	        // string _horizontalMoveInput
-		    [SerializeField] private string _horizontalMoveInput = "Horizontal";
+			[Tooltip("The horizontal movement input string")]
+			// string _horizontalMoveInput
+			[SerializeField] private string _horizontalMoveInput = "Horizontal";
 		    		
-	    // Require Components
+		// Require Components
 		[Header("Require Components")]
 
-	        [Tooltip("The Rigidbody Component")]
+			[Tooltip("The Rigidbody Component")]
 			// Rigidbody _rigidbody
 			[SerializeField] Rigidbody _rigidbody;	
 
-	    // Wheel Transforms
+		// Wheel Transforms
 		[Header("Wheel Transforms")]
 
 			[Tooltip("The front left wheel transform")]
-		    // Transform _frontLeftTransform
-		    [SerializeField] private Transform _frontLeftTransform;
+			// Transform _frontLeftTransform
+			[SerializeField] private Transform _frontLeftTransform;
 
 			[Tooltip("The front right wheel transform")]
-		    // Transform _frontRightTransform
-		    [SerializeField] private Transform _frontRightTransform;
+			// Transform _frontRightTransform
+			[SerializeField] private Transform _frontRightTransform;
 
 			[Tooltip("The first rear left wheel transform")]
-		    // Transform _rearLeft01Transform
-		    [SerializeField] private Transform _rearLeft01Transform;
+			// Transform _rearLeft01Transform
+			[SerializeField] private Transform _rearLeft01Transform;
 
 			[Tooltip("The second rear left wheel transform")]
-		    // Transform _rearLeft02Transform
-		    [SerializeField] private Transform _rearLeft02Transform;
+			// Transform _rearLeft02Transform
+			[SerializeField] private Transform _rearLeft02Transform;
 
 			[Tooltip("The first rear right wheel transform")]
-		    // Transform _rearRight01Transform
-		    [SerializeField] private Transform _rearRight01Transform;
+			// Transform _rearRight01Transform
+			[SerializeField] private Transform _rearRight01Transform;
 
 			[Tooltip("The second rear right wheel transform")]
-		    // Transform _rearRight02Transform
-		    [SerializeField] private Transform _rearRight02Transform;
+			// Transform _rearRight02Transform
+			[SerializeField] private Transform _rearRight02Transform;
 
 		// Wheel Colliders
 		[Header("Wheel Colliders")]
 
 			[Tooltip("The front left wheel collider")]
-		    // WheelCollider _frontLeft
-		    [SerializeField] private WheelCollider _frontLeft;
+			// WheelCollider _frontLeft
+			[SerializeField] private WheelCollider _frontLeft;
 
 			[Tooltip("The front right wheel collider")]
-		    // WheelCollider _frontRight
-		    [SerializeField] private WheelCollider _frontRight;
+			// WheelCollider _frontRight
+			[SerializeField] private WheelCollider _frontRight;
 
 			[Tooltip("The first rear left wheel collider")]
-		    // WheelCollider _rearLeft01
-		    [SerializeField] private WheelCollider _rearLeft01;
+			// WheelCollider _rearLeft01
+			[SerializeField] private WheelCollider _rearLeft01;
 
 			[Tooltip("The second rear left wheel collider")]
-		    // WheelCollider _rearLeft02
-		    [SerializeField] private WheelCollider _rearLeft02;
+			// WheelCollider _rearLeft02
+			[SerializeField] private WheelCollider _rearLeft02;
 
 			[Tooltip("The first rear right wheel collider")]
-		    // WheelCollider _rearRight01
-		    [SerializeField] private WheelCollider _rearRight01;
+			// WheelCollider _rearRight01
+			[SerializeField] private WheelCollider _rearRight01;
 
 			[Tooltip("The second rear right wheel collider")]
-		    // WheelCollider _rearRight02
-		    [SerializeField] private WheelCollider _rearRight02;
+			// WheelCollider _rearRight02
+			[SerializeField] private WheelCollider _rearRight02;
 					    	    
 		// Amounts
 		[Header("Amounts")]
@@ -114,7 +114,7 @@ namespace VehiclesControl
 			[SerializeField] private float _maxTurnAngle = 15f;
 
 			[Tooltip("The center of gravity offset amount")]	    
-		    // _centerOfGravityOffset is -1
+			// _centerOfGravityOffset is -1
 			[SerializeField] private float _centerOfGravityOffset = -1f;
 
 			// _currentAcceleration is 0
@@ -123,10 +123,10 @@ namespace VehiclesControl
 			// _currentBrakeForce is 0
 			private float _currentBrakeForce = 0f;
 		    
-		    // _currentTurnAngle is 0
+			// _currentTurnAngle is 0
 			private float _currentTurnAngle = 0f;
 	    
-	    // private void Awake
+		// private void Awake
 		private void Awake()
 		{
 			// _rigidbody is GetComponent Rigidbody

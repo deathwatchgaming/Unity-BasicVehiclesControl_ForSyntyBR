@@ -25,117 +25,117 @@ namespace PlayerControl
 	// public class FirstPersonController
 	public class FirstPersonController : MonoBehaviour 
 	{
-	    // Movement Speeds
+		// Movement Speeds
 		[Header("Movement Speeds")]
 
-	        [Tooltip("The walk speed amount")]
-	        // float _walkSpeed is 3.0
-		    [SerializeField] private float _walkSpeed = 3.0f;
+			[Tooltip("The walk speed amount")]
+			// float _walkSpeed is 3.0
+			[SerializeField] private float _walkSpeed = 3.0f;
 
-            [Tooltip("The sprint multiplier amount")]
-	        // float _sprintMultiplier is 2.0
-		    [SerializeField] private float _sprintMultiplier = 2.0f;
+			[Tooltip("The sprint multiplier amount")]
+			// float _sprintMultiplier is 2.0
+			[SerializeField] private float _sprintMultiplier = 2.0f;
 
-	    // Jump Parameters
+		// Jump Parameters
 		[Header("Jump Parameters")]
 
-            [Tooltip("The jump force amount")]
-	        // float _jumpForce is 5.0
-		    [SerializeField] private float _jumpForce = 5.0f;
+			[Tooltip("The jump force amount")]
+			// float _jumpForce is 5.0
+			[SerializeField] private float _jumpForce = 5.0f;
             
-            [Tooltip("The gravity amount")]
-	        // float _gravity is 9.81
-		    [SerializeField] private float _gravity = 9.81f;
+			[Tooltip("The gravity amount")]
+			// float _gravity is 9.81
+			[SerializeField] private float _gravity = 9.81f;
 
-	    // Look Sensitivity
+		// Look Sensitivity
 		[Header("Look Sensitivity")]
 	        
-	        [Tooltip("The mouse sensitivity amount")]
-	        // float _mouseSensitivity is 2.0
-		    [SerializeField] private float _mouseSensitivity = 2.0f;
+			[Tooltip("The mouse sensitivity amount")]
+			// float _mouseSensitivity is 2.0
+			[SerializeField] private float _mouseSensitivity = 2.0f;
             
-            [Tooltip("The up down range amount")]
-	        // float _upDownRange is 80.0
-		    [SerializeField] private float _upDownRange = 80.0f;
+			[Tooltip("The up down range amount")]
+			// float _upDownRange is 80.0
+			[SerializeField] private float _upDownRange = 80.0f;
 	    
-	    // Input Customizations
+		// Input Customizations
 		[Header("Input Customizations")]
             
-            [Tooltip("The vertical movement string")]
-	        // string _verticalMoveInput is Vertical
-		    [SerializeField] private string _verticalMoveInput = "Vertical";	
+			[Tooltip("The vertical movement string")]
+			// string _verticalMoveInput is Vertical
+			[SerializeField] private string _verticalMoveInput = "Vertical";	
             
-            [Tooltip("The horizontal movement string")]
-	        // string _horizontalMoveInput is Horizontal
-		    [SerializeField] private string _horizontalMoveInput = "Horizontal";	
+			[Tooltip("The horizontal movement string")]
+			// string _horizontalMoveInput is Horizontal
+			[SerializeField] private string _horizontalMoveInput = "Horizontal";	
             
-            [Tooltip("The mouse y input string")]            
-	        // string _mouseYInput is Mouse Y
-		    [SerializeField] private string _mouseYInput = "Mouse Y";
+			[Tooltip("The mouse y input string")]            
+			// string _mouseYInput is Mouse Y
+			[SerializeField] private string _mouseYInput = "Mouse Y";
             
-            [Tooltip("The mouse x input string")]
-	        // string _mouseXInput is Mouse X
-		    [SerializeField] private string _mouseXInput = "Mouse X";
+			[Tooltip("The mouse x input string")]
+			// string _mouseXInput is Mouse X
+			[SerializeField] private string _mouseXInput = "Mouse X";
             
-            [Tooltip("The sprint input keycode key")]
-		    // KeyCode _sprintKey is KeyCode LeftShift
-		    [SerializeField] private KeyCode _sprintKey = KeyCode.LeftShift;
+			[Tooltip("The sprint input keycode key")]
+			// KeyCode _sprintKey is KeyCode LeftShift
+			[SerializeField] private KeyCode _sprintKey = KeyCode.LeftShift;
             
-            [Tooltip("The jump input keycode key")]
-		    // KeyCode _jumpKey is KeyCode Space
-		    [SerializeField] private KeyCode _jumpKey = KeyCode.Space;
+			[Tooltip("The jump input keycode key")]
+			// KeyCode _jumpKey is KeyCode Space
+			[SerializeField] private KeyCode _jumpKey = KeyCode.Space;
 
-	    // Footstep Sounds
+		// Footstep Sounds
 		[Header("Footstep Sounds")]
             
-            [Tooltip("The footstep sounds audio source")]
-		    // AudioSource _footstepSource
-		    [SerializeField] private AudioSource _footstepSource;
+			[Tooltip("The footstep sounds audio source")]
+			// AudioSource _footstepSource
+			[SerializeField] private AudioSource _footstepSource;
             
-            [Tooltip("The footstep sounds audio clip")]
-		    // Audioclip[] _footstepSounds
-		    [SerializeField] private AudioClip[] _footstepSounds;
+			[Tooltip("The footstep sounds audio clip")]
+			// Audioclip[] _footstepSounds
+			[SerializeField] private AudioClip[] _footstepSounds;
             
-            [Tooltip("The walk step interval amount")]
-		    // float _walkStepInterval is 0.5
-		    [SerializeField] private float _walkStepInterval = 0.5f;
+			[Tooltip("The walk step interval amount")]
+			// float _walkStepInterval is 0.5
+			[SerializeField] private float _walkStepInterval = 0.5f;
             
-            [Tooltip("The sprint step interval amount")]
-		    // float _sprintStepInterval is 0.3
-		    [SerializeField] private float _sprintStepInterval = 0.3f;
+			[Tooltip("The sprint step interval amount")]
+			// float _sprintStepInterval is 0.3
+			[SerializeField] private float _sprintStepInterval = 0.3f;
             
-            [Tooltip("The velocity threshold amount")]
-		    // float _velocityThreshold is 2.0
-		    [SerializeField] private float _velocityThreshold = 2.0f;
+			[Tooltip("The velocity threshold amount")]
+			// float _velocityThreshold is 2.0
+			[SerializeField] private float _velocityThreshold = 2.0f;
 
-		    // float _nextStepTime
-		    private float _nextStepTime;
+			// float _nextStepTime
+			private float _nextStepTime;
 
-		    // int _lastPlayedIndex is -1
-	        private int _lastPlayedIndex = -1;
+			// int _lastPlayedIndex is -1
+			private int _lastPlayedIndex = -1;
 
-		    // bool _isMoving
-		    private bool _isMoving;	
+			// bool _isMoving
+			private bool _isMoving;	
 
-	        // Camera _mainCamera
-	        private Camera _mainCamera;
+			// Camera _mainCamera
+			private Camera _mainCamera;
 
-	        // float _verticalRotation
-	        private float _verticalRotation;
+			// float _verticalRotation
+			private float _verticalRotation;
 
-	        // Vector3 _currentMovement is Vector3.zero
-	        private Vector3 _currentMovement = Vector3.zero;
+			// Vector3 _currentMovement is Vector3.zero
+			private Vector3 _currentMovement = Vector3.zero;
 
-	        // CharacterController _characterController
-		    private CharacterController _characterController;
+			// CharacterController _characterController
+			private CharacterController _characterController;
 
-	    // private void Start
+		// private void Start
 		private void Start()
 		{
 	        // _characterController is GetComponent CharacterController
 			_characterController = GetComponent<CharacterController>();
 
-	        // _footstepSource is GetComponent AudioSource
+			// _footstepSource is GetComponent AudioSource
 			_footstepSource = GetComponent<AudioSource>();
 
 			// _mainCamera is Camera main
@@ -163,7 +163,7 @@ namespace PlayerControl
 
 		} // close private void Update
 	    
-	    // private void HandleMovement
+		// private void HandleMovement
 		private void HandleMovement()
 		{
 	        // float _verticalInput is Input GetAxis _verticalMoveInput
@@ -172,7 +172,7 @@ namespace PlayerControl
 	        // float _horizontalInput is Input GetAxis _horizontalMoveInput
 	        float _horizontalInput = Input.GetAxis(_horizontalMoveInput);
 
-	        // float _speedMultiplier
+			// float _speedMultiplier
 			float _speedMultiplier = Input.GetKey(_sprintKey) ? _sprintMultiplier : 1f;
 
 			// float _verticalSpeed
@@ -190,11 +190,11 @@ namespace PlayerControl
 			// HandleGravityAndJumping
 			HandleGravityAndJumping();
 
-	        // _currentMovement.x is _horizontalMovement.x
-	        _currentMovement.x = _horizontalMovement.x;
+			// _currentMovement.x is _horizontalMovement.x
+			_currentMovement.x = _horizontalMovement.x;
 
-	        // _currentMovement.z is _horizontalMovement.z
-	        _currentMovement.z = _horizontalMovement.z;
+			// _currentMovement.z is _horizontalMovement.z
+			_currentMovement.z = _horizontalMovement.z;
 
 			// _characterController Move _currentMovement times Time deltaTime
 			_characterController.Move(_currentMovement * Time.deltaTime);
@@ -204,10 +204,10 @@ namespace PlayerControl
 
 		} // close private void HandleMovement
 	    
-	    // private void HandleGravityAndJumping
+		// private void HandleGravityAndJumping
 		private void HandleGravityAndJumping()
 		{	        
-	        // if _characterController isGrounded
+			// if _characterController isGrounded
 			if (_characterController.isGrounded)
 			{
 				// _currentMovement.y is -0.5
@@ -223,7 +223,7 @@ namespace PlayerControl
 
 			} // close if _characterController isGrounded
 	        
-	        // else
+			// else
 			else 
 			{
 				// _currentMovement.y
@@ -233,7 +233,7 @@ namespace PlayerControl
 
 		} // close void HandleGravityAndJumping
 
-	    // private void HandleRotation
+		// private void HandleRotation
 		private void HandleRotation()
 		{
 			// _mouseXRotation
@@ -245,7 +245,7 @@ namespace PlayerControl
 			// _verticalRotation
 			_verticalRotation -= Input.GetAxis(_mouseYInput) * _mouseSensitivity;
 
-	        // _verticalRotation
+			// _verticalRotation
 			_verticalRotation = Mathf.Clamp(_verticalRotation, -_upDownRange, _upDownRange);
 
 			// _mainCamera transform localRotation
@@ -253,7 +253,7 @@ namespace PlayerControl
 
 		} // close private void HandleRotation
 
-	    // private void HandleFootsteps
+		// private void HandleFootsteps
 		private void HandleFootsteps()
 		{
 			// _currentStepInterval
@@ -265,7 +265,7 @@ namespace PlayerControl
 				// Play Footstep Sounds
 				PlayFootstepSounds();
 	            
-	            // _nextStepTime
+				// _nextStepTime
 				_nextStepTime = Time.time + _currentStepInterval;
 
 			} // Close - if
@@ -308,7 +308,7 @@ namespace PlayerControl
 			// _footsepSource clip
 			_footstepSource.clip = _footstepSounds[_randomIndex];
 	        
-	        // _footsepSource Play
+			// _footsepSource Play
 			_footstepSource.Play();
 
 		} // close private void PlayFootstepsounds
