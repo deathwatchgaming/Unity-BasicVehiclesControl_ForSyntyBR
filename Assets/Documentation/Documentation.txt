@@ -1,1 +1,5 @@
-Documentation coming shortly...
+Documentation coming shortly... as available free time may allow.
+
+
+let us first put prep setup steps for creating dev/demo/test scenes and related instructions here...
+also let us put instructions here for the all vehicles in one scene here.
