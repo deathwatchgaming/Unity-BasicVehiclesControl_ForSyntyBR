@@ -1,0 +1,10 @@
+Let's put dev/demo scenes here as this will make sense when docs are written for setup instructions for either the vehicle controller only usage and if then desired, the vehicle entry additions to such....
+
+ie:
+
+AllVehiclesDevScene.unity   (to test/dev and continue on with all vehicles in one scene)
+ArmoredTruckDevScene.unity  (to test/dev and continue on with ArmoredTruck only in scene)
+DuneBuggyDevScene.unity     (to test/dev and continue on with DuneBuggy only in scene)
+HumveeDevScene.unity        (to test/dev and continue on with Humvee only in scene)
+SedanDevScene.unity         (to test/dev and continue on with Sedan only in scene)
+SixWheelTruckDevScene.unity (to test/dev and continue on with SixWheelTruck only in scene)
