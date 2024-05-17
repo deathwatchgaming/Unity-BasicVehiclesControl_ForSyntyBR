@@ -1,10 +1,8 @@
 /*
- *
  * Name: FirstPersonController
  * File: FirstPersonController.cs
  * Author(s): DeathwatchGaming
  * License: MIT
- *
 */
 
 // Player Transform Position: X: 0 Y: 0.9799998 Z: 0 / Tag: Player
@@ -123,7 +121,7 @@ namespace PlayerControl
 			// float _verticalRotation
 			private float _verticalRotation;
 
-			// Vector3 _currentMovement is Vector3.zero
+			// Vector3 _currentMovement is Vector3 zero
 			private Vector3 _currentMovement = Vector3.zero;
 
 			// CharacterController _characterController
@@ -132,7 +130,7 @@ namespace PlayerControl
 		// private void Start
 		private void Start()
 		{
-	        // _characterController is GetComponent CharacterController
+			// _characterController is GetComponent CharacterController
 			_characterController = GetComponent<CharacterController>();
 
 			// _footstepSource is GetComponent AudioSource
@@ -152,13 +150,13 @@ namespace PlayerControl
 		// private void Update
 		private void Update()
 		{
-			// HandleMovement
+			// Handle Movement
 			HandleMovement();
 
-			// HandleRotation
+			// Handle Rotation
 			HandleRotation();
 
-			// HandleFootsteps
+			// Handle Footsteps
 			HandleFootsteps();		
 
 		} // close private void Update
@@ -166,40 +164,40 @@ namespace PlayerControl
 		// private void HandleMovement
 		private void HandleMovement()
 		{
-	        // float _verticalInput is Input GetAxis _verticalMoveInput
-	        float _verticalInput = Input.GetAxis(_verticalMoveInput);
+			// float _verticalInput is Input GetAxis _verticalMoveInput
+			float _verticalInput = Input.GetAxis(_verticalMoveInput);
 
-	        // float _horizontalInput is Input GetAxis _horizontalMoveInput
-	        float _horizontalInput = Input.GetAxis(_horizontalMoveInput);
+			// float _horizontalInput is Input GetAxis _horizontalMoveInput
+			float _horizontalInput = Input.GetAxis(_horizontalMoveInput);
 
-			// float _speedMultiplier
+			// float _speedMultiplier is Input GetKey _sprintKey ? _sprintMultiplier : 1f
 			float _speedMultiplier = Input.GetKey(_sprintKey) ? _sprintMultiplier : 1f;
 
-			// float _verticalSpeed
+			// float _verticalSpeed is _verticalInput times _walkSpeed times _speedMultiplier
 			float _verticalSpeed = _verticalInput * _walkSpeed * _speedMultiplier;
 
-			// float _horizontalSpeed
+			// float _horizontalSpeed is _horizontalInput times _walkSpeed times _speedMultiplier
 			float _horizontalSpeed = _horizontalInput * _walkSpeed * _speedMultiplier;		
 
-			// Vector3 _horizontalMovement
+			// Vector3 _horizontalMovement is Vector3 _horizontalSpeed 0 _verticalSpeed
 			Vector3 _horizontalMovement = new Vector3 (_horizontalSpeed, 0, _verticalSpeed);
 
-			// _horizontalMovement
+			// _horizontalMovement is transform rotation times _horizontalMovement
 			_horizontalMovement = transform.rotation * _horizontalMovement;
 
-			// HandleGravityAndJumping
+			// Handle Gravity And Jumping
 			HandleGravityAndJumping();
 
-			// _currentMovement.x is _horizontalMovement.x
+			// _currentMovement x is _horizontalMovement x
 			_currentMovement.x = _horizontalMovement.x;
 
-			// _currentMovement.z is _horizontalMovement.z
+			// _currentMovement z is _horizontalMovement z
 			_currentMovement.z = _horizontalMovement.z;
 
 			// _characterController Move _currentMovement times Time deltaTime
 			_characterController.Move(_currentMovement * Time.deltaTime);
 
-			// _isMoving
+			// _isMoving is _verticalInput not 0 or _horizontalInput not 0
 			_isMoving = _verticalInput != 0 || _horizontalInput != 0; // inputs vertical & horizontal
 
 		} // close private void HandleMovement
@@ -210,13 +208,13 @@ namespace PlayerControl
 			// if _characterController isGrounded
 			if (_characterController.isGrounded)
 			{
-				// _currentMovement.y is -0.5
+				// _currentMovement y is -0.5
 				_currentMovement.y = -0.5f;
 
 				// if Input GetKeyDown jumpKey
 				if (Input.GetKeyDown(_jumpKey))
 				{
-					// _currentMovement.y is _jumpForce
+					// _currentMovement y is _jumpForce
 					_currentMovement.y = _jumpForce;
 
 				} // close if Input GetKeyDown _jumpKey
@@ -226,7 +224,7 @@ namespace PlayerControl
 			// else
 			else 
 			{
-				// _currentMovement.y
+				// _currentMovement y _gravity times Time deltaTime
 				_currentMovement.y -= _gravity * Time.deltaTime;
 
 			} // close else
@@ -236,19 +234,19 @@ namespace PlayerControl
 		// private void HandleRotation
 		private void HandleRotation()
 		{
-			// _mouseXRotation
+			// _mouseXRotation is Input GetAxis _mouseXInput times _mouseSensitivity
 			float _mouseXRotation = Input.GetAxis(_mouseXInput) * _mouseSensitivity;
 
-			// transform Rotate
+			// transform Rotate 0 _mouseXRotation 0
 			transform.Rotate(0, _mouseXRotation, 0);
 
-			// _verticalRotation
+			// _verticalRotation Input GetAxis _mouseYInput times _mouseSensitivity
 			_verticalRotation -= Input.GetAxis(_mouseYInput) * _mouseSensitivity;
 
-			// _verticalRotation
+			// _verticalRotation is Mathf Clamp _verticalRotation -_upDownRange _upDownRange
 			_verticalRotation = Mathf.Clamp(_verticalRotation, -_upDownRange, _upDownRange);
 
-			// _mainCamera transform localRotation
+			// _mainCamera transform localRotation is Quaternion Euler _verticalRotation 0 0
 			_mainCamera.transform.localRotation = Quaternion.Euler(_verticalRotation, 0, 0);
 
 		} // close private void HandleRotation
@@ -256,19 +254,19 @@ namespace PlayerControl
 		// private void HandleFootsteps
 		private void HandleFootsteps()
 		{
-			// _currentStepInterval
+			// float _currentStepInterval is Input GetKey _sprintKey ? _sprintStepInterval : _walkStepInterval
 			float _currentStepInterval = (Input.GetKey(_sprintKey) ? _sprintStepInterval : _walkStepInterval);
 
-			// if
+			// if _characterController isGrounded and _isMoving and Time time > _nextStepTime and_characterController velocity magnitude > _velocityThreshold
 			if (_characterController.isGrounded && _isMoving && Time.time > _nextStepTime && _characterController.velocity.magnitude > _velocityThreshold)
 			{
 				// Play Footstep Sounds
 				PlayFootstepSounds();
 	            
-				// _nextStepTime
+				// _nextStepTime is Time time plus _currentStepInterval
 				_nextStepTime = Time.time + _currentStepInterval;
 
-			} // Close - if
+			} // close if _characterController isGrounded and _isMoving and Time time > _nextStepTime and_characterController velocity magnitude > _velocityThreshold
 	       
 		} // close private void HandleFootsteps
 
@@ -281,7 +279,7 @@ namespace PlayerControl
 			// if _footstepSounds Length 1
 			if (_footstepSounds.Length == 1)
 			{
-				// _randomIndex 
+				// _randomIndex is 0
 				_randomIndex = 0;
 
 			} // close if _footstepSounds Length 1
@@ -289,23 +287,23 @@ namespace PlayerControl
 			// else
 			else
 			{
-				// _randomIndex 
+				// _randomIndex Random Range 0 _footstepSounds.Length - 1
 				_randomIndex = Random.Range(0, _footstepSounds.Length - 1);
 
-				// if
+				// if _randomIndex >= _lastPlayedIndex
 				if (_randomIndex >= _lastPlayedIndex)
 				{
 					// _randomIndex
 					_randomIndex++;
 
-				} // close if
+				} // close if _randomIndex >= _lastPlayedIndex
 
 			} // close else
 
-			// _lastPlayedIndex
+			// _lastPlayedIndex is _randomIndex
 			_lastPlayedIndex = _randomIndex;
 
-			// _footsepSource clip
+			// _footsepSource clip is _footstepSounds[] _randomIndex
 			_footstepSource.clip = _footstepSounds[_randomIndex];
 	        
 			// _footsepSource Play
