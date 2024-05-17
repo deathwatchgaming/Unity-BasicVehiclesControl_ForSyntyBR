@@ -116,9 +116,9 @@ namespace VehiclesControl
 			// _rigidbody mass is 3000
 			_rigidbody.mass = 3000f;
 
-	        // Adjust the center of mass vertically to help prevent the truck from rolling
-	        // _rigidbody centerOfMass
-	        _rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;
+			// Adjust the center of mass vertically to help prevent the truck from rolling
+			// _rigidbody centerOfMass
+			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;
 
 		} // close private void Awake
 

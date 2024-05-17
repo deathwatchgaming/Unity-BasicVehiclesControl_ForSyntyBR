@@ -116,9 +116,9 @@ namespace VehiclesControl
 			// _rigidbody mass is 1500
 			_rigidbody.mass = 1500f;
 
-	        // Adjust the center of mass vertically to help prevent the dune buggy from rolling
-	        // _rigidbody centerOfMass
-	        _rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;
+			// Adjust the center of mass vertically to help prevent the dune buggy from rolling
+			// _rigidbody centerOfMass
+			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;
 
 		} // close private void Awake
 

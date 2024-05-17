@@ -33,12 +33,12 @@ namespace VehiclesControl
         [Header("Game Objects")]
 
             [Tooltip("The armored truck game object")]
-        	// GameObject _armoredTruck
-        	[SerializeField] private GameObject _armoredTruck;
+            // GameObject _armoredTruck
+            [SerializeField] private GameObject _armoredTruck;
 
             [Tooltip("The player game object")]
-        	// GameObject _player
-        	[SerializeField] private GameObject _player;
+            // GameObject _player
+            [SerializeField] private GameObject _player;
 
             [Tooltip("The interface text game object")]
             // GameObject _interfaceTextObject
@@ -48,8 +48,8 @@ namespace VehiclesControl
         [Header("Active State")]
 
             [Tooltip("The active state bool")]
-        	// bool _inArmoredTruck is false
-        	[SerializeField] private bool _inArmoredTruck = false;
+            // bool _inArmoredTruck is false
+            [SerializeField] private bool _inArmoredTruck = false;
         
         // ArmoredTruckController _armoredTruckScript
         private ArmoredTruckController _armoredTruckScript;
@@ -66,7 +66,7 @@ namespace VehiclesControl
         // private void Start
         private void Start() 
         {
-        	// _armoredTruckScript is GetComponent ArmoredTruckController
+            // _armoredTruckScript is GetComponent ArmoredTruckController
             _armoredTruckScript = GetComponent<ArmoredTruckController>();
 
             // _armoredTruckScript enabled is false
@@ -167,7 +167,7 @@ namespace VehiclesControl
         // private void OnTriggerExit Collider other
         private void OnTriggerExit(Collider other)
         {
-        	// if gameObject tag is Player
+            // if gameObject tag is Player
             if (other.gameObject.tag == "Player")
             {
             	// _interfaceTextObject SetActive is false
