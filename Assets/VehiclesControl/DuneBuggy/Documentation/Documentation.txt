@@ -271,10 +271,38 @@ let us disable the Interface in inspector for now until we need it
 
 -----------------------------------------------------------------------------------
 
+Step 14: Create: empty "Vehicle"
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Vehicle"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your scene heirarchy at top should look like this:
+
+Environment
+Player
+Vehicle
+Interface
+EventSystem
+
+Nice and organized right?! :) Good Stuff! ;)
 
 Note: as this uses a vehicle from such and due to licensing such vehicles
-cannot be included in this repository obviously. As such the provided scripts
-and instructions thus require having / purchasing the
+cannot be included in this repository obviously, as such the provided scripts
+and instructions thus require having / purchasing the:
 
 Synty Polygon Battle Royale Asset:
 https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
@@ -282,10 +310,22 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royal
 
 -----------------------------------------------------------------------------------
 
-Step 14: Install Synty Polygon Battle Royal Asset
+Step 15: Install: "Synty Polygon Battle Royal Asset"
 
 -----------------------------------------------------------------------------------
 
+
+Depending on how you purchased you can either use the package manager to
+install the asset or if you are like me and say already have local repository
+storage of purchased assets and have the package already you can install the
+asset manually.
+
+Asset package to install:
+
+ POLYGON Battle Royale - Low Poly 3D Art by Synty.unitypackage
+
+Purchase Synty Polygon Battle Royale Asset:
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
 
 
 -----------------------------------------------------------------------------------
