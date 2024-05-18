@@ -330,5 +330,76 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royal
 
 -----------------------------------------------------------------------------------
 
+Step 16: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Buggy_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 17: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefab:
+
+SM_Veh_Buggy_01 => "DuneBuggy"
+
+Next, set the Transform:
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Then move "DuneBuggy" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 18: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 19: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "DuneBuggyCamera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "DuneBuggyCamera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
 
 Further documentation coming shortly... as available free time may allow.

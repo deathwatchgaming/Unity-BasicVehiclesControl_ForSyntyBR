@@ -488,5 +488,233 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royal
 
 -----------------------------------------------------------------------------------
 
+Step 20: Identify: the "Vehicle Prefabs"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefabs" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Armored_Car_01
+
+SM_Veh_Buggy_01
+
+SM_Veh_Light_Armored_Car_01
+
+SM_Veh_Truck_01
+
+SM_Veh_Car_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Add: the "Vehicle Prefabs" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefabs" into the scene & unpack the prefabs completely
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Armored_Car_01 => "Armored Truck"
+
+SM_Veh_Buggy_01 => "DuneBuggy"
+
+SM_Veh_Light_Armored_Car_01 => "Humvee"
+
+SM_Veh_Car_01 => "SixWheelTruck"
+
+SM_Veh_Truck_01 => "Sedan"
+
+
+Now edit the transforms for each Vehicle:
+
+ArmoredTruck:
+-------------
+
+Position: X: -12 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+DuneBuggy:
+----------
+
+Position: X: -6 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Humvee:
+-------
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SixWheelTruck:
+--------------
+
+Position: X: 6 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Sedan:
+------
+
+Position: X: 12 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Then move "ArmoredTruck" into the empty: "Vehicles" as child of.
+Then move "DuneBuggy" into the empty: "Vehicles" as child of.
+Then move "Humvee" into the empty: "Vehicles" as child of.
+Then move "SixWheelTruck" into the empty: "Vehicles" as child of.
+Then move "Sedan" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+In "DuneBuggy" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+In "Humvee" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+In "SixWheelTruck" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+In "Sedan" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+ArmoredTruck:
+-------------
+
+In the empty: "View" add "Camera" component named: "ArmoredTruckCamera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "ArmoredTruckCamera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+DuneBuggy:
+-------------
+
+In the empty: "View" add "Camera" component named: "DuneBuggyCamera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "DuneBuggyCamera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Humvee:
+-------------
+
+In the empty: "View" add "Camera" component named: "HumveeCamera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "HumveeCamera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SixWheelTruck:
+-------------
+
+In the empty: "View" add "Camera" component named: "SixWheelTruckCamera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SixWheelTruckCamera":
+
+Position: X: 0 Y: 2.8 Z: -8.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Sedan:
+-------------
+
+In the empty: "View" add "Camera" component named: "SedanCamera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SedanCamera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
 
 Further documentation coming shortly... as available free time may allow.
