@@ -735,3 +735,10 @@ Size: X: 4.208336 Y: 2.19522 Z: 1.470402
 
 
 -----------------------------------------------------------------------------------
+
+
+That should about sum it up and should be about it and concludes the basic
+Vehicle Controller manual setup steps. You can now begin to modify such
+further for your specific needs.
+
+Best of Luck!

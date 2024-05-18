@@ -234,29 +234,29 @@ good measure.
 SM_Veh_Car_01_Wheel_fl
 ---------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -0.7100819 Y: 0.361439 Z: 1.619223
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Car_01_Wheel_fr
 ---------------------------
 
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
+Position: X: 0.7100819 Y: 0.361439 Z: 1.619223
+Rotation: X: 0 Y: -180 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Car_01_Wheel_rl
 ---------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -0.8224078 Y: 0.361439 Z: -1.130083
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Car_01_Wheel_rr
 ---------------------------
 
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
+Position: X: 0.8224078 Y: 0.361439 Z: -1.130083
+Rotation: X: 0 Y: -180 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 
@@ -461,3 +461,9 @@ Sedan: Sedan (Transform)
 
 -----------------------------------------------------------------------------------
 
+
+That should about sum it up and should be about it and concludes the basic
+Vehicle Controller manual setup steps. You can now begin to modify such
+further for your specific needs.
+
+Best of Luck!
