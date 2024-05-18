@@ -113,8 +113,8 @@ namespace VehiclesControl
 			// _rigidbody is GetComponent Rigidbody
 			_rigidbody = GetComponent<Rigidbody>();
 	        
-			// _rigidbody mass is 1500
-			_rigidbody.mass = 1500f;
+			// _rigidbody mass is 2500
+			_rigidbody.mass = 2500f;
 		
 			// Adjust the center of mass vertically to help prevent the Humvee from rolling
 			// _rigidbody centerOfMass

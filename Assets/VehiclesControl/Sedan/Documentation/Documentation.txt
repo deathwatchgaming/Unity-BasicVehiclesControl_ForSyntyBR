@@ -403,5 +403,259 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
+Step 20: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Sedan" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_01_Wheel_fl
+SM_Veh_Car_01_Wheel_fr
+SM_Veh_Car_01_Wheel_rl
+SM_Veh_Car_01_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure. 
+
+SM_Veh_Car_01_Wheel_fl
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_fr
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_rl
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_rr
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Also you will note, that some of the wheel meshes have a -180 on the rotation,
+that is fine, the provided script for this particular model has edits to
+factor for those rotations so as to not conflict with Wheel Colliders
+functionality.
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "Sedan" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_01_Wheel_fl
+SM_Veh_Car_01_Wheel_fr
+SM_Veh_Car_01_Wheel_rl
+SM_Veh_Car_01_Wheel_rr
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.3614392
+Front Wheels Collider Position Y: 0.511439 (0.3614392+0.15)  *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.3614392
+Rear Wheels Collider Position Y: 0.511439 (0.3614392+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_01_Wheel_fl
+SM_Veh_Car_01_Wheel_fr
+SM_Veh_Car_01_Wheel_rl
+SM_Veh_Car_01_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.361439
+Set both rear  "Wheel Colliders" radius: 0.361439
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_01_Wheel_fl
+---------------------------
+
+Position: X: -0.7100819 Y: 0.511439 Z: 1.619223
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_fr
+---------------------------
+
+Position: X: 0.7100819 Y: 0.511439 Z: 1.619223
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_rl
+---------------------------
+
+Position: X: -0.8224078 Y: 0.511439 Z: -1.130083
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_rr
+---------------------------
+
+Position: X: 0.8224078 Y: 0.511439 Z: -1.130083
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicle
+  Sedan
+    SM_Veh_Car_Glass_01
+    SM_Veh_Car_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicle
+  Sedan
+    SM_Veh_Car_Glass_01
+    SM_Veh_Car_SteeringW
+    WheelMeshes
+      SM_Veh_Car_01_Wheel_fl
+      SM_Veh_Car_01_Wheel_fr
+      SM_Veh_Car_01_Wheel_rl
+      SM_Veh_Car_01_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_01_Wheel_fl
+      SM_Veh_Car_01_Wheel_fr
+      SM_Veh_Car_01_Wheel_rl
+      SM_Veh_Car_01_Wheel_rr   
+    View
+      SedanCamera
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Add to: Sedan (SedanController.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanController.cs) to "Sedan"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Sedan (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_01_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_01_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_01_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_01_Wheel_rr (Transform) 
+
+WheelColliders:
+---------------
+
+Font Left: SM_Veh_Car_01_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_01_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_01_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_01_Wheel_rr (Wheel Collider) 
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1500
+
+-----------------------------------------------------------------------------------
+
+Step 23: Add to: SedanCamera (SedanCamera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanCamera.cs) to "SedanCamera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Sedan: Sedan (Transform)
+
+
+-----------------------------------------------------------------------------------
 
 Further documentation coming shortly... as available free time may allow.

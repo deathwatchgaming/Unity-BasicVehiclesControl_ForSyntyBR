@@ -402,5 +402,298 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
+Step 20: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SixWheelTruck" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Truck_Wheel_fl
+SM_Veh_Truck_Wheel_fr
+SM_Veh_Truck_Wheel_rl_01
+SM_Veh_Truck_Wheel_rl_02
+SM_Veh_Truck_Wheel_rr_01
+SM_Veh_Truck_Wheel_rr_02
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Truck_Wheel_fl
+---------------------------
+
+Position: X: -1.056318 Y: 0.6432184 Z: 2.190251
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_fr
+---------------------------
+
+Position: X: 1.056318 Y: 0.6432184 Z: 2.190251
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rl_01
+---------------------------
+
+Position: X: -1.172493 Y: 0.6432184 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rl_02
+---------------------------
+
+Position: X: -1.172493 Y: 0.6432184 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_01
+---------------------------
+
+Position: X: 1.172493 Y: 0.6432184 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_02
+---------------------------
+
+Position: X: 1.172493 Y: 0.6432184 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SixWheelTruck" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Truck_Wheel_fl
+SM_Veh_Truck_Wheel_fr
+SM_Veh_Truck_Wheel_rl_01
+SM_Veh_Truck_Wheel_rl_02
+SM_Veh_Truck_Wheel_rr_01
+SM_Veh_Truck_Wheel_rr_02
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.6400671
+Front Wheels Collider Position Y: 0.7900671 (0.6400671+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.6400672
+Rear Wheels Collider Position Y: 0.7900672 (0.6400672+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Truck_Wheel_fl
+SM_Veh_Truck_Wheel_fr
+SM_Veh_Truck_Wheel_rl_01
+SM_Veh_Truck_Wheel_rl_02
+SM_Veh_Truck_Wheel_rr_01
+SM_Veh_Truck_Wheel_rr_02
+
+Set both front "Wheel Colliders" radius: 0.6400671
+Set all rear  "Wheel Colliders" radius: 0.6400672
+
+We will need to now edit these infos:
+
+
+SM_Veh_Truck_Wheel_fl
+---------------------
+
+Position: X: -1.056318 Y: 0.7900671 Z: 2.190251
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_fr
+---------------------
+
+Position: X: 1.056318 Y: 0.7900671 Z: 2.190251
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rl_01
+------------------------
+
+Position: X: -1.172493 Y: 0.7900672 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rl_02
+------------------------
+
+Position: X: -1.172493 Y: 0.7900672 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_01
+------------------------
+
+Position: X: 1.172493 Y: 0.7900672 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_02
+------------------------
+
+Position: X: 1.172493 Y: 0.7900672 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicle
+  SixWheelTruck
+    SM_Veh_Truck_Glass_01
+    SM_Veh_Truck_SteeringW_01
+    SM_Veh_Truck_Trailer_01  
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicle
+  SixWheelTruck
+    SM_Veh_Truck_Glass_01
+    SM_Veh_Truck_SteeringW_01
+    SM_Veh_Truck_Trailer_01
+    WheelMeshes
+      SM_Veh_Truck_Wheel_fl
+      SM_Veh_Truck_Wheel_fr
+      SM_Veh_Truck_Wheel_rl_01
+      SM_Veh_Truck_Wheel_rl_02
+      SM_Veh_Truck_Wheel_rr_01
+      SM_Veh_Truck_Wheel_rr_02
+    WheelColliders
+      SM_Veh_Truck_Wheel_fl
+      SM_Veh_Truck_Wheel_fr
+      SM_Veh_Truck_Wheel_rl_01
+      SM_Veh_Truck_Wheel_rl_02
+      SM_Veh_Truck_Wheel_rr_01
+      SM_Veh_Truck_Wheel_rr_02   
+    View
+      SixWheelTruckCamera
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Add to: SixWheelTruck (SixWheelTruckController.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SixWheelTruckController.cs) to "SixWheelTruck"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SixWheelTruck (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Truck_Wheel_fl (Transform)
+Front Right: SM_Veh_Truck_Wheel_fr (Transform)
+Rear Left 01: SM_Veh_Truck_Wheel_rl_01 (Transform)
+Rear Left 02: SM_Veh_Truck_Wheel_rl_02 (Transform)
+Rear Right 01: SM_Veh_Truck_Wheel_rr_01 (Transform)
+Rear Right 02: SM_Veh_Truck_Wheel_rr_02 (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Truck_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Truck_Wheel_fr (Wheel Collider)
+Rear Left 01: SM_Veh_Truck_Wheel_rl_01 (Wheel Collider)
+Rear Left 02: SM_Veh_Truck_Wheel_rl_02 (Wheel Collider)
+Rear Right 01: SM_Veh_Truck_Wheel_rr_01 (Wheel Collider)
+Rear Right 02: SM_Veh_Truck_Wheel_rr_02 (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 3500
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: Add to: SixWheelTruckCamera (SixWheelTruckCamera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SixWheelTruckCamera.cs) to "SixWheelTruckCamera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Six Wheel Truck: SixWheelTruck (Transform)
+
+
+-----------------------------------------------------------------------------------
+
 
 Further documentation coming shortly... as available free time may allow.

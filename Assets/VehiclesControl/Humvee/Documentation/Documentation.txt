@@ -403,5 +403,267 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
+Step 20: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Humvee" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Light_Armored_Car_Wheel_fl
+SM_Veh_Light_Armored_Car_Wheel_fr
+SM_Veh_Light_Armored_Car_Wheel_rl
+SM_Veh_Light_Armored_Car_Wheel_rr
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure and sdo note this particular model has some issues because the
+designer actually has the back wheels incorrect as they are opposite
+regardless of how they are named and not what they should be and unless you
+notrice that you might run inot issues so let us correct that now:
+
+
+SM_Veh_Light_Armored_Car_Wheel_fl
+---------------------------------
+
+Position: X: -0.8390951 Y: 0.4136755 Z: 1.70215
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_fr
+---------------------------------
+
+Position: X: 0.8390951 Y: 0.4136755 Z: 1.70215
+Rotation: X: 0 Y: -180 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_rl
+---------------------------------
+
+Position: X: -0.9434342 Y: 0.4136755 Z: -1.524809
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_rr
+---------------------------------
+
+Position: X: 0.9434342 Y: 0.4136755 Z: -1.524809
+Rotation: X: 0 Y: -180 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Also you will note, that some of the wheel meshes have a -180 on the rotation,
+that is fine, the provided script for this particular model has edits to
+factor for those rotations so as to not conflict with Wheel Colliders
+functionality.
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "Humvee" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "VWheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+
+SM_Veh_Light_Armored_Car_Wheel_fl
+SM_Veh_Light_Armored_Car_Wheel_fr
+SM_Veh_Light_Armored_Car_Wheel_rl
+SM_Veh_Light_Armored_Car_Wheel_rr
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.4145404
+Front Wheels Collider Position Y: 0.5645404 (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.4145404
+Rear Wheels Collider Position Y: 0.5645404 (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Light_Armored_Car_Wheel_fl
+SM_Veh_Light_Armored_Car_Wheel_fr
+SM_Veh_Light_Armored_Car_Wheel_rl
+SM_Veh_Light_Armored_Car_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.4145404
+Set both rear  "Wheel Colliders" radius: 0.4145404
+
+We will need to now edit these infos:
+
+
+SM_Veh_Light_Armored_Car_Wheel_fl
+---------------------------------
+
+Position: X: -0.8390951 Y: 0.5645404 Z: 1.70215
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_fr
+---------------------------------
+
+Position: X: 0.8390951 Y: 0.5645404 Z: 1.70215
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_rl
+---------------------------------
+
+Position: X: -0.9434342 Y: 0.5645404 Z: -1.524809
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_rr
+---------------------------------
+
+Position: X: 0.9434342 Y: 0.5645404 Z: -1.524809
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicle
+  Humvee
+    SM_Veh_Light_Armored_Car_Glass_01
+    SM_Veh_Light_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicle
+  Humvee
+    SM_Veh_Light_Armored_Car_Glass_01
+    SM_Veh_Light_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Light_Armored_Car_Wheel_fl
+      SM_Veh_Light_Armored_Car_Wheel_fr
+      SM_Veh_Light_Armored_Car_Wheel_rl
+      SM_Veh_Light_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Light_Armored_Car_Wheel_fl
+      SM_Veh_Light_Armored_Car_Wheel_fr
+      SM_Veh_Light_Armored_Car_Wheel_rl
+      SM_Veh_Light_Armored_Car_Wheel_rr    
+    View
+      HumveeCamera
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Add to: Humvee (HumveeController.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (HumveeController.cs) to "Humvee"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Humvee (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Light_Armored_Car_Wheel_fl (Transform)
+Front Right: SM_Veh_Light_Armored_Car_Wheel_fr (Transform)
+Rear Left: SM_Veh_Light_Armored_Car_Wheel_rl (Transform)
+Rear Right: SM_Veh_Light_Armored_Car_Wheel_rr (Transform) 
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Light_Armored_Car_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Light_Armored_Car_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Light_Armored_Car_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Light_Armored_Car_Wheel_rr (Wheel Collider) 
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 2500
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: Add to: HumveeCamera (HumveeCamera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (HumveeCamera.cs) to "HumveeCamera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Humvee: Humvee (Transform)
+
+
+-----------------------------------------------------------------------------------
+
 
 Further documentation coming shortly... as available free time may allow.
