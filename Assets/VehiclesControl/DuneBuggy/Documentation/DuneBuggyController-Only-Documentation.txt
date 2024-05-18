@@ -1,8 +1,8 @@
-"SedanDevScene" Scene Setup Steps
+"DuneBuggyDevScene" Scene Setup Steps
 -----------------------------------------------------------------------------------
 
 
-Prep Step: Create New Scene Called: "SedanDevScene"
+Prep Step: Create New Scene Called: "DuneBuggyDevScene"
 
 
 -----------------------------------------------------------------------------------
@@ -78,201 +78,7 @@ We can now opt to clean up for better organization, simply drag the:
 
 -----------------------------------------------------------------------------------
 
-Step 4: Create: object "Player":
-
------------------------------------------------------------------------------------
-
-
-Create empty object and name such: "Player"
-
-Transform: 
-----------
-
-Position: X: 0 Y: 0.9799998 Z: -10 
-Rotation: X: 0 Y: 0  Z: 0 
-Scale:    X: 1 Y: 1  Z: 1
-
-Add Tag: "Player"
-
-
------------------------------------------------------------------------------------
-
-Step 5: Add: empty object "View":
-
------------------------------------------------------------------------------------
-
-
-In "Player" object, create a child of the "Player" object and name
-such: "View"
-
-Transform Position: X: 0 Y: 0 Z: 0
-
-
------------------------------------------------------------------------------------
-
-Step 6: Add: "Camera":
-
------------------------------------------------------------------------------------
-
-In "Player" object, add a Camera component as child of "View" and name
-such: "Camera"
-
-Transform: 
-----------
-
-Position: X: 0 Y: 0.6 Z: 0 
-Rotation: X: 0 Y: 0   Z: 0 
-Scale:    X: 1 Y: 1   Z: 1
-
-Depth: "1" 
-
-Add Tag: "MainCamera"
-
-
------------------------------------------------------------------------------------
-
-Step 7: Edit: the "CharacterController" component:
-
------------------------------------------------------------------------------------
-
-
-In "Player" object, edit the "CharacterController" component:
-
-Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
-
-
------------------------------------------------------------------------------------
-
-Step 9: Setup: Audio Source and Footstep Sounds Audio Clips:
-
------------------------------------------------------------------------------------
-
-In "Player" object edit: the "First Person Controller (Script)"
-
-Footstep Source: Player (AudioSource)
-
-Footsep Sounds: "4"
-
-Element 0: "Footstep01"
-Element 1: "Footstep02"
-Element 2: "Footstep03"
-Element 3: "Footstep04"
-
-
-That is it! You should now be able to run around your scene!
-
-
-But..., for now since we do not need the player controller at this point let
-us disable the player object / component in inspector for now until we need it
-
-
------------------------------------------------------------------------------------
-
-Step 10: Create: empty "Interface"
-
------------------------------------------------------------------------------------
-
-Create an empty called: "Interface"
-
-Layer: "UI"
-
-Transform: 
-----------
-
-Position: X: 0 Y: 0   Z: 0 
-Rotation: X: 0 Y: 0   Z: 0 
-Scale:    X: 1 Y: 1   Z: 1 
-
-
------------------------------------------------------------------------------------
-
-Step 11: In "Interface" Add UI: "Canvas"
-
------------------------------------------------------------------------------------
-
-
-Create as a child of "Interface" Add a UI: "Canvas"
-
-
------------------------------------------------------------------------------------
-
-Step 12: Create as child of "Canvas" add empty: "VehiclesEntry"
-
------------------------------------------------------------------------------------
-
-
-Create as a child of "Interface" add empty: "VehiclesEntry"
-
-Layer: "UI"
-
-
-Rect Transform: 
----------------
-
-Set at "Bottom Center"
-
-Position: X: 0 Y: 50   Z: 0 
-Width: 100
-Height: 100
-
-
------------------------------------------------------------------------------------
-
-Step 13:  Create child of "VehiclesEntry" add Text tmp: "Sedan_EntryKey"
-
------------------------------------------------------------------------------------
-
-Create as a child of "VehiclesEntry" add TextMeshPro Text: "Sedan_EntryKey"
-
-Layer: "UI"
-
-
-Rect Transform: 
----------------
-
-Set at "Top Center"
-
-Position: X: 0 Y: -50   Z: 0 
-Width: 100
-Height: 100
-
-
-Text Input: Press E
-Font Size: 36
-
-Alignment: Center & Middle
-
-Face:
------
-Dilate: 0.21
-
-Outline: Yes Thickness: 0.121
-
-Underlay: Yes Softness: 0.522
-
-Note: The face, outline and underlay are merely starting suggestions that you
-can tweak further to your desired likings as well as any other related
-settings of the likes.
-
-Ok, now that this part is done we can start moving to other setup steps...
-
-but..., for now since we do not need the interface canvas text item at this point 
-let us disable the Interface in inspector for now until we need it
-
-
------------------------------------------------------------------------------------
-
-Step 14: Create: empty "Vehicle"
+Step 4: Create: empty "Vehicle"
 
 -----------------------------------------------------------------------------------
 
@@ -294,10 +100,8 @@ Notes: Current Summary
 Note: Ok, by now your scene heirarchy at top should look like this:
 
 Environment
-Player
 Vehicle
-Interface
-EventSystem
+
 
 Nice and organized right?! :) Good Stuff! ;)
 
@@ -311,7 +115,7 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royal
 
 -----------------------------------------------------------------------------------
 
-Step 15: Install: "Synty Polygon Battle Royal Asset"
+Step 5: Install: "Synty Polygon Battle Royal Asset"
 
 -----------------------------------------------------------------------------------
 
@@ -331,7 +135,7 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royal
 
 -----------------------------------------------------------------------------------
 
-Step 16: Identify: the "Vehicle Prefab"
+Step 6: Identify: the "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -340,21 +144,21 @@ Let us first identify and locate the "Vehicle Prefab" we are going to use.
 
 Assets > PolygonBattleRoyale > Prefabs > Vehicles
 
-SM_Veh_Car_01
+SM_Veh_Buggy_01
 
 
 -----------------------------------------------------------------------------------
 
-Step 17: Add: the "Vehicle Prefab" to Scene
+Step 7: Add: the "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
 
 Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
 
-Next, rename the vehicle prefabs:
+Next, rename the vehicle prefab:
 
-SM_Veh_Truck_01 => "Sedan"
+SM_Veh_Buggy_01 => "DuneBuggy"
 
 Next, set the Transform:
 
@@ -362,17 +166,17 @@ Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-Then move "Sedan" into the empty: "Vehicle" as child of.
+Then move "DuneBuggy" into the empty: "Vehicle" as child of.
 
 
 -----------------------------------------------------------------------------------
 
-Step 18: Add: empty "View" as child
+Step 8: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
 
-In "Sedan" add empty as child named "View"
+In "DuneBuggy" add empty as child named "View"
 
 Set the Transform of "View":
 
@@ -383,18 +187,18 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 19: Add: "Camera" in empty "View" as child
+Step 9: Add: "Camera" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
 
-In the empty: "View" add "Camera" component named: "SedanCamera"
+In the empty: "View" add "Camera" component named: "DuneBuggyCamera"
 
 Tag: Untagged
 
 Depth: 0
 
-Set the Transform of "SedanCamera":
+Set the Transform of "DuneBuggyCamera":
 
 Position: X: 0 Y: 1.4 Z: -6.4 
 Rotation: X: 0 Y: 0 Z: 0 
@@ -403,12 +207,12 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 20: Add: empty "WheelMeshes" as child
+Step 10: Add: empty "WheelMeshes" as child
 
 -----------------------------------------------------------------------------------
 
 
-In "Sedan" add empty as child named "WheelMeshes"
+In "DuneBuggy" add empty as child named "WheelMeshes"
 
 Set the Transform of "WheelMeshes":
 
@@ -420,57 +224,52 @@ Copy & paste the following meshes into "WheelMeshes" as children
 (delete originals after as they are not needed since we copied them into new
 location)
 
-SM_Veh_Car_01_Wheel_fl
-SM_Veh_Car_01_Wheel_fr
-SM_Veh_Car_01_Wheel_rl
-SM_Veh_Car_01_Wheel_rr
+
 
 Transforms should be fine and unaffected but, let us just mention them for
-good measure. 
+good measure.
 
-SM_Veh_Car_01_Wheel_fl
+
+SM_Veh_Buggy_Wheel_fl
 ---------------------------
 
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-SM_Veh_Car_01_Wheel_fr
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-SM_Veh_Car_01_Wheel_rl
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-SM_Veh_Car_01_Wheel_rr
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
+Position: X: -0.9051619 Y: -0.3026607 Z: -0.05304886
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 
-Also you will note, that some of the wheel meshes have a -180 on the rotation,
-that is fine, the provided script for this particular model has edits to
-factor for those rotations so as to not conflict with Wheel Colliders
-functionality.
+SM_Veh_Buggy_Wheel_fr
+---------------------------
+
+Position: X: 0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------------
+
+Position: X: -0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------------
+
+Position: X: 0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
 
 
 -----------------------------------------------------------------------------------
 
-Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
+Step 11: Duplicate: empty "WheelMeshes" as "WheelColliders"
 
 -----------------------------------------------------------------------------------
 
 
-In "Sedan" duplicate "WheelMeshes" & rename to "WheelColliders"
+In "DuneBuggy" duplicate "WheelMeshes" & rename to "WheelColliders"
 
 Set the Transform of "WheelColliders":
 
@@ -482,10 +281,11 @@ Scale:    X: 1 Y: 1 Z: 1
 Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
 be the children already present with matching infos...
 
-SM_Veh_Car_01_Wheel_fl
-SM_Veh_Car_01_Wheel_fr
-SM_Veh_Car_01_Wheel_rl
-SM_Veh_Car_01_Wheel_rr
+  SM_Veh_Buggy_Shocks_01
+    SM_Veh_Buggy_Wheel_fl
+    SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
 
 Prior to the deletion of contents in WheelColliders if you desired to
 determine the wheel radius so as to eventually use with Wheel Colliders well,
@@ -500,8 +300,8 @@ These details are important:
 Front Wheels:
 -------------
 
-Front Wheels Collider Radius: 0.3614392
-Front Wheels Collider Position Y: 0.511439 (0.3614392+0.15)  *
+Front Wheels Collider Radius: 0.4145404
+Front Wheels Collider Position Y:  (0.4145404+0.15) *
 
 * Wheel colliders need +0.15 on the Y to function as intended as per
   documentation
@@ -509,8 +309,8 @@ Front Wheels Collider Position Y: 0.511439 (0.3614392+0.15)  *
 Rear Wheels:
 ------------
 
-Rear Wheels Collider Radius: 0.3614392
-Rear Wheels Collider Position Y: 0.511439 (0.3614392+0.15) *
+Rear Wheels Collider Radius: 0.4145404
+Rear Wheels Collider Position Y:  (0.4145404+0.15) *
 
 * Wheel colliders need +0.15 on the Y to function as intended as per
   documentation
@@ -521,46 +321,52 @@ and not needed for Wheel Colliders)
 * Delete Mesh Filter
 * Delete Mesh Renderer
 
+
 Add Component "Wheel Collider" to each:
 
-SM_Veh_Car_01_Wheel_fl
-SM_Veh_Car_01_Wheel_fr
-SM_Veh_Car_01_Wheel_rl
-SM_Veh_Car_01_Wheel_rr
+  SM_Veh_Buggy_Wheel_fl
+  SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
 
-Set both front "Wheel Colliders" radius: 0.361439
-Set both rear  "Wheel Colliders" radius: 0.361439
+Set both front "Wheel Colliders" radius: 0.5032759
+Set both rear  "Wheel Colliders" radius: 0.5032759
+
 
 We will need to now edit these infos:
 
 
-SM_Veh_Car_01_Wheel_fl
----------------------------
+SM_Veh_Buggy_Wheel_fl
+---------------------
 
-Position: X: -0.7100819 Y: 0.511439 Z: 1.619223
+Position: X: -0.9051619 Y: 0.650013 Z: 1.846053
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Car_01_Wheel_fr
----------------------------
 
-Position: X: 0.7100819 Y: 0.511439 Z: 1.619223
+SM_Veh_Buggy_Wheel_fr
+---------------------
+
+Position: X: 0.9051619 Y: 0.650013 Z: 1.846053
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Car_01_Wheel_rl
----------------------------
 
-Position: X: -0.8224078 Y: 0.511439 Z: -1.130083
+SM_Veh_Buggy_Wheel_rl
+---------------------
+
+Position: X: -0.9837266 Y: 0.6532759 Z: -1.294653
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Car_01_Wheel_rr
----------------------------
 
-Position: X: 0.8224078 Y: 0.511439 Z: -1.130083
+SM_Veh_Buggy_Wheel_rr
+---------------------
+
+Position: X: 0.9837266 Y: 0.6532759 Z: -1.294653
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
 
 
 -----------------------------------------------------------------------------------
@@ -575,9 +381,8 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicle
-  Sedan
-    SM_Veh_Car_Glass_01
-    SM_Veh_Car_SteeringW  
+  DuneBuggy
+    SM_Veh_Buggy_SteeringW_01
     WheelMeshes
     WheelColliders   
     View
@@ -585,77 +390,81 @@ Vehicle
 Fully Expanded:
 
 Vehicle
-  Sedan
-    SM_Veh_Car_Glass_01
-    SM_Veh_Car_SteeringW
+  DuneBuggy
+    SM_Veh_Buggy_SteeringW_01
     WheelMeshes
-      SM_Veh_Car_01_Wheel_fl
-      SM_Veh_Car_01_Wheel_fr
-      SM_Veh_Car_01_Wheel_rl
-      SM_Veh_Car_01_Wheel_rr
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
     WheelColliders
-      SM_Veh_Car_01_Wheel_fl
-      SM_Veh_Car_01_Wheel_fr
-      SM_Veh_Car_01_Wheel_rl
-      SM_Veh_Car_01_Wheel_rr   
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
     View
-      SedanCamera
+      DuneBuggyCamera
 
 
 -----------------------------------------------------------------------------------
 
-Step 22: Add to: Sedan (SedanController.cs)
+Step 12: Add to: DuneBuggy (DuneBuggyController.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (SedanController.cs) to "Sedan"
+Attach component / script (DuneBuggyController.cs) to "DuneBuggy"
 
 Adjust the following settings:
 
 Require Components:
 -------------------
 
-Rigidbody: Sedan (Rigidbody)
+Rigidbody: DuneBuggy (Rigidbody)
+
 
 Wheel Transforms:
 -----------------
 
-Front Left: SM_Veh_Car_01_Wheel_fl (Transform)
-Front Right: SM_Veh_Car_01_Wheel_fr (Transform)
-Rear Left: SM_Veh_Car_01_Wheel_rl (Transform)
-Rear Right: SM_Veh_Car_01_Wheel_rr (Transform) 
+Front Left: SM_Veh_Buggy_Wheel_fl (Transform)
+Front Right: SM_Veh_Buggy_Wheel_fr (Transform)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Transform)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Transform) 
+
 
 WheelColliders:
 ---------------
 
-Font Left: SM_Veh_Car_01_Wheel_fl (Wheel Collider)
-Front Right: SM_Veh_Car_01_Wheel_fr (Wheel Collider)
-Rear Left: SM_Veh_Car_01_Wheel_rl (Wheel Collider)
-Rear Right: SM_Veh_Car_01_Wheel_rr (Wheel Collider) 
+Front Left: SM_Veh_Buggy_Wheel_fl (Wheel Collider)
+Front: Right: SM_Veh_Buggy_Wheel_fr (Wheel Collider)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Wheel Collider) 
 
 In Rigidbody:
 -------------
 
-Set Rigibody Mass: 1500
+Set Rigibody Mass: 1000
+
 
 -----------------------------------------------------------------------------------
 
-Step 23: Add to: SedanCamera (SedanCamera.cs)
+Step 13: Add to: DuneBuggyCamera (DuneBuggyCamera.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (SedanCamera.cs) to "SedanCamera"
+Attach component / script (DuneBuggyCamera.cs) to "DuneBuggyCamera"
 
 Adjust Settings:
 
 Transforms:
 -----------
 
-Sedan: Sedan (Transform)
+Dune Buggy: DuneBuggy (Transform)
 
 
 -----------------------------------------------------------------------------------
+
 
 Further documentation coming shortly... as available free time may allow.

@@ -1,8 +1,8 @@
-"DuneBuggyDevScene" Scene Setup Steps
+"DuneBuggyDevScene-wEntry" Scene Setup Steps
 -----------------------------------------------------------------------------------
 
 
-Prep Step: Create New Scene Called: "DuneBuggyDevScene"
+Prep Step: Create New Scene Called: "DuneBuggyDevScene-wEntry"
 
 
 -----------------------------------------------------------------------------------

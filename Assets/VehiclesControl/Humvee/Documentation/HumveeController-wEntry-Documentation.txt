@@ -1,8 +1,8 @@
-"HumveeDevScene" Scene Setup Steps
+"HumveeDevScene-wEntry" Scene Setup Steps
 -----------------------------------------------------------------------------------
 
 
-Prep Step: Create New Scene Called: "HumveeDevScene"
+Prep Step: Create New Scene Called: "HumveeDevScene-wEntry"
 
 
 -----------------------------------------------------------------------------------

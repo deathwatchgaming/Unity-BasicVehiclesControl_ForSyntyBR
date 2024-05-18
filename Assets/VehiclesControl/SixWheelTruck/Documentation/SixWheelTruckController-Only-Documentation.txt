@@ -78,201 +78,7 @@ We can now opt to clean up for better organization, simply drag the:
 
 -----------------------------------------------------------------------------------
 
-Step 4: Create: object "Player":
-
------------------------------------------------------------------------------------
-
-
-Create empty object and name such: "Player"
-
-Transform: 
-----------
-
-Position: X: 0 Y: 0.9799998 Z: -10 
-Rotation: X: 0 Y: 0  Z: 0 
-Scale:    X: 1 Y: 1  Z: 1
-
-Add Tag: "Player"
-
-
------------------------------------------------------------------------------------
-
-Step 5: Add: empty object "View":
-
------------------------------------------------------------------------------------
-
-
-In "Player" object, create a child of the "Player" object and name
-such: "View"
-
-Transform Position: X: 0 Y: 0 Z: 0
-
-
------------------------------------------------------------------------------------
-
-Step 6: Add: "Camera":
-
------------------------------------------------------------------------------------
-
-In "Player" object, add a Camera component as child of "View" and name
-such: "Camera"
-
-Transform: 
-----------
-
-Position: X: 0 Y: 0.6 Z: 0 
-Rotation: X: 0 Y: 0   Z: 0 
-Scale:    X: 1 Y: 1   Z: 1
-
-Depth: "1" 
-
-Add Tag: "MainCamera"
-
-
------------------------------------------------------------------------------------
-
-Step 7: Edit: the "CharacterController" component:
-
------------------------------------------------------------------------------------
-
-
-In "Player" object, edit the "CharacterController" component:
-
-Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
-
-
------------------------------------------------------------------------------------
-
-Step 9: Setup: Audio Source and Footstep Sounds Audio Clips:
-
------------------------------------------------------------------------------------
-
-In "Player" object edit: the "First Person Controller (Script)"
-
-Footstep Source: Player (AudioSource)
-
-Footsep Sounds: "4"
-
-Element 0: "Footstep01"
-Element 1: "Footstep02"
-Element 2: "Footstep03"
-Element 3: "Footstep04"
-
-
-That is it! You should now be able to run around your scene!
-
-
-But..., for now since we do not need the player controller at this point let
-us disable the player object / component in inspector for now until we need it
-
-
------------------------------------------------------------------------------------
-
-Step 10: Create: empty "Interface"
-
------------------------------------------------------------------------------------
-
-Create an empty called: "Interface"
-
-Layer: "UI"
-
-Transform: 
-----------
-
-Position: X: 0 Y: 0   Z: 0 
-Rotation: X: 0 Y: 0   Z: 0 
-Scale:    X: 1 Y: 1   Z: 1 
-
-
------------------------------------------------------------------------------------
-
-Step 11: In "Interface" Add UI: "Canvas"
-
------------------------------------------------------------------------------------
-
-
-Create as a child of "Interface" Add a UI: "Canvas"
-
-
------------------------------------------------------------------------------------
-
-Step 12: Create as child of "Canvas" add empty: "VehiclesEntry"
-
------------------------------------------------------------------------------------
-
-
-Create as a child of "Interface" add empty: "VehiclesEntry"
-
-Layer: "UI"
-
-
-Rect Transform: 
----------------
-
-Set at "Bottom Center"
-
-Position: X: 0 Y: 50   Z: 0 
-Width: 100
-Height: 100
-
-
------------------------------------------------------------------------------------
-
-Step 13:  Create child of "VehiclesEntry" add Text tmp: "SixWheelTruck_EntryKey"
-
------------------------------------------------------------------------------------
-
-Create as a child of "VehiclesEntry" add TextMeshPro Text: "SixWheelTruck_EntryKey"
-
-Layer: "UI"
-
-
-Rect Transform: 
----------------
-
-Set at "Top Center"
-
-Position: X: 0 Y: -50   Z: 0 
-Width: 100
-Height: 100
-
-
-Text Input: Press E
-Font Size: 36
-
-Alignment: Center & Middle
-
-Face:
------
-Dilate: 0.21
-
-Outline: Yes Thickness: 0.121
-
-Underlay: Yes Softness: 0.522
-
-Note: The face, outline and underlay are merely starting suggestions that you
-can tweak further to your desired likings as well as any other related
-settings of the likes.
-
-Ok, now that this part is done we can start moving to other setup steps...
-
-but..., for now since we do not need the interface canvas text item at this point 
-let us disable the Interface in inspector for now until we need it
-
-
------------------------------------------------------------------------------------
-
-Step 14: Create: empty "Vehicle"
+Step 4: Create: empty "Vehicle"
 
 -----------------------------------------------------------------------------------
 
@@ -294,10 +100,7 @@ Notes: Current Summary
 Note: Ok, by now your scene heirarchy at top should look like this:
 
 Environment
-Player
 Vehicle
-Interface
-EventSystem
 
 Nice and organized right?! :) Good Stuff! ;)
 
@@ -311,7 +114,7 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royal
 
 -----------------------------------------------------------------------------------
 
-Step 15: Install: "Synty Polygon Battle Royal Asset"
+Step 5: Install: "Synty Polygon Battle Royal Asset"
 
 -----------------------------------------------------------------------------------
 
@@ -331,7 +134,7 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royal
 
 -----------------------------------------------------------------------------------
 
-Step 16: Identify: the "Vehicle Prefab"
+Step 6: Identify: the "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -345,7 +148,7 @@ SM_Veh_Truck_01
 
 -----------------------------------------------------------------------------------
 
-Step 17: Add: the "Vehicle Prefab" to Scene
+Step 7: Add: the "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -366,7 +169,7 @@ Then move "SixWheelTruck" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
-Step 18: Add: empty "View" as child
+Step 8: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -382,7 +185,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 19: Add: "Camera" in empty "View" as child
+Step 9: Add: "Camera" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
@@ -402,7 +205,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 20: Add: empty "WheelMeshes" as child
+Step 10: Add: empty "WheelMeshes" as child
 
 -----------------------------------------------------------------------------------
 
@@ -474,7 +277,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
+Step 11: Duplicate: empty "WheelMeshes" as "WheelColliders"
 
 -----------------------------------------------------------------------------------
 
@@ -636,7 +439,7 @@ Vehicle
 
 -----------------------------------------------------------------------------------
 
-Step 22: Add to: SixWheelTruck (SixWheelTruckController.cs)
+Step 12: Add to: SixWheelTruck (SixWheelTruckController.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -678,7 +481,7 @@ Set Rigibody Mass: 3500
 
 -----------------------------------------------------------------------------------
 
-Step 23: Add to: SixWheelTruckCamera (SixWheelTruckCamera.cs)
+Step 13: Add to: SixWheelTruckCamera (SixWheelTruckCamera.cs)
 
 -----------------------------------------------------------------------------------
 
