@@ -661,5 +661,43 @@ Dune Buggy: DuneBuggy (Transform)
 
 -----------------------------------------------------------------------------------
 
+Step 24: Add to: DuneBuggy (DuneBuggyEntry.cs)
 
-Further documentation coming shortly... as available free time may allow.
+-----------------------------------------------------------------------------------
+
+
+Firstly, if you remember earlier in instructions we disabled the "Player"
+object & the "Interface" object as we noted those were not needed at the
+time, right?! Ok, well now they should be re-enabled as they are now needed.
+
+Attach component / script (DuneBuggyEntry.cs) to "DuneBuggy"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Dune Buggy: DuneBuggy
+Player: Player
+Interface Text Object: DuneBuggy_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
+Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+  
+
+-----------------------------------------------------------------------------------
+

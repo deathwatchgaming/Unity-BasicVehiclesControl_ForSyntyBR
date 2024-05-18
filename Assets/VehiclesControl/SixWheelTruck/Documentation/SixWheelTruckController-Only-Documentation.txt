@@ -497,6 +497,3 @@ Six Wheel Truck: SixWheelTruck (Transform)
 
 
 -----------------------------------------------------------------------------------
-
-
-Further documentation coming shortly... as available free time may allow.

@@ -457,6 +457,3 @@ Armored Truck: ArmoredTruck (Transform)
 
 
 -----------------------------------------------------------------------------------
-
-
-Further documentation coming shortly... as available free time may allow.

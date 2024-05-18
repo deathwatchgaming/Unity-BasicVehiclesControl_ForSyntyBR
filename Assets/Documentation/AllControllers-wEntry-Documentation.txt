@@ -1965,5 +1965,183 @@ Six Wheel Truck: SixWheelTruck (Transform)
 
 -----------------------------------------------------------------------------------
 
+Step 44: Add to: ArmoredTruck (ArmoredTruckEntry.cs)
 
-Further documentation coming shortly... as available free time may allow.
+-----------------------------------------------------------------------------------
+
+
+Firstly, if you remember earlier in instructions we disabled the "Player"
+object & the "Interface" object as we noted those were not needed at the
+time, right?! Ok, well now they should be re-enabled as they are now needed.
+
+
+Attach component / script (ArmoredTruckEntry.cs) to "ArmoredTruck"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Armored Truck: ArmoredTruck
+Player: Player
+InterfaceText Object: ArmoredTruck_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
+Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+-----------------------------------------------------------------------------------
+
+Step 45: Add to: DuneBuggy (DuneBuggyEntry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggyEntry.cs) to "DuneBuggy"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Dune Buggy: DuneBuggy
+Player: Player
+Interface Text Object: DuneBuggy_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
+Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+-----------------------------------------------------------------------------------
+
+Step 46: Add to: Humvee (HumveeEntry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (HumveeEntry.cs) to "Humvee"
+
+Adjust the following settings:
+
+Game Objects:
+-------------
+
+Humvee: Humvee
+Player: Player
+Interface Text Object: Humvee_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: 0.0003892779 Y: 0.9888325 Z: -0.05741239
+Size: X: 3.561238 Y: 1.514789 Z: 1.951702
+
+
+-----------------------------------------------------------------------------------
+
+Step 47: Add to: SixWheelTruck (SixWheelTruckEntry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SixWheelTruckEntry.cs) to "SixWheelTruck"
+
+Adjust the following settings:
+
+Game Objects:
+-------------
+
+Six Wheel Truck: SixWheelTruck
+Player: Player
+Interface Text Object: SixWheelTruck_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: 0.007755756 Y: 1.946628 Z: 2.775195
+Size: X: 4.208336 Y: 2.19522 Z: 1.470402
+
+
+-----------------------------------------------------------------------------------
+
+Step 48: Add to: Sedan (SedanEntry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanEntry.cs) to "Sedan"
+
+Adjust the following settings:
+
+Game Objects:
+-------------
+
+Sedan: Sedan
+Player: Player
+Interface Text Object: Sedan_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.06134325 Y: 0.8881476 Z: 0.1162676
+Size: X: 3.262136 Y: 1.416598 Z: 1.655701
+
+
+-----------------------------------------------------------------------------------

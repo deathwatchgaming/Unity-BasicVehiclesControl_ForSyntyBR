@@ -466,5 +466,3 @@ Dune Buggy: DuneBuggy (Transform)
 
 -----------------------------------------------------------------------------------
 
-
-Further documentation coming shortly... as available free time may allow.

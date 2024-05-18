@@ -654,5 +654,42 @@ Armored Truck: ArmoredTruck (Transform)
 
 -----------------------------------------------------------------------------------
 
+Step 24: Add to: ArmoredTruck (ArmoredTruckEntry.cs)
 
-Further documentation coming shortly... as available free time may allow.
+-----------------------------------------------------------------------------------
+
+
+Firstly, if you remember earlier in instructions we disabled the "Player"
+object & the "Interface" object as we noted those were not needed at the
+time, right?! Ok, well now they should be re-enabled as they are now needed.
+
+Attach component / script (ArmoredTruckEntry.cs) to "ArmoredTruck"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Armored Truck: ArmoredTruck
+Player: Player
+InterfaceText Object: ArmoredTruck_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
+Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+-----------------------------------------------------------------------------------
