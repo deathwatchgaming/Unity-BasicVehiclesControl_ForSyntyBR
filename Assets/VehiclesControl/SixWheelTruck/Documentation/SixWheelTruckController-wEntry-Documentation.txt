@@ -228,11 +228,11 @@ Height: 100
 
 -----------------------------------------------------------------------------------
 
-Step 13:  Create child of "VehiclesEntry" add Text tmp: "Sedan_EntryKey"
+Step 13:  Create child of "VehiclesEntry" add Text tmp: "SixWheelTruck_EntryKey"
 
 -----------------------------------------------------------------------------------
 
-Create as a child of "VehiclesEntry" add TextMeshPro Text: "Sedan_EntryKey"
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SixWheelTruck_EntryKey"
 
 Layer: "UI"
 
