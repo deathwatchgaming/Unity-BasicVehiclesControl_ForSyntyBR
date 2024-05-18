@@ -10,7 +10,7 @@
 
 PlayerControl:
 
- Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/PlayerControl/Documentation/Documentation.txt
+ Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/PlayerControl/Documentation/PlayerControl-Documentation.txt
 
 
 Vehicles Control:
