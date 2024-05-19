@@ -1,11 +1,31 @@
 "SixWheelTruckDevScene" Scene Setup Steps
 -----------------------------------------------------------------------------------
 
+Description:
 
-Prep Step: Create New Scene Called: "SixWheelTruckDevScene"
+Create a basic Vehicle Controller for your Unity projects using vehicle models
+from Synty Polygon Battle Royale Asset.
+
+
+Vehicle Controls: 
+-----------------
+
+Vehicle Forward:  W
+Vehicle Reverse:  S
+Turn Left:        A
+Turn Right:       D
+Apply Brake:      Space
+
+
+Manual Setup Instruction:
+-------------------------
+
+* Simply follow the instruction for manual setup found below.
 
 
 -----------------------------------------------------------------------------------
+
+Prep Step: Create New Scene Called: "SixWheelTruckDevScene"
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.

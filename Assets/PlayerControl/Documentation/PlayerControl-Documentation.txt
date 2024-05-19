@@ -2,6 +2,25 @@ PlayerControl FirstPersonController (Basic Setup Steps)
 
 -----------------------------------------------------------------------------------
 
+Description:
+
+Create a basic Player Controller for your Unity projects.
+
+Player Controls:
+----------------
+
+Player Forward:   W
+Player Reverse:   S
+Player Left:      A
+Player Right:     D
+Player Jump:      Space
+Player Sprint:    Left Shift
+
+
+Manual Setup Instruction:
+-------------------------
+
+* Simply follow the instruction for manual setup found below.
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
