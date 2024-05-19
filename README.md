@@ -49,7 +49,7 @@ Manual Setup Instruction:
 PlayerControl:
 --------------
 
- Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/PlayerControl/Documentation/PlayerControl-Documentation.txt
+* Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/PlayerControl/Documentation/PlayerControl-Documentation.txt
 
 
 Vehicles Control:
