@@ -33,7 +33,11 @@ namespace VehiclesControl
 			[Tooltip("The horizontal movement input string")]
 			// string _horizontalMoveInput
 			[SerializeField] private string _horizontalMoveInput = "Horizontal";	
-		
+
+			[Tooltip("The brake input keycode key")]
+			// KeyCode _brakeKey
+			[SerializeField] private KeyCode _brakeKey = KeyCode.Space;
+					
 		// Require Components
 		[Header("Require Components")]
 
@@ -133,7 +137,7 @@ namespace VehiclesControl
 	        // If we are pressing the space key give _currentBrakingForce a value
 
 	    	// if Input GetKey KeyCode Space
-	    	if (Input.GetKey(KeyCode.Space))
+	    	if (Input.GetKey(_brakeKey))
 	    	{
 	    		// _currentBrakeForce is _brakingForce
 	    		_currentBrakeForce = _brakingForce;
