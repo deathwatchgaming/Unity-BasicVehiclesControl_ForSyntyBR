@@ -11,30 +11,36 @@ from Synty Polygon Battle Royale Asset.
  Note: as this uses currently as of this writing say 5 of the vehicles from such, and due to licensing such vehicles cannot be included in this repository obviously. As such the provided scripts and instructions thus require having / purchasing the Synty Polygon Battle Royale Asset:  https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
 
 
-Player Controls: (provided playercontrol script for usage example if using vehicle entry script)
+Player Controls: 
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+  Note: Relkated to the provided playercontrol script for usage example if say using vehicle entry script.
+
+* Player Forward:   W
+* Player Reverse:   S
+* Player Left:      A
+* Player Right:     D
+* Player Jump:      Space
+* Player Sprint:    Left Shift
 
 
-Vehicle Controls: (related to both variantion either standalone vehicle controller and entry script)
+Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
+  Note: The following below are related to both variations either standalone vehicle controller usage and entry script usage.
 
-Entry Script: (below are specific only when entry script is applied)
+* Vehicle Forward:  W
+* Vehicle Reverse:  S
+* Turn Left:        A
+* Turn Right:       D
+* Apply Brake:      Space
 
-Enter Vehicle:    E
-Exit Vehicle:     F
+Entry Script: 
+
+  Note: The following found below are specific only when entry script is applied.
+  
+* Enter Vehicle:    E
+* Exit Vehicle:     F
 
 Manual Setup Instruction:
 -------------------------
@@ -56,7 +62,7 @@ Vehicles Control:
 
 * All vehicles in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/Documentation/AllControllers-wEntry-Documentation.txt
 
- Armored Truck Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/ArmoredTruck/Documentation/ArmoredTruckController-Only-Documentation.txt
+* Armored Truck Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/ArmoredTruck/Documentation/ArmoredTruckController-Only-Documentation.txt
 
 
 * Armored Truck Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/ArmoredTruck/Documentation/ArmoredTruckController-wEntry-Documentation.txt
