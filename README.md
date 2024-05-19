@@ -12,7 +12,7 @@ from Synty Polygon Battle Royale Asset.
 Player Controls: 
 ----------------
 
-  Note: Thje following found below are related to the provided playercontrol script for usage example if say using vehicle entry script.
+  Note: The following found below are related to the provided playercontrol script for usage example if say using vehicle entry script.
 
 * Player Forward:   W
 * Player Reverse:   S
@@ -44,9 +44,6 @@ Manual Setup Instruction:
 -------------------------
 
 * Simply follow the documentation instruction linkages for manual setups found below.
-
-
- Various provided documentations:
 
 
 PlayerControl:
