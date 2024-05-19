@@ -3,16 +3,21 @@
 Description:
 ------------
 
+
 Create basic Vehicle Controllers for your Unity projects using vehicle models
 from Synty Polygon Battle Royale Asset.
 
+
  Note: as this uses currently as of this writing say 5 of the vehicles from such, and due to licensing such vehicles cannot be included in this repository obviously. As such the provided scripts and instructions thus require having / purchasing the Synty Polygon Battle Royale Asset:  https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
+
 
 
 Player Controls: 
 ----------------
 
+
   Note: The following found below are related to the provided playercontrol script for usage example if say using vehicle entry script.
+
 
 * Player Forward:   W
 * Player Reverse:   S
@@ -25,7 +30,9 @@ Player Controls:
 Vehicle Controls: 
 -----------------
 
+
   Note: The following below are related to both variations either standalone vehicle controller usage and entry script usage.
+
 
 * Vehicle Forward:  W
 * Vehicle Reverse:  S
@@ -33,17 +40,21 @@ Vehicle Controls:
 * Turn Right:       D
 * Apply Brake:      Space
 
+
 Entry Script: 
 
+
   Note: The following found below are specific only when entry script is applied.
+
 
 * Enter Vehicle:    E
 * Exit Vehicle:     F
 
+
 Manual Setup Instruction:
 -------------------------
 
-* Simply follow the documentation instruction linkages for manual setups found below.
+Simply follow the documentation instruction linkages for manual setups found below.
 
 
 PlayerControl:
