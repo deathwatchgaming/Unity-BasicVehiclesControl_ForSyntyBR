@@ -1,6 +1,6 @@
 /*
- * File: Tank Camera
- * Name: TankCamera.cs
+ * File: TankUS Camera
+ * Name: TankUSCamera.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
@@ -11,15 +11,15 @@ using UnityEngine;
 // namespace VehiclesControl
 namespace VehiclesControl
 {
-	// public class TankCamera
-	public class TankCamera : MonoBehaviour 
+	// public class TankUSCamera
+	public class TankUSCamera : MonoBehaviour 
 	{
 		// Transforms
 		[Header("Transforms")]
 
 			[Tooltip("The tank transform")]
-		    // Transform _tank
-			[SerializeField] private Transform _tank;
+		    // Transform _tankUS
+			[SerializeField] private Transform _tankUS;
         
 		// Amounts
 		[Header("Amounts")]
@@ -57,8 +57,8 @@ namespace VehiclesControl
 			// float _desiredAngle is _rotationVector.y
 			float _desiredAngle = _rotationVector.y;
 
-			// float _desiredHeight is _tank.position.y plus _height
-			float _desiredHeight = _tank.position.y + _height;
+			// float _desiredHeight is _tankUS.position.y plus _height
+			float _desiredHeight = _tankUS.position.y + _height;
 
 			// float _transformedAngle is transform.eulerAngles.y
 			float _transformedAngle = transform.eulerAngles.y;
@@ -75,8 +75,8 @@ namespace VehiclesControl
 			// Quaternion _currentRotation is Quaternion Euler 0, _transformedAngle, 0
 			Quaternion _currentRotation = Quaternion.Euler(0, _transformedAngle, 0);
 
-			// transform position is _tank.position
-			transform.position = _tank.position;
+			// transform position is _tankUS.position
+			transform.position = _tankUS.position;
 
 			// transform position is _currentRotation times Vector3.forward times _distance
 			transform.position -= _currentRotation * Vector3.forward * _distance;
@@ -90,16 +90,16 @@ namespace VehiclesControl
 			// transform position is _tempVector3
 			transform.position = _tempVector3;
 
-			// transform LookAt _tank
-			transform.LookAt(_tank);
+			// transform LookAt _tankUS
+			transform.LookAt(_tankUS);
 
 		} // close private void LateUpdate
 	    
 		// private void FixedUpdate
 		private void FixedUpdate()
 		{
-			// Vector3 _localVelocity is _tank InverseTransformDirection _tank GetComponent Rigidbody velocity
-			Vector3 _localVelocity = _tank.InverseTransformDirection(_tank.GetComponent<Rigidbody>().velocity);
+			// Vector3 _localVelocity is _tankUS InverseTransformDirection _tankUS GetComponent Rigidbody velocity
+			Vector3 _localVelocity = _tankUS.InverseTransformDirection(_tankUS.GetComponent<Rigidbody>().velocity);
 			
 			// if
 			if (_localVelocity.z < -0.1f)
@@ -107,8 +107,8 @@ namespace VehiclesControl
 				// Vector3 _tempVector3 is _rotationVector
 				Vector3 _tempVector3 = _rotationVector;
 				
-				// _tempVector3.y is _tank.eulerAngles.y plus 180
-				_tempVector3.y = _tank.eulerAngles.y + 180;
+				// _tempVector3.y is _tankUS.eulerAngles.y plus 180
+				_tempVector3.y = _tankUS.eulerAngles.y + 180;
 
 				// _rotationVector is _tempVector3
 				_rotationVector = _tempVector3;
@@ -121,22 +121,22 @@ namespace VehiclesControl
 				// Vector3 _tempVector3 is _rotationVector
 				Vector3 _tempVector3 = _rotationVector;
 
-				// _tempVector3 y is_tank.eulerAngles.y
-				_tempVector3.y = _tank.eulerAngles.y;
+				// _tempVector3 y is_tankUS.eulerAngles.y
+				_tempVector3.y = _tankUS.eulerAngles.y;
 
 				// _rotationVector is _tempVector3
 				_rotationVector = _tempVector3;
 
 			} // close else
 	        
-			// float acc is_tank GetComponent Rigidbody velocity magnitude
-			float _acc = _tank.GetComponent<Rigidbody>().velocity.magnitude;
+			// float acc is_tankUS GetComponent Rigidbody velocity magnitude
+			float _acc = _tankUS.GetComponent<Rigidbody>().velocity.magnitude;
 
 			// GetComponent Camera fieldOfView is _defaultFieldOfView plus _acc times _zoomRatio times Time.deltaTime
 			GetComponent<Camera>().fieldOfView = _defaultFieldOfView + _acc * _zoomRatio * Time.deltaTime;
 
 		} // close private void FixedUpdate
 
-	} // close public class TankCamera
+	} // close public class TankUSCamera
 
 } // close namespace VehiclesControl

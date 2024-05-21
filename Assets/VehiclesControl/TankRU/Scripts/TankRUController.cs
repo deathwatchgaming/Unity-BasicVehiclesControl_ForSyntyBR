@@ -1,6 +1,6 @@
 /*
- * File: Tank Controller
- * Name: TankController.cs
+ * File: TankRU Controller
+ * Name: TankRUController.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
@@ -17,8 +17,8 @@ namespace VehiclesControl
 	// RequireComponent typeof Rigidbody
 	[RequireComponent(typeof(Rigidbody))]
 
-	// public class TankController
-	public class TankController : MonoBehaviour
+	// public class TankRUController
+	public class TankRUController : MonoBehaviour
 	{
 		// Input Customizations
 		[Header("Input Customizations")]
@@ -50,20 +50,20 @@ namespace VehiclesControl
 			// Rigidbody _rigidbody
 			[SerializeField] Rigidbody _rigidbody;	
 
-		// Tank Transforms
-		[Header("Tank Transforms")]
+		// TankRU Transforms
+		[Header("TankRU Transforms")]
 
 			[Tooltip("The tank body transform")]	    
-			// _tankBody
-			[SerializeField] private Transform _tankBody;
+			// _tankRUBody
+			[SerializeField] private Transform _tankRUBody;
 
 			[Tooltip("The tank turret transform")]	    
-			// _tankTurret						
-			[SerializeField] private Transform _tankTurret;
+			// _tankRUTurret						
+			[SerializeField] private Transform _tankRUTurret;
 
 			[Tooltip("The tank turret transform")]	    
-			// _tankBarrel					
-			[SerializeField] private Transform _tankBarrel;			
+			// _tankRUBarrel					
+			[SerializeField] private Transform _tankRUBarrel;			
 
 		// Wheel Transforms
 		[Header("Wheel Transforms")]
@@ -227,8 +227,8 @@ namespace VehiclesControl
 		[Header("Amounts")]
 
 			[Tooltip("The tank body rotation speed")]	    
-			// _tankRotationSpeed is 0.35
-			[SerializeField] private float _tankRotationSpeed = 0.35f;
+			// _tankRURotationSpeed is 0.35
+			[SerializeField] private float _tankRURotationSpeed = 0.35f;
 
 			[Tooltip("The tank turret rotation speed")]	    
 			// _turretRotationSpeed is 0.35
@@ -263,11 +263,11 @@ namespace VehiclesControl
 		// _barrelElevation is 0
 		private float _barrelElevation = 0f;		
 
-		// Vector3 _tankRotation
-		private Vector3 _tankBodyRotation;
+		// Vector3 _tankRURotation
+		private Vector3 _tankRUBodyRotation;
 
-		// Vector3 _tankTurretRotation
-		private Vector3 _tankTurretRotation;
+		// Vector3 _tankRUTurretRotation
+		private Vector3 _tankRUTurretRotation;
 
 		// private void Awake
 		private void Awake()
@@ -282,11 +282,11 @@ namespace VehiclesControl
 			// _rigidbody centerOfMass
 			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;
 
-			// _tankRotation is _tankRotation.transform.eulerAngles
-			_tankBodyRotation = _tankBody.transform.eulerAngles;
+			// _tankRURotation is _tankRURotation.transform.eulerAngles
+			_tankRUBodyRotation = _tankRUBody.transform.eulerAngles;
 
-			// _tankTurretRotation is _tankTurret.transform.eulerAngles
-			_tankTurretRotation = _tankTurret.transform.eulerAngles;
+			// _tankRUTurretRotation is _tankRUTurret.transform.eulerAngles
+			_tankRUTurretRotation = _tankRUTurret.transform.eulerAngles;
 	        
 		} // close private void Awake
 
@@ -306,19 +306,19 @@ namespace VehiclesControl
 		{
 			// Take care of the tank body steering
 		
-			// _tankRotation.transform.eulerAngles is _tankRotation
-			_tankBody.transform.eulerAngles = _tankBodyRotation;
+			// _tankRURotation.transform.eulerAngles is _tankRURotation
+			_tankRUBody.transform.eulerAngles = _tankRUBodyRotation;
 
-			// _tankRotation.y is Input GetAxis _horizontalMoveInput times _tankRotationSpeed
-			_tankBodyRotation.y += Input.GetAxis(_horizontalMoveInput) * _tankRotationSpeed;
+			// _tankRURotation.y is Input GetAxis _horizontalMoveInput times _tankRURotationSpeed
+			_tankRUBodyRotation.y += Input.GetAxis(_horizontalMoveInput) * _tankRURotationSpeed;
 
 			// Take care of the tank turret steering
 		
-			// _tankTurret.transform.eulerAngles is _tankTurretRotation
-			_tankTurret.transform.eulerAngles = _tankTurretRotation;
+			// _tankRUTurret.transform.eulerAngles is _tankRUTurretRotation
+			_tankRUTurret.transform.eulerAngles = _tankRUTurretRotation;
 
-			// _tankTurretRotation.y is Input GetAxis _mouseXInput times _turretRotationSpeed
-			_tankTurretRotation.y += Input.GetAxis(_mouseXInput) * _turretRotationSpeed;
+			// _tankRUTurretRotation.y is Input GetAxis _mouseXInput times _turretRotationSpeed
+			_tankRUTurretRotation.y += Input.GetAxis(_mouseXInput) * _turretRotationSpeed;
 
 			// Take care of the tank barrel eleveation control
             
@@ -328,8 +328,8 @@ namespace VehiclesControl
 			// _barrelElevation is Mathf Clamp _barrelElevation plus _barrelVert, _barrelMin, _barrelMax
 			_barrelElevation = Mathf.Clamp(_barrelElevation+_barrelVert, _barrelMin, _barrelMax);
 
-			// _tankBarrel.localRotation is Quaternion Euler _barrelElevation, 0, 0
-			_tankBarrel.localRotation = Quaternion.Euler(_barrelElevation, 0, 0);
+			// _tankRUBarrel.localRotation is Quaternion Euler _barrelElevation, 0, 0
+			_tankRUBarrel.localRotation = Quaternion.Euler(_barrelElevation, 0, 0);
             
 		} // close private void Update
 
@@ -593,6 +593,6 @@ namespace VehiclesControl
 
 	    } // close private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
 
-	} // close public class TankController
+	} // close public class TankRUController
 
 } // close namespace VehiclesControl
