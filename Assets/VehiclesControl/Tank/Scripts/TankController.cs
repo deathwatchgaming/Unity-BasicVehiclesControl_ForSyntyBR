@@ -99,8 +99,8 @@ namespace VehiclesControl
 			[SerializeField] private Transform _left07Transform;
 
 			[Tooltip("The eighth left wheel transform")]
-		    // Transform _left08Transform
-		    [SerializeField] private Transform _left08Transform;
+			// Transform _left08Transform
+			[SerializeField] private Transform _left08Transform;
 
 			[Tooltip("The ninth left wheel transform")]
 			// Transform _left09Transform
