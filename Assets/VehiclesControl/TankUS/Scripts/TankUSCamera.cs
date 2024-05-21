@@ -18,7 +18,7 @@ namespace VehiclesControl
 		[Header("Transforms")]
 
 			[Tooltip("The tank transform")]
-		    // Transform _tankUS
+			// Transform _tankUS
 			[SerializeField] private Transform _tankUS;
         
 		// Amounts
