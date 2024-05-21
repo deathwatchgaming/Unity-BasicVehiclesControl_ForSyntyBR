@@ -98,14 +98,6 @@ namespace VehiclesControl
 			// Transform _left07Transform
 			[SerializeField] private Transform _left07Transform;
 
-			[Tooltip("The eighth left wheel transform")]
-			// Transform _left08Transform
-			[SerializeField] private Transform _left08Transform;
-
-			[Tooltip("The ninth left wheel transform")]
-			// Transform _left09Transform
-			[SerializeField] private Transform _left09Transform;
-
 			// Right Wheel Transforms
 
 			[Tooltip("The first right wheel transform")]
@@ -135,14 +127,6 @@ namespace VehiclesControl
 			[Tooltip("The seventh right wheel transform")]
 			// Transform _right07Transform
 			[SerializeField] private Transform _right07Transform;
-
-			[Tooltip("The eighth right wheel transform")]
-			// Transform _right08Transform
-			[SerializeField] private Transform _right08Transform;
-
-			[Tooltip("The ninth right wheel transform")]
-			// Transform _right09Transform
-			[SerializeField] private Transform _right09Transform;
 
 		// Wheel Colliders
 		[Header("Wheel Colliders")]
@@ -175,15 +159,7 @@ namespace VehiclesControl
 
 			[Tooltip("The seventh left wheel collider")]
 			// WheelCollider _left07
-			[SerializeField] private WheelCollider _left07;
-
-			[Tooltip("The eighth left wheel collider")]
-			// WheelCollider _left08
-			[SerializeField] private WheelCollider _left08;
-
-			[Tooltip("The ninth left wheel collider")]
-			// WheelCollider _left09
-			[SerializeField] private WheelCollider _left09;		    
+			[SerializeField] private WheelCollider _left07;	    
 
 			// Right Wheel Colliders
 
@@ -214,14 +190,6 @@ namespace VehiclesControl
 			[Tooltip("The seventh right wheel collider")]
 			// WheelCollider _right07
 			[SerializeField] private WheelCollider _right07;
-
-			[Tooltip("The eighth right wheel collider")]
-			// WheelCollider _right08
-			[SerializeField] private WheelCollider _right08;
-
-			[Tooltip("The ninth right wheel collider")]
-			// WheelCollider _right09
-			[SerializeField] private WheelCollider _right09;
 
 		// Amounts
 		[Header("Amounts")]
@@ -381,16 +349,10 @@ namespace VehiclesControl
 			// _left06 motorTorque is _currentAcceleration
 			_left06.motorTorque = _currentAcceleration;	
 
-			// _left07 motorTorque is _currentAcceleration
-			_left07.motorTorque = _currentAcceleration;	
-
-			// _left08 motorTorque is _currentAcceleration
-			_left08.motorTorque = _currentAcceleration;	
-
 			// Left Sprocket
 
-			// _left09 motorTorque is _currentAcceleration
-			_left09.motorTorque = _currentAcceleration;
+			// _left07 motorTorque is _currentAcceleration
+			_left07.motorTorque = _currentAcceleration;
 
 			// Right Wheels
 
@@ -410,18 +372,12 @@ namespace VehiclesControl
 			_right05.motorTorque = _currentAcceleration;
 
 			// _right06 motorTorque is _currentAcceleration
-			_right06.motorTorque = _currentAcceleration;
-
-			// _right07 motorTorque is _currentAcceleration
-			_right07.motorTorque = _currentAcceleration;
-
-			// _right08 motorTorque is _currentAcceleration
-			_right08.motorTorque = _currentAcceleration;			
+			_right06.motorTorque = _currentAcceleration;			
 
 			// Right Sprocket
 
-			// _right09 motorTorque is _currentAcceleration
-			_right09.motorTorque = _currentAcceleration;
+			// _right07 motorTorque is _currentAcceleration
+			_right07.motorTorque = _currentAcceleration;
 
 			// Apply braking force to all of the wheels
 
@@ -448,12 +404,6 @@ namespace VehiclesControl
 			// _left07 brakeTorque is _currentBrakeForce
 			_left07.brakeTorque = _currentBrakeForce;
 
-			// _left08 brakeTorque is _currentBrakeForce
-			_left08.brakeTorque = _currentBrakeForce;
-
-			// _left09 brakeTorque is _currentBrakeForce
-			_left09.brakeTorque = _currentBrakeForce;
-
 			// Right Wheels
 
 			// _right01 brakeTorque is _currentBrakeForce
@@ -476,12 +426,6 @@ namespace VehiclesControl
 
 			// _right07 brakeTorque is _currentBrakeForce
 			_right07.brakeTorque = _currentBrakeForce;	
-
-			// _right08 brakeTorque is _currentBrakeForce
-			_right08.brakeTorque = _currentBrakeForce;
-
-			// _right09 brakeTorque is _currentBrakeForce
-			_right09.brakeTorque = _currentBrakeForce;	
 
 			// Update the wheel meshes
 
@@ -508,12 +452,6 @@ namespace VehiclesControl
 			// UpdateLeftWheel _left07 _left07Transform
 			UpdateLeftWheel(_left07, _left07Transform); 
 
-			// UpdateLeftWheel _left08 _left08Transform
-			UpdateLeftWheel(_left08, _left08Transform); 
-
-			// UpdateLeftWheel _left09 _left09Transform
-			UpdateLeftWheel(_left09, _left09Transform); 
-
 			// Right Wheels
 
 			// UpdateRightWheel _right01 _right01Transform
@@ -535,13 +473,7 @@ namespace VehiclesControl
 			UpdateRightWheel(_right06, _right06Transform); 
 
 			// UpdateRightWheel _right07 _right07Transform
-			UpdateRightWheel(_right07, _right07Transform); 
-
-			// UpdateRightWheel _right08 _right08Transform
-			UpdateRightWheel(_right08, _right08Transform); 
-
-			// UpdateRightWheel _right09 _right09Transform
-			UpdateRightWheel(_right09, _right09Transform); 
+			UpdateRightWheel(_right07, _right07Transform);  
 
 	    } // close private void FixedUpdate
 
