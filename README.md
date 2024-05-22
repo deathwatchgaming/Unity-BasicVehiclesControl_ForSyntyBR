@@ -27,8 +27,8 @@ Vehicles Currently "In Progress" & Not Yet Included:
 
 
 * Dirt Bike (90% completed) coming soon...
-* Tank US (90% completed) coming soon...
-* Tank RU (90% completed) coming soon...
+* Tank US (95% completed) coming soon...
+* Tank RU (95% completed) coming soon...
 * Rib (0% completed)
 
 
@@ -69,6 +69,12 @@ Entry Script:
 
 * Enter Vehicle:    E
 * Exit Vehicle:     F
+
+
+Note: Additional specific only to Tanks US & RU are the following controls specific to the tank turret and tank barrel movements:
+
+* Mouse X 
+* Mouse Y
 
 
 Manual Setup Instruction:
