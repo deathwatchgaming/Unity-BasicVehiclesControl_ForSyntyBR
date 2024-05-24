@@ -174,6 +174,7 @@ Let us first identify and locate the "Vehicle Prefab" we are going to use.
 Assets > PolygonBattleRoyale > Prefabs > Vehicles
 
 
+SM_Veh_Tank_USA_01
 
 
 -----------------------------------------------------------------------------------
@@ -187,7 +188,9 @@ Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completel
 
 Next, rename the vehicle prefabs:
 
- => "TankUS"
+
+SM_Veh_Tank_USA_01 => "TankUS"
+
 
 Next, set the Transform:
 
@@ -254,101 +257,162 @@ location)
 
 ---------------------------
 
+Left:
+
+SM_Veh_Tank_USA_Track_Wheel_L_01
+SM_Veh_Tank_USA_Track_Wheel_L_02
+SM_Veh_Tank_USA_Track_Wheel_L_03
+SM_Veh_Tank_USA_Track_Wheel_L_04
+SM_Veh_Tank_USA_Track_Wheel_L_05
+SM_Veh_Tank_USA_Track_Wheel_L_06
+SM_Veh_Tank_USA_Track_Wheel_L_07
+SM_Veh_Tank_USA_Track_Wheel_L_08
+SM_Veh_Tank_USA_Track_Wheel_L_09
+
+Right:
+
+SM_Veh_Tank_USA_Track_Wheel_R_01
+SM_Veh_Tank_USA_Track_Wheel_R_02
+SM_Veh_Tank_USA_Track_Wheel_R_03
+SM_Veh_Tank_USA_Track_Wheel_R_04
+SM_Veh_Tank_USA_Track_Wheel_R_05
+SM_Veh_Tank_USA_Track_Wheel_R_06
+SM_Veh_Tank_USA_Track_Wheel_R_07
+SM_Veh_Tank_USA_Track_Wheel_R_08
+SM_Veh_Tank_USA_Track_Wheel_R_09
+
+
 Transforms should be fine and unaffected but, let us just mention them for
 good measure.
 
 
----------------------------
+Left:
+
+SM_Veh_Tank_US_Track_Wheel_L_01
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_02
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_03
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_04
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_05
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_06
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_07
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_08
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_09
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 
----------------------------
+Right:
+
+
+SM_Veh_Tank_US_Track_Wheel_R_01
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_02
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_03
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_04
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_05
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_06
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_07
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
+SM_Veh_Tank_US_Track_Wheel_R_08
+-------------------------------
 
----------------------------
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_09
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
@@ -366,13 +430,37 @@ In "TankUS" duplicate "WheelMeshes" & rename to "WheelColliders"
 
 Set the Transform of "WheelColliders":
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: 0 Y: -0.015 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
 be the children already present with matching infos...
 
+
+Left:
+
+SM_Veh_Tank_USA_Track_Wheel_L_01
+SM_Veh_Tank_USA_Track_Wheel_L_02
+SM_Veh_Tank_USA_Track_Wheel_L_03
+SM_Veh_Tank_USA_Track_Wheel_L_04
+SM_Veh_Tank_USA_Track_Wheel_L_05
+SM_Veh_Tank_USA_Track_Wheel_L_06
+SM_Veh_Tank_USA_Track_Wheel_L_07
+SM_Veh_Tank_USA_Track_Wheel_L_08
+SM_Veh_Tank_USA_Track_Wheel_L_09
+
+Right:
+
+SM_Veh_Tank_USA_Track_Wheel_R_01
+SM_Veh_Tank_USA_Track_Wheel_R_02
+SM_Veh_Tank_USA_Track_Wheel_R_03
+SM_Veh_Tank_USA_Track_Wheel_R_04
+SM_Veh_Tank_USA_Track_Wheel_R_05
+SM_Veh_Tank_USA_Track_Wheel_R_06
+SM_Veh_Tank_USA_Track_Wheel_R_07
+SM_Veh_Tank_USA_Track_Wheel_R_08
+SM_Veh_Tank_USA_Track_Wheel_R_09
 
 
 Prior to the deletion of contents in WheelColliders if you desired to
@@ -418,98 +506,133 @@ Set all rear  "Wheel Colliders" radius: 0
 We will need to now edit these infos:
 
 
+Left:
 
----------------------------
+SM_Veh_Tank_US_Track_Wheel_L_01
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_02
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_03
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_04
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_05
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_06
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_07
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_08
+-------------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_09
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 
----------------------------
+Right:
+
+
+SM_Veh_Tank_US_Track_Wheel_R_01
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_02
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_03
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_04
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_05
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_06
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
----------------------------
-
-Position: X: 0 Y: 0 Z: 0
-Rotation: X: 0 Y: 0 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-
----------------------------
+SM_Veh_Tank_US_Track_Wheel_R_07
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
+SM_Veh_Tank_US_Track_Wheel_R_08
+-------------------------------
 
----------------------------
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_09
+-------------------------------
 
 Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
@@ -529,6 +652,9 @@ Mostly Collapsed:
 
 Vehicle
   TankUS
+    SM_Veh_Tank_USA_Track_L
+    SM_Veh_Tank_USA_Track_R
+    SM_Veh_Tank_USA_Turret_01 
     WheelMeshes
     WheelColliders   
     View
@@ -537,11 +663,48 @@ Fully Expanded:
 
 Vehicle
   TankUS
-
+    SM_Veh_Tank_USA_Track_L
+    SM_Veh_Tank_USA_Track_R
+    SM_Veh_Tank_USA_Turret_01
+      SM_Veh_Tank_USA_Turret_Barrel_01
     WheelMeshes
-
+      SM_Veh_Tank_USA_Track_Wheel_L_01
+      SM_Veh_Tank_USA_Track_Wheel_L_02
+      SM_Veh_Tank_USA_Track_Wheel_L_03
+      SM_Veh_Tank_USA_Track_Wheel_L_04
+      SM_Veh_Tank_USA_Track_Wheel_L_05
+      SM_Veh_Tank_USA_Track_Wheel_L_06
+      SM_Veh_Tank_USA_Track_Wheel_L_07
+      SM_Veh_Tank_USA_Track_Wheel_L_08
+      SM_Veh_Tank_USA_Track_Wheel_L_09
+      SM_Veh_Tank_USA_Track_Wheel_R_01
+      SM_Veh_Tank_USA_Track_Wheel_R_02
+      SM_Veh_Tank_USA_Track_Wheel_R_03
+      SM_Veh_Tank_USA_Track_Wheel_R_04
+      SM_Veh_Tank_USA_Track_Wheel_R_05
+      SM_Veh_Tank_USA_Track_Wheel_R_06
+      SM_Veh_Tank_USA_Track_Wheel_R_07
+      SM_Veh_Tank_USA_Track_Wheel_R_08
+      SM_Veh_Tank_USA_Track_Wheel_R_09
     WheelColliders
- 
+      SM_Veh_Tank_USA_Track_Wheel_L_01
+      SM_Veh_Tank_USA_Track_Wheel_L_02
+      SM_Veh_Tank_USA_Track_Wheel_L_03
+      SM_Veh_Tank_USA_Track_Wheel_L_04
+      SM_Veh_Tank_USA_Track_Wheel_L_05
+      SM_Veh_Tank_USA_Track_Wheel_L_06
+      SM_Veh_Tank_USA_Track_Wheel_L_07
+      SM_Veh_Tank_USA_Track_Wheel_L_08
+      SM_Veh_Tank_USA_Track_Wheel_L_09
+      SM_Veh_Tank_USA_Track_Wheel_R_01
+      SM_Veh_Tank_USA_Track_Wheel_R_02
+      SM_Veh_Tank_USA_Track_Wheel_R_03
+      SM_Veh_Tank_USA_Track_Wheel_R_04
+      SM_Veh_Tank_USA_Track_Wheel_R_05
+      SM_Veh_Tank_USA_Track_Wheel_R_06
+      SM_Veh_Tank_USA_Track_Wheel_R_07
+      SM_Veh_Tank_USA_Track_Wheel_R_08
+      SM_Veh_Tank_USA_Track_Wheel_R_09 
     View
       TankUSCamera
 
@@ -561,6 +724,15 @@ Require Components:
 -------------------
 
 Rigidbody: TankUS (Rigidbody)
+
+
+TankUS Transforms:
+------------------
+
+Tank US Body: TankUS (Transform)
+Tank US Turret: SM_Veh_Tank_USA_Turret_01 (Transform)
+Tank US Barrel: SM_Veh_Tank_USA_Turret_Barrel_01 (Transform)
+
 
 Wheel Transforms:
 -----------------
@@ -609,13 +781,31 @@ Attach component / script (TankUSTrackScrolling.cs) to "TankUS"
 
 Adjust Settings:
 
-Transforms:
------------
+TankUS Rigidbody:
+-----------------
 
-Track L: (Transform)
-Track R: (Transform)
+Rigidbody: TankUS (Rigidbody)
+
+
+Track Scrolling:
+---------------- 
+
+Scroll Speed: 0.05
+Invert: NO
+
+Mesh Renderers:
+---------------
+
+Track Renderers: 2
+
+SM_Veh_Tank_USA_Track_L (Mesh Renderer)
+
+SM_Veh_Tank_USA_Track_R (Mesh Renderer)
+
 
 -----------------------------------------------------------------------------------
+
+
 
 
 That should about sum it up and should be about it and concludes the basic
