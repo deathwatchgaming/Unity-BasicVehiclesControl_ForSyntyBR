@@ -98,8 +98,7 @@ Vehicles Control:
 * TankUS Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankUS/Documentation/TankUSController-Only-Documentation.txt
 
 
-* TankUS Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankUS/Documentation/TankUSController-wEntry-Documentation.txt
-
+* TankUS Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankUS/Documentation/TankUSController-Only-wEntry-Documentation.txt
 
 * Armored Truck Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/ArmoredTruck/Documentation/ArmoredTruckController-Only-Documentation.txt
 
@@ -134,7 +133,7 @@ Vehicles Control:
 * TankRU Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankRU/Documentation/TankRUController-Only-Documentation.txt
 
 
-* TankRU Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankRU/Documentation/TankRUController-wEntry-Documentation.txt
+* TankRU Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankRU/Documentation/TankRUController-Only-wEntry-Documentation.txt
 
 
  
