@@ -289,63 +289,63 @@ Left:
 SM_Veh_Tank_US_Track_Wheel_L_01
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.8289917 Z: 3.356318
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_02
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.4179952 Z: 2.309
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_03
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.4179952 Z: 1.56178
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_04
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.4179952 Z: 0.8150922
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_05
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.4179952 Z: 0.0873564
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_06
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.4179952 Z: -0.6593317
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_07
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.4179952 Z: -1.394437
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_08
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.4179952 Z: -2.141125
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_09
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.49857 Y: 0.8754374 Z: -3.052751
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -356,65 +356,66 @@ Right:
 SM_Veh_Tank_US_Track_Wheel_R_01
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.8289917 Z: 3.356318
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_02
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.4179952 Z: 2.452122
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_03
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.4179952 Z: 1.56178
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_04
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.4179952 Z: 0.8150922
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_05
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.4179952 Z: 0.0873564
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_06
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.4179952 Z: -0.6593317
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_07
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.4179952 Z: -1.394437
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_08
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.4179952 Z: -2.141125
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_09
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.498295 Y: 0.862684 Z: -3.047343
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
 
 
 -----------------------------------------------------------------------------------
