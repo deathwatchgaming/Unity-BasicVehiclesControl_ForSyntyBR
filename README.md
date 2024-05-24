@@ -11,6 +11,12 @@ from Synty Polygon Battle Royale Asset.
  Note: As this uses currently as of this writing say 7 of the vehicles from such and due to licensing such said vehicles cannot be included in this repository obviously, so, as such the provided scripts and instructions thus require having / purchasing the Synty Polygon Battle Royale Asset:  https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
 
 
+Release Intentions note:
+------------------------
+
+The intention of these releases due to only being scripts for usage with models one must already own or opt to purchase and as such was known that one could not release such models with the package here the intent was to provide basic vehicle functionality as a start point as fully functional in terms of an opinion of basic but leave out optional continuances in the hopes that these will be used as starting points for folks to continue on with and improve upon. Now, some of the things intentionally left out, umm, sudio sources, audio clips, particle systems and or raycast or projectile functionality for tank turret say for example on the tank controllers as leaving these initializations of such aforementioned  out was intentional in the hope the end user will continue to add those as desired. And while these are great hints, tips or suggestions if you were think of what to add next, please note though, that is not to say if and or when I may find myself to have free time say I just may or may not opt to add such at later dates. Another thing to note is that I intentionally left out was adding a fuel system to these at this time because again the intent was to provide basic functional vehicle controllers as starting points 
+
+
 Vehicles Currently "Completed" & Included:
 ------------------------------------------
 
