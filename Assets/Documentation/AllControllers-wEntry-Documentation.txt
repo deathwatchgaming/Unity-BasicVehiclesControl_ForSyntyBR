@@ -465,6 +465,8 @@ Step 18: Create: empty "Vehicles"
 -----------------------------------------------------------------------------------
 
 
+Now that you disabled the interface, let us go back in your scene heirarchy and...
+
 Create Empty: "Vehicles"
 
 Position: X: 0 Y: 0 Z: 0 

@@ -1,10 +1,11 @@
-"SedanDevScene-wEntry" Scene Setup Steps
+"TankRUDevScene-wEntry" Scene Setup Steps
 -----------------------------------------------------------------------------------
 
 Description:
 
 Create a basic Vehicle Controller for your Unity projects using vehicle models
 from Synty Polygon Battle Royale Asset.
+
 
 Player Controls:
 ----------------
@@ -28,6 +29,14 @@ Apply Brake:      Space
 Enter Vehicle:    E
 Exit Vehicle:     F
 
+
+Note: the following controls below are specific to the tank turret and tank
+barrel movements:
+
+* Mouse X 
+* Mouse Y
+
+
 Manual Setup Instruction:
 -------------------------
 
@@ -36,7 +45,7 @@ Manual Setup Instruction:
 
 -----------------------------------------------------------------------------------
 
-Prep Step: Create New Scene Called: "SedanDevScene-wEntry"
+Prep Step: Create New Scene Called: "TankRUkDevScene-wEntry"
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
@@ -105,7 +114,6 @@ Scale:    X: 1     Y: 1 Z: 1
 
 We can now opt to clean up for better organization, simply drag the:
 "Terrain" into the holder "Environment" we added for just this exact purpose!
-
 
 -----------------------------------------------------------------------------------
 
@@ -259,11 +267,11 @@ Height: 100
 
 -----------------------------------------------------------------------------------
 
-Step 13:  Create child of "VehiclesEntry" add Text tmp: "Sedan_EntryKey"
+Step 13:  Create child of "VehiclesEntry" add Text tmp: "TankRU_EntryKey"
 
 -----------------------------------------------------------------------------------
 
-Create as a child of "VehiclesEntry" add TextMeshPro Text: "Sedan_EntryKey"
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "TankRU_EntryKey"
 
 Layer: "UI"
 
@@ -373,7 +381,7 @@ Let us first identify and locate the "Vehicle Prefab" we are going to use.
 
 Assets > PolygonBattleRoyale > Prefabs > Vehicles
 
-SM_Veh_Car_01
+
 
 
 -----------------------------------------------------------------------------------
@@ -387,7 +395,7 @@ Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completel
 
 Next, rename the vehicle prefabs:
 
-SM_Veh_Truck_01 => "Sedan"
+ => "TankRU"
 
 Next, set the Transform:
 
@@ -395,8 +403,7 @@ Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-Then move "Sedan" into the empty: "Vehicle" as child of.
-
+Then move "TankRU" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
@@ -405,7 +412,7 @@ Step 18: Add: empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In "Sedan" add empty as child named "View"
+In "TankRU" add empty as child named "View"
 
 Set the Transform of "View":
 
@@ -421,15 +428,15 @@ Step 19: Add: "Camera" in empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In the empty: "View" add "Camera" component named: "SedanCamera"
+In the empty: "View" add "Camera" component named: "TankRUCamera"
 
 Tag: Untagged
 
 Depth: 0
 
-Set the Transform of "SedanCamera":
+Set the Transform of "TankRUCamera":
 
-Position: X: 0 Y: 1.4 Z: -6.4 
+Position: X: 0 Y: 2.8 Z: -8.4 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -441,7 +448,7 @@ Step 20: Add: empty "WheelMeshes" as child
 -----------------------------------------------------------------------------------
 
 
-In "Sedan" add empty as child named "WheelMeshes"
+In "TankRU" add empty as child named "WheelMeshes"
 
 Set the Transform of "WheelMeshes":
 
@@ -453,47 +460,136 @@ Copy & paste the following meshes into "WheelMeshes" as children
 (delete originals after as they are not needed since we copied them into new
 location)
 
-SM_Veh_Car_01_Wheel_fl
-SM_Veh_Car_01_Wheel_fr
-SM_Veh_Car_01_Wheel_rl
-SM_Veh_Car_01_Wheel_rr
+---------------------------
 
 Transforms should be fine and unaffected but, let us just mention them for
-good measure. 
+good measure.
 
-SM_Veh_Car_01_Wheel_fl
+
+
 ---------------------------
 
-Position: X: -0.7100819 Y: 0.361439 Z: 1.619223
+Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Car_01_Wheel_fr
+
 ---------------------------
 
-Position: X: 0.7100819 Y: 0.361439 Z: 1.619223
-Rotation: X: 0 Y: -180 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-SM_Veh_Car_01_Wheel_rl
----------------------------
-
-Position: X: -0.8224078 Y: 0.361439 Z: -1.130083
+Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Car_01_Wheel_rr
+
 ---------------------------
 
-Position: X: 0.8224078 Y: 0.361439 Z: -1.130083
-Rotation: X: 0 Y: -180 Z: 0 
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 
-Also you will note, that some of the wheel meshes have a -180 on the rotation,
-that is fine, the provided script for this particular model has edits to
-factor for those rotations so as to not conflict with Wheel Colliders
-functionality.
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
 
 
 -----------------------------------------------------------------------------------
@@ -503,7 +599,7 @@ Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
 -----------------------------------------------------------------------------------
 
 
-In "Sedan" duplicate "WheelMeshes" & rename to "WheelColliders"
+In "TankRU" duplicate "WheelMeshes" & rename to "WheelColliders"
 
 Set the Transform of "WheelColliders":
 
@@ -511,14 +607,10 @@ Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
 Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
 be the children already present with matching infos...
 
-SM_Veh_Car_01_Wheel_fl
-SM_Veh_Car_01_Wheel_fr
-SM_Veh_Car_01_Wheel_rl
-SM_Veh_Car_01_Wheel_rr
+
 
 Prior to the deletion of contents in WheelColliders if you desired to
 determine the wheel radius so as to eventually use with Wheel Colliders well,
@@ -529,12 +621,11 @@ need to do so.
 
 These details are important:
 
-
 Front Wheels:
 -------------
 
-Front Wheels Collider Radius: 0.3614392
-Front Wheels Collider Position Y: 0.511439 (0.3614392+0.15)  *
+Front Wheels Collider Radius: 0
+Front Wheels Collider Position Y: 0 (0+0.15) *
 
 * Wheel colliders need +0.15 on the Y to function as intended as per
   documentation
@@ -542,8 +633,8 @@ Front Wheels Collider Position Y: 0.511439 (0.3614392+0.15)  *
 Rear Wheels:
 ------------
 
-Rear Wheels Collider Radius: 0.3614392
-Rear Wheels Collider Position Y: 0.511439 (0.3614392+0.15) *
+Rear Wheels Collider Radius: 
+Rear Wheels Collider Position Y: 0 (0+0.15) *
 
 * Wheel colliders need +0.15 on the Y to function as intended as per
   documentation
@@ -556,42 +647,135 @@ and not needed for Wheel Colliders)
 
 Add Component "Wheel Collider" to each:
 
-SM_Veh_Car_01_Wheel_fl
-SM_Veh_Car_01_Wheel_fr
-SM_Veh_Car_01_Wheel_rl
-SM_Veh_Car_01_Wheel_rr
 
-Set both front "Wheel Colliders" radius: 0.361439
-Set both rear  "Wheel Colliders" radius: 0.361439
+
+Set both front "Wheel Colliders" radius: 0
+Set all rear  "Wheel Colliders" radius: 0
 
 We will need to now edit these infos:
 
 
-SM_Veh_Car_01_Wheel_fl
 ---------------------------
 
-Position: X: -0.7100819 Y: 0.511439 Z: 1.619223
+Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Car_01_Wheel_fr
+
 ---------------------------
 
-Position: X: 0.7100819 Y: 0.511439 Z: 1.619223
+Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Car_01_Wheel_rl
+
 ---------------------------
 
-Position: X: -0.8224078 Y: 0.511439 Z: -1.130083
+Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Car_01_Wheel_rr
+
 ---------------------------
 
-Position: X: 0.8224078 Y: 0.511439 Z: -1.130083
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+---------------------------
+
+Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -608,9 +792,7 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicle
-  Sedan
-    SM_Veh_Car_Glass_01
-    SM_Veh_Car_SteeringW  
+  TankRU
     WheelMeshes
     WheelColliders   
     View
@@ -618,80 +800,89 @@ Vehicle
 Fully Expanded:
 
 Vehicle
-  Sedan
-    SM_Veh_Car_Glass_01
-    SM_Veh_Car_SteeringW
+  TankRU
+
     WheelMeshes
-      SM_Veh_Car_01_Wheel_fl
-      SM_Veh_Car_01_Wheel_fr
-      SM_Veh_Car_01_Wheel_rl
-      SM_Veh_Car_01_Wheel_rr
+
     WheelColliders
-      SM_Veh_Car_01_Wheel_fl
-      SM_Veh_Car_01_Wheel_fr
-      SM_Veh_Car_01_Wheel_rl
-      SM_Veh_Car_01_Wheel_rr   
+ 
     View
-      SedanCamera
+      TankRUCamera
 
 
 -----------------------------------------------------------------------------------
 
-Step 22: Add to: Sedan (SedanController.cs)
+Step 22: Add to: TankRU (TankRUController.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (SedanController.cs) to "Sedan"
+Attach component / script (TankRUController.cs) to "TankRU"
 
 Adjust the following settings:
 
 Require Components:
 -------------------
 
-Rigidbody: Sedan (Rigidbody)
+Rigidbody: TankRU (Rigidbody)
 
 Wheel Transforms:
 -----------------
 
-Front Left: SM_Veh_Car_01_Wheel_fl (Transform)
-Front Right: SM_Veh_Car_01_Wheel_fr (Transform)
-Rear Left: SM_Veh_Car_01_Wheel_rl (Transform)
-Rear Right: SM_Veh_Car_01_Wheel_rr (Transform) 
+Left:  (Transform)
+Right:  (Transform)
 
 WheelColliders:
 ---------------
 
-Font Left: SM_Veh_Car_01_Wheel_fl (Wheel Collider)
-Front Right: SM_Veh_Car_01_Wheel_fr (Wheel Collider)
-Rear Left: SM_Veh_Car_01_Wheel_rl (Wheel Collider)
-Rear Right: SM_Veh_Car_01_Wheel_rr (Wheel Collider) 
+Left: (Wheel Collider)
+Right:  (Wheel Collider)
+
 
 In Rigidbody:
 -------------
 
-Set Rigibody Mass: 1500
+Set Rigibody Mass: 7000
+
 
 -----------------------------------------------------------------------------------
 
-Step 23: Add to: SedanCamera (SedanCamera.cs)
+Step 23: Add to: TankRUCamera (TankRUCamera.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (SedanCamera.cs) to "SedanCamera"
+Attach component / script (TankRUCamera.cs) to "TankRUCamera"
 
 Adjust Settings:
 
 Transforms:
 -----------
 
-Sedan: Sedan (Transform)
+Tank RU: TankRU (Transform)
 
 
 -----------------------------------------------------------------------------------
 
-Step 24: Add to: Sedan (SedanEntry.cs)
+Step 24: Add to: TankUS (TankRUTrackScrolling.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankRUTrackScrolling.cs) to "TankRU"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Track L: (Transform)
+Track R: (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 25: Add to: TankRU (TankRUEntry.cs)
 
 -----------------------------------------------------------------------------------
 
@@ -700,7 +891,8 @@ Firstly, if you remember earlier in instructions we disabled the "Player"
 object & the "Interface" object as we noted those were not needed at the
 time, right?! Ok, well now they should be re-enabled as they are now needed.
 
-Attach component / script (SedanEntry.cs) to "Sedan"
+
+Attach component / script (TankRUEntry.cs) to "TankRU"
 
 Adjust the following settings:
 
@@ -708,9 +900,9 @@ Adjust the following settings:
 Game Objects:
 -------------
 
-Sedan: Sedan
+Tank US: TankRU
 Player: Player
-Interface Text Object: Sedan_EntryKey
+Interface Text Object: TankRU_EntryKey
 
 
 In Box Collider:
@@ -720,17 +912,16 @@ Is Trigger: Yes
 
 Edit Collider: YES!* 
 
-* Edit the collider to be around the vehicle doors makings sure to extend the
-  collider a good bit out away from doors so as to allow for a good trigger
+* Edit the collider to be around the vehicle making sure to extend the
+  collider a good bit out away from such so as to allow for a good trigger
   zone. Here is just an example that I suggest you tweak further to you
   likings and needs:
 
-Center: X: -0.06134325 Y: 0.8881476 Z: 0.1162676
-Size: X: 3.262136 Y: 1.416598 Z: 1.655701
+Center: X:  Y:  Z: 
+Size: X:  Y:  Z: 
 
 
 -----------------------------------------------------------------------------------
-
 
 That should about sum it up and should be about it and concludes the basic
 Vehicle Controller manual setup steps. You can now begin to modify such
