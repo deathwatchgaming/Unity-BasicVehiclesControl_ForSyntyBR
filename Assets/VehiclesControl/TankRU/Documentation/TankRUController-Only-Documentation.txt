@@ -250,7 +250,6 @@ Copy & paste the following meshes into "WheelMeshes" as children
 (delete originals after as they are not needed since we copied them into new
 location)
 
------------------------------------
 
 Left:
 
@@ -282,49 +281,49 @@ Left:
 SM_Veh_Tank_Russia_Track_Wheel_L_01
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.559748 Y: 0.8468547 Z: 2.733236
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_02
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.505886 Y: 0.5171387 Z: 1.849813
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_03
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.505886 Y: 0.5171387 Z: 0.767
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_04
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.505886 Y: 0.5171387 Z: -0.258
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_05
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.505886 Y: 0.5171387 Z: -1.21
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_06
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.505886 Y: 0.5171387 Z: -2.206517
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_07
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.415374 Y: 0.8156583 Z: -3.041019
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -335,51 +334,52 @@ Right:
 SM_Veh_Tank_Russia_Track_Wheel_R_01
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.559747 Y: 0.8468553 Z: 2.733234
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_02
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.505885 Y: 0.517139 Z: 1.849814
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_03
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.505885 Y: 0.517139 Z: 0.79
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_04
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.505885 Y: 0.517139 Z: -0.194
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_05
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.505885 Y: 0.517139 Z: -1.2
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_06
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.505885 Y: 0.517139 Z: -2.206516
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_07
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.415374 Y: 0.8156583 Z: -3.041019
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
 
 -----------------------------------------------------------------------------------
 
@@ -429,21 +429,6 @@ need to do so.
 
 These details are important:
 
-Front Wheels:
--------------
-
-Front Wheels Collider Radius: 0
-Front Wheels Collider Position Y: 0 (0+0.15) *
-
-* Wheel colliders need +0.15 on the Y to function as intended as per
-  documentation
-
-Rear Wheels:
-------------
-
-Rear Wheels Collider Radius: 
-Rear Wheels Collider Position Y: 0 (0+0.15) *
-
 * Wheel colliders need +0.15 on the Y to function as intended as per
   documentation
 
@@ -455,62 +440,129 @@ and not needed for Wheel Colliders)
 
 Add Component "Wheel Collider" to each:
 
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+
+Right:
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+SM_Veh_Tank_Russia_Track_Wheel_R_07
 
 
-Set both front "Wheel Colliders" radius: 0
-Set all rear  "Wheel Colliders" radius: 0
+Wheel Collider Radius:
+----------------------
+
+
+Left:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_L_01 "Wheel Collider" radius: 0.3202184
+Set SM_Veh_Tank_Russia_Track_Wheel_L_02 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_03 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_04 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_05 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_06 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_07 "Wheel Collider" radius: 0.3966376
+
+Right:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_R_01 "Wheel Collider" radius: 0.3202184
+Set SM_Veh_Tank_Russia_Track_Wheel_R_02 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_03 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_04 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_05 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_06 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_07 "Wheel Collider" radius: 0.3966376
+
+
+Wheel Collider Suspension Distance:
+-----------------------------------
+
+
+Left:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_L_01 "Wheel Collider" Suspension Distance: 0.2
+Set SM_Veh_Tank_Russia_Track_Wheel_L_02 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_03 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_04 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_05 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_06 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_07 "Wheel Collider" Suspension Distance: 0.17
+
+Right:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_R_01 "Wheel Collider" Suspension Distance: 0.2
+Set SM_Veh_Tank_Russia_Track_Wheel_R_02 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_03 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_04 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_05 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_06 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_07 "Wheel Collider" Suspension Distance: 0.17
+
 
 We will need to now edit these infos:
 
 
 Left:
 
+
 SM_Veh_Tank_Russia_Track_Wheel_L_01
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.559748 Y: 0.9968547 Z: 2.733236
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_02
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.505886 Y: 0.6671387 Z: 1.849813
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_03
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.505886 Y: 0.6671387 Z: 0.767
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_04
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.505886 Y: 0.6671387 Z: -0.258
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_05
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.505886 Y: 0.6671387 Z: -1.21
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_06
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.505886 Y: 0.6671387 Z: -2.206517
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_L_07
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.415374 Y: 0.9656583 Z: -3.041019
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -521,49 +573,49 @@ Right:
 SM_Veh_Tank_Russia_Track_Wheel_R_01
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.559747 Y: 0.9968553 Z: 2.733234
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_02
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.505885 Y: 0.667139 Z: 1.849814
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_03
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.505885 Y: 0.667139 Z: 0.79
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_04
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.505885 Y: 0.667139 Z: -0.194
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_05
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.505885 Y: 0.667139 Z: -1.2
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_06
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.505885 Y: 0.667139 Z: -2.206516
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_Russia_Track_Wheel_R_07
 -----------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.415374 Y: 0.9656583 Z: -3.041019
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -646,17 +698,50 @@ Require Components:
 
 Rigidbody: TankRU (Rigidbody)
 
+
 Wheel Transforms:
 -----------------
 
-Left:  (Transform)
-Right:  (Transform)
+Left01 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_01 (Transform)
+Left02 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_02 (Transform)
+Left03 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_03 (Transform)
+Left04 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_04 (Transform)
+Left05 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_05 (Transform)
+Left06 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_06 (Transform)
+Left07 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_07 (Transform)
+
+
+Right01 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_01 (Transform)
+Right02 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_02 (Transform)
+Right03 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_03 (Transform)
+Right04 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_04 (Transform)
+Right05 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_05 (Transform)
+Right06 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_06 (Transform)
+Right07 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_07 (Transform)
+
+
 
 WheelColliders:
 ---------------
 
-Left: (Wheel Collider)
-Right:  (Wheel Collider)
+
+Left01: SM_Veh_Tank_Russia_Track_Wheel_L_01 (Wheel Collider)
+Left02: SM_Veh_Tank_Russia_Track_Wheel_L_02 (Wheel Collider)
+Left03: SM_Veh_Tank_Russia_Track_Wheel_L_03 (Wheel Collider)
+Left04: SM_Veh_Tank_Russia_Track_Wheel_L_04 (Wheel Collider)
+Left05: SM_Veh_Tank_Russia_Track_Wheel_L_05 (Wheel Collider)
+Left06: SM_Veh_Tank_Russia_Track_Wheel_L_06 (Wheel Collider)
+Left07: SM_Veh_Tank_Russia_Track_Wheel_L_07 (Wheel Collider)
+
+
+Right01: SM_Veh_Tank_Russia_Track_Wheel_R_01 (Wheel Collider)
+Right02: SM_Veh_Tank_Russia_Track_Wheel_R_02 (Wheel Collider)
+Right03: SM_Veh_Tank_Russia_Track_Wheel_R_03 (Wheel Collider)
+Right04: SM_Veh_Tank_Russia_Track_Wheel_R_04 (Wheel Collider)
+Right05: SM_Veh_Tank_Russia_Track_Wheel_R_05 (Wheel Collider)
+Right06: SM_Veh_Tank_Russia_Track_Wheel_R_06 (Wheel Collider)
+Right07: SM_Veh_Tank_Russia_Track_Wheel_R_07 (Wheel Collider)
+
 
 
 In Rigidbody:
@@ -692,6 +777,7 @@ Step 14: Add to: TankUS (TankRUTrackScrolling.cs)
 Attach component / script (TankRUTrackScrolling.cs) to "TankRU"
 
 Adjust Settings:
+
 
 TankRU Rigidbody:
 -----------------

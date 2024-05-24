@@ -673,20 +673,6 @@ need to do so.
 
 These details are important:
 
-Front Wheels:
--------------
-
-Front Wheels Collider Radius: 0
-Front Wheels Collider Position Y: 0 (0+0.15) *
-
-* Wheel colliders need +0.15 on the Y to function as intended as per
-  documentation
-
-Rear Wheels:
-------------
-
-Rear Wheels Collider Radius: 
-Rear Wheels Collider Position Y: 0 (0+0.15) *
 
 * Wheel colliders need +0.15 on the Y to function as intended as per
   documentation
@@ -699,10 +685,63 @@ and not needed for Wheel Colliders)
 
 Add Component "Wheel Collider" to each:
 
+Wheel Collider Radius:
+----------------------
 
 
-Set both front "Wheel Colliders" radius: 0
-Set all rear  "Wheel Colliders" radius: 0
+Left:
+
+Set SM_Veh_Tank_USA_Track_Wheel_L_01 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_02 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_03 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_04 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_05 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_06 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_07 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_08 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_09 "Wheel Collider" radius: 0.3252691
+
+Right:
+
+Set SM_Veh_Tank_USA_Track_Wheel_R_01 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_02 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_03 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_04 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_05 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_06 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_07 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_08 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_09 "Wheel Collider" radius: 0.3252691
+
+
+Wheel Collider Suspension Distance:
+-----------------------------------
+
+
+Left:
+
+Set SM_Veh_Tank_USA_Track_Wheel_L_01 "Wheel Collider" Suspension Distance: 0.2
+Set SM_Veh_Tank_USA_Track_Wheel_L_02 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_03 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_04 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_05 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_06 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_07 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_08 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_09 "Wheel Collider" Suspension Distance: 0.2
+
+Right:
+
+Set SM_Veh_Tank_USA_Track_Wheel_R_01 "Wheel Collider" Suspension Distance: 0.2
+Set SM_Veh_Tank_USA_Track_Wheel_R_02 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_03 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_04 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_05 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_06 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_07 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_08 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_09 "Wheel Collider" Suspension Distance: 0.2
+
 
 We will need to now edit these infos:
 
@@ -712,63 +751,63 @@ Left:
 SM_Veh_Tank_US_Track_Wheel_L_01
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.9789917 Z: 3.356318
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_02
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.5679952 Z: 2.309
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_03
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.5679952 Z: 1.56178
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_04
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.5679952 Z: 0.8150922
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_05
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.5679952 Z: 0.0873564
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_06
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.5679952 Z: -0.6593317
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_07
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.5679952 Z: -1.394437
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_08
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.469488 Y: 0.5679952 Z: -2.141125
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_L_09
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: -1.49857 Y: 1.025437 Z: -3.052751
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -779,65 +818,66 @@ Right:
 SM_Veh_Tank_US_Track_Wheel_R_01
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.9789917 Z: 3.356318
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_02
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.5679952 Z: 2.452122
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_03
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.5679952 Z: 1.56178
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_04
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.5679952 Z: 0.8150922
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_05
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.5679952 Z: 0.0873564
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_06
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.5679952 Z: -0.6593317
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_07
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.5679952 Z: -1.394437
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_08
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.469212 Y: 0.5679952 Z: -2.141125
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
 SM_Veh_Tank_US_Track_Wheel_R_09
 -------------------------------
 
-Position: X: 0 Y: 0 Z: 0
+Position: X: 1.498295 Y: 1.012684 Z: -3.047343
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
 
 
 -----------------------------------------------------------------------------------
@@ -938,14 +978,50 @@ Tank US Barrel: SM_Veh_Tank_USA_Turret_Barrel_01 (Transform)
 Wheel Transforms:
 -----------------
 
-Left:  (Transform)
-Right:  (Transform)
+Left01 Transform: SM_Veh_Tank_USA_Track_Wheel_L_01 (Transform)
+Left02 Transform: SM_Veh_Tank_USA_Track_Wheel_L_02 (Transform)
+Left03 Transform: SM_Veh_Tank_USA_Track_Wheel_L_03 (Transform)
+Left04 Transform: SM_Veh_Tank_USA_Track_Wheel_L_04 (Transform)
+Left05 Transform: SM_Veh_Tank_USA_Track_Wheel_L_05 (Transform)
+Left06 Transform: SM_Veh_Tank_USA_Track_Wheel_L_06 (Transform)
+Left07 Transform: SM_Veh_Tank_USA_Track_Wheel_L_07 (Transform)
+Left08 Transform: SM_Veh_Tank_USA_Track_Wheel_L_08 (Transform)
+Left09 Transform: SM_Veh_Tank_USA_Track_Wheel_L_09 (Transform)
+
+Right01 Transform: SM_Veh_Tank_USA_Track_Wheel_R_01 (Transform)
+Right02 Transform: SM_Veh_Tank_USA_Track_Wheel_R_02 (Transform)
+Right03 Transform: SM_Veh_Tank_USA_Track_Wheel_R_03 (Transform)
+Right04 Transform: SM_Veh_Tank_USA_Track_Wheel_R_04 (Transform)
+Right05 Transform: SM_Veh_Tank_USA_Track_Wheel_R_05 (Transform)
+Right06 Transform: SM_Veh_Tank_USA_Track_Wheel_R_06 (Transform)
+Right07 Transform: SM_Veh_Tank_USA_Track_Wheel_R_07 (Transform)
+Right08 Transform: SM_Veh_Tank_USA_Track_Wheel_R_08 (Transform)
+Right09 Transform: SM_Veh_Tank_USA_Track_Wheel_R_09 (Transform)
+
 
 WheelColliders:
 ---------------
 
-Left: (Wheel Collider)
-Right:  (Wheel Collider)
+
+Left01: SM_Veh_Tank_USA_Track_Wheel_L_01 (Wheel Collider)
+Left02: SM_Veh_Tank_USA_Track_Wheel_L_02 (Wheel Collider)
+Left03: SM_Veh_Tank_USA_Track_Wheel_L_03 (Wheel Collider)
+Left04: SM_Veh_Tank_USA_Track_Wheel_L_04 (Wheel Collider)
+Left05: SM_Veh_Tank_USA_Track_Wheel_L_05 (Wheel Collider)
+Left06: SM_Veh_Tank_USA_Track_Wheel_L_06 (Wheel Collider)
+Left07: SM_Veh_Tank_USA_Track_Wheel_L_07 (Wheel Collider)
+Left08: SM_Veh_Tank_USA_Track_Wheel_L_08 (Wheel Collider)
+Left09: SM_Veh_Tank_USA_Track_Wheel_L_09 (Wheel Collider)
+
+Right01: SM_Veh_Tank_USA_Track_Wheel_R_01 (Wheel Collider)
+Right02: SM_Veh_Tank_USA_Track_Wheel_R_02 (Wheel Collider)
+Right03: SM_Veh_Tank_USA_Track_Wheel_R_03 (Wheel Collider)
+Right04: SM_Veh_Tank_USA_Track_Wheel_R_04 (Wheel Collider)
+Right05: SM_Veh_Tank_USA_Track_Wheel_R_05 (Wheel Collider)
+Right06: SM_Veh_Tank_USA_Track_Wheel_R_06 (Wheel Collider)
+Right07: SM_Veh_Tank_USA_Track_Wheel_R_07 (Wheel Collider)
+Right08: SM_Veh_Tank_USA_Track_Wheel_R_08 (Wheel Collider)
+Right09: SM_Veh_Tank_USA_Track_Wheel_R_09 (Wheel Collider)
 
 
 In Rigidbody:

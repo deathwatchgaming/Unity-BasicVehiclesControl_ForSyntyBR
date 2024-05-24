@@ -27,8 +27,8 @@ Vehicles Currently "In Progress" & Not Yet Included:
 
 
 * Dirt Bike (90% completed) coming soon...
-* Tank US (95% completed) coming soon...
-* Tank RU (95% completed) coming soon...
+* Tank US (98% completed) coming soon...
+* Tank RU (98% completed) coming soon...
 * Rib (15% completed)
 
 
@@ -94,6 +94,13 @@ Vehicles Control:
 
 * All vehicles in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/Documentation/AllControllers-wEntry-Documentation.txt
 
+
+* TankUS Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankUS/Documentation/TankUSController-Only-Documentation.txt
+
+
+* TankUS Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankUS/Documentation/TankUSController-wEntry-Documentation.txt
+
+
 * Armored Truck Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/ArmoredTruck/Documentation/ArmoredTruckController-Only-Documentation.txt
 
 
@@ -122,5 +129,12 @@ Vehicles Control:
 
 
 * Sedan Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/Sedan/Documentation/SedanController-wEntry-Documentation.txt
+
+
+* TankRU Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankRU/Documentation/TankRUController-Only-Documentation.txt
+
+
+* TankRU Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankRU/Documentation/TankRUController-wEntry-Documentation.txt
+
 
  
