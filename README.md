@@ -15,11 +15,13 @@ Vehicles Currently "Completed" & Included:
 ------------------------------------------
 
 
+* Tank US (100% completed)
 * Armored Truck (100% completed)
 * Dune Buggy (100% completed)
 * Humvee (100% completed)
 * Six Wheel Truck (100% completed)
 * Sedan (100% completed)
+* Tank RU (100% completed)
 
 
 Vehicles Currently "In Progress" & Not Yet Included:
@@ -27,8 +29,6 @@ Vehicles Currently "In Progress" & Not Yet Included:
 
 
 * Dirt Bike (90% completed) coming soon...
-* Tank US (98% completed) coming soon...
-* Tank RU (98% completed) coming soon...
 * Rib (15% completed)
 
 
