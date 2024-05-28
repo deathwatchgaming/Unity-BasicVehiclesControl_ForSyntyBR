@@ -218,37 +218,37 @@ namespace VehiclesControl
 			// if not _inTankUS and gameObject tag is Player
 			if (!_inTankUS && other.gameObject.tag == "Player")
 			{
-                // _interfaceIMG01Object SetActive is false
-                _interfaceIMG01Object.SetActive(false);
+				// _interfaceIMG01Object SetActive is false
+				_interfaceIMG01Object.SetActive(false);
 
-                // _interfaceIMG02Object SetActive is false
-                _interfaceIMG02Object.SetActive(false);
+				// _interfaceIMG02Object SetActive is false
+				_interfaceIMG02Object.SetActive(false);
 
-                // _interfaceTextObject SetActive is false
-                _interfaceTextObject.SetActive(false);	
+				// _interfaceTextObject SetActive is false
+				_interfaceTextObject.SetActive(false);	
 
-                // _interfaceParentObject SetActive is false
-                _interfaceParentObject.SetActive(false);
+				// _interfaceParentObject SetActive is false
+				_interfaceParentObject.SetActive(false);
 
 			} // close if not _inTankUS and gameObject tag is Player
 
 			// if not _inTankUS and gameObject tag is Player and Input GetKey KeyCode _enterKey
 			if (!_inTankUS && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
 			{
-                // _interfaceIMG01Object SetActive is true
-                _interfaceIMG01Object.SetActive(true);
+				// _interfaceIMG01Object SetActive is true
+				_interfaceIMG01Object.SetActive(true);
 
-                // _interfaceIMG02Object SetActive is true
-                _interfaceIMG02Object.SetActive(true);
+				// _interfaceIMG02Object SetActive is true
+				_interfaceIMG02Object.SetActive(true);
 
-                // _interfaceTextObject SetActive is true
-                _interfaceTextObject.SetActive(true);
+				// _interfaceTextObject SetActive is true
+				_interfaceTextObject.SetActive(true);
 
-                // _interfaceParentObject SetActive is true
-                _interfaceParentObject.SetActive(true);
+				// _interfaceParentObject SetActive is true
+				_interfaceParentObject.SetActive(true);
 
-                // _inTankUS is true
-                _inTankUS = true;					
+				// _inTankUS is true
+				_inTankUS = true;					
 
 			} // close if not _inTankUS and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
@@ -260,17 +260,17 @@ namespace VehiclesControl
 			// if gameObject tag is Player
 			if (other.gameObject.tag == "Player")
 			{
-            	// _interfaceIMG01Object SetActive is false
-                _interfaceIMG01Object.SetActive(false);
+				// _interfaceIMG01Object SetActive is false
+				_interfaceIMG01Object.SetActive(false);
 
-            	// _interfaceIMG02Object SetActive is false
-                _interfaceIMG02Object.SetActive(false);
+				// _interfaceIMG02Object SetActive is false
+				_interfaceIMG02Object.SetActive(false);
 
-            	// _interfaceTextObject SetActive is false
-                _interfaceTextObject.SetActive(false);			
+				// _interfaceTextObject SetActive is false
+				_interfaceTextObject.SetActive(false);			
 
-            	// _interfaceParentObject SetActive is false
-                _interfaceParentObject.SetActive(false);
+				// _interfaceParentObject SetActive is false
+				_interfaceParentObject.SetActive(false);
 
 			} // close if gameObject tag is Player
 
