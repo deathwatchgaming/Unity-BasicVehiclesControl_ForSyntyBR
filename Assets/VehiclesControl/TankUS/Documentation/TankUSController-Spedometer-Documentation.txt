@@ -42,7 +42,20 @@ Bottom Left
 Width: 300
 Height: 300
 
-TankUSSpeedometer
+
+-----------------------------------------------------------------------------------
+
+Step 2: In "VehiclesSpeed" create empty child: "TankUSSpeedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankUSSpeedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
 
 Middle Center
 

@@ -42,7 +42,20 @@ Bottom Left
 Width: 300
 Height: 300
 
-TankRUSpeedometer
+
+-----------------------------------------------------------------------------------
+
+Step 2: In "VehiclesSpeed" create empty child: "TankRUSpeedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankRUSpeedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
 
 Middle Center
 
@@ -64,7 +77,7 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 2: In Interface > Canvas > VehiclesSpeed add UI IMG: "TankRU_SpeedoGuage"
+Step 3: In Interface > Canvas > VehiclesSpeed add UI IMG: "TankRU_SpeedoGuage"
 
 -----------------------------------------------------------------------------------
 
@@ -92,7 +105,7 @@ Color: (Suggested Hex) 3A3E37
 
 -----------------------------------------------------------------------------------
 
-Step 3: In Interface > Canvas > VehiclesSpeed add IMG: "TankRU_SpeedoNeedle"
+Step 4: In Interface > Canvas > VehiclesSpeed add IMG: "TankRU_SpeedoNeedle"
 
 -----------------------------------------------------------------------------------
 
@@ -120,7 +133,7 @@ Color: (Suggested Hex) 6B3232
 
 -----------------------------------------------------------------------------------
 
-Step 4: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "TankRU_SpeedText"
+Step 5: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "TankRU_SpeedText"
 
 -----------------------------------------------------------------------------------
 
@@ -165,7 +178,7 @@ Softness: 0.522 *
 
 -----------------------------------------------------------------------------------
 
-Step 5: In Vehicle > TankRU attach script: (TankRUSpeedometer.cs)
+Step 6: In Vehicle > TankRU attach script: (TankRUSpeedometer.cs)
 
 -----------------------------------------------------------------------------------
 

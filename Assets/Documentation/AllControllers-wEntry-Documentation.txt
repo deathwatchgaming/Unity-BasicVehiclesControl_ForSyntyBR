@@ -3997,7 +3997,7 @@ Step 69: Move "TankRU" as child of "Vehicles"
 -----------------------------------------------------------------------------------
 
 
-Move "TankUS" as child of "Vehicles" as you previously did with all other
+Move "TankRU" as child of "Vehicles" as you previously did with all other
 vehicles.
 
 

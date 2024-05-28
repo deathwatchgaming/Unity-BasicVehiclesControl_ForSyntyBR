@@ -43,7 +43,20 @@ Bottom Left
 Width: 300
 Height: 300
 
-HumveeSpeedometer
+
+-----------------------------------------------------------------------------------
+
+Step 2: In "VehiclesSpeed" create empty child: "HumveeSpeedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "HumveeSpeedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
 
 Middle Center
 
@@ -65,7 +78,7 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 2: In Interface > Canvas > VehiclesSpeed add UI IMG: "Humvee_SpeedoGuage"
+Step 3: In Interface > Canvas > VehiclesSpeed add UI IMG: "Humvee_SpeedoGuage"
 
 -----------------------------------------------------------------------------------
 
@@ -93,7 +106,7 @@ Color: (Suggested Hex) FFFFFF
 
 -----------------------------------------------------------------------------------
 
-Step 3: In Interface > Canvas > VehiclesSpeed add IMG: "Humvee_SpeedoNeedle"
+Step 4: In Interface > Canvas > VehiclesSpeed add IMG: "Humvee_SpeedoNeedle"
 
 -----------------------------------------------------------------------------------
 
@@ -121,7 +134,7 @@ Color: (Suggested Hex) 6B3232
 
 -----------------------------------------------------------------------------------
 
-Step 4: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Humvee_SpeedText"
+Step 5: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Humvee_SpeedText"
 
 -----------------------------------------------------------------------------------
 
@@ -166,7 +179,7 @@ Softness: 0.522 *
 
 -----------------------------------------------------------------------------------
 
-Step 5: In Vehicle > Humvee attach script: (HumveeSpeedometer.cs)
+Step 6: In Vehicle > Humvee attach script: (HumveeSpeedometer.cs)
 
 -----------------------------------------------------------------------------------
 
