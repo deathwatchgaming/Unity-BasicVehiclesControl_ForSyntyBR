@@ -67,6 +67,43 @@ namespace VehiclesControl
 			// TMP_Text speedText
 			[SerializeField] private TMP_Text _speedText;
 
+		// Game Objects
+		[Header("Game Objects")]
+
+			[Tooltip("The interface parent game object")]
+			// GameObject _interfaceParentObject
+			[SerializeField] private GameObject _interfaceParentObject;
+			
+			[Tooltip("The interface image01 speedometer guage game object")]
+			// GameObject _interfaceIMG01Object
+			[SerializeField] private GameObject _interfaceIMG01Object;
+
+			[Tooltip("The interface image02 speedometer needle game object")]
+			// GameObject _interfaceIMG02Object
+			[SerializeField] private GameObject _interfaceIMG02Object;
+
+			[Tooltip("The interface text speed text game object")]
+			// GameObject _interfaceTextObject
+			[SerializeField] private GameObject _interfaceTextObject;
+
+		// Active State
+		[Header("Active State")]
+
+			[Tooltip("The active state bool")]
+			// bool _inTankUS is false
+			[SerializeField] private bool _inTankUS = false;
+
+		// Input Customizations
+		[Header("Input Customizations")] 
+
+			[Tooltip("The vehicle entry key code")]
+			// KeyCode _enterKey
+			[SerializeField] private KeyCode _enterKey = KeyCode.E;	
+
+			[Tooltip("The vehicle exit key code")]
+			// KeyCode _exitKey
+			[SerializeField] private KeyCode _exitKey = KeyCode.F;
+
 		// float _currentSpeed
 		float _currentSpeed;
 
@@ -83,7 +120,31 @@ namespace VehiclesControl
 			_tankUSScript = GetComponent<TankUSController>();
 
 			// _rigidbody
-			_rigidbody = GetComponent<Rigidbody>();	
+			_rigidbody = GetComponent<Rigidbody>();
+
+			// _interfaceIMG01Object is GameObject
+			_interfaceIMG01Object = GameObject.Find("TankUS_SpeedoGuage");
+
+			// _interfaceIMG01Object SetActive is false
+			_interfaceIMG01Object.SetActive(false);
+
+			// _interfaceIMG02Object is GameObject
+			_interfaceIMG02Object = GameObject.Find("TankUS_SpeedoNeedle");
+
+			// _interfaceIMG02Object SetActive is false
+			_interfaceIMG02Object.SetActive(false);	
+
+			// _interfaceTextObject is GameObject
+			_interfaceTextObject = GameObject.Find("TankUS_SpeedText");
+
+			// _interfaceTextObject SetActive is false
+			_interfaceTextObject.SetActive(false);			
+
+			// _interfaceParentObject is GameObject
+			_interfaceParentObject = GameObject.Find("TankUSSpeedometer");
+
+			// _interfaceParentObject SetActive is false
+			_interfaceParentObject.SetActive(false);
 
 		} // close private void Start
 
@@ -116,6 +177,14 @@ namespace VehiclesControl
 
 			} // close else
 
+			// if _inTankUS and Input GetKey KeyCode _exitKey
+			if (_inTankUS && Input.GetKey(_exitKey))
+			{
+				// _inTankUS is false
+				_inTankUS = false;
+
+			} // close if _inTankUS and Input GetKey KeyCode _exitKey
+
 		} // close private void Update
 
 		// private void FixedUpdate
@@ -141,7 +210,71 @@ namespace VehiclesControl
 			// _needle.transform.eulerAngles
 			_needle.transform.eulerAngles = new Vector3(0, 0, (_startPosition -_temp * _desiredPosition));
 
-		} // close private void UpdateSpeedoNeedle				
+		} // close private void UpdateSpeedoNeedle
+
+        // private void OnTriggerStay Collider other
+        private void OnTriggerStay(Collider other)
+        {
+            // if not _inTankUS and gameObject tag is Player
+            if (!_inTankUS && other.gameObject.tag == "Player")
+			{
+                // _interfaceIMG01Object SetActive is false
+                _interfaceIMG01Object.SetActive(false);
+
+                // _interfaceIMG02Object SetActive is false
+                _interfaceIMG02Object.SetActive(false);
+
+                // _interfaceTextObject SetActive is false
+                _interfaceTextObject.SetActive(false);	
+
+                // _interfaceParentObject SetActive is false
+                _interfaceParentObject.SetActive(false);
+
+            } // close if not _inTankUS and gameObject tag is Player
+
+            // if not _inTankUS and gameObject tag is Player and Input GetKey KeyCode _enterKey
+            if (!_inTankUS && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
+            {
+                // _interfaceIMG01Object SetActive is true
+                _interfaceIMG01Object.SetActive(true);
+
+                // _interfaceIMG02Object SetActive is true
+                _interfaceIMG02Object.SetActive(true);
+
+                // _interfaceTextObject SetActive is true
+                _interfaceTextObject.SetActive(true);
+
+                // _interfaceParentObject SetActive is true
+                _interfaceParentObject.SetActive(true);
+
+                // _inTankUS is true
+                _inTankUS = true;					
+
+            } // close if not _inTankUS and gameObject tag is Player and Input GetKey KeyCode _enterKey
+
+        } // close private void OnTriggerStay Collider other
+
+        // private void OnTriggerExit Collider other
+        private void OnTriggerExit(Collider other)
+        {
+            // if gameObject tag is Player
+            if (other.gameObject.tag == "Player")
+            {
+            	// _interfaceIMG01Object SetActive is false
+                _interfaceIMG01Object.SetActive(false);
+
+            	// _interfaceIMG02Object SetActive is false
+                _interfaceIMG02Object.SetActive(false);
+
+            	// _interfaceTextObject SetActive is false
+                _interfaceTextObject.SetActive(false);			
+
+            	// _interfaceParentObject SetActive is false
+                _interfaceParentObject.SetActive(false);
+
+            } // close if gameObject tag is Player
+
+        } // close private void OnTriggerExit Collider other
 
 	} // close public class TankUSSpeedometer
 
