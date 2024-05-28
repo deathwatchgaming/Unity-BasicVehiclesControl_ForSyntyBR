@@ -4004,6 +4004,1064 @@ vehicles.
 -----------------------------------------------------------------------------------
 
 
+Optional (Speedometer) setup steps:
+
+-----------------------------------------------------------------------------------
+
+Step 70: In Interface > Canvas create empty child: "VehiclesSpeed"
+
+-----------------------------------------------------------------------------------
+
+
+In: "VehiclesSpeed"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Bottom Left
+
+Width: 300
+Height: 300
+
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 71: In "VehiclesSpeed" create empty child: "ArmoredTruckSpeedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruckSpeedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 72: In Interface > Canvas > VehiclesSpeed add UI IMG: "ArmoredTruck_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 73: In Interface > Canvas > VehiclesSpeed add IMG: "ArmoredTruck_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 74: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "ArmoredTruck_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 75: In Vehicle > ArmoredTruck attach script: (ArmoredTruckSpeedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach ArmoredTruckSpeedometer script: (ArmoredTruckSpeedometer.cs) to
+Vehicle: "ArmoredTruck"
+
+In: "ArmoredTruck" > ArmoredTruck Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: ArmoredTruck_Needle
+
+Speed Text: ArmoredTruck_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: ArmoredTruck_Speedometer
+Interface IMG01 Object: ArmoredTruck_SpeedoGuage
+Interface IMG02 Object: ArmoredTruck_SpeedoNeedle
+Interface Text Object: ArmoredTruck_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 76: In "VehiclesSpeed" create empty child: "DunebBuggySpeedometer"
+
+-----------------------------------------------------------------------------------
+
+In: "DuneBuggySpeedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 77: In Interface > Canvas > VehiclesSpeed add UI IMG: "DuneBuggy_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 78: In Interface > Canvas > VehiclesSpeed add IMG: "DuneBuggy_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 79: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "DuneBuggy_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 80: In Vehicle > DuneBuggy attach script: (DuneBuggySpeedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach DuneBuggySpeedometer script: (DuneBuggySpeedometer.cs) to
+Vehicle: "DuneBuggy"
+
+In: "DuneBuggy" > DuneBuggy Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: DuneBuggy_Needle
+
+Speed Text: DuneBuggy_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: DuneBuggy_Speedometer
+Interface IMG01 Object: DuneBuggy_SpeedoGuage
+Interface IMG02 Object: DuneBuggy_SpeedoNeedle
+Interface Text Object: DuneBuggy_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 81: In "VehiclesSpeed" create empty child: "HumveeSpeedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "HumveeSpeedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 82: In Interface > Canvas > VehiclesSpeed add UI IMG: "Humvee_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Humvee_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 83: In Interface > Canvas > VehiclesSpeed add IMG: "Humvee_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Humvee_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 84: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Humvee_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Humvee_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 85: In Vehicle > Humvee attach script: (HumveeSpeedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach HumveeSpeedometer script: (HumveeSpeedometer.cs) to
+Vehicle: "Humvee"
+
+In: "Humvee" > Humvee Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: Humvee_Needle
+
+Speed Text: Humvee_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: Humvee_Speedometer
+Interface IMG01 Object: Humvee_SpeedoGuage
+Interface IMG02 Object: Humvee_SpeedoNeedle
+Interface Text Object: Humvee_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 86: In "VehiclesSpeed" create empty child: "SedanSpeedometer"
+
+-----------------------------------------------------------------------------------
+
+In: "SedanSpeedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 87: In Interface > Canvas > VehiclesSpeed add IMG: "Sedan_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Sedan_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 88: In Interface > Canvas > VehiclesSpeed add IMG: "Sedan_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Sedan_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 89: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Sedan_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Sedan_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 90: In Vehicle > Sedan attach script: (SedanSpeedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SedanSpeedometer script: (SedanSpeedometer.cs) to Vehicle: "Sedan"
+
+In: "Sedan" > Sedan Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and Speed Text)
+
+Needle: Sedan_Needle
+
+Speed Text: Sedan_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: Sedan_Speedometer
+Interface IMG01 Object: Sedan_SpeedoGuage
+Interface IMG02 Object: Sedan_SpeedoNeedle
+Interface Text Object: Sedan_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 91: In "VehiclesSpeed" create empty child: "SixWheelTruckSpeedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SixWheelTruckSpeedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 92: In Interface > Canvas > VehiclesSpeed add IMG: "SixWheelTruck_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SixWheelTruck_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 93: In Interface > Canvas > VehiclesSpeed add IMG: "SixWheelTruck_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SixWheelTruck_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 94: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SixWheelTruck_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SixWheelTruck_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 95: In Vehicle > SixWheelTruck attach script: (SixWheelTruckSpeedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SixWheelTruckSpeedometer script: (SixWheelTruckSpeedometer.cs) to
+Vehicle: "SixWheelTruck"
+
+In: "SixWheelTruck" > SixWheelTruck Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SixWheelTruck_Needle
+
+Speed Text: SixWheelTruck_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: SixWheelTruck_Speedometer
+Interface IMG01 Object: SixWheelTruck_SpeedoGuage
+Interface IMG02 Object: SixWheelTruck_SpeedoNeedle
+Interface Text Object: SixWheelTruck_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 96: In "VehiclesSpeed" create empty child: "TankRUSpeedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankRUSpeedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 97: In Interface > Canvas > VehiclesSpeed add UI IMG: "TankRU_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankRU_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) 3A3E37
+
+
+-----------------------------------------------------------------------------------
+
+Step 98: In Interface > Canvas > VehiclesSpeed add IMG: "TankRU_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankRU_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 99: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "TankRU_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankRU_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) 3A3E37
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 100: In Vehicle > TankRU attach script: (TankRUSpeedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach TankRUSpeedometer script: (TankRUSpeedometer.cs) to
+Vehicle: "TankRU"
+
+In: "TankRU" > TankRU Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: TankRU_Needle
+
+Speet Text: TankRU_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: TankRU_Speedometer
+Interface IMG01 Object: TankRU_SpeedoGuage
+Interface IMG02 Object: TankRU_SpeedoNeedle
+Interface Text Object: TankRU_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 101: In "VehiclesSpeed" create empty child: "TankUSSpeedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankUSSpeedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 102: In Interface > Canvas > VehiclesSpeed add UI IMG: "TankUS_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankUS_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) 3A3E37
+
+
+-----------------------------------------------------------------------------------
+
+Step 103: In Interface > Canvas > VehiclesSpeed add IMG: "TankUS_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankUS_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 104: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "TankUS_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankUS_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) 3A3E37
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 105: In Vehicle > TankUS attach script: (TankUSSpeedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach TankUSSpeedometer script: (TankUSSpeedometer.cs) to
+Vehicle: "TankUS"
+
+In: "TankUS" > TankUS Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: TankUS_Needle
+
+Speed Text: TankUS_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: TankUS_Speedometer
+Interface IMG01 Object: TankUS_SpeedoGuage
+Interface IMG02 Object: TankUS_SpeedoNeedle
+Interface Text Object: TankUS_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
 That should about sum it up and should be about it and concludes the basic
 Vehicle Controllers manual setup steps. You can now begin to modify such
 further for your specific needs.

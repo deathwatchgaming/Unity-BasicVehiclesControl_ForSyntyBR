@@ -62,7 +62,7 @@ Width: 300
 Height: 300
 
 * something to note on placement: ok, when you add the script later in steps
-  you will notice and option in script settings for setting on choice of
+  you will notice an option in script settings for setting on choice of
   either kph or mph in regards to SpeedText output, ok, with taking that into
   account you can now possibly understand the following note about placement
   of the interface items specific to such, mkay lets say that these setup
