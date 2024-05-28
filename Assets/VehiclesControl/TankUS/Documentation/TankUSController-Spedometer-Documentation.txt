@@ -2,6 +2,21 @@ TankUS Speedometer Setup Steps:
 -------------------------------------
 
 
+Note: these instructions steps found below are for the script provided that is
+for usage with the vehicle entry script applied. Ok, noting that if you only
+followed the vehicle setup steps to use vehicle controller and not vehicle
+entry additions after and now you want to add the vehicle speedometer then
+you need the original spedometer script for that and that can be found in the
+extras folder with script specifc to the vehicle controller you are using.
+Please note that Iopted to consider this fact after thinking back on the
+instructions steps for vehicle controller setups and then understanding now
+that hmm, if I made the speeedometer script to work properly with entry
+script usages that this would put anyone using just the vehicle controller
+setups SOL in regards to using the newer speedometer script, so as such I
+opted to place the old speedo scripts in the extras directory just for that
+purpose. Hopefully that all makes sense. :)
+
+
 Manual Setup Instruction:
 -------------------------
 
@@ -165,7 +180,12 @@ Speed Text)
 
 Needle: TankUS_Needle
 
-Speet Text: TankUS_SpeedText (Text Mesh Pro UGUI)
+Speed Text: TankUS_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: TankUS_Speedometer
+Interface IMG01 Object: TankUS_SpeedoGuage
+Interface IMG02 Object: TankUS_SpeedoNeedle
+Interface Text Object: TankUS_SpeedText
 
 
 -----------------------------------------------------------------------------------

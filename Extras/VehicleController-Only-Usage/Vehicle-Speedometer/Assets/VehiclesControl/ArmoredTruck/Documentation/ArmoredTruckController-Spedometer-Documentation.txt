@@ -2,6 +2,22 @@ ArmoredTruck Speedometer Setup Steps:
 -------------------------------------
 
 
+Note: these instructions steps found below are for the older script provided
+that is for usage with say only using the vehicle controller and not with the
+additional vehicle entry functionality applied. Ok, noting that if you only
+followed the vehicle setup steps to use vehicle controller and not vehicle
+entry additions after and now you want to add the vehicle speedometer then
+you need these original spedometer scripts for that found here in the extras
+folder with scripts specifc to the vehicle controller you are using. Please
+note that I opted to consider this fact after thinking back on the
+instructions steps for vehicle controller setups and then understanding now
+that hmm, if I made the speeedometer script to work properly with entry
+script usages that htis would put anyone using just the vehicle controller
+setups SOL in regards to using the newer speedometer script, so as such I
+opted to place the old speedo scripts in the extras directory just for that
+purpose. Hopefully that all makes sense. :)
+
+
 Manual Setup Instruction:
 -------------------------
 
@@ -165,7 +181,7 @@ Speed Text)
 
 Needle: ArmoredTruck_Needle
 
-Speet Text: ArmoredTruck_SpeedText (Text Mesh Pro UGUI)
+Speed Text: ArmoredTruck_SpeedText (Text Mesh Pro UGUI)
 
 
 -----------------------------------------------------------------------------------
