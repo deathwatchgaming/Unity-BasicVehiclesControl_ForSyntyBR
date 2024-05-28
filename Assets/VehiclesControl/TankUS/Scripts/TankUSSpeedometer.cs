@@ -212,12 +212,12 @@ namespace VehiclesControl
 
 		} // close private void UpdateSpeedoNeedle
 
-        // private void OnTriggerStay Collider other
-        private void OnTriggerStay(Collider other)
-        {
-            // if not _inTankUS and gameObject tag is Player
-            if (!_inTankUS && other.gameObject.tag == "Player")
-            {
+		// private void OnTriggerStay Collider other
+		private void OnTriggerStay(Collider other)
+		{
+			// if not _inTankUS and gameObject tag is Player
+			if (!_inTankUS && other.gameObject.tag == "Player")
+			{
                 // _interfaceIMG01Object SetActive is false
                 _interfaceIMG01Object.SetActive(false);
 
@@ -230,11 +230,11 @@ namespace VehiclesControl
                 // _interfaceParentObject SetActive is false
                 _interfaceParentObject.SetActive(false);
 
-            } // close if not _inTankUS and gameObject tag is Player
+			} // close if not _inTankUS and gameObject tag is Player
 
-            // if not _inTankUS and gameObject tag is Player and Input GetKey KeyCode _enterKey
-            if (!_inTankUS && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
-            {
+			// if not _inTankUS and gameObject tag is Player and Input GetKey KeyCode _enterKey
+			if (!_inTankUS && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
+			{
                 // _interfaceIMG01Object SetActive is true
                 _interfaceIMG01Object.SetActive(true);
 
@@ -250,16 +250,16 @@ namespace VehiclesControl
                 // _inTankUS is true
                 _inTankUS = true;					
 
-            } // close if not _inTankUS and gameObject tag is Player and Input GetKey KeyCode _enterKey
+			} // close if not _inTankUS and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
-        } // close private void OnTriggerStay Collider other
+		} // close private void OnTriggerStay Collider other
 
-        // private void OnTriggerExit Collider other
-        private void OnTriggerExit(Collider other)
-        {
-            // if gameObject tag is Player
-            if (other.gameObject.tag == "Player")
-            {
+		// private void OnTriggerExit Collider other
+		private void OnTriggerExit(Collider other)
+		{
+			// if gameObject tag is Player
+			if (other.gameObject.tag == "Player")
+			{
             	// _interfaceIMG01Object SetActive is false
                 _interfaceIMG01Object.SetActive(false);
 
@@ -272,9 +272,9 @@ namespace VehiclesControl
             	// _interfaceParentObject SetActive is false
                 _interfaceParentObject.SetActive(false);
 
-            } // close if gameObject tag is Player
+			} // close if gameObject tag is Player
 
-        } // close private void OnTriggerExit Collider other
+		} // close private void OnTriggerExit Collider other
 
 	} // close public class TankUSSpeedometer
 
