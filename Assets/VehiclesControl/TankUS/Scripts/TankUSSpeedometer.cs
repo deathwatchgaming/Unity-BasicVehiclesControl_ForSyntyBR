@@ -217,7 +217,7 @@ namespace VehiclesControl
         {
             // if not _inTankUS and gameObject tag is Player
             if (!_inTankUS && other.gameObject.tag == "Player")
-			{
+            {
                 // _interfaceIMG01Object SetActive is false
                 _interfaceIMG01Object.SetActive(false);
 
