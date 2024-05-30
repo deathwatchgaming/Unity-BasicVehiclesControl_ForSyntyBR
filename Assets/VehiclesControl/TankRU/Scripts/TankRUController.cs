@@ -292,7 +292,6 @@ namespace VehiclesControl
 		// private void Update
 		private void Update()
 		{
-
 			// float _speed
 			float _speed = _rigidbody.velocity.magnitude;
 
