@@ -9,6 +9,7 @@
 // Wheel Collider Position Y: 0.511439 (0.3614392+0.15)
 
 // using
+using System;
 using UnityEngine;
 
 // namespace VehiclesControl
@@ -184,7 +185,7 @@ namespace VehiclesControl
 			} // close else if _sedanSpeedType equals SedanSpeedType.kmh
 
 		} // close private void Update
-        
+
 		// private void FixedUpdate
 		private void FixedUpdate()
 		{
