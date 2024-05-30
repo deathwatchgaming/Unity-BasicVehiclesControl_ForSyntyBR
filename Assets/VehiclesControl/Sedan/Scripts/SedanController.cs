@@ -14,6 +14,14 @@ using UnityEngine;
 // namespace VehiclesControl
 namespace VehiclesControl
 {
+	// public enum SedanSpeedType
+	public enum SedanSpeedType
+	{
+		mph,
+		kmh	
+
+	} // close public enum SedanSpeedType
+
 	// RequireComponent typeof MeshCollider
 	[RequireComponent(typeof(MeshCollider))]
 
@@ -110,6 +118,17 @@ namespace VehiclesControl
 		    
 			// _currentTurnAngle is 0
 			private float _currentTurnAngle = 0f;
+
+		// Speed
+		[Header("Speed")]
+
+			[Tooltip("The speed measurement unit")]
+			// SedanSpeedType _speedType	
+			[SerializeField] private SedanSpeedType _speedType;			
+	    
+			[Tooltip("The maximum speed amount")]
+			// float _maxSpeed
+			[SerializeField] private float _maxSpeed = 180;			
 	    
 		// private void Awake
 		private void Awake()
@@ -124,11 +143,51 @@ namespace VehiclesControl
 			// _rigidbody centerOfMass
 			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;	
 	        
-		} // close private void Awake    
+		} // close private void Awake
 
-	    // private void FixedUpdate
-	    private void FixedUpdate()
-	    {
+		// private void Update
+		private void Update()
+		{
+			// float _speed
+			float _speed = _rigidbody.velocity.magnitude;
+
+			// _speedType equals SedanSpeedType.mph
+			if (_speedType == SedanSpeedType.mph)
+			{
+				// _speed
+				_speed *= 2.23694f;
+
+				// if _speed > _maxSpeed
+				if (_speed > _maxSpeed)
+				{
+					// _rigidbody.velocity
+					_rigidbody.velocity = (_maxSpeed/2.23694f) * _rigidbody.velocity.normalized;
+
+				} // close if _speed > _maxSpeed
+                        
+			} // close if _sedanSpeedType equals SedanSpeedType.mph
+
+			// else if _speedType equals SedanSpeedType.kmh
+			else if (_speedType == SedanSpeedType.kmh)
+			{
+				// _speed
+				_speed *= 3.6f;
+
+				// if _speed > _maxSpeed
+				if (_speed > _maxSpeed)
+				{
+					// _rigidbody.velocity
+					_rigidbody.velocity = (_maxSpeed/3.6f) * _rigidbody.velocity.normalized;
+
+				} // close if _speed > _maxSpeed
+                       
+			} // close else if _sedanSpeedType equals SedanSpeedType.kmh
+
+		} // close private void Update
+        
+		// private void FixedUpdate
+		private void FixedUpdate()
+		{
 	    	// Get the forward and reverse acceleration from vertical axis (W and S keys)
 	        
 	        // _currentAcceleration is _acceleration times Input GetAxis Vertical
@@ -199,7 +258,7 @@ namespace VehiclesControl
 	        // UpdateRightWheel _rearRight _rearRightTransform
 	        UpdateRightWheel(_rearRight, _rearRightTransform);
 	                       
-	    } // close private void FixedUpdate
+		} // close private void FixedUpdate
 
 	    // private void UpdateLeftWheel WheelCollider _leftCollider Transform _leftTransform
 	    private void UpdateLeftWheel(WheelCollider _leftCollider, Transform _leftTransform)
