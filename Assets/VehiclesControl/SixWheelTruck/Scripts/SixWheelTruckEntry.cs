@@ -87,7 +87,7 @@ namespace VehiclesControl
             // _rigidbody
             _rigidbody = GetComponent<Rigidbody>();            
 
-            // _interfaceTextObject is GameObject Find PressE
+            // _interfaceTextObject is GameObject Find SixWheelTruck_EntryKey
             _interfaceTextObject = GameObject.Find("SixWheelTruck_EntryKey");
 
             // _interfaceTextObject SetActive is false
@@ -100,7 +100,7 @@ namespace VehiclesControl
         // private void Update
         private void Update()
         {
-            // if _inSixWheelTruck and Input GetKey KeyCode F
+            // if _inSixWheelTruck and Input GetKey KeyCode _exitKey
             if (_inSixWheelTruck && Input.GetKey(_exitKey))
             {
                 // _player SetActive is true
@@ -121,7 +121,7 @@ namespace VehiclesControl
                 // _inSixWheelTruck is false
                 _inSixWheelTruck = false;
 
-            } // close if _inSixWheelTruck and Input GetKey KeyCode F
+            } // close if _inSixWheelTruck and Input GetKey KeyCode _exitKey
 
         } // close private void Update         
 
@@ -136,7 +136,7 @@ namespace VehiclesControl
 
             } // close if not _inSixWheelTruck and gameObject tag is Player
             
-            // if not _inSixWheelTruck and gameObject tag is Player and Input GetKey KeyCode E
+            // if not _inSixWheelTruck and gameObject tag is Player and Input GetKey KeyCode _enterKey
             if (!_inSixWheelTruck && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
             {
                 // _interfaceTextObject SetActive is false
@@ -160,7 +160,7 @@ namespace VehiclesControl
                 // _inSixWheelTruck is true
                 _inSixWheelTruck = true;
 
-            } // close if not _inSixWheelTruck and gameObject tag is Player and Input GetKey KeyCode E
+            } // close if not _inSixWheelTruck and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
         } // close private void OnTriggerStay Collider other
         

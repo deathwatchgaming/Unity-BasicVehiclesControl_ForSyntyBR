@@ -149,6 +149,8 @@ namespace VehiclesControl
 		// private void Update
 		private void Update()
 		{
+			// Take care of speed unit type and max speed
+
 			// float _speed
 			float _speed = _rigidbody.velocity.magnitude;
 
@@ -194,15 +196,15 @@ namespace VehiclesControl
 			// _currentAcceleration is _acceleration times Input GetAxis Vertical
 			_currentAcceleration = _acceleration * Input.GetAxis(_verticalMoveInput);
 
-			// If we are pressing the space key give currentBrakingForce a value
+			// If we are pressing the _brakeKey give currentBrakingForce a value
 
-			// if Input GetKey KeyCode Space
+			// if Input GetKey KeyCode _brakeKey
 			if (Input.GetKey(_brakeKey))
 			{
 				// _currentBrakeForce is _brakingForce
 				_currentBrakeForce = _brakingForce;
 
-			} // close if Input GetKey KeyCode Space
+			} // close if Input GetKey KeyCode _brakeKey
 	        
 			// else 
 			else

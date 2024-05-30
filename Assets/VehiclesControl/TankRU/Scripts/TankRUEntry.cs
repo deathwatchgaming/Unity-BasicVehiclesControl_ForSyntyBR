@@ -87,7 +87,7 @@ namespace VehiclesControl
             // _rigidbody
             _rigidbody = GetComponent<Rigidbody>();
 
-            // _interfaceTextObject is GameObject Find PressE
+            // _interfaceTextObject is GameObject Find TankRU_EntryKey
             _interfaceTextObject = GameObject.Find("TankRU_EntryKey");
 
             // _interfaceTextObject SetActive is false
@@ -100,7 +100,7 @@ namespace VehiclesControl
         // private void Update
         private void Update()
         {
-            // if _inTankRU and Input GetKey KeyCode F
+            // if _inTankRU and Input GetKey KeyCode _exitKey
             if (_inTankRU && Input.GetKey(_exitKey))
             {
                 // _player SetActive is true
@@ -121,7 +121,7 @@ namespace VehiclesControl
                 // _inTankRU is false
                 _inTankRU = false;
 
-            } // close if _inTankRU and Input GetKey KeyCode F
+            } // close if _inTankRU and Input GetKey KeyCode _exitKey
 
         } // close private void Update         
 
@@ -136,7 +136,7 @@ namespace VehiclesControl
 
             } // close if not _inTankRU and gameObject tag is Player
             
-            // if not _inTankRU and gameObject tag is Player and Input GetKey KeyCode E
+            // if not _inTankRU and gameObject tag is Player and Input GetKey KeyCode _enterKey
             if (!_inTankRU && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
             {
                 // _interfaceTextObject SetActive is false
@@ -160,7 +160,7 @@ namespace VehiclesControl
                 // _inTankRU is true
                 _inTankRU = true;
 
-            } // close if not _inTankRU and gameObject tag is Player and Input GetKey KeyCode E
+            } // close if not _inTankRU and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
         } // close private void OnTriggerStay Collider other
         
@@ -189,7 +189,7 @@ namespace VehiclesControl
             // _rigidbody Sleep
             _rigidbody.Sleep();
 
-        } // close private IEnumerator RigidbodySleep float duartion       
+        } // close private IEnumerator RigidbodySleep float duration       
         
     } // close public class TankRUEntry  
 
