@@ -6,11 +6,20 @@
  */
 
 // using
+using System;
 using UnityEngine;
 
 // namespace VehiclesControl
 namespace VehiclesControl
 {
+	// public enum TankUSSpeedType
+	public enum TankUSSpeedType
+	{
+		mph,
+		kmh	
+
+	} // close public enum TankUSSpeedType
+
 	// RequireComponent typeof MeshCollider
 	[RequireComponent(typeof(MeshCollider))]
 
@@ -254,20 +263,31 @@ namespace VehiclesControl
 			// _centerOfGravityOffset is -1
 			[SerializeField] private float _centerOfGravityOffset = -1f;
 
-		// _currentAcceleration is 0
-		private float _currentAcceleration = 0f;
+			// _currentAcceleration is 0
+			private float _currentAcceleration = 0f;
 
-		// _currentBrakeForce is 0
-		private float _currentBrakeForce = 0f;
+			// _currentBrakeForce is 0
+			private float _currentBrakeForce = 0f;
 
-		// _barrelElevation is 0
-		private float _barrelElevation = 0f;		
+			// _barrelElevation is 0
+			private float _barrelElevation = 0f;		
 
-		// Vector3 _tankUSRotation
-		private Vector3 _tankUSBodyRotation;
+			// Vector3 _tankUSRotation
+			private Vector3 _tankUSBodyRotation;
 
-		// Vector3 _tankUSTurretRotation
-		private Vector3 _tankUSTurretRotation;
+			// Vector3 _tankUSTurretRotation
+			private Vector3 _tankUSTurretRotation;
+
+		// Speed
+		[Header("Speed")]
+
+			[Tooltip("The speed measurement unit")]
+			// TankUSSpeedType _speedType	
+			[SerializeField] private TankUSSpeedType _speedType;			
+	    
+			[Tooltip("The maximum speed amount")]
+			// float _maxSpeed
+			[SerializeField] private float _maxSpeed = 180;	
 
 		// private void Awake
 		private void Awake()
@@ -304,6 +324,41 @@ namespace VehiclesControl
 		// private void Update
 		private void Update()
 		{
+			// float _speed
+			float _speed = _rigidbody.velocity.magnitude;
+
+			// _speedType equals TankUSSpeedType.mph
+			if (_speedType == TankUSSpeedType.mph)
+			{
+				// _speed
+				_speed *= 2.23694f;
+
+				// if _speed > _maxSpeed
+				if (_speed > _maxSpeed)
+				{
+					// _rigidbody.velocity
+					_rigidbody.velocity = (_maxSpeed/2.23694f) * _rigidbody.velocity.normalized;
+
+				} // close if _speed > _maxSpeed
+                        
+			} // close if _speedType equals TankUSSpeedType.mph
+
+			// else if _speedType equals TankUSSpeedType.kmh
+			else if (_speedType == TankUSSpeedType.kmh)
+			{
+				// _speed
+				_speed *= 3.6f;
+
+				// if _speed > _maxSpeed
+				if (_speed > _maxSpeed)
+				{
+					// _rigidbody.velocity
+					_rigidbody.velocity = (_maxSpeed/3.6f) * _rigidbody.velocity.normalized;
+
+				} // close if _speed > _maxSpeed
+                       
+			} // close else if _speedType equals TankUSSpeedType.kmh
+						
 			// Take care of the tank body steering
 		
 			// _tankUSRotation.transform.eulerAngles is _tankUSRotation
@@ -333,31 +388,31 @@ namespace VehiclesControl
             
 		} // close private void Update
 
-	    // private void FixedUpdate
-	    private void FixedUpdate()
-	    {
-	    	// Get the forward and reverse acceleration from vertical axis (W and S keys)
+		// private void FixedUpdate
+		private void FixedUpdate()
+		{
+			// Get the forward and reverse acceleration from vertical axis (W and S keys)
 	        
-	        // _currentAcceleration is _acceleration times Input GetAxis Vertical
-	        _currentAcceleration = _acceleration * Input.GetAxis(_verticalMoveInput);
+			// _currentAcceleration is _acceleration times Input GetAxis Vertical
+			_currentAcceleration = _acceleration * Input.GetAxis(_verticalMoveInput);
 
-	        // If we are pressing the space key then give currentBrakingForce a value
+			// If we are pressing the space key then give currentBrakingForce a value
 
-	    	// if Input GetKey KeyCode Space
-	    	if (Input.GetKey(_brakeKey))
-	    	{
-	    		// _currentBrakeForce is _brakingForce
-	    		_currentBrakeForce = _brakingForce;
+			// if Input GetKey KeyCode Space
+			if (Input.GetKey(_brakeKey))
+			{
+				// _currentBrakeForce is _brakingForce
+				_currentBrakeForce = _brakingForce;
 
-	    	} // close if Input GetKey KeyCode Space
+			} // close if Input GetKey KeyCode Space
 	        
-	        // else 
-	    	else
-	    	{
-	    		// _currentBrakeForce is 0
-	    		_currentBrakeForce = 0f;
+			// else 
+			else
+			{
+				// _currentBrakeForce is 0
+				_currentBrakeForce = 0f;
 
-	    	} // close else
+			} // close else
 
 			// Apply acceleration to the wheels
 
@@ -543,55 +598,55 @@ namespace VehiclesControl
 			// UpdateRightWheel _right09 _right09Transform
 			UpdateRightWheel(_right09, _right09Transform); 
 
-	    } // close private void FixedUpdate
+		} // close private void FixedUpdate
 
-	    // private void UpdateLeftWheel WheelCollider _leftCollider Transform _leftTransform
-	    private void UpdateLeftWheel(WheelCollider _leftCollider, Transform _leftTransform)
-	    {
-	    	// Get the left wheels collider states
+		// private void UpdateLeftWheel WheelCollider _leftCollider Transform _leftTransform
+		private void UpdateLeftWheel(WheelCollider _leftCollider, Transform _leftTransform)
+		{
+			// Get the left wheels collider states
 
-	    	// Vector3 _leftPosition
-	    	Vector3 _leftPosition;
+			// Vector3 _leftPosition
+			Vector3 _leftPosition;
 
-	    	// Quaternion _leftRotation
-	    	Quaternion _leftRotation;
+			// Quaternion _leftRotation
+			Quaternion _leftRotation;
 
-	    	// leftCollider GetWorldPose out _leftPosition out _leftRotation
-	    	_leftCollider.GetWorldPose(out _leftPosition, out _leftRotation);
+			// leftCollider GetWorldPose out _leftPosition out _leftRotation
+			_leftCollider.GetWorldPose(out _leftPosition, out _leftRotation);
 
-	    	// Set the left wheels transform states
+			// Set the left wheels transform states
 
-	    	// _leftTransform position is _leftPosition
-	    	_leftTransform.position = _leftPosition;
+			// _leftTransform position is _leftPosition
+			_leftTransform.position = _leftPosition;
 
-	    	// _leftTransform rotation is _leftRotation
-	    	_leftTransform.rotation = _leftRotation;
+			// _leftTransform rotation is _leftRotation
+			_leftTransform.rotation = _leftRotation;
 
-	    } // close private void UpdateLeftWheel WheelCollider _leftCollider Transform _leftTransform
+		} // close private void UpdateLeftWheel WheelCollider _leftCollider Transform _leftTransform
 	    
-	    // private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
-	    private void UpdateRightWheel(WheelCollider _rightCollider, Transform _rightTransform)
-	    {
-	    	// Get the right wheels collider states
+		// private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
+		private void UpdateRightWheel(WheelCollider _rightCollider, Transform _rightTransform)
+		{
+			// Get the right wheels collider states
 
-	    	// Vector3 _rightPosition
-	    	Vector3 _rightPosition;
+			// Vector3 _rightPosition
+			Vector3 _rightPosition;
 
-	    	// Quaternion _rightRotation
-	    	Quaternion _rightRotation;
+			// Quaternion _rightRotation
+			Quaternion _rightRotation;
 
-	    	// _rightCollider GetWorldPose out _rightPosition out _rightRotation
-	    	_rightCollider.GetWorldPose(out _rightPosition, out _rightRotation);
+			// _rightCollider GetWorldPose out _rightPosition out _rightRotation
+			_rightCollider.GetWorldPose(out _rightPosition, out _rightRotation);
 
-	    	// Set the right wheels transform states
+			// Set the right wheels transform states
 
-	    	// _rightTransform position is _rightPosition
-	    	_rightTransform.position = _rightPosition;
+			// _rightTransform position is _rightPosition
+			_rightTransform.position = _rightPosition;
 
-	    	// _rightTransform rotation is _rightRotation
-	    	_rightTransform.rotation = _rightRotation;
+			// _rightTransform rotation is _rightRotation
+			_rightTransform.rotation = _rightRotation;
 
-	    } // close private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
+		} // close private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
 
 	} // close public class TankUSController
 
