@@ -157,6 +157,8 @@ namespace VehiclesControl
 			// _speedType equals HumveeSpeedType.mph
 			if (_speedType == HumveeSpeedType.mph)
 			{
+				// 2.23694 is the constant to convert a value from m/s to mph
+
 				// _speed
 				_speed *= 2.23694f;
 
@@ -173,6 +175,8 @@ namespace VehiclesControl
 			// else if _speedType equals HumveeSpeedType.kmh
 			else if (_speedType == HumveeSpeedType.kmh)
 			{
+				// 3.6 is the constant to convert a value from m/s to km/h
+				
 				// _speed
 				_speed *= 3.6f;
 

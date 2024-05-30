@@ -176,6 +176,8 @@ namespace VehiclesControl
 			// _speedType equals SixWheelTruckSpeedType.mph
 			if (_speedType == SixWheelTruckSpeedType.mph)
 			{
+				// 2.23694 is the constant to convert a value from m/s to mph
+
 				// _speed
 				_speed *= 2.23694f;
 
@@ -192,6 +194,8 @@ namespace VehiclesControl
 			// else if _speedType equals SixWheelTruckSpeedType.kmh
 			else if (_speedType == SixWheelTruckSpeedType.kmh)
 			{
+				// 3.6 is the constant to convert a value from m/s to km/h
+				
 				// _speed
 				_speed *= 3.6f;
 
