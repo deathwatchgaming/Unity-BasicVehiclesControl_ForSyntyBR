@@ -166,7 +166,7 @@ namespace VehiclesControl
 
 				} // close if _speed > _maxSpeed
                         
-			} // close if _sedanSpeedType equals SedanSpeedType.mph
+			} // close if _speedType equals SedanSpeedType.mph
 
 			// else if _speedType equals SedanSpeedType.kmh
 			else if (_speedType == SedanSpeedType.kmh)
@@ -182,7 +182,7 @@ namespace VehiclesControl
 
 				} // close if _speed > _maxSpeed
                        
-			} // close else if _sedanSpeedType equals SedanSpeedType.kmh
+			} // close else if _speedType equals SedanSpeedType.kmh
 
 		} // close private void Update
 
