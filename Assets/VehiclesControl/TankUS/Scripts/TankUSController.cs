@@ -324,73 +324,11 @@ namespace VehiclesControl
 		// private void Update
 		private void Update()
 		{
-			// Take care of speed unit type and max speed
+			// Handle Speed
+			HandleSpeed();
 
-			// float _speed
-			float _speed = _rigidbody.velocity.magnitude;
-
-			// _speedType equals TankUSSpeedType.mph
-			if (_speedType == TankUSSpeedType.mph)
-			{
-				// 2.23694 is the constant to convert a value from m/s to mph
-
-				// _speed
-				_speed *= 2.23694f;
-
-				// if _speed > _maxSpeed
-				if (_speed > _maxSpeed)
-				{
-					// _rigidbody.velocity
-					_rigidbody.velocity = (_maxSpeed/2.23694f) * _rigidbody.velocity.normalized;
-
-				} // close if _speed > _maxSpeed
-                        
-			} // close if _speedType equals TankUSSpeedType.mph
-
-			// else if _speedType equals TankUSSpeedType.kmh
-			else if (_speedType == TankUSSpeedType.kmh)
-			{
-				// 3.6 is the constant to convert a value from m/s to km/h
-				
-				// _speed
-				_speed *= 3.6f;
-
-				// if _speed > _maxSpeed
-				if (_speed > _maxSpeed)
-				{
-					// _rigidbody.velocity
-					_rigidbody.velocity = (_maxSpeed/3.6f) * _rigidbody.velocity.normalized;
-
-				} // close if _speed > _maxSpeed
-                       
-			} // close else if _speedType equals TankUSSpeedType.kmh
-						
-			// Take care of the tank body steering
-		
-			// _tankUSRotation.transform.eulerAngles is _tankUSRotation
-			_tankUSBody.transform.eulerAngles = _tankUSBodyRotation;
-
-			// _tankUSRotation.y is Input GetAxis _horizontalMoveInput times _tankUSRotationSpeed
-			_tankUSBodyRotation.y += Input.GetAxis(_horizontalMoveInput) * _tankUSRotationSpeed;
-
-			// Take care of the tank turret steering
-		
-			// _tankUSTurret.transform.eulerAngles is _tankUSTurretRotation
-			_tankUSTurret.transform.eulerAngles = _tankUSTurretRotation;
-
-			// _tankUSTurretRotation.y is Input GetAxis _mouseXInput times _turretRotationSpeed
-			_tankUSTurretRotation.y += Input.GetAxis(_mouseXInput) * _turretRotationSpeed;
-
-			// Take care of the tank barrel elevation control
-            
-			// _barrelVert is Input GetAxis _mouseYInput
-			float _barrelVert = Input.GetAxis(_mouseYInput);
-
-			// _barrelElevation is Mathf Clamp _barrelElevation plus _barrelVert, _barrelMin, _barrelMax
-			_barrelElevation = Mathf.Clamp(_barrelElevation+_barrelVert, _barrelMin, _barrelMax);
-
-			// _tankUSBarrel.localRotation is Quaternion Euler _barrelElevation, 0, 0
-			_tankUSBarrel.localRotation = Quaternion.Euler(_barrelElevation, 0, 0);
+			// Handle Steering
+			HandleSteering();
             
 		} // close private void Update
 
@@ -653,6 +591,84 @@ namespace VehiclesControl
 			_rightTransform.rotation = _rightRotation;
 
 		} // close private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
+
+		// private void HandleSpeed
+		private void HandleSpeed()
+		{
+			// Take care of speed unit type and max speed
+
+			// float _speed
+			float _speed = _rigidbody.velocity.magnitude;
+
+			// _speedType equals TankUSSpeedType.mph
+			if (_speedType == TankUSSpeedType.mph)
+			{
+				// 2.23694 is the constant to convert a value from m/s to mph
+
+				// _speed
+				_speed *= 2.23694f;
+
+				// if _speed > _maxSpeed
+				if (_speed > _maxSpeed)
+				{
+					// _rigidbody.velocity
+					_rigidbody.velocity = (_maxSpeed/2.23694f) * _rigidbody.velocity.normalized;
+
+				} // close if _speed > _maxSpeed
+                        
+			} // close if _speedType equals TankUSSpeedType.mph
+
+			// else if _speedType equals TankUSSpeedType.kmh
+			else if (_speedType == TankUSSpeedType.kmh)
+			{
+				// 3.6 is the constant to convert a value from m/s to km/h
+				
+				// _speed
+				_speed *= 3.6f;
+
+				// if _speed > _maxSpeed
+				if (_speed > _maxSpeed)
+				{
+					// _rigidbody.velocity
+					_rigidbody.velocity = (_maxSpeed/3.6f) * _rigidbody.velocity.normalized;
+
+				} // close if _speed > _maxSpeed
+                       
+			} // close else if _speedType equals TankUSSpeedType.kmh
+            
+		} // close private void HandleSpeed
+
+		// private void HandleSteering
+		private void HandleSteering()
+		{						
+			// Take care of the tank body steering
+		
+			// _tankUSRotation.transform.eulerAngles is _tankUSRotation
+			_tankUSBody.transform.eulerAngles = _tankUSBodyRotation;
+
+			// _tankUSRotation.y is Input GetAxis _horizontalMoveInput times _tankUSRotationSpeed
+			_tankUSBodyRotation.y += Input.GetAxis(_horizontalMoveInput) * _tankUSRotationSpeed;
+
+			// Take care of the tank turret steering
+		
+			// _tankUSTurret.transform.eulerAngles is _tankUSTurretRotation
+			_tankUSTurret.transform.eulerAngles = _tankUSTurretRotation;
+
+			// _tankUSTurretRotation.y is Input GetAxis _mouseXInput times _turretRotationSpeed
+			_tankUSTurretRotation.y += Input.GetAxis(_mouseXInput) * _turretRotationSpeed;
+
+			// Take care of the tank barrel elevation control
+            
+			// _barrelVert is Input GetAxis _mouseYInput
+			float _barrelVert = Input.GetAxis(_mouseYInput);
+
+			// _barrelElevation is Mathf Clamp _barrelElevation plus _barrelVert, _barrelMin, _barrelMax
+			_barrelElevation = Mathf.Clamp(_barrelElevation+_barrelVert, _barrelMin, _barrelMax);
+
+			// _tankUSBarrel.localRotation is Quaternion Euler _barrelElevation, 0, 0
+			_tankUSBarrel.localRotation = Quaternion.Euler(_barrelElevation, 0, 0);
+            
+		} // close private void HandleSteering
 
 	} // close public class TankUSController
 
