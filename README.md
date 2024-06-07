@@ -38,6 +38,20 @@ Vehicles Currently "In Progress" & Not Yet Included:
 * Rib (15% completed)
 
 
+Other Currently "In Progress" & Not Yet Included:
+--------------------------------------------------
+
+
+* Gas Station / Fuel System (5% Completed) coming soon...
+* Engine Audio (0% Completed) coming soon...
+* Horn Audio (0% Completed) coming soon...
+* Reverse Beeps Audio (0% Completed) coming soon...
+* Exhaust Particles (0% Completed) coming soon...
+* Vehicle Damage System (0% Completed) * still considering such eventually as
+  a possibility since there are provided damaged vehicle prefabs in asset
+
+* Related Documentation(s) (0% completed) coming soon...
+
 
 Player Controls: 
 ----------------
