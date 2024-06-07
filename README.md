@@ -33,9 +33,10 @@ Vehicles Currently "Completed" & Included:
 Vehicles Currently "In Progress" & Not Yet Included:
 ----------------------------------------------------
 
-
+* C-130 Airplane (50% completed) coming soon...
 * Dirt Bike (90% completed) coming soon...
 * Rib (15% completed)
+
 
 
 Player Controls: 
