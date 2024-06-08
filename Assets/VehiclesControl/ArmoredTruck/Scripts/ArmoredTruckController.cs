@@ -180,7 +180,7 @@ namespace VehiclesControl
 
 			} // close else
 
-			// Apply acceleration to the front wheels
+			// Apply acceleration to all of the wheels
 	        
 			// frontLeft motorTorque is _currentAcceleration
 			_frontLeft.motorTorque = _currentAcceleration;
