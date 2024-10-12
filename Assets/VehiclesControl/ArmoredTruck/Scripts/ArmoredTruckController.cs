@@ -50,9 +50,13 @@ namespace VehiclesControl
 		// Require Components
 		[Header("Require Components")]
 
-			[Tooltip("The Rigidbody component")]
+			[Tooltip("The rigidbody component")]
 			// Rigidbody _rigidbody
-			[SerializeField] private Rigidbody _rigidbody;	
+			[SerializeField] private Rigidbody _rigidbody;
+
+			[Tooltip("The mesh collider component")]
+			// MeshCollider _meshCollider
+			[SerializeField] private MeshCollider _meshCollider;	
 
 		// Wheel Transforms
 		[Header("Wheel Transforms")]
@@ -95,7 +99,7 @@ namespace VehiclesControl
 		// Amounts
 		[Header("Amounts")]
 
-			[Tooltip("The acceleraion amount")]
+			[Tooltip("The acceleration amount")]
 			// _acceleration  is 500
 			[SerializeField] private float _acceleration = 500f;
 
@@ -110,6 +114,10 @@ namespace VehiclesControl
 			[Tooltip("The center of gravity amount")]	    
 			// _centerOfGravityOffset is -1
 			[SerializeField] private float _centerOfGravityOffset = -1f;
+
+			[Tooltip("The rigidbody component mass")]
+			// float _rigidbodyMass is 3000
+			[SerializeField] private float _rigidbodyMass = 3000f;
 
 			// _currentAcceleration is 0
 			private float _currentAcceleration = 0f;
@@ -137,12 +145,18 @@ namespace VehiclesControl
 			// _rigidbody is GetComponent Rigidbody
 			_rigidbody = GetComponent<Rigidbody>();
 	        
-			// _rigidbody mass is 3000
-			_rigidbody.mass = 3000f;
+			// _rigidbody mass is _rigidbodyMass
+			_rigidbody.mass = _rigidbodyMass;
 
 			// Adjust the center of mass vertically to help prevent the truck from rolling
 			// _rigidbody centerOfMass
 			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;
+
+			// _meshCollider is GetComponent MeshCollider
+			_meshCollider = GetComponent<MeshCollider>();
+
+			// _meshCollider convex is true
+			_meshCollider.convex = true;
 
 		} // close private void Awake
 

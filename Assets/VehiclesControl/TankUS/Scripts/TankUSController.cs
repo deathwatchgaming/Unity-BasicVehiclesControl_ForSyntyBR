@@ -55,9 +55,13 @@ namespace VehiclesControl
 		// Require Components
 		[Header("Require Components")]
 
-			[Tooltip("The Rigidbody Component")]
+			[Tooltip("The rigidbody component")]
 			// Rigidbody _rigidbody
 			[SerializeField] Rigidbody _rigidbody;	
+
+			[Tooltip("The mesh collider component")]
+			// MeshCollider _meshCollider
+			[SerializeField] private MeshCollider _meshCollider;
 
 		// TankUS Transforms
 		[Header("TankUS Transforms")]
@@ -263,6 +267,10 @@ namespace VehiclesControl
 			// _centerOfGravityOffset is -1
 			[SerializeField] private float _centerOfGravityOffset = -1f;
 
+			[Tooltip("The rigidbody component mass")]
+			// float _rigidbodyMass is 7000
+			[SerializeField] private float _rigidbodyMass = 7000f;
+
 			// _currentAcceleration is 0
 			private float _currentAcceleration = 0f;
 
@@ -295,13 +303,19 @@ namespace VehiclesControl
 			// _rigidbody is GetComponent Rigidbody
 			_rigidbody = GetComponent<Rigidbody>();
 	        
-			// _rigidbody mass is 7000
-			_rigidbody.mass = 7000f;
+			// _rigidbody mass is _rigidbodyMass
+			_rigidbody.mass = _rigidbodyMass;
 		
 			// Adjust the center of mass vertically to help prevent the tank from rolling
 			// _rigidbody centerOfMass
 			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;
 
+			// _meshCollider is GetComponent MeshCollider
+			_meshCollider = GetComponent<MeshCollider>();
+
+			// _meshCollider convex is true
+			_meshCollider.convex = true;
+			
 			// _tankUSRotation is _tankUSRotation.transform.eulerAngles
 			_tankUSBodyRotation = _tankUSBody.transform.eulerAngles;
 
