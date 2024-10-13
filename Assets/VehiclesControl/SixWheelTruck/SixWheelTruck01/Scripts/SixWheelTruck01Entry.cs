@@ -1,6 +1,6 @@
 /*
- * File: TankRU Entry
- * Name: TankRUEntry.cs
+ * File: Six Wheel Truck 01 Entry
+ * Name: SixWheelTruck01Entry.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
@@ -15,8 +15,8 @@ namespace VehiclesControl
     // RequireComponent typeof BoxCollider
     [RequireComponent(typeof(BoxCollider))]
 
-    // public class TankRUEntry 
-    public class TankRUEntry : MonoBehaviour
+    // public class SixWheelTruck01Entry 
+    public class SixWheelTruck01Entry : MonoBehaviour
     {   
         // Input Customizations
         [Header("Input Customizations")] 
@@ -32,9 +32,9 @@ namespace VehiclesControl
         // Game Objects
         [Header("Game Objects")]
 
-            [Tooltip("The tankRU game object")]
-            // GameObject _tankRU
-            [SerializeField] private GameObject _tankRU;
+            [Tooltip("The six wheel truck 01 game object")]
+            // GameObject _sixWheelTruck01
+            [SerializeField] private GameObject _sixWheelTruck01;
 
             [Tooltip("The player game object")]
             // GameObject _player
@@ -48,20 +48,20 @@ namespace VehiclesControl
         [Header("Active State")]
 
             [Tooltip("The active state bool")]
-            // bool _inTankRU is false
-            [SerializeField] private bool _inTankRU = false;
+            // bool _inSixWheelTruck01 is false
+            [SerializeField] private bool _inSixWheelTruck01 = false;
         
-        // TankRUController _tankRUScript
-        private TankRUController _tankRUScript;
+        // SixWheelTruck01Controller _sixWheelTruck01Script
+        private SixWheelTruck01Controller _sixWheelTruck01Script;
+        
+        // Camera _sixWheelTruck01Camera
+        private Camera _sixWheelTruck01Camera;
 
-        // Camera _tankRUCamera
-        private Camera _tankRUCamera;
-
-        // AudioListener _tankRUCameraAudioListener
-        private AudioListener _tankRUCameraAudioListener; 
+        // AudioListener _sixWheelTruck01CameraAudioListener
+        private AudioListener _sixWheelTruck01CameraAudioListener;        
 
         // Rigidbody _rigidbody
-        private Rigidbody _rigidbody;        
+        private Rigidbody _rigidbody;  
 
         // GameObject FindInActiveObjectByName
         GameObject FindInActiveObjectByName(string name)
@@ -95,29 +95,29 @@ namespace VehiclesControl
         // private void Start
         private void Start() 
         {
-            // _tankRUScript is GetComponent TankRUController
-            _tankRUScript = GetComponent<TankRUController>();
+            // _sixWheelTruck01Script is GetComponent SixWheelTruck01Controller
+            _sixWheelTruck01Script = GetComponent<SixWheelTruck01Controller>();
 
-            // _tankRUScript enabled is false
-            _tankRUScript.enabled = false;
+            // _sixWheelTruck01Script enabled is false
+            _sixWheelTruck01Script.enabled = false;
+
+            // _sixWheelTruck01Camera is GetComponentInChildren Camera
+            _sixWheelTruck01Camera = GetComponentInChildren<Camera>();
             
-            // _tankRUScript is GetComponentInChildren
-            _tankRUCamera = GetComponentInChildren<Camera>();
+            // _sixWheelTruck01Camera enabled is false
+            _sixWheelTruck01Camera.enabled = false;
 
-            // _tankRUCamera enabled is false
-            _tankRUCamera.enabled = false;
-
-            // _tankRUCameraAudioListener is GetComponentInChildren AudioListener
-            _tankRUCameraAudioListener = GetComponentInChildren<AudioListener>();
+            // _sixWheelTruck01CameraAudioListener is GetComponentInChildren AudioListener
+            _sixWheelTruck01CameraAudioListener = GetComponentInChildren<AudioListener>();
             
-            // _tankRUCameraAudioListener enabled is false
-            _tankRUCameraAudioListener.enabled = false; 
+            // _sixWheelTruck01CameraAudioListener enabled is false
+            _sixWheelTruck01CameraAudioListener.enabled = false;            
 
             // _rigidbody
-            _rigidbody = GetComponent<Rigidbody>();
+            _rigidbody = GetComponent<Rigidbody>();            
 
-            // GameObject _interfaceTextObject is FindInActiveObjectByName TankRU_EntryKey
-            GameObject _interfaceTextObject = FindInActiveObjectByName("TankRU_EntryKey");
+            // GameObject _interfaceTextObject is FindInActiveObjectByName SixWheelTruck01_EntryKey
+            GameObject _interfaceTextObject = FindInActiveObjectByName("SixWheelTruck01_EntryKey");
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
@@ -129,8 +129,8 @@ namespace VehiclesControl
         // private void Update
         private void Update()
         {
-            // if _inTankRU and Input GetKey KeyCode _exitKey
-            if (_inTankRU && Input.GetKey(_exitKey))
+            // if _inSixWheelTruck01 and Input GetKey KeyCode _exitKey
+            if (_inSixWheelTruck01 && Input.GetKey(_exitKey))
             {
                 // _player SetActive is true
                 _player.SetActive(true);
@@ -138,35 +138,35 @@ namespace VehiclesControl
                 // _player transform parent is null
                 _player.transform.parent = null;
 
-                // _tankRUScript enabled is false
-                _tankRUScript.enabled = false;
+                // _sixWheelTruck01Script enabled is false
+                _sixWheelTruck01Script.enabled = false;
                 
-                // _tankRUCamera enabled is false
-                _tankRUCamera.enabled = false;
+                // _sixWheelTruck01Camera enabled is false
+                _sixWheelTruck01Camera.enabled = false;
 
-                // _tankRUCameraAudioListener enabled is false
-                _tankRUCameraAudioListener.enabled = false; 
+                // _sixWheelTruck01CameraAudioListener enabled is false
+                _sixWheelTruck01CameraAudioListener.enabled = false; 
 
-                // _inTankRU is false
-                _inTankRU = false;
+                // _inSixWheelTruck01 is false
+                _inSixWheelTruck01 = false;
 
-            } // close if _inTankRU and Input GetKey KeyCode _exitKey
+            } // close if _inSixWheelTruck01 and Input GetKey KeyCode _exitKey
 
         } // close private void Update         
 
         // private void OnTriggerStay Collider other
         private void OnTriggerStay(Collider other)
         {
-            // if not _inTankRU and gameObject tag is Player
-            if (!_inTankRU && other.gameObject.tag == "Player")
+            // if not _inSixWheelTruck01 and gameObject tag is Player
+            if (!_inSixWheelTruck01 && other.gameObject.tag == "Player")
             {
                 // _interfaceTextObject SetActive is true
                 _interfaceTextObject.SetActive(true);
 
-            } // close if not _inTankRU and gameObject tag is Player
+            } // close if not _inSixWheelTruck01 and gameObject tag is Player
             
-            // if not _inTankRU and gameObject tag is Player and Input GetKey KeyCode _enterKey
-            if (!_inTankRU && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
+            // if not _inSixWheelTruck01 and gameObject tag is Player and Input GetKey KeyCode _enterKey
+            if (!_inSixWheelTruck01 && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
             {
                 // _interfaceTextObject SetActive is false
                 _interfaceTextObject.SetActive(false);
@@ -174,22 +174,22 @@ namespace VehiclesControl
                 // _player SetActive is false 
                 _player.SetActive(false);
 
-                // _player transform parent is _tankRU transform
-                _player.transform.parent = _tankRU.transform;
+                // _player transform parent is _sixWheelTruck01 transform
+                _player.transform.parent = _sixWheelTruck01.transform;
 
-                // _tankRUScript enabled is true
-                _tankRUScript.enabled = true;
+                // _sixWheelTruck01Script enabled is true
+                _sixWheelTruck01Script.enabled = true;
                 
-                // _tankRUCamera enabled is true
-                _tankRUCamera.enabled = true;
+                // _sixWheelTruck01Camera enabled is true
+                _sixWheelTruck01Camera.enabled = true;
 
-                // _tankRUCameraAudioListener enabled is true
-                _tankRUCameraAudioListener.enabled = true; 
+                // _sixWheelTruck01CameraAudioListener enabled is true
+                _sixWheelTruck01CameraAudioListener.enabled = true;                 
 
-                // _inTankRU is true
-                _inTankRU = true;
+                // _inSixWheelTruck01 is true
+                _inSixWheelTruck01 = true;
 
-            } // close if not _inTankRU and gameObject tag is Player and Input GetKey KeyCode _enterKey
+            } // close if not _inSixWheelTruck01 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
         } // close private void OnTriggerStay Collider other
         
@@ -201,7 +201,7 @@ namespace VehiclesControl
             {
                 // _interfaceTextObject SetActive is false
                 _interfaceTextObject.SetActive(false);
-                
+
                 // StartCoroutine RigidbodySleep
                 StartCoroutine(RigidbodySleep(0.000001f)); 
 
@@ -218,8 +218,8 @@ namespace VehiclesControl
             // _rigidbody Sleep
             _rigidbody.Sleep();
 
-        } // close private IEnumerator RigidbodySleep float duration       
-        
-    } // close public class TankRUEntry  
+        } // close private IEnumerator RigidbodySleep float duration
+
+    } // close public class SixWheelTruck01Entry  
 
 } // close namespace VehiclesControl

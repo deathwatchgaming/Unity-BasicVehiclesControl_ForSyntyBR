@@ -1,6 +1,6 @@
 /*
- * File: Dune Buggy Controller
- * Name: DuneBuggyController.cs
+ * File: Dune Buggy 01 Controller
+ * Name: DuneBuggy01Controller.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
@@ -15,13 +15,13 @@ using UnityEngine;
 // namespace VehiclesControl
 namespace VehiclesControl
 {
-	// public enum DuneBuggySpeedType
-	public enum DuneBuggySpeedType
+	// public enum DuneBuggy01SpeedType
+	public enum DuneBuggy01SpeedType
 	{
 		mph,
 		kmh	
 
-	} // close public enum DuneBuggySpeedType
+	} // close public enum DuneBuggy01SpeedType
 		
 	// RequireComponent typeof MeshCollider
 	[RequireComponent(typeof(MeshCollider))]
@@ -29,8 +29,8 @@ namespace VehiclesControl
 	// RequireComponent typeof Rigidbody
 	[RequireComponent(typeof(Rigidbody))]
 
-	// public class DuneBuggyController
-	public class DuneBuggyController : MonoBehaviour
+	// public class DuneBuggy01Controller
+	public class DuneBuggy01Controller : MonoBehaviour
 	{
 		// Input Customizations
 		[Header("Input Customizations")]
@@ -132,8 +132,8 @@ namespace VehiclesControl
 		[Header("Speed")]
 
 			[Tooltip("The speed measurement unit")]
-			// DuneBuggySpeedType _speedType	
-			[SerializeField] private DuneBuggySpeedType _speedType;			
+			// DuneBuggy01SpeedType _speedType	
+			[SerializeField] private DuneBuggy01SpeedType _speedType;			
 	    
 			[Tooltip("The maximum speed amount")]
 			// float _maxSpeed
@@ -299,8 +299,8 @@ namespace VehiclesControl
 			// float _speed
 			float _speed = _rigidbody.velocity.magnitude;
 
-			// _speedType equals DuneBuggySpeedType.mph
-			if (_speedType == DuneBuggySpeedType.mph)
+			// _speedType equals DuneBuggy01SpeedType.mph
+			if (_speedType == DuneBuggy01SpeedType.mph)
 			{
 				// 2.23694 is the constant to convert a value from m/s to mph
 				
@@ -315,10 +315,10 @@ namespace VehiclesControl
 
 				} // close if _speed > _maxSpeed
                         
-			} // close if _speedType equals DuneBuggySpeedType.mph
+			} // close if _speedType equals DuneBuggy01SpeedType.mph
 
-			// else if _speedType equals DuneBuggySpeedType.kmh
-			else if (_speedType == DuneBuggySpeedType.kmh)
+			// else if _speedType equals DuneBuggy01SpeedType.kmh
+			else if (_speedType == DuneBuggy01SpeedType.kmh)
 			{
 				// 3.6 is the constant to convert a value from m/s to km/h
 
@@ -333,10 +333,10 @@ namespace VehiclesControl
 
 				} // close if _speed > _maxSpeed
                        
-			} // close else if _speedType equals DuneBuggySpeedType.kmh
+			} // close else if _speedType equals DuneBuggy01SpeedType.kmh
 
 		} // close private void Handlespeed
 		
-	} // close public class DuneBuggyController
+	} // close public class DuneBuggy01Controller
 
 } // close namespace VehiclesControl

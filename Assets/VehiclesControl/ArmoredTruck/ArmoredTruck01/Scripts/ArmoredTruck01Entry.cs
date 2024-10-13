@@ -1,6 +1,6 @@
 /*
- * File: TankRU Entry
- * Name: TankRUEntry.cs
+ * File: Armored Truck 01 Entry 
+ * Name: ArmoredTruck01Entry.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
@@ -15,9 +15,9 @@ namespace VehiclesControl
     // RequireComponent typeof BoxCollider
     [RequireComponent(typeof(BoxCollider))]
 
-    // public class TankRUEntry 
-    public class TankRUEntry : MonoBehaviour
-    {   
+    // public class ArmoredTruck01Entry 
+    public class ArmoredTruck01Entry : MonoBehaviour
+    {  
         // Input Customizations
         [Header("Input Customizations")] 
 
@@ -32,9 +32,9 @@ namespace VehiclesControl
         // Game Objects
         [Header("Game Objects")]
 
-            [Tooltip("The tankRU game object")]
-            // GameObject _tankRU
-            [SerializeField] private GameObject _tankRU;
+            [Tooltip("The armored truck game object")]
+            // GameObject _armoredTruck01
+            [SerializeField] private GameObject _armoredTruck01;
 
             [Tooltip("The player game object")]
             // GameObject _player
@@ -48,20 +48,20 @@ namespace VehiclesControl
         [Header("Active State")]
 
             [Tooltip("The active state bool")]
-            // bool _inTankRU is false
-            [SerializeField] private bool _inTankRU = false;
+            // bool _inArmoredTruck01 is false
+            [SerializeField] private bool _inArmoredTruck01 = false;
         
-        // TankRUController _tankRUScript
-        private TankRUController _tankRUScript;
+        // ArmoredTruck01Controller _armoredTruck01Script
+        private ArmoredTruck01Controller _armoredTruck01Script;
+        
+        // Camera _armoredTruck01Camera
+        private Camera _armoredTruck01Camera;
 
-        // Camera _tankRUCamera
-        private Camera _tankRUCamera;
-
-        // AudioListener _tankRUCameraAudioListener
-        private AudioListener _tankRUCameraAudioListener; 
+        // AudioListener _armoredTruck01CameraAudioListener
+        private AudioListener _armoredTruck01CameraAudioListener; 
 
         // Rigidbody _rigidbody
-        private Rigidbody _rigidbody;        
+        private Rigidbody _rigidbody;
 
         // GameObject FindInActiveObjectByName
         GameObject FindInActiveObjectByName(string name)
@@ -95,42 +95,42 @@ namespace VehiclesControl
         // private void Start
         private void Start() 
         {
-            // _tankRUScript is GetComponent TankRUController
-            _tankRUScript = GetComponent<TankRUController>();
+            // _armoredTruck01Script is GetComponent ArmoredTruck01Controller
+            _armoredTruck01Script = GetComponent<ArmoredTruck01Controller>();
 
-            // _tankRUScript enabled is false
-            _tankRUScript.enabled = false;
+            // _armoredTruck01Script enabled is false
+            _armoredTruck01Script.enabled = false;
             
-            // _tankRUScript is GetComponentInChildren
-            _tankRUCamera = GetComponentInChildren<Camera>();
-
-            // _tankRUCamera enabled is false
-            _tankRUCamera.enabled = false;
-
-            // _tankRUCameraAudioListener is GetComponentInChildren AudioListener
-            _tankRUCameraAudioListener = GetComponentInChildren<AudioListener>();
+            // _armoredTruck01Camera is GetComponentInChildren Camera
+            _armoredTruck01Camera = GetComponentInChildren<Camera>();
             
-            // _tankRUCameraAudioListener enabled is false
-            _tankRUCameraAudioListener.enabled = false; 
+            // _armoredTruck01Camera enabled is false
+            _armoredTruck01Camera.enabled = false;
+
+            // _armoredTruck01CameraAudioListener is GetComponentInChildren AudioListener
+            _armoredTruck01CameraAudioListener = GetComponentInChildren<AudioListener>();
+            
+            // _armoredTruck01CameraAudioListener enabled is false
+            _armoredTruck01CameraAudioListener.enabled = false; 
 
             // _rigidbody
             _rigidbody = GetComponent<Rigidbody>();
 
-            // GameObject _interfaceTextObject is FindInActiveObjectByName TankRU_EntryKey
-            GameObject _interfaceTextObject = FindInActiveObjectByName("TankRU_EntryKey");
+            // GameObject _interfaceTextObject is FindInActiveObjectByName ArmoredTruck01_EntryKey
+            GameObject _interfaceTextObject = FindInActiveObjectByName("ArmoredTruck01_EntryKey");
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
 
-        } // close private void Start
+    	} // close private void Start
 
         // Update is called once per frame
 
         // private void Update
         private void Update()
         {
-            // if _inTankRU and Input GetKey KeyCode _exitKey
-            if (_inTankRU && Input.GetKey(_exitKey))
+            // if _inArmoredTruck01 and Input GetKey KeyCode _exitKey
+            if (_inArmoredTruck01 && Input.GetKey(_exitKey))
             {
                 // _player SetActive is true
                 _player.SetActive(true);
@@ -138,35 +138,35 @@ namespace VehiclesControl
                 // _player transform parent is null
                 _player.transform.parent = null;
 
-                // _tankRUScript enabled is false
-                _tankRUScript.enabled = false;
+                // _armoredTruck01Script enabled is false
+                _armoredTruck01Script.enabled = false;
                 
-                // _tankRUCamera enabled is false
-                _tankRUCamera.enabled = false;
+                // _armoredTruck01Camera enabled is false
+                _armoredTruck01Camera.enabled = false;
 
-                // _tankRUCameraAudioListener enabled is false
-                _tankRUCameraAudioListener.enabled = false; 
+                // _armoredTruck01CameraAudioListener enabled is false
+                _armoredTruck01CameraAudioListener.enabled = false;                 
 
-                // _inTankRU is false
-                _inTankRU = false;
+                // _inArmoredTruck01 is false
+                _inArmoredTruck01 = false;
 
-            } // close if _inTankRU and Input GetKey KeyCode _exitKey
+            } // close if _inArmoredTruck01 and Input GetKey KeyCode _exitKey
 
         } // close private void Update         
 
         // private void OnTriggerStay Collider other
         private void OnTriggerStay(Collider other)
         {
-            // if not _inTankRU and gameObject tag is Player
-            if (!_inTankRU && other.gameObject.tag == "Player")
+        	// if not _inArmoredTruck01 and gameObject tag is Player
+            if (!_inArmoredTruck01 && other.gameObject.tag == "Player")
             {
-                // _interfaceTextObject SetActive is true
+            	// _interfaceTextObject SetActive is true
                 _interfaceTextObject.SetActive(true);
 
-            } // close if not _inTankRU and gameObject tag is Player
+            } // close if not _inArmoredTruck01 and gameObject tag is Player
             
-            // if not _inTankRU and gameObject tag is Player and Input GetKey KeyCode _enterKey
-            if (!_inTankRU && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
+            // if not _inArmoredTruck01 and gameObject tag is Player and Input GetKey KeyCode _enterKey
+            if (!_inArmoredTruck01 && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
             {
                 // _interfaceTextObject SetActive is false
                 _interfaceTextObject.SetActive(false);
@@ -174,22 +174,22 @@ namespace VehiclesControl
                 // _player SetActive is false 
                 _player.SetActive(false);
 
-                // _player transform parent is _tankRU transform
-                _player.transform.parent = _tankRU.transform;
+                // _player transform parent is _armoredTruck01 transform
+                _player.transform.parent = _armoredTruck01.transform;
 
-                // _tankRUScript enabled is true
-                _tankRUScript.enabled = true;
+                // _armoredTruck01Script enabled is true
+                _armoredTruck01Script.enabled = true;
                 
-                // _tankRUCamera enabled is true
-                _tankRUCamera.enabled = true;
+                // _armoredTruck01Camera enabled is true
+                _armoredTruck01Camera.enabled = true;
 
-                // _tankRUCameraAudioListener enabled is true
-                _tankRUCameraAudioListener.enabled = true; 
+                // _armoredTruck01CameraAudioListener enabled is true
+                _armoredTruck01CameraAudioListener.enabled = true; 
 
-                // _inTankRU is true
-                _inTankRU = true;
+                // _inArmoredTruck01 is true
+                _inArmoredTruck01 = true;
 
-            } // close if not _inTankRU and gameObject tag is Player and Input GetKey KeyCode _enterKey
+            } // close if not _inArmoredTruck01 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
         } // close private void OnTriggerStay Collider other
         
@@ -199,7 +199,7 @@ namespace VehiclesControl
             // if gameObject tag is Player
             if (other.gameObject.tag == "Player")
             {
-                // _interfaceTextObject SetActive is false
+            	// _interfaceTextObject SetActive is false
                 _interfaceTextObject.SetActive(false);
                 
                 // StartCoroutine RigidbodySleep
@@ -218,8 +218,8 @@ namespace VehiclesControl
             // _rigidbody Sleep
             _rigidbody.Sleep();
 
-        } // close private IEnumerator RigidbodySleep float duration       
+        } // close private IEnumerator RigidbodySleep float duration  
         
-    } // close public class TankRUEntry  
+    } // close public class ArmoredTruck01Entry  
 
 } // close namespace VehiclesControl

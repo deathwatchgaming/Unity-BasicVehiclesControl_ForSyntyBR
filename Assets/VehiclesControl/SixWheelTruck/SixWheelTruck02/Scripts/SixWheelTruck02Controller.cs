@@ -1,12 +1,15 @@
 /*
- * File: Dune Buggy Controller
- * Name: DuneBuggyController.cs
+ * File: Six Wheel Truck 02 Controller
+ * Name: SixWheelTruck02Controller.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
 
-// Wheels Collider Radius: 0.4145404
-// Wheels Collider Position Y: (0.4145404+0.15)
+// Front Wheels Collider Radius: 0.6400671
+// Front Wheels Collider Position Y: 0.7900671 (0.6400671+0.15)
+
+// Rear Wheels Collider Radius: 0.6400672
+// Rear Wheels Collider Position Y: 0.7900672 (0.6400672+0.15)
 
 // using
 using System;
@@ -15,22 +18,22 @@ using UnityEngine;
 // namespace VehiclesControl
 namespace VehiclesControl
 {
-	// public enum DuneBuggySpeedType
-	public enum DuneBuggySpeedType
+	// public enum SixWheelTruck02SpeedType
+	public enum SixWheelTruck02SpeedType
 	{
 		mph,
 		kmh	
 
-	} // close public enum DuneBuggySpeedType
-		
+	} // close public enum SixWheelTruck02SpeedType
+
 	// RequireComponent typeof MeshCollider
 	[RequireComponent(typeof(MeshCollider))]
 
 	// RequireComponent typeof Rigidbody
 	[RequireComponent(typeof(Rigidbody))]
 
-	// public class DuneBuggyController
-	public class DuneBuggyController : MonoBehaviour
+	// public class SixWheelTruck02Controller
+	public class SixWheelTruck02Controller : MonoBehaviour
 	{
 		// Input Customizations
 		[Header("Input Customizations")]
@@ -41,22 +44,22 @@ namespace VehiclesControl
 
 			[Tooltip("The horizontal movement input string")]
 			// string _horizontalMoveInput
-			[SerializeField] private string _horizontalMoveInput = "Horizontal";	
+			[SerializeField] private string _horizontalMoveInput = "Horizontal";
 
 			[Tooltip("The brake input keycode key")]
 			// KeyCode _brakeKey
 			[SerializeField] private KeyCode _brakeKey = KeyCode.Space;
-					
+					    		
 		// Require Components
 		[Header("Require Components")]
 
 			[Tooltip("The rigidbody component")]
 			// Rigidbody _rigidbody
-			[SerializeField] private Rigidbody _rigidbody;
+			[SerializeField] Rigidbody _rigidbody;	
 
 			[Tooltip("The mesh collider component")]
 			// MeshCollider _meshCollider
-			[SerializeField] private MeshCollider _meshCollider;			
+			[SerializeField] private MeshCollider _meshCollider;	
 
 		// Wheel Transforms
 		[Header("Wheel Transforms")]
@@ -69,13 +72,21 @@ namespace VehiclesControl
 			// Transform _frontRightTransform
 			[SerializeField] private Transform _frontRightTransform;
 
-			[Tooltip("The rear left wheel transform")]
-			// Transform _rearLeftTransform
-			[SerializeField] private Transform _rearLeftTransform;
+			[Tooltip("The first rear left wheel transform")]
+			// Transform _rearLeft01Transform
+			[SerializeField] private Transform _rearLeft01Transform;
 
-			[Tooltip("The rear right wheel transform")]
-			// Transform _rearRightTransform
-			[SerializeField] private Transform _rearRightTransform;
+			[Tooltip("The second rear left wheel transform")]
+			// Transform _rearLeft02Transform
+			[SerializeField] private Transform _rearLeft02Transform;
+
+			[Tooltip("The first rear right wheel transform")]
+			// Transform _rearRight01Transform
+			[SerializeField] private Transform _rearRight01Transform;
+
+			[Tooltip("The second rear right wheel transform")]
+			// Transform _rearRight02Transform
+			[SerializeField] private Transform _rearRight02Transform;
 
 		// Wheel Colliders
 		[Header("Wheel Colliders")]
@@ -88,14 +99,22 @@ namespace VehiclesControl
 			// WheelCollider _frontRight
 			[SerializeField] private WheelCollider _frontRight;
 
-			[Tooltip("The rear left wheel collider")]
-			// WheelCollider _rearLeft
-			[SerializeField] private WheelCollider _rearLeft;
+			[Tooltip("The first rear left wheel collider")]
+			// WheelCollider _rearLeft01
+			[SerializeField] private WheelCollider _rearLeft01;
 
-			[Tooltip("The rear right wheel collider")]
-			// WheelCollider _rearRight
-			[SerializeField] private WheelCollider _rearRight;
-		    	    
+			[Tooltip("The second rear left wheel collider")]
+			// WheelCollider _rearLeft02
+			[SerializeField] private WheelCollider _rearLeft02;
+
+			[Tooltip("The first rear right wheel collider")]
+			// WheelCollider _rearRight01
+			[SerializeField] private WheelCollider _rearRight01;
+
+			[Tooltip("The second rear right wheel collider")]
+			// WheelCollider _rearRight02
+			[SerializeField] private WheelCollider _rearRight02;
+					    	    
 		// Amounts
 		[Header("Amounts")]
 
@@ -111,13 +130,13 @@ namespace VehiclesControl
 			// _maxTurnAngle is 15
 			[SerializeField] private float _maxTurnAngle = 15f;
 
-			[Tooltip("The center of gravity amount")]	    
+			[Tooltip("The center of gravity offset amount")]	    
 			// _centerOfGravityOffset is -1
 			[SerializeField] private float _centerOfGravityOffset = -1f;
 
 			[Tooltip("The rigidbody component mass")]
-			// float _rigidbodyMass is 1500
-			[SerializeField] private float _rigidbodyMass = 1500f;			
+			// float _rigidbodyMass is 3500
+			[SerializeField] private float _rigidbodyMass = 3500f;
 
 			// _currentAcceleration is 0
 			private float _currentAcceleration = 0f;
@@ -125,15 +144,15 @@ namespace VehiclesControl
 			// _currentBrakeForce is 0
 			private float _currentBrakeForce = 0f;
 		    
-			// _currentTurnAngle is 0 
+			// _currentTurnAngle is 0
 			private float _currentTurnAngle = 0f;
 
 		// Speed
 		[Header("Speed")]
 
 			[Tooltip("The speed measurement unit")]
-			// DuneBuggySpeedType _speedType	
-			[SerializeField] private DuneBuggySpeedType _speedType;			
+			// SixWheelTruck02SpeedType _speedType	
+			[SerializeField] private SixWheelTruck02SpeedType _speedType;			
 	    
 			[Tooltip("The maximum speed amount")]
 			// float _maxSpeed
@@ -147,19 +166,19 @@ namespace VehiclesControl
 	        
 			// _rigidbody mass is _rigidbodyMass
 			_rigidbody.mass = _rigidbodyMass;
-
-			// Adjust the center of mass vertically to help prevent the dune buggy from rolling
+		
+			// Adjust the center of mass vertically to help prevent the truck from rolling
 			// _rigidbody centerOfMass
-			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;
+			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;	
 
 			// _meshCollider is GetComponent MeshCollider
 			_meshCollider = GetComponent<MeshCollider>();
 
 			// _meshCollider convex is true
 			_meshCollider.convex = true;
-			
+	        
 		} // close private void Awake
-
+		
 		// private void Update
 		private void Update()
 		{
@@ -171,12 +190,12 @@ namespace VehiclesControl
 		// private void FixedUpdate
 		private void FixedUpdate()
 		{
-			// Get the forward and reverse _acceleration from vertical axis (W and S keys)
+			// Get the forward and reverse acceleration from vertical axis (W and S keys)
 	        
 			// _currentAcceleration is _acceleration times Input GetAxis Vertical
 			_currentAcceleration = _acceleration * Input.GetAxis(_verticalMoveInput);
 
-			// If we are pressing the _brakeKey give currentBrakingForce a value
+			// If we are pressing the _brakeKey then give currentBrakingForce a value
 
 			// if Input GetKey KeyCode _brakeKey
 			if (Input.GetKey(_brakeKey))
@@ -194,15 +213,15 @@ namespace VehiclesControl
 
 			} // close else
 
-			// Apply _acceleration to the rear wheels
+			// Apply acceleration to the front wheels
 	        
-			// _rearLeft motorTorque is _currentAcceleration
-			_rearLeft.motorTorque = _currentAcceleration;
+			// _frontLeft motorTorque is _currentAcceleration
+			_frontLeft.motorTorque = _currentAcceleration;
 
-			// _rearRight motorTorque is _currentAcceleration
-			_rearRight.motorTorque = _currentAcceleration;
+			// _frontRight motorTorque is _currentAcceleration
+			_frontRight.motorTorque = _currentAcceleration;
 
-			// Apply braking force to all wheels
+			// Apply braking force to all of the wheels
 
 			// _frontLeft brakeTorque is _currentBrakeForce
 			_frontLeft.brakeTorque = _currentBrakeForce;
@@ -210,11 +229,17 @@ namespace VehiclesControl
 			// _frontRight brakeTorque is _currentBrakeForce
 			_frontRight.brakeTorque = _currentBrakeForce;
 
-			// _rearLeft brakeTorque is _currentBrakeForce
-			_rearLeft.brakeTorque = _currentBrakeForce;
+			// _rearLeft01 brakeTorque is _currentBrakeForce
+			_rearLeft01.brakeTorque = _currentBrakeForce;
 
-			// _rearRight brakeTorque is _currentBrakeForce
-			_rearRight.brakeTorque = _currentBrakeForce;
+			// _rearLeft02 brakeTorque is _currentBrakeForce
+			_rearLeft02.brakeTorque = _currentBrakeForce;
+
+			// _rearRight01 brakeTorque is _currentBrakeForce
+			_rearRight01.brakeTorque = _currentBrakeForce;
+
+			// _rearRight02 brakeTorque is _currentBrakeForce
+			_rearRight02.brakeTorque = _currentBrakeForce;
 
 			// Take care of the front wheels steering
 
@@ -227,7 +252,7 @@ namespace VehiclesControl
 			// _frontRight steerAngle is _currentTurnAngle
 			_frontRight.steerAngle = _currentTurnAngle;
 
-			// Update wheel meshes
+			// Update the wheel meshes
 
 			// UpdateLeftWheel _frontLeft _frontLeftTransform
 			UpdateLeftWheel(_frontLeft, _frontLeftTransform); 
@@ -235,11 +260,17 @@ namespace VehiclesControl
 			// UpdateRightWheel _frontRight _frontRightTransform
 			UpdateRightWheel(_frontRight, _frontRightTransform);
 
-			// UpdateLeftWheel _rearLeft _rearLeftTransform
-			UpdateLeftWheel(_rearLeft, _rearLeftTransform); 
-	        
-			// UpdateRightWheel _rearRight _rearRightTransform
-			UpdateRightWheel(_rearRight, _rearRightTransform);                      
+			// UpdateLeftWheel _rearLeft01 _rearLeft01Transform
+			UpdateLeftWheel(_rearLeft01, _rearLeft01Transform);
+
+			// UpdateLeftWheel _rearLeft02 _rearLeft02Transform
+			UpdateLeftWheel(_rearLeft02, _rearLeft02Transform); 
+
+			// UpdateRightWheel _rearRight01 _rearRight01Transform
+			UpdateRightWheel(_rearRight01, _rearRight01Transform);
+	 
+			// UpdateRightWheel _rearRight02 _rearRight02Transform
+			UpdateRightWheel(_rearRight02, _rearRight02Transform);
 
 		} // close private void FixedUpdate
 
@@ -254,7 +285,7 @@ namespace VehiclesControl
 			// Quaternion _leftRotation
 			Quaternion _leftRotation;
 
-			// _leftCollider GetWorldPose out _leftPosition out _leftRotation
+			// leftCollider GetWorldPose out _leftPosition out _leftRotation
 			_leftCollider.GetWorldPose(out _leftPosition, out _leftRotation);
 
 			// Set the left wheels transform states
@@ -287,10 +318,10 @@ namespace VehiclesControl
 			_rightTransform.position = _rightPosition;
 
 			// _rightTransform rotation is _rightRotation
-			_rightTransform.rotation = _rightRotation;    	
+			_rightTransform.rotation = _rightRotation;
 
 		} // close private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
-
+		
 		// private void HandleSpeed
 		private void HandleSpeed()
 		{
@@ -299,11 +330,11 @@ namespace VehiclesControl
 			// float _speed
 			float _speed = _rigidbody.velocity.magnitude;
 
-			// _speedType equals DuneBuggySpeedType.mph
-			if (_speedType == DuneBuggySpeedType.mph)
+			// _speedType equals SixWheelTruck02SpeedType.mph
+			if (_speedType == SixWheelTruck02SpeedType.mph)
 			{
 				// 2.23694 is the constant to convert a value from m/s to mph
-				
+
 				// _speed
 				_speed *= 2.23694f;
 
@@ -315,13 +346,13 @@ namespace VehiclesControl
 
 				} // close if _speed > _maxSpeed
                         
-			} // close if _speedType equals DuneBuggySpeedType.mph
+			} // close if _speedType equals SixWheelTruck02SpeedType.mph
 
-			// else if _speedType equals DuneBuggySpeedType.kmh
-			else if (_speedType == DuneBuggySpeedType.kmh)
+			// else if _speedType equals SixWheelTruck02SpeedType.kmh
+			else if (_speedType == SixWheelTruck02SpeedType.kmh)
 			{
 				// 3.6 is the constant to convert a value from m/s to km/h
-
+				
 				// _speed
 				_speed *= 3.6f;
 
@@ -333,10 +364,10 @@ namespace VehiclesControl
 
 				} // close if _speed > _maxSpeed
                        
-			} // close else if _speedType equals DuneBuggySpeedType.kmh
+			} // close else if _speedType equals SixWheelTruck02SpeedType.kmh
 
-		} // close private void Handlespeed
-		
-	} // close public class DuneBuggyController
+		} // close private void HandleSpeed
 
-} // close namespace VehiclesControl
+	} // close public class SixWheelTruck02Controller
+
+} //close namespace VehiclesControl

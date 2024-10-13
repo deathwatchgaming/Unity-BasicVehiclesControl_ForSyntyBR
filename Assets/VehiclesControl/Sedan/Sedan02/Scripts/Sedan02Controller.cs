@@ -1,12 +1,12 @@
 /*
- * File: Dune Buggy Controller
- * Name: DuneBuggyController.cs
+ * File: Sedan 02 Controller
+ * Name: Sedan02Controller.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
 
-// Wheels Collider Radius: 0.4145404
-// Wheels Collider Position Y: (0.4145404+0.15)
+// Wheel Collider Radius: 0.3614392
+// Wheel Collider Position Y: 0.511439 (0.3614392+0.15)
 
 // using
 using System;
@@ -15,22 +15,22 @@ using UnityEngine;
 // namespace VehiclesControl
 namespace VehiclesControl
 {
-	// public enum DuneBuggySpeedType
-	public enum DuneBuggySpeedType
+	// public enum Sedan02SpeedType
+	public enum Sedan02SpeedType
 	{
 		mph,
 		kmh	
 
-	} // close public enum DuneBuggySpeedType
-		
+	} // close public enum Sedan02SpeedType
+
 	// RequireComponent typeof MeshCollider
 	[RequireComponent(typeof(MeshCollider))]
 
 	// RequireComponent typeof Rigidbody
 	[RequireComponent(typeof(Rigidbody))]
 
-	// public class DuneBuggyController
-	public class DuneBuggyController : MonoBehaviour
+	// public class Sedan02Controller
+	public class Sedan02Controller : MonoBehaviour
 	{
 		// Input Customizations
 		[Header("Input Customizations")]
@@ -46,17 +46,17 @@ namespace VehiclesControl
 			[Tooltip("The brake input keycode key")]
 			// KeyCode _brakeKey
 			[SerializeField] private KeyCode _brakeKey = KeyCode.Space;
-					
+			
 		// Require Components
 		[Header("Require Components")]
 
 			[Tooltip("The rigidbody component")]
 			// Rigidbody _rigidbody
-			[SerializeField] private Rigidbody _rigidbody;
+			[SerializeField] private Rigidbody _rigidbody;	
 
 			[Tooltip("The mesh collider component")]
 			// MeshCollider _meshCollider
-			[SerializeField] private MeshCollider _meshCollider;			
+			[SerializeField] private MeshCollider _meshCollider;
 
 		// Wheel Transforms
 		[Header("Wheel Transforms")]
@@ -105,19 +105,19 @@ namespace VehiclesControl
 
 			[Tooltip("The braking force amount")]
 			// _brakingForce is 300
-			[SerializeField] private float _brakingForce = 300f; 
+			[SerializeField] private float _brakingForce = 300f;
 
 			[Tooltip("The maximum turn angle amount")]
-			// _maxTurnAngle is 15
+			// _maxTurnAngle
 			[SerializeField] private float _maxTurnAngle = 15f;
 
-			[Tooltip("The center of gravity amount")]	    
+			[Tooltip("The cnter of gravity offset amount")]	    
 			// _centerOfGravityOffset is -1
 			[SerializeField] private float _centerOfGravityOffset = -1f;
 
 			[Tooltip("The rigidbody component mass")]
-			// float _rigidbodyMass is 1500
-			[SerializeField] private float _rigidbodyMass = 1500f;			
+			// float _rigidbodyMass is 1000
+			[SerializeField] private float _rigidbodyMass = 1000f;
 
 			// _currentAcceleration is 0
 			private float _currentAcceleration = 0f;
@@ -125,20 +125,20 @@ namespace VehiclesControl
 			// _currentBrakeForce is 0
 			private float _currentBrakeForce = 0f;
 		    
-			// _currentTurnAngle is 0 
+			// _currentTurnAngle is 0
 			private float _currentTurnAngle = 0f;
 
 		// Speed
 		[Header("Speed")]
 
 			[Tooltip("The speed measurement unit")]
-			// DuneBuggySpeedType _speedType	
-			[SerializeField] private DuneBuggySpeedType _speedType;			
+			// Sedan02SpeedType _speedType	
+			[SerializeField] private Sedan02SpeedType _speedType;			
 	    
 			[Tooltip("The maximum speed amount")]
 			// float _maxSpeed
-			[SerializeField] private float _maxSpeed = 180;	
-
+			[SerializeField] private float _maxSpeed = 180;			
+	    
 		// private void Awake
 		private void Awake()
 		{
@@ -147,17 +147,17 @@ namespace VehiclesControl
 	        
 			// _rigidbody mass is _rigidbodyMass
 			_rigidbody.mass = _rigidbodyMass;
-
-			// Adjust the center of mass vertically to help prevent the dune buggy from rolling
+		
+			// Adjust the center of mass vertically to help prevent the sedan02 car from rolling
 			// _rigidbody centerOfMass
-			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;
+			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;	
 
 			// _meshCollider is GetComponent MeshCollider
 			_meshCollider = GetComponent<MeshCollider>();
 
 			// _meshCollider convex is true
 			_meshCollider.convex = true;
-			
+	        
 		} // close private void Awake
 
 		// private void Update
@@ -171,7 +171,7 @@ namespace VehiclesControl
 		// private void FixedUpdate
 		private void FixedUpdate()
 		{
-			// Get the forward and reverse _acceleration from vertical axis (W and S keys)
+			// Get the forward and reverse acceleration from vertical axis (W and S keys)
 	        
 			// _currentAcceleration is _acceleration times Input GetAxis Vertical
 			_currentAcceleration = _acceleration * Input.GetAxis(_verticalMoveInput);
@@ -194,7 +194,7 @@ namespace VehiclesControl
 
 			} // close else
 
-			// Apply _acceleration to the rear wheels
+			// Apply acceleration to the rear wheels
 	        
 			// _rearLeft motorTorque is _currentAcceleration
 			_rearLeft.motorTorque = _currentAcceleration;
@@ -202,7 +202,7 @@ namespace VehiclesControl
 			// _rearRight motorTorque is _currentAcceleration
 			_rearRight.motorTorque = _currentAcceleration;
 
-			// Apply braking force to all wheels
+			// Apply braking force to all of the wheels
 
 			// _frontLeft brakeTorque is _currentBrakeForce
 			_frontLeft.brakeTorque = _currentBrakeForce;
@@ -218,7 +218,7 @@ namespace VehiclesControl
 
 			// Take care of the front wheels steering
 
-			// _currentTurnAngle is _maxTurnAngle times Input GetAxis Horizontal
+			// _currentTurnAngle is _maxTurnAngle time Input GetAxis Horizontal
 			_currentTurnAngle = _maxTurnAngle * Input.GetAxis(_horizontalMoveInput);
 
 			// _frontLeft steerAngle is _currentTurnAngle
@@ -227,7 +227,7 @@ namespace VehiclesControl
 			// _frontRight steerAngle is _currentTurnAngle
 			_frontRight.steerAngle = _currentTurnAngle;
 
-			// Update wheel meshes
+			// Update the wheel meshes
 
 			// UpdateLeftWheel _frontLeft _frontLeftTransform
 			UpdateLeftWheel(_frontLeft, _frontLeftTransform); 
@@ -236,17 +236,17 @@ namespace VehiclesControl
 			UpdateRightWheel(_frontRight, _frontRightTransform);
 
 			// UpdateLeftWheel _rearLeft _rearLeftTransform
-			UpdateLeftWheel(_rearLeft, _rearLeftTransform); 
+			UpdateLeftWheel(_rearLeft, _rearLeftTransform);
 	        
 			// UpdateRightWheel _rearRight _rearRightTransform
-			UpdateRightWheel(_rearRight, _rearRightTransform);                      
-
+			UpdateRightWheel(_rearRight, _rearRightTransform);
+	                       
 		} // close private void FixedUpdate
 
 		// private void UpdateLeftWheel WheelCollider _leftCollider Transform _leftTransform
 		private void UpdateLeftWheel(WheelCollider _leftCollider, Transform _leftTransform)
 		{
-			// Get the left wheels collider states
+			// Get the left wheel collider states
 
 			// Vector3 _leftPosition
 			Vector3 _leftPosition;
@@ -270,7 +270,7 @@ namespace VehiclesControl
 		// private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
 		private void UpdateRightWheel(WheelCollider _rightCollider, Transform _rightTransform)
 		{
-			// Get the right wheels collider states
+			// Get Right wheels collider states
 
 			// Vector3 _rightPosition
 			Vector3 _rightPosition;
@@ -287,6 +287,11 @@ namespace VehiclesControl
 			_rightTransform.position = _rightPosition;
 
 			// _rightTransform rotation is _rightRotation
+			//_rightTransform.rotation = _rightRotation;
+
+			Vector3 _euler = _rightRotation.eulerAngles;
+			_euler.z += 180;
+			_rightRotation.eulerAngles = _euler;
 			_rightTransform.rotation = _rightRotation;    	
 
 		} // close private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
@@ -299,8 +304,8 @@ namespace VehiclesControl
 			// float _speed
 			float _speed = _rigidbody.velocity.magnitude;
 
-			// _speedType equals DuneBuggySpeedType.mph
-			if (_speedType == DuneBuggySpeedType.mph)
+			// _speedType equals Sedan02SpeedType.mph
+			if (_speedType == Sedan02SpeedType.mph)
 			{
 				// 2.23694 is the constant to convert a value from m/s to mph
 				
@@ -315,10 +320,10 @@ namespace VehiclesControl
 
 				} // close if _speed > _maxSpeed
                         
-			} // close if _speedType equals DuneBuggySpeedType.mph
+			} // close if _speedType equals Sedan02SpeedType.mph
 
-			// else if _speedType equals DuneBuggySpeedType.kmh
-			else if (_speedType == DuneBuggySpeedType.kmh)
+			// else if _speedType equals Sedan02SpeedType.kmh
+			else if (_speedType == Sedan02SpeedType.kmh)
 			{
 				// 3.6 is the constant to convert a value from m/s to km/h
 
@@ -333,10 +338,10 @@ namespace VehiclesControl
 
 				} // close if _speed > _maxSpeed
                        
-			} // close else if _speedType equals DuneBuggySpeedType.kmh
+			} // close else if _speedType equals Sedan02SpeedType.kmh
 
-		} // close private void Handlespeed
-		
-	} // close public class DuneBuggyController
+		} // close private void HandleSpeed
+
+	} // close public class Sedan02Controller
 
 } // close namespace VehiclesControl

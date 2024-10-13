@@ -1,6 +1,6 @@
 /*
- * File: TankRU Entry
- * Name: TankRUEntry.cs
+ * File: TankUS 01 Entry
+ * Name: TankUS01Entry.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
@@ -15,8 +15,8 @@ namespace VehiclesControl
     // RequireComponent typeof BoxCollider
     [RequireComponent(typeof(BoxCollider))]
 
-    // public class TankRUEntry 
-    public class TankRUEntry : MonoBehaviour
+    // public class TankUS01Entry 
+    public class TankUS01Entry : MonoBehaviour
     {   
         // Input Customizations
         [Header("Input Customizations")] 
@@ -32,9 +32,9 @@ namespace VehiclesControl
         // Game Objects
         [Header("Game Objects")]
 
-            [Tooltip("The tankRU game object")]
-            // GameObject _tankRU
-            [SerializeField] private GameObject _tankRU;
+            [Tooltip("The tankUS01 game object")]
+            // GameObject _tankUS01
+            [SerializeField] private GameObject _tankUS01;
 
             [Tooltip("The player game object")]
             // GameObject _player
@@ -48,17 +48,17 @@ namespace VehiclesControl
         [Header("Active State")]
 
             [Tooltip("The active state bool")]
-            // bool _inTankRU is false
-            [SerializeField] private bool _inTankRU = false;
+            // bool _inTankUS01 is false
+            [SerializeField] private bool _inTankUS01 = false;
         
-        // TankRUController _tankRUScript
-        private TankRUController _tankRUScript;
+        // TankUS01Controller _tankUS01Script
+        private TankUS01Controller _tankUS01Script;
 
-        // Camera _tankRUCamera
-        private Camera _tankRUCamera;
+        // Camera _tankUS01Camera
+        private Camera _tankUS01Camera;
 
-        // AudioListener _tankRUCameraAudioListener
-        private AudioListener _tankRUCameraAudioListener; 
+        // AudioListener _tankUS01CameraAudioListener
+        private AudioListener _tankUS01CameraAudioListener; 
 
         // Rigidbody _rigidbody
         private Rigidbody _rigidbody;        
@@ -95,29 +95,29 @@ namespace VehiclesControl
         // private void Start
         private void Start() 
         {
-            // _tankRUScript is GetComponent TankRUController
-            _tankRUScript = GetComponent<TankRUController>();
+            // _tankUS01Script is GetComponent TankUS01Controller
+            _tankUS01Script = GetComponent<TankUS01Controller>();
 
-            // _tankRUScript enabled is false
-            _tankRUScript.enabled = false;
+            // _tankUS01Script enabled is false
+            _tankUS01Script.enabled = false;
             
-            // _tankRUScript is GetComponentInChildren
-            _tankRUCamera = GetComponentInChildren<Camera>();
+            // _tankUS01Script is GetComponentInChildren
+            _tankUS01Camera = GetComponentInChildren<Camera>();
 
-            // _tankRUCamera enabled is false
-            _tankRUCamera.enabled = false;
+            // _tankUS01Camera enabled is false
+            _tankUS01Camera.enabled = false;
 
-            // _tankRUCameraAudioListener is GetComponentInChildren AudioListener
-            _tankRUCameraAudioListener = GetComponentInChildren<AudioListener>();
+            // _tankUS01CameraAudioListener is GetComponentInChildren AudioListener
+            _tankUS01CameraAudioListener = GetComponentInChildren<AudioListener>();
             
-            // _tankRUCameraAudioListener enabled is false
-            _tankRUCameraAudioListener.enabled = false; 
+            // _tankUS01CameraAudioListener enabled is false
+            _tankUS01CameraAudioListener.enabled = false; 
 
             // _rigidbody
             _rigidbody = GetComponent<Rigidbody>();
 
-            // GameObject _interfaceTextObject is FindInActiveObjectByName TankRU_EntryKey
-            GameObject _interfaceTextObject = FindInActiveObjectByName("TankRU_EntryKey");
+            // GameObject _interfaceTextObject is FindInActiveObjectByName TankUS01_EntryKey
+            GameObject _interfaceTextObject = FindInActiveObjectByName("TankUS01_EntryKey");
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
@@ -129,8 +129,8 @@ namespace VehiclesControl
         // private void Update
         private void Update()
         {
-            // if _inTankRU and Input GetKey KeyCode _exitKey
-            if (_inTankRU && Input.GetKey(_exitKey))
+            // if _inTankUS01 and Input GetKey KeyCode _exitKey
+            if (_inTankUS01 && Input.GetKey(_exitKey))
             {
                 // _player SetActive is true
                 _player.SetActive(true);
@@ -138,35 +138,35 @@ namespace VehiclesControl
                 // _player transform parent is null
                 _player.transform.parent = null;
 
-                // _tankRUScript enabled is false
-                _tankRUScript.enabled = false;
+                // _tankUS01Script enabled is false
+                _tankUS01Script.enabled = false;
                 
-                // _tankRUCamera enabled is false
-                _tankRUCamera.enabled = false;
+                // _tankUS01Camera enabled is false
+                _tankUS01Camera.enabled = false;
 
-                // _tankRUCameraAudioListener enabled is false
-                _tankRUCameraAudioListener.enabled = false; 
+                // _tankUS01CameraAudioListener enabled is false
+                _tankUS01CameraAudioListener.enabled = false; 
 
-                // _inTankRU is false
-                _inTankRU = false;
+                // _inTankUS01 is false
+                _inTankUS01 = false;
 
-            } // close if _inTankRU and Input GetKey KeyCode _exitKey
+            } // close if _inTankUS01 and Input GetKey KeyCode _exitKey
 
         } // close private void Update         
 
         // private void OnTriggerStay Collider other
         private void OnTriggerStay(Collider other)
         {
-            // if not _inTankRU and gameObject tag is Player
-            if (!_inTankRU && other.gameObject.tag == "Player")
+            // if not _inTankUS01 and gameObject tag is Player
+            if (!_inTankUS01 && other.gameObject.tag == "Player")
             {
                 // _interfaceTextObject SetActive is true
                 _interfaceTextObject.SetActive(true);
 
-            } // close if not _inTankRU and gameObject tag is Player
+            } // close if not _inTankUS01 and gameObject tag is Player
             
-            // if not _inTankRU and gameObject tag is Player and Input GetKey KeyCode _enterKey
-            if (!_inTankRU && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
+            // if not _inTankUS01 and gameObject tag is Player and Input GetKey KeyCode _enterKey
+            if (!_inTankUS01 && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
             {
                 // _interfaceTextObject SetActive is false
                 _interfaceTextObject.SetActive(false);
@@ -174,22 +174,22 @@ namespace VehiclesControl
                 // _player SetActive is false 
                 _player.SetActive(false);
 
-                // _player transform parent is _tankRU transform
-                _player.transform.parent = _tankRU.transform;
+                // _player transform parent is _tankUS01 transform
+                _player.transform.parent = _tankUS01.transform;
 
-                // _tankRUScript enabled is true
-                _tankRUScript.enabled = true;
+                // _tankUS01Script enabled is true
+                _tankUS01Script.enabled = true;
                 
-                // _tankRUCamera enabled is true
-                _tankRUCamera.enabled = true;
+                // _tankUS01Camera enabled is true
+                _tankUS01Camera.enabled = true;
 
-                // _tankRUCameraAudioListener enabled is true
-                _tankRUCameraAudioListener.enabled = true; 
+                // _tankUS01CameraAudioListener enabled is true
+                _tankUS01CameraAudioListener.enabled = true; 
 
-                // _inTankRU is true
-                _inTankRU = true;
+                // _inTankUS01 is true
+                _inTankUS01 = true;
 
-            } // close if not _inTankRU and gameObject tag is Player and Input GetKey KeyCode _enterKey
+            } // close if not _inTankUS01 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
         } // close private void OnTriggerStay Collider other
         
@@ -220,6 +220,6 @@ namespace VehiclesControl
 
         } // close private IEnumerator RigidbodySleep float duration       
         
-    } // close public class TankRUEntry  
+    } // close public class TankUS01Entry  
 
 } // close namespace VehiclesControl

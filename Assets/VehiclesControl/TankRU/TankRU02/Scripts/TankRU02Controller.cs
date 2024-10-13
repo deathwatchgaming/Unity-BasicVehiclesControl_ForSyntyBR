@@ -1,6 +1,6 @@
 /*
- * File: TankRU Controller
- * Name: TankRUController.cs
+ * File: Tank RU 02 Controller
+ * Name: TankRU02Controller.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
@@ -12,13 +12,13 @@ using UnityEngine;
 // namespace VehiclesControl
 namespace VehiclesControl
 {
-	// public enum TankRUSpeedType
-	public enum TankRUSpeedType
+	// public enum TankRU02SpeedType
+	public enum TankRU02SpeedType
 	{
 		mph,
 		kmh	
 
-	} // close public enum TankRUSpeedType
+	} // close public enum TankRU02SpeedType
 
 	// RequireComponent typeof MeshCollider
 	[RequireComponent(typeof(MeshCollider))]
@@ -26,8 +26,8 @@ namespace VehiclesControl
 	// RequireComponent typeof Rigidbody
 	[RequireComponent(typeof(Rigidbody))]
 
-	// public class TankRUController
-	public class TankRUController : MonoBehaviour
+	// public class TankRU02Controller
+	public class TankRU02Controller : MonoBehaviour
 	{
 		// Input Customizations
 		[Header("Input Customizations")]
@@ -63,20 +63,20 @@ namespace VehiclesControl
 			// MeshCollider _meshCollider
 			[SerializeField] private MeshCollider _meshCollider;
 
-		// TankRU Transforms
-		[Header("TankRU Transforms")]
+		// TankRU02 Transforms
+		[Header("TankRU02 Transforms")]
 
 			[Tooltip("The tank body transform")]	    
-			// _tankRUBody
-			[SerializeField] private Transform _tankRUBody;
+			// _tankRU02Body
+			[SerializeField] private Transform _tankRU02Body;
 
 			[Tooltip("The tank turret transform")]	    
-			// _tankRUTurret						
-			[SerializeField] private Transform _tankRUTurret;
+			// _tankRU02Turret						
+			[SerializeField] private Transform _tankRU02Turret;
 
 			[Tooltip("The tank barrel transform")]	    
-			// _tankRUBarrel					
-			[SerializeField] private Transform _tankRUBarrel;			
+			// _tankRU02Barrel					
+			[SerializeField] private Transform _tankRU02Barrel;			
 
 		// Wheel Transforms
 		[Header("Wheel Transforms")]
@@ -208,8 +208,8 @@ namespace VehiclesControl
 		[Header("Amounts")]
 
 			[Tooltip("The tank body rotation speed")]	    
-			// _tankRURotationSpeed is 0.35
-			[SerializeField] private float _tankRURotationSpeed = 0.35f;
+			// _tankRU02RotationSpeed is 0.35
+			[SerializeField] private float _tankRU02RotationSpeed = 0.35f;
 
 			[Tooltip("The tank turret rotation speed")]	    
 			// _turretRotationSpeed is 0.35
@@ -248,18 +248,18 @@ namespace VehiclesControl
 			// _barrelElevation is 0
 			private float _barrelElevation = 0f;		
 
-			// Vector3 _tankRURotation
-			private Vector3 _tankRUBodyRotation;
+			// Vector3 _tankRU02Rotation
+			private Vector3 _tankRU02BodyRotation;
 
-			// Vector3 _tankRUTurretRotation
-			private Vector3 _tankRUTurretRotation;
+			// Vector3 _tankRU02TurretRotation
+			private Vector3 _tankRU02TurretRotation;
 
 		// Speed
 		[Header("Speed")]
 
 			[Tooltip("The speed measurement unit")]
-			// TankRUSpeedType _speedType	
-			[SerializeField] private TankRUSpeedType _speedType;			
+			// TankRU02SpeedType _speedType	
+			[SerializeField] private TankRU02SpeedType _speedType;			
 	    
 			[Tooltip("The maximum speed amount")]
 			// float _maxSpeed
@@ -284,11 +284,11 @@ namespace VehiclesControl
 			// _meshCollider convex is true
 			_meshCollider.convex = true;
 
-			// _tankRURotation is _tankRURotation.transform.eulerAngles
-			_tankRUBodyRotation = _tankRUBody.transform.eulerAngles;
+			// _tankRU02Rotation is _tankRU02Rotation.transform.eulerAngles
+			_tankRU02BodyRotation = _tankRU02Body.transform.eulerAngles;
 
-			// _tankRUTurretRotation is _tankRUTurret.transform.eulerAngles
-			_tankRUTurretRotation = _tankRUTurret.transform.eulerAngles;
+			// _tankRU02TurretRotation is _tankRU02Turret.transform.eulerAngles
+			_tankRU02TurretRotation = _tankRU02Turret.transform.eulerAngles;
 	        
 		} // close private void Awake
 
@@ -546,8 +546,8 @@ namespace VehiclesControl
 			// float _speed
 			float _speed = _rigidbody.velocity.magnitude;
 
-			// _speedType equals TankRUSpeedType.mph
-			if (_speedType == TankRUSpeedType.mph)
+			// _speedType equals TankRU02SpeedType.mph
+			if (_speedType == TankRU02SpeedType.mph)
 			{
 				// 2.23694 is the constant to convert a value from m/s to mph
 				
@@ -562,10 +562,10 @@ namespace VehiclesControl
 
 				} // close if _speed > _maxSpeed
                         
-			} // close if _speedType equals TankRUSpeedType.mph
+			} // close if _speedType equals TankRU02SpeedType.mph
 
-			// else if _speedType equals TankRUSpeedType.kmh
-			else if (_speedType == TankRUSpeedType.kmh)
+			// else if _speedType equals TankRU02SpeedType.kmh
+			else if (_speedType == TankRU02SpeedType.kmh)
 			{
 				// 3.6 is the constant to convert a value from m/s to km/h
 
@@ -580,7 +580,7 @@ namespace VehiclesControl
 
 				} // close if _speed > _maxSpeed
                        
-			} // close else if _speedType equals TankRUSpeedType.kmh
+			} // close else if _speedType equals TankRU02SpeedType.kmh
             
 		} // close private void HandleSpeed
 
@@ -589,19 +589,19 @@ namespace VehiclesControl
 		{			
 			// Take care of the tank body steering
 		
-			// _tankRURotation.transform.eulerAngles is _tankRURotation
-			_tankRUBody.transform.eulerAngles = _tankRUBodyRotation;
+			// _tankRU02Rotation.transform.eulerAngles is _tankRU02Rotation
+			_tankRU02Body.transform.eulerAngles = _tankRU02BodyRotation;
 
-			// _tankRURotation.y is Input GetAxis _horizontalMoveInput times _tankRURotationSpeed
-			_tankRUBodyRotation.y += Input.GetAxis(_horizontalMoveInput) * _tankRURotationSpeed;
+			// _tankRU02Rotation.y is Input GetAxis _horizontalMoveInput times _tankRU02RotationSpeed
+			_tankRU02BodyRotation.y += Input.GetAxis(_horizontalMoveInput) * _tankRU02RotationSpeed;
 
 			// Take care of the tank turret steering
 		
-			// _tankRUTurret.transform.eulerAngles is _tankRUTurretRotation
-			_tankRUTurret.transform.eulerAngles = _tankRUTurretRotation;
+			// _tankRU02Turret.transform.eulerAngles is _tankRU02TurretRotation
+			_tankRU02Turret.transform.eulerAngles = _tankRU02TurretRotation;
 
-			// _tankRUTurretRotation.y is Input GetAxis _mouseXInput times _turretRotationSpeed
-			_tankRUTurretRotation.y += Input.GetAxis(_mouseXInput) * _turretRotationSpeed;
+			// _tankRU02TurretRotation.y is Input GetAxis _mouseXInput times _turretRotationSpeed
+			_tankRU02TurretRotation.y += Input.GetAxis(_mouseXInput) * _turretRotationSpeed;
 
 			// Take care of the tank barrel elevation control
             
@@ -611,11 +611,11 @@ namespace VehiclesControl
 			// _barrelElevation is Mathf Clamp _barrelElevation plus _barrelVert, _barrelMin, _barrelMax
 			_barrelElevation = Mathf.Clamp(_barrelElevation+_barrelVert, _barrelMin, _barrelMax);
 
-			// _tankRUBarrel.localRotation is Quaternion Euler _barrelElevation, 0, 0
-			_tankRUBarrel.localRotation = Quaternion.Euler(_barrelElevation, 0, 0);
+			// _tankRU02Barrel.localRotation is Quaternion Euler _barrelElevation, 0, 0
+			_tankRU02Barrel.localRotation = Quaternion.Euler(_barrelElevation, 0, 0);
             
 		} // close private void HandleSteering
 
-	} // close public class TankRUController
+	} // close public class TankRU02Controller
 
 } // close namespace VehiclesControl
