@@ -1,4 +1,4 @@
-"HumveeDevScene" Scene Setup Steps
+"Humvee02DevScene" Scene Setup Steps
 -----------------------------------------------------------------------------------
 Description:
 
@@ -22,7 +22,7 @@ Manual Setup Instruction:
 
 -----------------------------------------------------------------------------------
 
-Prep Step: Create New Scene Called: "HumveeDevScene"
+Prep Step: Create New Scene Called: "Humvee02DevScene"
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
@@ -174,7 +174,7 @@ Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completel
 
 Next, rename the vehicle prefabs:
 
-SM_Veh_Light_Armored_Car_01 => "Humvee"
+SM_Veh_Light_Armored_Car_01 => "Humvee02"
 
 Next, set the Transform:
 
@@ -182,9 +182,9 @@ Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-Material: PolygonBattleRoyale_Veh_01
+Material: PolygonBattleRoyale_Veh_02
 
-Then move "Humvee" into the empty: "Vehicle" as child of.
+Then move "Humvee02" into the empty: "Vehicle" as child of.
 
 
 -----------------------------------------------------------------------------------
@@ -194,7 +194,7 @@ Step 8: Add: empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In "Humvee" add empty as child named "View"
+In "Humvee02" add empty as child named "View"
 
 Set the Transform of "View":
 
@@ -210,13 +210,13 @@ Step 9: Add: "Camera" in empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In the empty: "View" add "Camera" component named: "HumveeCamera"
+In the empty: "View" add "Camera" component named: "Humvee02Camera"
 
 Tag: Untagged
 
 Depth: 0
 
-Set the Transform of "HumveeCamera":
+Set the Transform of "Humvee02Camera":
 
 Position: X: 0 Y: 1.4 Z: -6.4 
 Rotation: X: 0 Y: 0 Z: 0 
@@ -230,7 +230,7 @@ Step 10: Add: empty "WheelMeshes" as child
 -----------------------------------------------------------------------------------
 
 
-In "Humvee" add empty as child named "WheelMeshes"
+In "Humvee02" add empty as child named "WheelMeshes"
 
 Set the Transform of "WheelMeshes":
 
@@ -297,7 +297,7 @@ Step 11: Duplicate: empty "WheelMeshes" as "WheelColliders"
 -----------------------------------------------------------------------------------
 
 
-In "Humvee" duplicate "WheelMeshes" & rename to "WheelColliders"
+In "Humvee02" duplicate "WheelMeshes" & rename to "WheelColliders"
 
 Set the Transform of "VWheelColliders":
 
@@ -403,7 +403,7 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicle
-  Humvee
+  Humvee02
     SM_Veh_Light_Armored_Car_Glass_01
     SM_Veh_Light_Armored_Car_SteeringW_01  
     WheelMeshes
@@ -413,7 +413,7 @@ Vehicle
 Fully Expanded:
 
 Vehicle
-  Humvee
+  Humvee02
     SM_Veh_Light_Armored_Car_Glass_01
     SM_Veh_Light_Armored_Car_SteeringW_01
     WheelMeshes
@@ -427,24 +427,24 @@ Vehicle
       SM_Veh_Light_Armored_Car_Wheel_rl
       SM_Veh_Light_Armored_Car_Wheel_rr    
     View
-      HumveeCamera
+      Humvee02Camera
 
 
 -----------------------------------------------------------------------------------
 
-Step 12: Add to: Humvee (HumveeController.cs)
+Step 12: Add to: Humvee02 (Humvee02Controller.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (HumveeController.cs) to "Humvee"
+Attach component / script (Humvee02Controller.cs) to "Humvee02"
 
 Adjust the following settings:
 
 Require Components:
 -------------------
 
-Rigidbody: Humvee (Rigidbody)
+Rigidbody: Humvee02 (Rigidbody)
 
 Wheel Transforms:
 -----------------
@@ -470,19 +470,19 @@ Set Rigibody Mass: 2500
 
 -----------------------------------------------------------------------------------
 
-Step 13: Add to: HumveeCamera (HumveeCamera.cs)
+Step 13: Add to: Humvee02Camera (Humvee02Camera.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (HumveeCamera.cs) to "HumveeCamera"
+Attach component / script (Humvee02Camera.cs) to "Humvee02Camera"
 
 Adjust Settings:
 
 Transforms:
 -----------
 
-Humvee: Humvee (Transform)
+Humvee02: Humvee02 (Transform)
 
 
 -----------------------------------------------------------------------------------

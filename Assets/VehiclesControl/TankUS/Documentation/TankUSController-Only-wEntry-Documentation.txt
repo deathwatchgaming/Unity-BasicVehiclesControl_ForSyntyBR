@@ -44,7 +44,7 @@ Manual Setup Instruction:
 
 -----------------------------------------------------------------------------------
 
-Prep Step: Create New Scene Called: "TankUSkDevScene-wEntry"
+Prep Step: Create New Scene Called: "TankUSDevScene-wEntry"
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
@@ -405,6 +405,8 @@ Next, set the Transform:
 Position: X: 0 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_01
 
 Then move "TankUS" into the empty: "Vehicle" as child of.
 

@@ -1,9 +1,11 @@
-"HumveeDevScene" Scene Setup Steps
+"SixWheelTruck01DevScene" Scene Setup Steps
 -----------------------------------------------------------------------------------
+
 Description:
 
 Create a basic Vehicle Controller for your Unity projects using vehicle models
 from Synty Polygon Battle Royale Asset.
+
 
 Vehicle Controls: 
 -----------------
@@ -14,6 +16,7 @@ Turn Left:        A
 Turn Right:       D
 Apply Brake:      Space
 
+
 Manual Setup Instruction:
 -------------------------
 
@@ -22,7 +25,7 @@ Manual Setup Instruction:
 
 -----------------------------------------------------------------------------------
 
-Prep Step: Create New Scene Called: "HumveeDevScene"
+Prep Step: Create New Scene Called: "SixWheelTruck01DevScene"
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
@@ -160,7 +163,7 @@ Let us first identify and locate the "Vehicle Prefab" we are going to use.
 
 Assets > PolygonBattleRoyale > Prefabs > Vehicles
 
-SM_Veh_Light_Armored_Car_01
+SM_Veh_Truck_01
 
 
 -----------------------------------------------------------------------------------
@@ -170,11 +173,11 @@ Step 7: Add: the "Vehicle Prefab" to Scene
 -----------------------------------------------------------------------------------
 
 
-Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
 
 Next, rename the vehicle prefabs:
 
-SM_Veh_Light_Armored_Car_01 => "Humvee"
+SM_Veh_Truck_01 => "SixWheelTruck01"
 
 Next, set the Transform:
 
@@ -184,8 +187,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 Material: PolygonBattleRoyale_Veh_01
 
-Then move "Humvee" into the empty: "Vehicle" as child of.
-
+Then move "SixWheelTruck01" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
@@ -194,7 +196,7 @@ Step 8: Add: empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In "Humvee" add empty as child named "View"
+In "SixWheelTruck01" add empty as child named "View"
 
 Set the Transform of "View":
 
@@ -210,15 +212,15 @@ Step 9: Add: "Camera" in empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In the empty: "View" add "Camera" component named: "HumveeCamera"
+In the empty: "View" add "Camera" component named: "SixWheelTruck01Camera"
 
 Tag: Untagged
 
 Depth: 0
 
-Set the Transform of "HumveeCamera":
+Set the Transform of "SixWheelTruck01Camera":
 
-Position: X: 0 Y: 1.4 Z: -6.4 
+Position: X: 0 Y: 2.8 Z: -8.4 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -230,7 +232,7 @@ Step 10: Add: empty "WheelMeshes" as child
 -----------------------------------------------------------------------------------
 
 
-In "Humvee" add empty as child named "WheelMeshes"
+In "SixWheelTruck01" add empty as child named "WheelMeshes"
 
 Set the Transform of "WheelMeshes":
 
@@ -242,52 +244,57 @@ Copy & paste the following meshes into "WheelMeshes" as children
 (delete originals after as they are not needed since we copied them into new
 location)
 
-SM_Veh_Light_Armored_Car_Wheel_fl
-SM_Veh_Light_Armored_Car_Wheel_fr
-SM_Veh_Light_Armored_Car_Wheel_rl
-SM_Veh_Light_Armored_Car_Wheel_rr
-
+SM_Veh_Truck_Wheel_fl
+SM_Veh_Truck_Wheel_fr
+SM_Veh_Truck_Wheel_rl_01
+SM_Veh_Truck_Wheel_rl_02
+SM_Veh_Truck_Wheel_rr_01
+SM_Veh_Truck_Wheel_rr_02
 
 Transforms should be fine and unaffected but, let us just mention them for
-good measure and sdo note this particular model has some issues because the
-designer actually has the back wheels incorrect as they are opposite
-regardless of how they are named and not what they should be and unless you
-notrice that you might run inot issues so let us correct that now:
+good measure.
 
+SM_Veh_Truck_Wheel_fl
+---------------------------
 
-SM_Veh_Light_Armored_Car_Wheel_fl
----------------------------------
-
-Position: X: -0.8390951 Y: 0.4136755 Z: 1.70215
+Position: X: -1.056318 Y: 0.6432184 Z: 2.190251
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Light_Armored_Car_Wheel_fr
----------------------------------
+SM_Veh_Truck_Wheel_fr
+---------------------------
 
-Position: X: 0.8390951 Y: 0.4136755 Z: 1.70215
-Rotation: X: 0 Y: -180 Z: 0 
-Scale:    X: 1 Y: 1 Z: 1
-
-SM_Veh_Light_Armored_Car_Wheel_rl
----------------------------------
-
-Position: X: -0.9434342 Y: 0.4136755 Z: -1.524809
+Position: X: 1.056318 Y: 0.6432184 Z: 2.190251
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Light_Armored_Car_Wheel_rr
----------------------------------
+SM_Veh_Truck_Wheel_rl_01
+---------------------------
 
-Position: X: 0.9434342 Y: 0.4136755 Z: -1.524809
-Rotation: X: 0 Y: -180 Z: 0 
+Position: X: -1.172493 Y: 0.6432184 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
+SM_Veh_Truck_Wheel_rl_02
+---------------------------
 
-Also you will note, that some of the wheel meshes have a -180 on the rotation,
-that is fine, the provided script for this particular model has edits to
-factor for those rotations so as to not conflict with Wheel Colliders
-functionality.
+Position: X: -1.172493 Y: 0.6432184 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_01
+---------------------------
+
+Position: X: 1.172493 Y: 0.6432184 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_02
+---------------------------
+
+Position: X: 1.172493 Y: 0.6432184 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
 
 
 -----------------------------------------------------------------------------------
@@ -297,23 +304,23 @@ Step 11: Duplicate: empty "WheelMeshes" as "WheelColliders"
 -----------------------------------------------------------------------------------
 
 
-In "Humvee" duplicate "WheelMeshes" & rename to "WheelColliders"
+In "SixWheelTruck01" duplicate "WheelMeshes" & rename to "WheelColliders"
 
-Set the Transform of "VWheelColliders":
+Set the Transform of "WheelColliders":
 
 Position: X: 0 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
 Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
 be the children already present with matching infos...
 
-
-SM_Veh_Light_Armored_Car_Wheel_fl
-SM_Veh_Light_Armored_Car_Wheel_fr
-SM_Veh_Light_Armored_Car_Wheel_rl
-SM_Veh_Light_Armored_Car_Wheel_rr
+SM_Veh_Truck_Wheel_fl
+SM_Veh_Truck_Wheel_fr
+SM_Veh_Truck_Wheel_rl_01
+SM_Veh_Truck_Wheel_rl_02
+SM_Veh_Truck_Wheel_rr_01
+SM_Veh_Truck_Wheel_rr_02
 
 Prior to the deletion of contents in WheelColliders if you desired to
 determine the wheel radius so as to eventually use with Wheel Colliders well,
@@ -328,8 +335,8 @@ These details are important:
 Front Wheels:
 -------------
 
-Front Wheels Collider Radius: 0.4145404
-Front Wheels Collider Position Y: 0.5645404 (0.4145404+0.15) *
+Front Wheels Collider Radius: 0.6400671
+Front Wheels Collider Position Y: 0.7900671 (0.6400671+0.15) *
 
 * Wheel colliders need +0.15 on the Y to function as intended as per
   documentation
@@ -337,8 +344,8 @@ Front Wheels Collider Position Y: 0.5645404 (0.4145404+0.15) *
 Rear Wheels:
 ------------
 
-Rear Wheels Collider Radius: 0.4145404
-Rear Wheels Collider Position Y: 0.5645404 (0.4145404+0.15) *
+Rear Wheels Collider Radius: 0.6400672
+Rear Wheels Collider Position Y: 0.7900672 (0.6400672+0.15) *
 
 * Wheel colliders need +0.15 on the Y to function as intended as per
   documentation
@@ -351,42 +358,58 @@ and not needed for Wheel Colliders)
 
 Add Component "Wheel Collider" to each:
 
-SM_Veh_Light_Armored_Car_Wheel_fl
-SM_Veh_Light_Armored_Car_Wheel_fr
-SM_Veh_Light_Armored_Car_Wheel_rl
-SM_Veh_Light_Armored_Car_Wheel_rr
+SM_Veh_Truck_Wheel_fl
+SM_Veh_Truck_Wheel_fr
+SM_Veh_Truck_Wheel_rl_01
+SM_Veh_Truck_Wheel_rl_02
+SM_Veh_Truck_Wheel_rr_01
+SM_Veh_Truck_Wheel_rr_02
 
-Set both front "Wheel Colliders" radius: 0.4145404
-Set both rear  "Wheel Colliders" radius: 0.4145404
+Set both front "Wheel Colliders" radius: 0.6400671
+Set all rear  "Wheel Colliders" radius: 0.6400672
 
 We will need to now edit these infos:
 
 
-SM_Veh_Light_Armored_Car_Wheel_fl
----------------------------------
+SM_Veh_Truck_Wheel_fl
+---------------------
 
-Position: X: -0.8390951 Y: 0.5645404 Z: 1.70215
+Position: X: -1.056318 Y: 0.7900671 Z: 2.190251
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Light_Armored_Car_Wheel_fr
----------------------------------
+SM_Veh_Truck_Wheel_fr
+---------------------
 
-Position: X: 0.8390951 Y: 0.5645404 Z: 1.70215
+Position: X: 1.056318 Y: 0.7900671 Z: 2.190251
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Light_Armored_Car_Wheel_rl
----------------------------------
+SM_Veh_Truck_Wheel_rl_01
+------------------------
 
-Position: X: -0.9434342 Y: 0.5645404 Z: -1.524809
+Position: X: -1.172493 Y: 0.7900672 Z: -0.5653239
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-SM_Veh_Light_Armored_Car_Wheel_rr
----------------------------------
+SM_Veh_Truck_Wheel_rl_02
+------------------------
 
-Position: X: 0.9434342 Y: 0.5645404 Z: -1.524809
+Position: X: -1.172493 Y: 0.7900672 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_01
+------------------------
+
+Position: X: 1.172493 Y: 0.7900672 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_02
+------------------------
+
+Position: X: 1.172493 Y: 0.7900672 Z: -2.031397
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -403,9 +426,10 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicle
-  Humvee
-    SM_Veh_Light_Armored_Car_Glass_01
-    SM_Veh_Light_Armored_Car_SteeringW_01  
+  SixWheelTruck01
+    SM_Veh_Truck_Glass_01
+    SM_Veh_Truck_SteeringW_01
+    SM_Veh_Truck_Trailer_01  
     WheelMeshes
     WheelColliders   
     View
@@ -413,76 +437,85 @@ Vehicle
 Fully Expanded:
 
 Vehicle
-  Humvee
-    SM_Veh_Light_Armored_Car_Glass_01
-    SM_Veh_Light_Armored_Car_SteeringW_01
+  SixWheelTruck01
+    SM_Veh_Truck_Glass_01
+    SM_Veh_Truck_SteeringW_01
+    SM_Veh_Truck_Trailer_01
     WheelMeshes
-      SM_Veh_Light_Armored_Car_Wheel_fl
-      SM_Veh_Light_Armored_Car_Wheel_fr
-      SM_Veh_Light_Armored_Car_Wheel_rl
-      SM_Veh_Light_Armored_Car_Wheel_rr
+      SM_Veh_Truck_Wheel_fl
+      SM_Veh_Truck_Wheel_fr
+      SM_Veh_Truck_Wheel_rl_01
+      SM_Veh_Truck_Wheel_rl_02
+      SM_Veh_Truck_Wheel_rr_01
+      SM_Veh_Truck_Wheel_rr_02
     WheelColliders
-      SM_Veh_Light_Armored_Car_Wheel_fl
-      SM_Veh_Light_Armored_Car_Wheel_fr
-      SM_Veh_Light_Armored_Car_Wheel_rl
-      SM_Veh_Light_Armored_Car_Wheel_rr    
+      SM_Veh_Truck_Wheel_fl
+      SM_Veh_Truck_Wheel_fr
+      SM_Veh_Truck_Wheel_rl_01
+      SM_Veh_Truck_Wheel_rl_02
+      SM_Veh_Truck_Wheel_rr_01
+      SM_Veh_Truck_Wheel_rr_02   
     View
-      HumveeCamera
+      SixWheelTruck01Camera
 
 
 -----------------------------------------------------------------------------------
 
-Step 12: Add to: Humvee (HumveeController.cs)
+Step 12: Add to: SixWheelTruck01 (SixWheelTruck01Controller.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (HumveeController.cs) to "Humvee"
+Attach component / script (SixWheelTruck01Controller.cs) to "SixWheelTruck01"
 
 Adjust the following settings:
 
 Require Components:
 -------------------
 
-Rigidbody: Humvee (Rigidbody)
+Rigidbody: SixWheelTruck01 (Rigidbody)
 
 Wheel Transforms:
 -----------------
 
-Front Left: SM_Veh_Light_Armored_Car_Wheel_fl (Transform)
-Front Right: SM_Veh_Light_Armored_Car_Wheel_fr (Transform)
-Rear Left: SM_Veh_Light_Armored_Car_Wheel_rl (Transform)
-Rear Right: SM_Veh_Light_Armored_Car_Wheel_rr (Transform) 
+Front Left: SM_Veh_Truck_Wheel_fl (Transform)
+Front Right: SM_Veh_Truck_Wheel_fr (Transform)
+Rear Left 01: SM_Veh_Truck_Wheel_rl_01 (Transform)
+Rear Left 02: SM_Veh_Truck_Wheel_rl_02 (Transform)
+Rear Right 01: SM_Veh_Truck_Wheel_rr_01 (Transform)
+Rear Right 02: SM_Veh_Truck_Wheel_rr_02 (Transform)
 
 WheelColliders:
 ---------------
 
-Front Left: SM_Veh_Light_Armored_Car_Wheel_fl (Wheel Collider)
-Front Right: SM_Veh_Light_Armored_Car_Wheel_fr (Wheel Collider)
-Rear Left: SM_Veh_Light_Armored_Car_Wheel_rl (Wheel Collider)
-Rear Right: SM_Veh_Light_Armored_Car_Wheel_rr (Wheel Collider) 
+Front Left: SM_Veh_Truck_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Truck_Wheel_fr (Wheel Collider)
+Rear Left 01: SM_Veh_Truck_Wheel_rl_01 (Wheel Collider)
+Rear Left 02: SM_Veh_Truck_Wheel_rl_02 (Wheel Collider)
+Rear Right 01: SM_Veh_Truck_Wheel_rr_01 (Wheel Collider)
+Rear Right 02: SM_Veh_Truck_Wheel_rr_02 (Wheel Collider)
 
 In Rigidbody:
 -------------
 
-Set Rigibody Mass: 2500
+Set Rigibody Mass: 3500
 
 
 -----------------------------------------------------------------------------------
 
-Step 13: Add to: HumveeCamera (HumveeCamera.cs)
+Step 13: Add to: SixWheelTruck01Camera (SixWheelTruck01Camera.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (HumveeCamera.cs) to "HumveeCamera"
+Attach component / script (SixWheelTruck01Camera.cs) to "SixWheelTruck01Camera"
 
 Adjust Settings:
 
 Transforms:
 -----------
 
-Humvee: Humvee (Transform)
+Six Wheel Truck: SixWheelTruck01 (Transform)
 
 
 -----------------------------------------------------------------------------------

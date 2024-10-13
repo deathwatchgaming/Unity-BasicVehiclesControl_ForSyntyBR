@@ -388,13 +388,15 @@ Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completel
 
 Next, rename the vehicle prefabs:
 
-SM_Veh_Car_01 => "SixWheelTruck"
+SM_Veh_Truck_01 => "SixWheelTruck"
 
 Next, set the Transform:
 
 Position: X: 0 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_01
 
 Then move "SixWheelTruck" into the empty: "Vehicle" as child of.
 

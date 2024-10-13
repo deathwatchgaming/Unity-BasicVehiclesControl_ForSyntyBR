@@ -1,4 +1,4 @@
-"DuneBuggyDevScene-wEntry" Scene Setup Steps
+"DuneBuggy01DevScene-wEntry" Scene Setup Steps
 -----------------------------------------------------------------------------------
 
 Description:
@@ -35,7 +35,7 @@ Manual Setup Instruction:
 
 -----------------------------------------------------------------------------------
 
-Prep Step: Create New Scene Called: "DuneBuggyDevScene-wEntry"
+Prep Step: Create New Scene Called: "DuneBuggy01DevScene-wEntry"
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
@@ -257,11 +257,11 @@ Height: 100
 
 -----------------------------------------------------------------------------------
 
-Step 13:  Create child of "VehiclesEntry" add Text tmp: "DuneBuggy_EntryKey"
+Step 13:  Create child of "VehiclesEntry" add Text tmp: "DuneBuggy01_EntryKey"
 
 -----------------------------------------------------------------------------------
 
-Create as a child of "VehiclesEntry" add TextMeshPro Text: "DuneBuggy_EntryKey"
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "DuneBuggy01_EntryKey"
 
 Layer: "UI"
 
@@ -388,7 +388,7 @@ Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completel
 
 Next, rename the vehicle prefab:
 
-SM_Veh_Buggy_01 => "DuneBuggy"
+SM_Veh_Buggy_01 => "DuneBuggy01"
 
 Next, set the Transform:
 
@@ -398,7 +398,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 Material: PolygonBattleRoyale_Veh_01
 
-Then move "DuneBuggy" into the empty: "Vehicle" as child of.
+Then move "DuneBuggy01" into the empty: "Vehicle" as child of.
 
 
 -----------------------------------------------------------------------------------
@@ -408,7 +408,7 @@ Step 18: Add: empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In "DuneBuggy" add empty as child named "View"
+In "DuneBuggy01" add empty as child named "View"
 
 Set the Transform of "View":
 
@@ -424,13 +424,13 @@ Step 19: Add: "Camera" in empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In the empty: "View" add "Camera" component named: "DuneBuggyCamera"
+In the empty: "View" add "Camera" component named: "DuneBuggy01Camera"
 
 Tag: Untagged
 
 Depth: 0
 
-Set the Transform of "DuneBuggyCamera":
+Set the Transform of "DuneBuggy01Camera":
 
 Position: X: 0 Y: 1.4 Z: -6.4 
 Rotation: X: 0 Y: 0 Z: 0 
@@ -444,7 +444,7 @@ Step 20: Add: empty "WheelMeshes" as child
 -----------------------------------------------------------------------------------
 
 
-In "DuneBuggy" add empty as child named "WheelMeshes"
+In "DuneBuggy01" add empty as child named "WheelMeshes"
 
 Set the Transform of "WheelMeshes":
 
@@ -501,7 +501,7 @@ Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
 -----------------------------------------------------------------------------------
 
 
-In "DuneBuggy" duplicate "WheelMeshes" & rename to "WheelColliders"
+In "DuneBuggy01" duplicate "WheelMeshes" & rename to "WheelColliders"
 
 Set the Transform of "WheelColliders":
 
@@ -613,7 +613,7 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicle
-  DuneBuggy
+  DuneBuggy01
     SM_Veh_Buggy_SteeringW_01
     WheelMeshes
     WheelColliders   
@@ -622,7 +622,7 @@ Vehicle
 Fully Expanded:
 
 Vehicle
-  DuneBuggy
+  DuneBuggy01
     SM_Veh_Buggy_SteeringW_01
     WheelMeshes
       SM_Veh_Buggy_Shocks_01
@@ -636,24 +636,24 @@ Vehicle
       SM_Veh_Buggy_Wheel_rl
       SM_Veh_Buggy_Wheel_rr          
     View
-      DuneBuggyCamera
+      DuneBuggy01Camera
 
 
 -----------------------------------------------------------------------------------
 
-Step 22: Add to: DuneBuggy (DuneBuggyController.cs)
+Step 22: Add to: DuneBuggy01 (DuneBuggy01Controller.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (DuneBuggyController.cs) to "DuneBuggy"
+Attach component / script (DuneBuggy01Controller.cs) to "DuneBuggy01"
 
 Adjust the following settings:
 
 Require Components:
 -------------------
 
-Rigidbody: DuneBuggy (Rigidbody)
+Rigidbody: DuneBuggy01 (Rigidbody)
 
 
 Wheel Transforms:
@@ -681,29 +681,29 @@ Set Rigibody Mass: 1000
 
 -----------------------------------------------------------------------------------
 
-Step 23: Add to: DuneBuggyCamera (DuneBuggyCamera.cs)
+Step 23: Add to: DuneBuggy01Camera (DuneBuggy01Camera.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (DuneBuggyCamera.cs) to "DuneBuggyCamera"
+Attach component / script (DuneBuggy01Camera.cs) to "DuneBuggy01Camera"
 
 Adjust Settings:
 
 Transforms:
 -----------
 
-Dune Buggy: DuneBuggy (Transform)
+Dune Buggy: DuneBuggy01 (Transform)
 
 
 -----------------------------------------------------------------------------------
 
-Step 24: Add to: DuneBuggy (DuneBuggyEntry.cs)
+Step 24: Add to: DuneBuggy01 (DuneBuggy01Entry.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (DuneBuggyEntry.cs) to "DuneBuggy"
+Attach component / script (DuneBuggy01Entry.cs) to "DuneBuggy01"
 
 Adjust the following settings:
 
@@ -711,9 +711,9 @@ Adjust the following settings:
 Game Objects:
 -------------
 
-Dune Buggy: DuneBuggy
+Dune Buggy: DuneBuggy01
 Player: Player
-Interface Text Object: DuneBuggy_EntryKey
+Interface Text Object: DuneBuggy01_EntryKey
 
 
 In Box Collider:

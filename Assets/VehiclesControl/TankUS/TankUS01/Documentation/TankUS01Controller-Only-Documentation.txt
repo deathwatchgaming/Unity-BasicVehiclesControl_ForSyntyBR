@@ -1,4 +1,4 @@
-"TankUSDevScene" Scene Setup Steps
+"TankUS01DevScene" Scene Setup Steps
 -----------------------------------------------------------------------------------
 
 Description:
@@ -32,7 +32,7 @@ Manual Setup Instruction:
 
 -----------------------------------------------------------------------------------
 
-Prep Step: Create New Scene Called: "TankUSDevScene"
+Prep Step: Create New Scene Called: "TankUS01DevScene"
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
@@ -189,7 +189,7 @@ Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completel
 Next, rename the vehicle prefabs:
 
 
-SM_Veh_Tank_USA_01 => "TankUS"
+SM_Veh_Tank_USA_01 => "TankUS01"
 
 
 Next, set the Transform:
@@ -200,7 +200,7 @@ Scale:    X: 1 Y: 1 Z: 1
 
 Material: PolygonBattleRoyale_Veh_01
 
-Then move "TankUS" into the empty: "Vehicle" as child of.
+Then move "TankUS01" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
@@ -209,7 +209,7 @@ Step 8: Add: empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In "TankUS" add empty as child named "View"
+In "TankUS01" add empty as child named "View"
 
 Set the Transform of "View":
 
@@ -225,13 +225,13 @@ Step 9: Add: "Camera" in empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In the empty: "View" add "Camera" component named: "TankUSCamera"
+In the empty: "View" add "Camera" component named: "TankUS01Camera"
 
 Tag: Untagged
 
 Depth: 0
 
-Set the Transform of "TankUSCamera":
+Set the Transform of "TankUS01Camera":
 
 Position: X: 0 Y: 2.8 Z: -8.4 
 Rotation: X: 0 Y: 0 Z: 0 
@@ -245,7 +245,7 @@ Step 10: Add: empty "WheelMeshes" as child
 -----------------------------------------------------------------------------------
 
 
-In "TankUS" add empty as child named "WheelMeshes"
+In "TankUS01" add empty as child named "WheelMeshes"
 
 Set the Transform of "WheelMeshes":
 
@@ -427,7 +427,7 @@ Step 11: Duplicate: empty "WheelMeshes" as "WheelColliders"
 -----------------------------------------------------------------------------------
 
 
-In "TankUS" duplicate "WheelMeshes" & rename to "WheelColliders"
+In "TankUS01" duplicate "WheelMeshes" & rename to "WheelColliders"
 
 Set the Transform of "WheelColliders":
 
@@ -694,7 +694,7 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicle
-  TankUS
+  TankUS01
     SM_Veh_Tank_USA_Track_L
     SM_Veh_Tank_USA_Track_R
     SM_Veh_Tank_USA_Turret_01 
@@ -705,7 +705,7 @@ Vehicle
 Fully Expanded:
 
 Vehicle
-  TankUS
+  TankUS01
     SM_Veh_Tank_USA_Track_L
     SM_Veh_Tank_USA_Track_R
     SM_Veh_Tank_USA_Turret_01
@@ -749,30 +749,30 @@ Vehicle
       SM_Veh_Tank_USA_Track_Wheel_R_08
       SM_Veh_Tank_USA_Track_Wheel_R_09 
     View
-      TankUSCamera
+      TankUS01Camera
 
 
 -----------------------------------------------------------------------------------
 
-Step 12: Add to: TankUS (TankUSController.cs)
+Step 12: Add to: TankUS01 (TankUS01Controller.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (TankUSController.cs) to "TankUS"
+Attach component / script (TankUS01Controller.cs) to "TankUS01"
 
 Adjust the following settings:
 
 Require Components:
 -------------------
 
-Rigidbody: TankUS (Rigidbody)
+Rigidbody: TankUS01 (Rigidbody)
 
 
-TankUS Transforms:
+TankUS01 Transforms:
 ------------------
 
-Tank US Body: TankUS (Transform)
+Tank US Body: TankUS01 (Transform)
 Tank US Turret: SM_Veh_Tank_USA_Turret_01 (Transform)
 Tank US Barrel: SM_Veh_Tank_USA_Turret_Barrel_01 (Transform)
 
@@ -834,36 +834,36 @@ Set Rigibody Mass: 7000
 
 -----------------------------------------------------------------------------------
 
-Step 13: Add to: TankUSCamera (TankUSCamera.cs)
+Step 13: Add to: TankUS01Camera (TankUS01Camera.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (TankUSCamera.cs) to "TankUSCamera"
+Attach component / script (TankUS01Camera.cs) to "TankUS01Camera"
 
 Adjust Settings:
 
 Transforms:
 -----------
 
-Tank US: TankUS (Transform)
+Tank US: TankUS01 (Transform)
 
 
 -----------------------------------------------------------------------------------
 
-Step 14: Add to: TankUS (TankUSTrackScrolling.cs)
+Step 14: Add to: TankUS01 (TankUS01TrackScrolling.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (TankUSTrackScrolling.cs) to "TankUS"
+Attach component / script (TankUS01TrackScrolling.cs) to "TankUS01"
 
 Adjust Settings:
 
-TankUS Rigidbody:
+TankUS01 Rigidbody:
 -----------------
 
-Rigidbody: TankUS (Rigidbody)
+Rigidbody: TankUS01 (Rigidbody)
 
 
 Track Scrolling:

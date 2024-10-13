@@ -1,9 +1,9 @@
-"DuneBuggyDevScene-wEntry" Scene Setup Steps
+"ArmoredTruck02DevScene-wEntry" Scene Setup Steps
 -----------------------------------------------------------------------------------
 
 Description:
 
-Create basic Vehicle Controllers for your Unity projects using vehicle models
+Create a basic Vehicle Controller for your Unity projects using vehicle models
 from Synty Polygon Battle Royale Asset.
 
 Player Controls:
@@ -33,9 +33,10 @@ Manual Setup Instruction:
 
 * Simply follow the instruction for manual setup found below.
 
+
 -----------------------------------------------------------------------------------
 
-Prep Step: Create New Scene Called: "DuneBuggyDevScene-wEntry"
+Prep Step: Create New Scene Called: "ArmoredTruck02DevScene-wEntry"
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
@@ -104,6 +105,7 @@ Scale:    X: 1     Y: 1 Z: 1
 
 We can now opt to clean up for better organization, simply drag the:
 "Terrain" into the holder "Environment" we added for just this exact purpose!
+
 
 -----------------------------------------------------------------------------------
 
@@ -257,11 +259,11 @@ Height: 100
 
 -----------------------------------------------------------------------------------
 
-Step 13:  Create child of "VehiclesEntry" add Text tmp: "DuneBuggy_EntryKey"
+Step 13:  Create child of "VehiclesEntry" add Text tmp: "ArmoredTruck02_EntryKey"
 
 -----------------------------------------------------------------------------------
 
-Create as a child of "VehiclesEntry" add TextMeshPro Text: "DuneBuggy_EntryKey"
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "ArmoredTruck02_EntryKey"
 
 Layer: "UI"
 
@@ -374,7 +376,7 @@ Let us first identify and locate the "Vehicle Prefab" we are going to use.
 
 Assets > PolygonBattleRoyale > Prefabs > Vehicles
 
-SM_Veh_Buggy_01
+SM_Veh_Armored_Car_01
 
 
 -----------------------------------------------------------------------------------
@@ -386,9 +388,9 @@ Step 17: Add: the "Vehicle Prefab" to Scene
 
 Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
 
-Next, rename the vehicle prefab:
+Next, rename the vehicle prefabs:
 
-SM_Veh_Buggy_01 => "DuneBuggy"
+SM_Veh_Armored_Car_01 => "Armored Truck"
 
 Next, set the Transform:
 
@@ -396,9 +398,9 @@ Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-Material: PolygonBattleRoyale_Veh_01
+Material: PolygonBattleRoyale_Veh_02
 
-Then move "DuneBuggy" into the empty: "Vehicle" as child of.
+Then move "ArmoredTruck02" into the empty: "Vehicle" as child of.
 
 
 -----------------------------------------------------------------------------------
@@ -408,7 +410,7 @@ Step 18: Add: empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In "DuneBuggy" add empty as child named "View"
+In "ArmoredTruck02" add empty as child named "View"
 
 Set the Transform of "View":
 
@@ -424,13 +426,13 @@ Step 19: Add: "Camera" in empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In the empty: "View" add "Camera" component named: "DuneBuggyCamera"
+In the empty: "View" add "Camera" component named: "ArmoredTruck02Camera"
 
 Tag: Untagged
 
 Depth: 0
 
-Set the Transform of "DuneBuggyCamera":
+Set the Transform of "ArmoredTruck02Camera":
 
 Position: X: 0 Y: 1.4 Z: -6.4 
 Rotation: X: 0 Y: 0 Z: 0 
@@ -444,7 +446,7 @@ Step 20: Add: empty "WheelMeshes" as child
 -----------------------------------------------------------------------------------
 
 
-In "DuneBuggy" add empty as child named "WheelMeshes"
+In "ArmoredTruck02" add empty as child named "WheelMeshes"
 
 Set the Transform of "WheelMeshes":
 
@@ -456,40 +458,39 @@ Copy & paste the following meshes into "WheelMeshes" as children
 (delete originals after as they are not needed since we copied them into new
 location)
 
-
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
 
 Transforms should be fine and unaffected but, let us just mention them for
 good measure.
 
-
-SM_Veh_Buggy_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fl
 ---------------------------
 
-Position: X: -0.9051619 Y: -0.3026607 Z: -0.05304886
+Position: X: -0.9126655 Y: 0.5421047 Z: 1.730696 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
-SM_Veh_Buggy_Wheel_fr
+SM_Veh_Armored_Car_Wheel_fr
 ---------------------------
 
-Position: X: 0.9051619 Y: -0.3026607 Z: -0.05304886
+Position: X: 0.9126655 Y: 0.5421047 Z: 1.730696 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
-SM_Veh_Buggy_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rl
 ---------------------------
 
-Position: X: -0.9837266 Y: 0.5000129 Z: -1.294653
+Position: X: -1.048778 Y: 0.5421047 Z: -1.581318 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-
-SM_Veh_Buggy_Wheel_rr
+SM_Veh_Armored_Car_Wheel_rr
 ---------------------------
 
-Position: X: 0.9837266 Y: 0.5000129 Z: -1.294653
+Position: X: 1.048778 Y: 0.5421047 Z: -1.581318
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -501,7 +502,7 @@ Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
 -----------------------------------------------------------------------------------
 
 
-In "DuneBuggy" duplicate "WheelMeshes" & rename to "WheelColliders"
+In "ArmoredTruck02" duplicate "WheelMeshes" & rename to "WheelColliders"
 
 Set the Transform of "WheelColliders":
 
@@ -513,11 +514,11 @@ Scale:    X: 1 Y: 1 Z: 1
 Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
 be the children already present with matching infos...
 
-  SM_Veh_Buggy_Shocks_01
-    SM_Veh_Buggy_Wheel_fl
-    SM_Veh_Buggy_Wheel_fr
-  SM_Veh_Buggy_Wheel_rl
-  SM_Veh_Buggy_Wheel_rr
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
 
 Prior to the deletion of contents in WheelColliders if you desired to
 determine the wheel radius so as to eventually use with Wheel Colliders well,
@@ -532,8 +533,8 @@ These details are important:
 Front Wheels:
 -------------
 
-Front Wheels Collider Radius: 0.4145404
-Front Wheels Collider Position Y:  (0.4145404+0.15) *
+Front Wheels Collider Radius: 0.5407741
+Front Wheels Collider Position Y: 0.6907741 (0.5407741+0.15) *
 
 * Wheel colliders need +0.15 on the Y to function as intended as per
   documentation
@@ -541,8 +542,8 @@ Front Wheels Collider Position Y:  (0.4145404+0.15) *
 Rear Wheels:
 ------------
 
-Rear Wheels Collider Radius: 0.4145404
-Rear Wheels Collider Position Y:  (0.4145404+0.15) *
+Rear Wheels Collider Radius: 0.5407741
+Rear Wheels Collider Position Y: 0.6907741 (0.5407741+0.15) *
 
 * Wheel colliders need +0.15 on the Y to function as intended as per
   documentation
@@ -553,52 +554,46 @@ and not needed for Wheel Colliders)
 * Delete Mesh Filter
 * Delete Mesh Renderer
 
-
 Add Component "Wheel Collider" to each:
 
-  SM_Veh_Buggy_Wheel_fl
-  SM_Veh_Buggy_Wheel_fr
-  SM_Veh_Buggy_Wheel_rl
-  SM_Veh_Buggy_Wheel_rr
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
 
-Set both front "Wheel Colliders" radius: 0.5032759
-Set both rear  "Wheel Colliders" radius: 0.5032759
-
+Set both front "Wheel Colliders" radius: 0.5407741
+Set both rear  "Wheel Colliders" radius: 0.5407741
 
 We will need to now edit these infos:
 
 
-SM_Veh_Buggy_Wheel_fl
----------------------
+SM_Veh_Armored_Car_Wheel_fl
+---------------------------
 
-Position: X: -0.9051619 Y: 0.650013 Z: 1.846053
+Position: X: -0.9126655 Y: 0.6907741 Z: 1.730696
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
+SM_Veh_Armored_Car_Wheel_fr
+---------------------------
 
-SM_Veh_Buggy_Wheel_fr
----------------------
-
-Position: X: 0.9051619 Y: 0.650013 Z: 1.846053
+Position: X: 0.9126655 Y: 0.6907741 Z: 1.730696
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
+SM_Veh_Armored_Car_Wheel_rl
+---------------------------
 
-SM_Veh_Buggy_Wheel_rl
----------------------
-
-Position: X: -0.9837266 Y: 0.6532759 Z: -1.294653
+Position: X: -1.048778 Y: 0.6907741 Z: -1.581318
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
+SM_Veh_Armored_Car_Wheel_rr
+---------------------------
 
-SM_Veh_Buggy_Wheel_rr
----------------------
-
-Position: X: 0.9837266 Y: 0.6532759 Z: -1.294653
+Position: X: 1.048778 Y: 0.6907741 Z: -1.581318
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
-
 
 
 -----------------------------------------------------------------------------------
@@ -613,8 +608,9 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicle
-  DuneBuggy
-    SM_Veh_Buggy_SteeringW_01
+  ArmoredTruck02
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01  
     WheelMeshes
     WheelColliders   
     View
@@ -622,88 +618,86 @@ Vehicle
 Fully Expanded:
 
 Vehicle
-  DuneBuggy
-    SM_Veh_Buggy_SteeringW_01
+  ArmoredTruck02
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01
     WheelMeshes
-      SM_Veh_Buggy_Shocks_01
-        SM_Veh_Buggy_Wheel_fl
-        SM_Veh_Buggy_Wheel_fr
-      SM_Veh_Buggy_Wheel_rl
-      SM_Veh_Buggy_Wheel_rr
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_Armored_Car_Wheel_rr
     WheelColliders
-      SM_Veh_Buggy_Wheel_fl
-      SM_Veh_Buggy_Wheel_fr      
-      SM_Veh_Buggy_Wheel_rl
-      SM_Veh_Buggy_Wheel_rr          
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_rmored_Car_Wheel_rr    
     View
-      DuneBuggyCamera
+      ArmoredTruck02Camera
 
 
 -----------------------------------------------------------------------------------
 
-Step 22: Add to: DuneBuggy (DuneBuggyController.cs)
+Step 22: Add to: ArmoredTruck02 (ArmoredTruck02Controller.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (DuneBuggyController.cs) to "DuneBuggy"
+Attach component / script (ArmoredTruck02Controller.cs) to "ArmoredTruck02"
 
 Adjust the following settings:
 
 Require Components:
 -------------------
 
-Rigidbody: DuneBuggy (Rigidbody)
-
+Rigidbody: ArmoredTruck02 (Rigidbody)
 
 Wheel Transforms:
 -----------------
 
-Front Left: SM_Veh_Buggy_Wheel_fl (Transform)
-Front Right: SM_Veh_Buggy_Wheel_fr (Transform)      
-Rear Left: SM_Veh_Buggy_Wheel_rl (Transform)
-Rear Right: SM_Veh_Buggy_Wheel_rr (Transform) 
-
+Front Left: SM_Veh_Armored_Car_Wheel_fl (Transform)
+Front Right: SM_Veh_Armored_Car_Wheel_fr (Transform)
+Rear Left: SM_Veh_Armored_Car_Wheel_rl (Transform)
+Rear Right: SM_Veh_Armored_Car_Wheel_rr (Transform)
 
 WheelColliders:
 ---------------
 
-Front Left: SM_Veh_Buggy_Wheel_fl (Wheel Collider)
-Front: Right: SM_Veh_Buggy_Wheel_fr (Wheel Collider)      
-Rear Left: SM_Veh_Buggy_Wheel_rl (Wheel Collider)
-Rear Right: SM_Veh_Buggy_Wheel_rr (Wheel Collider) 
+Front Left: SM_Veh_Armored_Car_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Armored_Car_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Armored_Car_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Armored_Car_Wheel_rr (Wheel Collider)
 
 In Rigidbody:
 -------------
 
-Set Rigibody Mass: 1000
-
-
------------------------------------------------------------------------------------
-
-Step 23: Add to: DuneBuggyCamera (DuneBuggyCamera.cs)
+Set Rigibody Mass: 3000
 
 -----------------------------------------------------------------------------------
 
+Step 23: Add to: ArmoredTruck02Camera (ArmoredTruck02TruckCamera.cs)
 
-Attach component / script (DuneBuggyCamera.cs) to "DuneBuggyCamera"
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (ArmoredTruck02Camera.cs) to "ArmoredTruck02Camera"
+
 
 Adjust Settings:
 
 Transforms:
 -----------
 
-Dune Buggy: DuneBuggy (Transform)
+Armored Truck: ArmoredTruck02 (Transform)
 
 
 -----------------------------------------------------------------------------------
 
-Step 24: Add to: DuneBuggy (DuneBuggyEntry.cs)
+Step 24: Add to: ArmoredTruck02 (ArmoredTruck02Entry.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (DuneBuggyEntry.cs) to "DuneBuggy"
+Attach component / script (ArmoredTruck02Entry.cs) to "ArmoredTruck02"
 
 Adjust the following settings:
 
@@ -711,9 +705,9 @@ Adjust the following settings:
 Game Objects:
 -------------
 
-Dune Buggy: DuneBuggy
+Armored Truck: ArmoredTruck02
 Player: Player
-Interface Text Object: DuneBuggy_EntryKey
+InterfaceText Object: ArmoredTruck02_EntryKey
 
 
 In Box Collider:
@@ -728,12 +722,11 @@ Edit Collider: YES!*
   zone. Here is just an example that I suggest you tweak further to you
   likings and needs:
 
-Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
-Size: X: 4.030926 Y: 1.303131 Z: 1.31885
-  
+Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
+Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
 
 -----------------------------------------------------------------------------------
-
 
 
 That should about sums it up and should be about it and concludes the basic

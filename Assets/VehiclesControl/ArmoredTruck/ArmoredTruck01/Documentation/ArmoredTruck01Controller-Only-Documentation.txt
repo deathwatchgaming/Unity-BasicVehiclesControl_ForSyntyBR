@@ -1,21 +1,10 @@
-"ArmoredTruckDevScene-wEntry" Scene Setup Steps
+"ArmoredTruck01DevScene" Scene Setup Steps
 -----------------------------------------------------------------------------------
 
 Description:
 
 Create a basic Vehicle Controller for your Unity projects using vehicle models
 from Synty Polygon Battle Royale Asset.
-
-Player Controls:
-----------------
-
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
-
 
 Vehicle Controls: 
 -----------------
@@ -25,8 +14,6 @@ Vehicle Reverse:  S
 Turn Left:        A
 Turn Right:       D
 Apply Brake:      Space
-Enter Vehicle:    E
-Exit Vehicle:     F
 
 Manual Setup Instruction:
 -------------------------
@@ -36,7 +23,7 @@ Manual Setup Instruction:
 
 -----------------------------------------------------------------------------------
 
-Prep Step: Create New Scene Called: "ArmoredTruckDevScene-wEntry"
+Prep Step: Create New Scene Called: "ArmoredTruck01DevScene"
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
@@ -109,209 +96,10 @@ We can now opt to clean up for better organization, simply drag the:
 
 -----------------------------------------------------------------------------------
 
-Step 4: Create: object "Player":
+Step 4: Create: empty "Vehicle"
 
 -----------------------------------------------------------------------------------
 
-
-Create empty object and name such: "Player"
-
-Transform: 
-----------
-
-Position: X: 0 Y: 0.9799998 Z: -10 
-Rotation: X: 0 Y: 0  Z: 0 
-Scale:    X: 1 Y: 1  Z: 1
-
-Add Tag: "Player"
-
-
------------------------------------------------------------------------------------
-
-Step 5: Add: empty object "View":
-
------------------------------------------------------------------------------------
-
-
-In "Player" object, create a child of the "Player" object and name
-such: "View"
-
-Transform Position: X: 0 Y: 0 Z: 0
-
-
------------------------------------------------------------------------------------
-
-Step 6: Add: "Camera":
-
------------------------------------------------------------------------------------
-
-In "Player" object, add a Camera component as child of "View" and name
-such: "Camera"
-
-Transform: 
-----------
-
-Position: X: 0 Y: 0.6 Z: 0 
-Rotation: X: 0 Y: 0   Z: 0 
-Scale:    X: 1 Y: 1   Z: 1
-
-Depth: "1" 
-
-Add Tag: "MainCamera"
-
-
------------------------------------------------------------------------------------
-
-Step 7: Edit: the "CharacterController" component:
-
------------------------------------------------------------------------------------
-
-
-In "Player" object, edit the "CharacterController" component:
-
-Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
-
-
------------------------------------------------------------------------------------
-
-Step 9: Setup: Audio Source and Footstep Sounds Audio Clips:
-
------------------------------------------------------------------------------------
-
-In "Player" object edit: the "First Person Controller (Script)"
-
-Footstep Source: Player (AudioSource)
-
-Footsep Sounds: "4"
-
-Element 0: "Footstep01"
-Element 1: "Footstep02"
-Element 2: "Footstep03"
-Element 3: "Footstep04"
-
-
-That is it! You should now be able to run around your scene!
-
-
-But..., for now since we do not need the player controller at this point let
-us disable the player object / component in inspector for now until we need it
-
-
------------------------------------------------------------------------------------
-
-Step 10: Create: empty "Interface"
-
------------------------------------------------------------------------------------
-
-Create an empty called: "Interface"
-
-Layer: "UI"
-
-Transform: 
-----------
-
-Position: X: 0 Y: 0   Z: 0 
-Rotation: X: 0 Y: 0   Z: 0 
-Scale:    X: 1 Y: 1   Z: 1 
-
-
------------------------------------------------------------------------------------
-
-Step 11: In "Interface" Add UI: "Canvas"
-
------------------------------------------------------------------------------------
-
-
-Create as a child of "Interface" Add a UI: "Canvas"
-
-
------------------------------------------------------------------------------------
-
-Step 12: Create as child of "Canvas" add empty: "VehiclesEntry"
-
------------------------------------------------------------------------------------
-
-
-Create as a child of "Interface" add empty: "VehiclesEntry"
-
-Layer: "UI"
-
-
-Rect Transform: 
----------------
-
-Set at "Bottom Center"
-
-Position: X: 0 Y: 50   Z: 0 
-Width: 100
-Height: 100
-
-
------------------------------------------------------------------------------------
-
-Step 13:  Create child of "VehiclesEntry" add Text tmp: "ArmoredTruck_EntryKey"
-
------------------------------------------------------------------------------------
-
-Create as a child of "VehiclesEntry" add TextMeshPro Text: "ArmoredTruck_EntryKey"
-
-Layer: "UI"
-
-
-Rect Transform: 
----------------
-
-Set at "Top Center"
-
-Position: X: 0 Y: -50   Z: 0 
-Width: 100
-Height: 100
-
-
-Text Input: Press E
-Font Size: 36
-
-Alignment: Center & Middle
-
-Face:
------
-Dilate: 0.21
-
-Outline: Yes Thickness: 0.121
-
-Underlay: Yes Softness: 0.522
-
-Note: The face, outline and underlay are merely starting suggestions that you
-can tweak further to your desired likings as well as any other related
-settings of the likes.
-
-Note: Lastly, disable this object as we do not want this to display prior to
-awake or start methods and to do this we will disable this object by default
-and then there is a wrapper in the script that will find the inactive item in
-start thus doing what will be needed. So yeah, make sure to disable this
-object in the editor.
-
-Ok, now that this part is done we can start moving to other setup steps...
-
-
------------------------------------------------------------------------------------
-
-Step 14: Create: empty "Vehicle"
-
------------------------------------------------------------------------------------
-
-
-Now that you disabled the interface, let us go back in your scene heirarchy and...
 
 Create Empty: "Vehicle"
 
@@ -330,10 +118,8 @@ Notes: Current Summary
 Note: Ok, by now your scene heirarchy at top should look like this:
 
 Environment
-Player
 Vehicle
-Interface
-EventSystem
+
 
 Nice and organized right?! :) Good Stuff! ;)
 
@@ -347,7 +133,7 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royal
 
 -----------------------------------------------------------------------------------
 
-Step 15: Install: "Synty Polygon Battle Royal Asset"
+Step 5: Install: "Synty Polygon Battle Royal Asset"
 
 -----------------------------------------------------------------------------------
 
@@ -367,7 +153,7 @@ https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royal
 
 -----------------------------------------------------------------------------------
 
-Step 16: Identify: the "Vehicle Prefab"
+Step 6: Identify: the "Vehicle Prefab"
 
 -----------------------------------------------------------------------------------
 
@@ -381,7 +167,7 @@ SM_Veh_Armored_Car_01
 
 -----------------------------------------------------------------------------------
 
-Step 17: Add: the "Vehicle Prefab" to Scene
+Step 7: Add: the "Vehicle Prefab" to Scene
 
 -----------------------------------------------------------------------------------
 
@@ -390,7 +176,7 @@ Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completel
 
 Next, rename the vehicle prefabs:
 
-SM_Veh_Armored_Car_01 => "Armored Truck"
+SM_Veh_Armored_Car_01 => "ArmoredTruck01"
 
 Next, set the Transform:
 
@@ -400,17 +186,17 @@ Scale:    X: 1 Y: 1 Z: 1
 
 Material: PolygonBattleRoyale_Veh_01
 
-Then move "ArmoredTruck" into the empty: "Vehicle" as child of.
+Then move "ArmoredTruck01" into the empty: "Vehicle" as child of.
 
 
 -----------------------------------------------------------------------------------
 
-Step 18: Add: empty "View" as child
+Step 8: Add: empty "View" as child
 
 -----------------------------------------------------------------------------------
 
 
-In "ArmoredTruck" add empty as child named "View"
+In "ArmoredTruck01" add empty as child named "View"
 
 Set the Transform of "View":
 
@@ -421,18 +207,18 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 19: Add: "Camera" in empty "View" as child
+Step 9: Add: "Camera" in empty "View" as child
 
 -----------------------------------------------------------------------------------
 
 
-In the empty: "View" add "Camera" component named: "ArmoredTruckCamera"
+In the empty: "View" add "Camera" component named: "ArmoredTruck01Camera"
 
 Tag: Untagged
 
 Depth: 0
 
-Set the Transform of "ArmoredTruckCamera":
+Set the Transform of "ArmoredTruck01Camera":
 
 Position: X: 0 Y: 1.4 Z: -6.4 
 Rotation: X: 0 Y: 0 Z: 0 
@@ -441,12 +227,12 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 20: Add: empty "WheelMeshes" as child
+Step 10: Add: empty "WheelMeshes" as child
 
 -----------------------------------------------------------------------------------
 
 
-In "ArmoredTruck" add empty as child named "WheelMeshes"
+In "ArmoredTruck01" add empty as child named "WheelMeshes"
 
 Set the Transform of "WheelMeshes":
 
@@ -497,12 +283,12 @@ Scale:    X: 1 Y: 1 Z: 1
 
 -----------------------------------------------------------------------------------
 
-Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
+Step 11: Duplicate: empty "WheelMeshes" as "WheelColliders"
 
 -----------------------------------------------------------------------------------
 
 
-In "ArmoredTruck" duplicate "WheelMeshes" & rename to "WheelColliders"
+In "ArmoredTruck01" duplicate "WheelMeshes" & rename to "WheelColliders"
 
 Set the Transform of "WheelColliders":
 
@@ -608,7 +394,7 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicle
-  ArmoredTruck
+  ArmoredTruck01
     SM_Veh_Armored_Car_Glass_01
     SM_Veh_Armored_Car_SteeringW_01  
     WheelMeshes
@@ -618,7 +404,7 @@ Vehicle
 Fully Expanded:
 
 Vehicle
-  ArmoredTruck
+  ArmoredTruck01
     SM_Veh_Armored_Car_Glass_01
     SM_Veh_Armored_Car_SteeringW_01
     WheelMeshes
@@ -632,24 +418,24 @@ Vehicle
       SM_Veh_Armored_Car_Wheel_rl
       SM_Veh_rmored_Car_Wheel_rr    
     View
-      ArmoredTruckCamera
+      ArmoredTruck01Camera
 
 
 -----------------------------------------------------------------------------------
 
-Step 22: Add to: ArmoredTruck (ArmoredTruckController.cs)
+Step 12: Add to: ArmoredTruck01 (ArmoredTruck01Controller.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (ArmoredTruckController.cs) to "ArmoredTruck"
+Attach component / script (ArmoredTruck01Controller.cs) to "ArmoredTruck01"
 
 Adjust the following settings:
 
 Require Components:
 -------------------
 
-Rigidbody: ArmoredTruck (Rigidbody)
+Rigidbody: ArmoredTruck01 (Rigidbody)
 
 Wheel Transforms:
 -----------------
@@ -674,12 +460,12 @@ Set Rigibody Mass: 3000
 
 -----------------------------------------------------------------------------------
 
-Step 23: Add to: ArmoredTruckCamera (ArmoredTruckTruckCamera.cs)
+Step 13: Add to: ArmoredTruck01Camera (ArmoredTruck01TruckCamera.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (ArmoredTruckCamera.cs) to "ArmoredTruckCamera"
+Attach component / script (ArmoredTruck01Camera.cs) to "ArmoredTruck01Camera"
 
 
 Adjust Settings:
@@ -687,43 +473,7 @@ Adjust Settings:
 Transforms:
 -----------
 
-Armored Truck: ArmoredTruck (Transform)
-
-
------------------------------------------------------------------------------------
-
-Step 24: Add to: ArmoredTruck (ArmoredTruckEntry.cs)
-
------------------------------------------------------------------------------------
-
-
-Attach component / script (ArmoredTruckEntry.cs) to "ArmoredTruck"
-
-Adjust the following settings:
-
-
-Game Objects:
--------------
-
-Armored Truck: ArmoredTruck
-Player: Player
-InterfaceText Object: ArmoredTruck_EntryKey
-
-
-In Box Collider:
-----------------
-
-Is Trigger: Yes
-
-Edit Collider: YES!* 
-
-* Edit the collider to be around the vehicle doors makings sure to extend the
-  collider a good bit out away from doors so as to allow for a good trigger
-  zone. Here is just an example that I suggest you tweak further to you
-  likings and needs:
-
-Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
-Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+Armored Truck: ArmoredTruck01 (Transform)
 
 
 -----------------------------------------------------------------------------------
