@@ -1,0 +1,5245 @@
+"AllVehicleTypesDevScene-wEntry" Scene Setup Steps
+-----------------------------------------------------------------------------------
+
+Description:
+
+Create basic all Vehicle Controller types in scene for your Unity projects
+using vehicle models from Synty Polygon Battle Royale Asset.
+
+Player Controls:
+----------------
+
+Player Forward:   W
+Player Reverse:   S
+Player Left:      A
+Player Right:     D
+Player Jump:      Space
+Player Sprint:    Left Shift
+
+
+Vehicle Controls: 
+-----------------
+
+Vehicle Forward:  W
+Vehicle Reverse:  S
+Turn Left:        A
+Turn Right:       D
+Apply Brake:      Space
+Enter Vehicle:    E
+Exit Vehicle:     F
+
+Manual Setup Instruction:
+-------------------------
+
+* Simply follow the instruction for manual setup found below.
+
+-----------------------------------------------------------------------------------
+
+
+Prep Step: Create New Scene Called: "AllVehicleTypesDevScene-wEntry"
+
+Note: if you already have some sort of a test terrain in place, well then, you
+can simple skip the steps: #1, 2 & 3 and go directly to #4.
+
+-----------------------------------------------------------------------------------
+
+Step 1: Create: "Environment" * (for Nicer Organization)
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Environment"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+First since this is just a "holder" added for better organization, let us go
+ahead & drag the "Directional Light" into "Environment".
+
+* also if you wanted you could add a "dir" called Environment and opt to place
+  your TerrainData inside that in its own Dir "TerrainData" and as such any
+  other Environment stuff respectively in as desired the "Environment" dir.
+  Just a suggestion.
+
+Also: We don't need the "Main Camera" in Sample Scene, so..., we can go ahead
+and delete it.
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: Create: "Terrain Plane"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Plane"
+
+Position: X: 0   Y: -0.03 Z: 0 
+Rotation: X: 0   Y: 0     Z: 0 
+Scale:    X: 100 Y: 1     Z: 100
+
+Rename to: "Terrain Plane"
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain Plane" into the holder "Environment" we added for just this exact
+ purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: Create: "Terrain"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Terrain"
+
+Modify via:
+
+"Terrain" Inspector: Terrain Settings
+
+Position: X: -500 Y: 0 Z: -500 
+Rotation: X: 0     Y: 0 Z: 0 
+Scale:    X: 1     Y: 1 Z: 1
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain" into the holder "Environment" we added for just this exact purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 4: Create: object "Player":
+
+-----------------------------------------------------------------------------------
+
+
+Create empty object and name such: "Player"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.9799998 Z: -15 
+Rotation: X: 0 Y: 0  Z: 0 
+Scale:    X: 1 Y: 1  Z: 1
+
+Add Tag: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: Add: empty object "View":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, create a child of the "Player" object and name
+such: "View"
+
+Transform Position: X: 0 Y: 0 Z: 0
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: Add: "Camera":
+
+-----------------------------------------------------------------------------------
+
+In "Player" object, add a Camera component as child of "View" and name
+such: "Camera"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.6 Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1
+
+Depth: "1" 
+
+Add Tag: "MainCamera"
+
+
+-----------------------------------------------------------------------------------
+
+Step 7: Edit: the "CharacterController" component:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, edit the "CharacterController" component:
+
+Height: "1.8"
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 9: Setup: Audio Source and Footstep Sounds Audio Clips:
+
+-----------------------------------------------------------------------------------
+
+In "Player" object edit: the "First Person Controller (Script)"
+
+Footstep Source: Player (AudioSource)
+
+Footsep Sounds: "4"
+
+Element 0: "Footstep01"
+Element 1: "Footstep02"
+Element 2: "Footstep03"
+Element 3: "Footstep04"
+
+
+That is it! You should now be able to run around your scene!
+
+
+But..., for now since we do not need the player controller at this point let
+us disable the player object / component in inspector for now until we need it
+
+
+-----------------------------------------------------------------------------------
+
+Step 10: Create: empty "Interface"
+
+-----------------------------------------------------------------------------------
+
+Create an empty called: "Interface"
+
+Layer: "UI"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0   Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1 
+
+
+-----------------------------------------------------------------------------------
+
+Step 11: In "Interface" Add UI: "Canvas"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" Add a UI: "Canvas"
+
+
+-----------------------------------------------------------------------------------
+
+Step 12: Create as child of "Canvas" add empty: "VehiclesEntry"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" add empty: "VehiclesEntry"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Bottom Center"
+
+Position: X: 0 Y: 50   Z: 0 
+Width: 100
+Height: 100
+
+
+-----------------------------------------------------------------------------------
+
+Step 13:  Create child of "VehiclesEntry" add Text tmp: "ArmoredTruck01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "ArmoredTruck01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 14:  Create child of "VehiclesEntry" add Text tmp: "DuneBuggy01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "DuneBuggy01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+-----------------------------------------------------------------------------------
+
+Step 15:  Create child of "VehiclesEntry" add Text tmp: "Humvee01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "Humvee01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 16:  Create child of "VehiclesEntry" add Text tmp: "Sedan01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "Sedan01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 17:  Create child of "VehiclesEntry" add Text tmp: "SixWheelTruck01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SixWheelTruck01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that those are done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 18: Create: empty "Vehicles"
+
+-----------------------------------------------------------------------------------
+
+
+Now that you disabled the interface, let us go back in your scene heirarchy and...
+
+Create Empty: "Vehicles"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your scene heirarchy at top should look like this:
+
+Environment
+Player
+Vehicles
+Interface
+EventSystem
+
+Nice and organized right?! :) Good Stuff! ;)
+
+Note: as this uses currently as of this writing say 7 of the vehicles from
+such and due to licensing such vehicles cannot be included in this
+repository obviously, as such the provided scripts and instructions thus
+require having / purchasing the: 
+
+Synty Polygon Battle Royale Asset:
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
+
+
+-----------------------------------------------------------------------------------
+
+Step 19: Install Synty Polygon Battle Royal Asset
+
+-----------------------------------------------------------------------------------
+
+Depending on how you purchased you can either use the package manager to
+install the asset or if you are like me and say already have local repository
+storage of purchased assets and have the package already you can install the
+asset manually.
+
+Asset package to install:
+
+ POLYGON Battle Royale - Low Poly 3D Art by Synty.unitypackage
+
+Purchase Synty Polygon Battle Royale Asset:
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
+
+
+-----------------------------------------------------------------------------------
+
+Step 20: Identify: the "Vehicle Prefabs"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefabs" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Armored_Car_01
+
+SM_Veh_Buggy_01
+
+SM_Veh_Light_Armored_Car_01
+
+SM_Veh_Truck_01
+
+SM_Veh_Car_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Add: the "Vehicle Prefabs" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefabs" into the scene & unpack the prefabs completely
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Armored_Car_01 => "ArmoredTruck01"
+
+SM_Veh_Buggy_01 => "DuneBuggy01"
+
+SM_Veh_Light_Armored_Car_01 => "Humvee01"
+
+SM_Veh_Car_01 => "SixWheelTruck01"
+
+SM_Veh_Truck_01 => "Sedan01"
+
+
+Now edit the transforms for each Vehicle:
+
+ArmoredTruck01:
+-------------
+
+Position: X: -12 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_01
+
+
+DuneBuggy01:
+----------
+
+Position: X: -6 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_01
+
+
+Humvee01:
+-------
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_01
+
+
+SixWheelTruck01:
+--------------
+
+Position: X: 6 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_01
+
+
+Sedan01:
+------
+
+Position: X: 12 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_01
+
+
+Then move "ArmoredTruck01" into the empty: "Vehicles" as child of.
+Then move "DuneBuggy01" into the empty: "Vehicles" as child of.
+Then move "Humvee01" into the empty: "Vehicles" as child of.
+Then move "SixWheelTruck01" into the empty: "Vehicles" as child of.
+Then move "Sedan01" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+In "DuneBuggy01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+In "Humvee01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+In "SixWheelTruck01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+In "Sedan01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+ArmoredTruck01:
+-------------
+
+In the empty: "View" add "Camera" component named: "ArmoredTruck01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "ArmoredTruck01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+DuneBuggy01:
+-------------
+
+In the empty: "View" add "Camera" component named: "DuneBuggy01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "DuneBuggy01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Humvee01:
+-------------
+
+In the empty: "View" add "Camera" component named: "Humvee01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "Humvee01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SixWheelTruck01:
+-------------
+
+In the empty: "View" add "Camera" component named: "SixWheelTruck01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SixWheelTruck01Camera":
+
+Position: X: 0 Y: 2.8 Z: -8.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Sedan01:
+-------------
+
+In the empty: "View" add "Camera" component named: "Sedan01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "Sedan01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 24: In ArmoredTruck01: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Armored_Car_Wheel_fl
+---------------------------
+
+Position: X: -0.9126655 Y: 0.5421047 Z: 1.730696 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_fr
+---------------------------
+
+Position: X: 0.9126655 Y: 0.5421047 Z: 1.730696 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rl
+---------------------------
+
+Position: X: -1.048778 Y: 0.5421047 Z: -1.581318 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rr
+---------------------------
+
+Position: X: 1.048778 Y: 0.5421047 Z: -1.581318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 25: In ArmoredTruck01: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.5407741
+Front Wheels Collider Position Y: 0.6907741 (0.5407741+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.5407741
+Rear Wheels Collider Position Y: 0.6907741 (0.5407741+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5407741
+Set both rear  "Wheel Colliders" radius: 0.5407741
+
+We will need to now edit these infos:
+
+
+SM_Veh_Armored_Car_Wheel_fl
+---------------------------
+
+Position: X: -0.9126655 Y: 0.6907741 Z: 1.730696
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_fr
+---------------------------
+
+Position: X: 0.9126655 Y: 0.6907741 Z: 1.730696
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rl
+---------------------------
+
+Position: X: -1.048778 Y: 0.6907741 Z: -1.581318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rr
+---------------------------
+
+Position: X: 1.048778 Y: 0.6907741 Z: -1.581318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 26: In DuneBuggy01: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------------
+
+Position: X: -0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------------
+
+Position: X: 0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------------
+
+Position: X: -0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------------
+
+Position: X: 0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 27: In DuneBuggy01: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+  SM_Veh_Buggy_Shocks_01
+    SM_Veh_Buggy_Wheel_fl
+    SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.4145404
+Front Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.4145404
+Rear Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+
+Add Component "Wheel Collider" to each:
+
+  SM_Veh_Buggy_Wheel_fl
+  SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5032759
+Set both rear  "Wheel Colliders" radius: 0.5032759
+
+
+We will need to now edit these infos:
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------
+
+Position: X: -0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------
+
+Position: X: 0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------
+
+Position: X: -0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------
+
+Position: X: 0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 28: In Humvee01: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Humvee01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Light_Armored_Car_Wheel_fl
+SM_Veh_Light_Armored_Car_Wheel_fr
+SM_Veh_Light_Armored_Car_Wheel_rl
+SM_Veh_Light_Armored_Car_Wheel_rr
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure and sdo note this particular model has some issues because the
+designer actually has the back wheels incorrect as they are opposite
+regardless of how they are named and not what they should be and unless you
+notrice that you might run inot issues so let us correct that now:
+
+
+SM_Veh_Light_Armored_Car_Wheel_fl
+---------------------------------
+
+Position: X: -0.8390951 Y: 0.4136755 Z: 1.70215
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_fr
+---------------------------------
+
+Position: X: 0.8390951 Y: 0.4136755 Z: 1.70215
+Rotation: X: 0 Y: -180 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_rl
+---------------------------------
+
+Position: X: -0.9434342 Y: 0.4136755 Z: -1.524809
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_rr
+---------------------------------
+
+Position: X: 0.9434342 Y: 0.4136755 Z: -1.524809
+Rotation: X: 0 Y: -180 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Also you will note, that some of the wheel meshes have a -180 on the rotation,
+that is fine, the provided script for this particular model has edits to
+factor for those rotations so as to not conflict with Wheel Colliders
+functionality.
+
+
+-----------------------------------------------------------------------------------
+
+Step 29: In Humvee01: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "Humvee01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "VWheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+
+SM_Veh_Light_Armored_Car_Wheel_fl
+SM_Veh_Light_Armored_Car_Wheel_fr
+SM_Veh_Light_Armored_Car_Wheel_rl
+SM_Veh_Light_Armored_Car_Wheel_rr
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.4145404
+Front Wheels Collider Position Y: 0.5645404 (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.4145404
+Rear Wheels Collider Position Y: 0.5645404 (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Light_Armored_Car_Wheel_fl
+SM_Veh_Light_Armored_Car_Wheel_fr
+SM_Veh_Light_Armored_Car_Wheel_rl
+SM_Veh_Light_Armored_Car_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.4145404
+Set both rear  "Wheel Colliders" radius: 0.4145404
+
+We will need to now edit these infos:
+
+
+SM_Veh_Light_Armored_Car_Wheel_fl
+---------------------------------
+
+Position: X: -0.8390951 Y: 0.5645404 Z: 1.70215
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_fr
+---------------------------------
+
+Position: X: 0.8390951 Y: 0.5645404 Z: 1.70215
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_rl
+---------------------------------
+
+Position: X: -0.9434342 Y: 0.5645404 Z: -1.524809
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Light_Armored_Car_Wheel_rr
+---------------------------------
+
+Position: X: 0.9434342 Y: 0.5645404 Z: -1.524809
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 30: In Sedan01: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "Sedan01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_01_Wheel_fl
+SM_Veh_Car_01_Wheel_fr
+SM_Veh_Car_01_Wheel_rl
+SM_Veh_Car_01_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure. 
+
+SM_Veh_Car_01_Wheel_fl
+---------------------------
+
+Position: X: -0.7100819 Y: 0.361439 Z: 1.619223
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_fr
+---------------------------
+
+Position: X: 0.7100819 Y: 0.361439 Z: 1.619223
+Rotation: X: 0 Y: -180 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_rl
+---------------------------
+
+Position: X: -0.8224078 Y: 0.361439 Z: -1.130083
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_rr
+---------------------------
+
+Position: X: 0.8224078 Y: 0.361439 Z: -1.130083
+Rotation: X: 0 Y: -180 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Also you will note, that some of the wheel meshes have a -180 on the rotation,
+that is fine, the provided script for this particular model has edits to
+factor for those rotations so as to not conflict with Wheel Colliders
+functionality.
+
+
+-----------------------------------------------------------------------------------
+
+Step 31: In Sedan01: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "Sedan01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_01_Wheel_fl
+SM_Veh_Car_01_Wheel_fr
+SM_Veh_Car_01_Wheel_rl
+SM_Veh_Car_01_Wheel_rr
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.3614392
+Front Wheels Collider Position Y: 0.511439 (0.3614392+0.15)  *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.3614392
+Rear Wheels Collider Position Y: 0.511439 (0.3614392+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_01_Wheel_fl
+SM_Veh_Car_01_Wheel_fr
+SM_Veh_Car_01_Wheel_rl
+SM_Veh_Car_01_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.361439
+Set both rear  "Wheel Colliders" radius: 0.361439
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_01_Wheel_fl
+---------------------------
+
+Position: X: -0.7100819 Y: 0.511439 Z: 1.619223
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_fr
+---------------------------
+
+Position: X: 0.7100819 Y: 0.511439 Z: 1.619223
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_rl
+---------------------------
+
+Position: X: -0.8224078 Y: 0.511439 Z: -1.130083
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_01_Wheel_rr
+---------------------------
+
+Position: X: 0.8224078 Y: 0.511439 Z: -1.130083
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 32: In SixWheelTruck01: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SixWheelTruck01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Truck_Wheel_fl
+SM_Veh_Truck_Wheel_fr
+SM_Veh_Truck_Wheel_rl_01
+SM_Veh_Truck_Wheel_rl_02
+SM_Veh_Truck_Wheel_rr_01
+SM_Veh_Truck_Wheel_rr_02
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Truck_Wheel_fl
+---------------------------
+
+Position: X: -1.056318 Y: 0.6432184 Z: 2.190251
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_fr
+---------------------------
+
+Position: X: 1.056318 Y: 0.6432184 Z: 2.190251
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rl_01
+---------------------------
+
+Position: X: -1.172493 Y: 0.6432184 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rl_02
+---------------------------
+
+Position: X: -1.172493 Y: 0.6432184 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_01
+---------------------------
+
+Position: X: 1.172493 Y: 0.6432184 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_02
+---------------------------
+
+Position: X: 1.172493 Y: 0.6432184 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 33: In SixWheelTruck01: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SixWheelTruck01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Truck_Wheel_fl
+SM_Veh_Truck_Wheel_fr
+SM_Veh_Truck_Wheel_rl_01
+SM_Veh_Truck_Wheel_rl_02
+SM_Veh_Truck_Wheel_rr_01
+SM_Veh_Truck_Wheel_rr_02
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.6400671
+Front Wheels Collider Position Y: 0.7900671 (0.6400671+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.6400672
+Rear Wheels Collider Position Y: 0.7900672 (0.6400672+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Truck_Wheel_fl
+SM_Veh_Truck_Wheel_fr
+SM_Veh_Truck_Wheel_rl_01
+SM_Veh_Truck_Wheel_rl_02
+SM_Veh_Truck_Wheel_rr_01
+SM_Veh_Truck_Wheel_rr_02
+
+Set both front "Wheel Colliders" radius: 0.6400671
+Set all rear  "Wheel Colliders" radius: 0.6400672
+
+We will need to now edit these infos:
+
+
+SM_Veh_Truck_Wheel_fl
+---------------------
+
+Position: X: -1.056318 Y: 0.7900671 Z: 2.190251
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_fr
+---------------------
+
+Position: X: 1.056318 Y: 0.7900671 Z: 2.190251
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rl_01
+------------------------
+
+Position: X: -1.172493 Y: 0.7900672 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rl_02
+------------------------
+
+Position: X: -1.172493 Y: 0.7900672 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_01
+------------------------
+
+Position: X: 1.172493 Y: 0.7900672 Z: -0.5653239
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Truck_Wheel_rr_02
+------------------------
+
+Position: X: 1.172493 Y: 0.7900672 Z: -2.031397
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Humvee01
+    SM_Veh_Light_Armored_Car_Glass_01
+    SM_Veh_Light_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+  Sedan01
+    SM_Veh_Car_Glass_01
+    SM_Veh_Car_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  SixWheelTruck01
+    SM_Veh_Truck_Glass_01
+    SM_Veh_Truck_SteeringW_01
+    SM_Veh_Truck_Trailer_01  
+    WheelMeshes
+    WheelColliders   
+    View
+
+
+Fully Expanded:
+
+Vehicles
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_rmored_Car_Wheel_rr    
+    View
+      ArmoredTruck01Camera
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera     
+  Humvee01
+    SM_Veh_Light_Armored_Car_Glass_01
+    SM_Veh_Light_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Light_Armored_Car_Wheel_fl
+      SM_Veh_Light_Armored_Car_Wheel_fr
+      SM_Veh_Light_Armored_Car_Wheel_rl
+      SM_Veh_Light_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Light_Armored_Car_Wheel_fl
+      SM_Veh_Light_Armored_Car_Wheel_fr
+      SM_Veh_Light_Armored_Car_Wheel_rl
+      SM_Veh_Light_Armored_Car_Wheel_rr    
+    View
+      Humvee01Camera
+  Sedan01
+    SM_Veh_Car_Glass_01
+    SM_Veh_Car_SteeringW
+    WheelMeshes
+      SM_Veh_Car_01_Wheel_fl
+      SM_Veh_Car_01_Wheel_fr
+      SM_Veh_Car_01_Wheel_rl
+      SM_Veh_Car_01_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_01_Wheel_fl
+      SM_Veh_Car_01_Wheel_fr
+      SM_Veh_Car_01_Wheel_rl
+      SM_Veh_Car_01_Wheel_rr   
+    View
+      Sedan01Camera
+  SixWheelTruck01
+    SM_Veh_Truck_Glass_01
+    SM_Veh_Truck_SteeringW_01
+    SM_Veh_Truck_Trailer_01
+    WheelMeshes
+      SM_Veh_Truck_Wheel_fl
+      SM_Veh_Truck_Wheel_fr
+      SM_Veh_Truck_Wheel_rl_01
+      SM_Veh_Truck_Wheel_rl_02
+      SM_Veh_Truck_Wheel_rr_01
+      SM_Veh_Truck_Wheel_rr_02
+    WheelColliders
+      SM_Veh_Truck_Wheel_fl
+      SM_Veh_Truck_Wheel_fr
+      SM_Veh_Truck_Wheel_rl_01
+      SM_Veh_Truck_Wheel_rl_02
+      SM_Veh_Truck_Wheel_rr_01
+      SM_Veh_Truck_Wheel_rr_02   
+    View
+      SixWheelTruck01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 34: Add to: ArmoredTruck01 (ArmoredTruck01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (ArmoredTruck01Controller.cs) to "ArmoredTruck01" 
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: ArmoredTruck01 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Armored_Car_Wheel_fl (Transform)
+Front Right: SM_Veh_Armored_Car_Wheel_fr (Transform)
+Rear Left: SM_Veh_Armored_Car_Wheel_rl (Transform)
+Rear Right: SM_Veh_Armored_Car_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Armored_Car_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Armored_Car_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Armored_Car_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Armored_Car_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 3000
+
+
+-----------------------------------------------------------------------------------
+
+Step 35: Add to: DuneBuggy01 (DuneBuggy01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy01Controller.cs) to "DuneBuggy01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: DuneBuggy01 (Rigidbody)
+
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Transform)
+Front Right: SM_Veh_Buggy_Wheel_fr (Transform)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Transform)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Transform) 
+
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Wheel Collider)
+Front: Right: SM_Veh_Buggy_Wheel_fr (Wheel Collider)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Wheel Collider) 
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1000
+
+
+-----------------------------------------------------------------------------------
+
+Step 36: Add to: Humvee01 (Humvee01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Humvee01Controller.cs) to "Humvee01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Humvee01 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Light_Armored_Car_Wheel_fl (Transform)
+Front Right: SM_Veh_Light_Armored_Car_Wheel_fr (Transform)
+Rear Left: SM_Veh_Light_Armored_Car_Wheel_rl (Transform)
+Rear Right: SM_Veh_Light_Armored_Car_Wheel_rr (Transform) 
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Light_Armored_Car_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Light_Armored_Car_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Light_Armored_Car_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Light_Armored_Car_Wheel_rr (Wheel Collider) 
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 2500
+
+
+-----------------------------------------------------------------------------------
+
+Step 37: Add to: Sedan01 (Sedan01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Sedan01Controller.cs) to "Sedan01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: Sedan01 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_01_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_01_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_01_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_01_Wheel_rr (Transform) 
+
+WheelColliders:
+---------------
+
+Font Left: SM_Veh_Car_01_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_01_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_01_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_01_Wheel_rr (Wheel Collider) 
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1500
+
+
+-----------------------------------------------------------------------------------
+
+Step 38: Add to: SixWheelTruck01 (SixWheelTruck01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (ArmoredTruck01Controller.cs) to "SixWheelTruck01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SixWheelTruck01 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Truck_Wheel_fl (Transform)
+Front Right: SM_Veh_Truck_Wheel_fr (Transform)
+Rear Left 01: SM_Veh_Truck_Wheel_rl_01 (Transform)
+Rear Left 02: SM_Veh_Truck_Wheel_rl_02 (Transform)
+Rear Right 01: SM_Veh_Truck_Wheel_rr_01 (Transform)
+Rear Right 02: SM_Veh_Truck_Wheel_rr_02 (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Truck_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Truck_Wheel_fr (Wheel Collider)
+Rear Left 01: SM_Veh_Truck_Wheel_rl_01 (Wheel Collider)
+Rear Left 02: SM_Veh_Truck_Wheel_rl_02 (Wheel Collider)
+Rear Right 01: SM_Veh_Truck_Wheel_rr_01 (Wheel Collider)
+Rear Right 02: SM_Veh_Truck_Wheel_rr_02 (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 3500
+
+-----------------------------------------------------------------------------------
+
+Step 39: Add to: ArmoredTruck01Camera (ArmoredTruck01TruckCamera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (ArmoredTruck01Camera.cs) to "ArmoredTruck01Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Armored Truck: ArmoredTruck01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 40: Add to: DuneBuggy01Camera (DuneBuggy01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy01Camera.cs) to "DuneBuggy01Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Dune Buggy: DuneBuggy01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 41: Add to: Humvee01Camera (Humvee01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Humvee01Camera.cs) to "Humvee01Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Humvee01: Humvee01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 42: Add to: Sedan01Camera (Sedan01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Sedan01Camera.cs) to "Sedan01Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Sedan01: Sedan01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 43: Add to: SixWheelTruck01Camera (SixWheelTruck01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SixWheelTruck01Camera.cs) to "SixWheelTruck01Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Six Wheel Truck: SixWheelTruck01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 44: Add to: ArmoredTruck01 (ArmoredTruck01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Firstly, if you remember earlier in instructions we disabled the "Player"
+object & the "Interface" object as we noted those were not needed at the
+time, right?! Ok, well now they should be re-enabled as they are now needed.
+
+
+Attach component / script (ArmoredTruck01Entry.cs) to "ArmoredTruck01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Armored Truck: ArmoredTruck01
+Player: Player
+InterfaceText Object: ArmoredTruck01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
+Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+-----------------------------------------------------------------------------------
+
+Step 45: Add to: DuneBuggy01 (DuneBuggy01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy01Entry.cs) to "DuneBuggy01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Dune Buggy: DuneBuggy01
+Player: Player
+Interface Text Object: DuneBuggy01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
+Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+-----------------------------------------------------------------------------------
+
+Step 46: Add to: Humvee01 (Humvee01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Humvee01Entry.cs) to "Humvee01"
+
+Adjust the following settings:
+
+Game Objects:
+-------------
+
+Humvee01: Humvee01
+Player: Player
+Interface Text Object: Humvee01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: 0.0003892779 Y: 0.9888325 Z: -0.05741239
+Size: X: 3.561238 Y: 1.514789 Z: 1.951702
+
+
+-----------------------------------------------------------------------------------
+
+Step 47: Add to: SixWheelTruck01 (SixWheelTruck01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SixWheelTruck01Entry.cs) to "SixWheelTruck01"
+
+Adjust the following settings:
+
+Game Objects:
+-------------
+
+Six Wheel Truck: SixWheelTruck01
+Player: Player
+Interface Text Object: SixWheelTruck01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: 0.007755756 Y: 1.946628 Z: 2.775195
+Size: X: 4.208336 Y: 2.19522 Z: 1.470402
+
+
+-----------------------------------------------------------------------------------
+
+Step 48: Add to: Sedan01 (Sedan01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (Sedan01Entry.cs) to "Sedan01"
+
+Adjust the following settings:
+
+Game Objects:
+-------------
+
+Sedan01: Sedan01
+Player: Player
+Interface Text Object: Sedan01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.06134325 Y: 0.8881476 Z: 0.1162676
+Size: X: 3.262136 Y: 1.416598 Z: 1.655701
+
+
+-----------------------------------------------------------------------------------
+
+
+Add Tanks now:
+
+
+Tank USA:
+---------
+
+-----------------------------------------------------------------------------------
+
+Step 49.A:  Create child of "VehiclesEntry" add Text tmp: "TankUS01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "TankUS01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 49.B: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+
+SM_Veh_Tank_USA_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 50: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Tank_USA_01 => "TankUS01"
+
+Next, set the Transform:
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Then move "TankUS01" into the empty: "Vehicle" as child of.
+
+-----------------------------------------------------------------------------------
+
+Step 51: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "TankUS01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: -20 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 52: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "TankUS01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "TankUS01Camera":
+
+Position: X: 0 Y: 2.8 Z: -8.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 53: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "TankUS01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+Left:
+
+SM_Veh_Tank_USA_Track_Wheel_L_01
+SM_Veh_Tank_USA_Track_Wheel_L_02
+SM_Veh_Tank_USA_Track_Wheel_L_03
+SM_Veh_Tank_USA_Track_Wheel_L_04
+SM_Veh_Tank_USA_Track_Wheel_L_05
+SM_Veh_Tank_USA_Track_Wheel_L_06
+SM_Veh_Tank_USA_Track_Wheel_L_07
+SM_Veh_Tank_USA_Track_Wheel_L_08
+SM_Veh_Tank_USA_Track_Wheel_L_09
+
+Right:
+
+SM_Veh_Tank_USA_Track_Wheel_R_01
+SM_Veh_Tank_USA_Track_Wheel_R_02
+SM_Veh_Tank_USA_Track_Wheel_R_03
+SM_Veh_Tank_USA_Track_Wheel_R_04
+SM_Veh_Tank_USA_Track_Wheel_R_05
+SM_Veh_Tank_USA_Track_Wheel_R_06
+SM_Veh_Tank_USA_Track_Wheel_R_07
+SM_Veh_Tank_USA_Track_Wheel_R_08
+SM_Veh_Tank_USA_Track_Wheel_R_09
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+
+Left:
+
+SM_Veh_Tank_US_Track_Wheel_L_01
+-------------------------------
+
+Position: X: -1.469488 Y: 0.8289917 Z: 3.356318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_02
+-------------------------------
+
+Position: X: -1.469488 Y: 0.4179952 Z: 2.309
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_03
+-------------------------------
+
+Position: X: -1.469488 Y: 0.4179952 Z: 1.56178
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_04
+-------------------------------
+
+Position: X: -1.469488 Y: 0.4179952 Z: 0.8150922
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_05
+-------------------------------
+
+Position: X: -1.469488 Y: 0.4179952 Z: 0.0873564
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_06
+-------------------------------
+
+Position: X: -1.469488 Y: 0.4179952 Z: -0.6593317
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_07
+-------------------------------
+
+Position: X: -1.469488 Y: 0.4179952 Z: -1.394437
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_08
+-------------------------------
+
+Position: X: -1.469488 Y: 0.4179952 Z: -2.141125
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_09
+-------------------------------
+
+Position: X: -1.49857 Y: 0.8754374 Z: -3.052751
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Right:
+
+
+SM_Veh_Tank_US_Track_Wheel_R_01
+-------------------------------
+
+Position: X: 1.469212 Y: 0.8289917 Z: 3.356318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_02
+-------------------------------
+
+Position: X: 1.469212 Y: 0.4179952 Z: 2.452122
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_03
+-------------------------------
+
+Position: X: 1.469212 Y: 0.4179952 Z: 1.56178
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_04
+-------------------------------
+
+Position: X: 1.469212 Y: 0.4179952 Z: 0.8150922
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_05
+-------------------------------
+
+Position: X: 1.469212 Y: 0.4179952 Z: 0.0873564
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_06
+-------------------------------
+
+Position: X: 1.469212 Y: 0.4179952 Z: -0.6593317
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_07
+-------------------------------
+
+Position: X: 1.469212 Y: 0.4179952 Z: -1.394437
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_08
+-------------------------------
+
+Position: X: 1.469212 Y: 0.4179952 Z: -2.141125
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_09
+-------------------------------
+
+Position: X: 1.498295 Y: 0.862684 Z: -3.047343
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+
+-----------------------------------------------------------------------------------
+
+Step 54: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "TankUS01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: -0.015 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+Left:
+
+SM_Veh_Tank_USA_Track_Wheel_L_01
+SM_Veh_Tank_USA_Track_Wheel_L_02
+SM_Veh_Tank_USA_Track_Wheel_L_03
+SM_Veh_Tank_USA_Track_Wheel_L_04
+SM_Veh_Tank_USA_Track_Wheel_L_05
+SM_Veh_Tank_USA_Track_Wheel_L_06
+SM_Veh_Tank_USA_Track_Wheel_L_07
+SM_Veh_Tank_USA_Track_Wheel_L_08
+SM_Veh_Tank_USA_Track_Wheel_L_09
+
+Right:
+
+SM_Veh_Tank_USA_Track_Wheel_R_01
+SM_Veh_Tank_USA_Track_Wheel_R_02
+SM_Veh_Tank_USA_Track_Wheel_R_03
+SM_Veh_Tank_USA_Track_Wheel_R_04
+SM_Veh_Tank_USA_Track_Wheel_R_05
+SM_Veh_Tank_USA_Track_Wheel_R_06
+SM_Veh_Tank_USA_Track_Wheel_R_07
+SM_Veh_Tank_USA_Track_Wheel_R_08
+SM_Veh_Tank_USA_Track_Wheel_R_09
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+Wheel Collider Radius:
+----------------------
+
+
+Left:
+
+Set SM_Veh_Tank_USA_Track_Wheel_L_01 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_02 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_03 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_04 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_05 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_06 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_07 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_08 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_L_09 "Wheel Collider" radius: 0.3252691
+
+Right:
+
+Set SM_Veh_Tank_USA_Track_Wheel_R_01 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_02 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_03 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_04 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_05 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_06 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_07 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_08 "Wheel Collider" radius: 0.3376395
+Set SM_Veh_Tank_USA_Track_Wheel_R_09 "Wheel Collider" radius: 0.3252691
+
+
+Wheel Collider Suspension Distance:
+-----------------------------------
+
+
+Left:
+
+Set SM_Veh_Tank_USA_Track_Wheel_L_01 "Wheel Collider" Suspension Distance: 0.2
+Set SM_Veh_Tank_USA_Track_Wheel_L_02 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_03 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_04 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_05 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_06 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_07 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_08 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_L_09 "Wheel Collider" Suspension Distance: 0.2
+
+Right:
+
+Set SM_Veh_Tank_USA_Track_Wheel_R_01 "Wheel Collider" Suspension Distance: 0.2
+Set SM_Veh_Tank_USA_Track_Wheel_R_02 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_03 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_04 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_05 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_06 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_07 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_08 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_USA_Track_Wheel_R_09 "Wheel Collider" Suspension Distance: 0.2
+
+
+We will need to now edit these infos:
+
+
+Left:
+
+SM_Veh_Tank_US_Track_Wheel_L_01
+-------------------------------
+
+Position: X: -1.469488 Y: 0.9789917 Z: 3.356318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_02
+-------------------------------
+
+Position: X: -1.469488 Y: 0.5679952 Z: 2.309
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_03
+-------------------------------
+
+Position: X: -1.469488 Y: 0.5679952 Z: 1.56178
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_04
+-------------------------------
+
+Position: X: -1.469488 Y: 0.5679952 Z: 0.8150922
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_05
+-------------------------------
+
+Position: X: -1.469488 Y: 0.5679952 Z: 0.0873564
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_06
+-------------------------------
+
+Position: X: -1.469488 Y: 0.5679952 Z: -0.6593317
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_07
+-------------------------------
+
+Position: X: -1.469488 Y: 0.5679952 Z: -1.394437
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_08
+-------------------------------
+
+Position: X: -1.469488 Y: 0.5679952 Z: -2.141125
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_L_09
+-------------------------------
+
+Position: X: -1.49857 Y: 1.025437 Z: -3.052751
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Right:
+
+
+SM_Veh_Tank_US_Track_Wheel_R_01
+-------------------------------
+
+Position: X: 1.469212 Y: 0.9789917 Z: 3.356318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_02
+-------------------------------
+
+Position: X: 1.469212 Y: 0.5679952 Z: 2.452122
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_03
+-------------------------------
+
+Position: X: 1.469212 Y: 0.5679952 Z: 1.56178
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_04
+-------------------------------
+
+Position: X: 1.469212 Y: 0.5679952 Z: 0.8150922
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_05
+-------------------------------
+
+Position: X: 1.469212 Y: 0.5679952 Z: 0.0873564
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_06
+-------------------------------
+
+Position: X: 1.469212 Y: 0.5679952 Z: -0.6593317
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_07
+-------------------------------
+
+Position: X: 1.469212 Y: 0.5679952 Z: -1.394437
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_08
+-------------------------------
+
+Position: X: 1.469212 Y: 0.5679952 Z: -2.141125
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_US_Track_Wheel_R_09
+-------------------------------
+
+Position: X: 1.498295 Y: 1.012684 Z: -3.047343
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  TankUS01
+    SM_Veh_Tank_USA_Track_L
+    SM_Veh_Tank_USA_Track_R
+    SM_Veh_Tank_USA_Turret_01
+    WheelMeshes
+    WheelColliders   
+    View
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Humvee01
+    SM_Veh_Light_Armored_Car_Glass_01
+    SM_Veh_Light_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+  Sedan01
+    SM_Veh_Car_Glass_01
+    SM_Veh_Car_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  SixWheelTruck01
+    SM_Veh_Truck_Glass_01
+    SM_Veh_Truck_SteeringW_01
+    SM_Veh_Truck_Trailer_01  
+    WheelMeshes
+    WheelColliders   
+    View
+
+
+Fully Expanded:
+
+Vehicles
+  TankUS01
+    SM_Veh_Tank_USA_Track_L
+    SM_Veh_Tank_USA_Track_R
+    SM_Veh_Tank_USA_Turret_01
+      SM_Veh_Tank_USA_Turret_Barrel_01
+    WheelMeshes
+      SM_Veh_Tank_USA_Track_Wheel_L_01
+      SM_Veh_Tank_USA_Track_Wheel_L_02
+      SM_Veh_Tank_USA_Track_Wheel_L_03
+      SM_Veh_Tank_USA_Track_Wheel_L_04
+      SM_Veh_Tank_USA_Track_Wheel_L_05
+      SM_Veh_Tank_USA_Track_Wheel_L_06
+      SM_Veh_Tank_USA_Track_Wheel_L_07
+      SM_Veh_Tank_USA_Track_Wheel_L_08
+      SM_Veh_Tank_USA_Track_Wheel_L_09
+      SM_Veh_Tank_USA_Track_Wheel_R_01
+      SM_Veh_Tank_USA_Track_Wheel_R_02
+      SM_Veh_Tank_USA_Track_Wheel_R_03
+      SM_Veh_Tank_USA_Track_Wheel_R_04
+      SM_Veh_Tank_USA_Track_Wheel_R_05
+      SM_Veh_Tank_USA_Track_Wheel_R_06
+      SM_Veh_Tank_USA_Track_Wheel_R_07
+      SM_Veh_Tank_USA_Track_Wheel_R_08
+      SM_Veh_Tank_USA_Track_Wheel_R_09 
+    WheelColliders
+      SM_Veh_Tank_USA_Track_Wheel_L_01
+      SM_Veh_Tank_USA_Track_Wheel_L_02
+      SM_Veh_Tank_USA_Track_Wheel_L_03
+      SM_Veh_Tank_USA_Track_Wheel_L_04
+      SM_Veh_Tank_USA_Track_Wheel_L_05
+      SM_Veh_Tank_USA_Track_Wheel_L_06
+      SM_Veh_Tank_USA_Track_Wheel_L_07
+      SM_Veh_Tank_USA_Track_Wheel_L_08
+      SM_Veh_Tank_USA_Track_Wheel_L_09
+      SM_Veh_Tank_USA_Track_Wheel_R_01
+      SM_Veh_Tank_USA_Track_Wheel_R_02
+      SM_Veh_Tank_USA_Track_Wheel_R_03
+      SM_Veh_Tank_USA_Track_Wheel_R_04
+      SM_Veh_Tank_USA_Track_Wheel_R_05
+      SM_Veh_Tank_USA_Track_Wheel_R_06
+      SM_Veh_Tank_USA_Track_Wheel_R_07
+      SM_Veh_Tank_USA_Track_Wheel_R_08
+      SM_Veh_Tank_USA_Track_Wheel_R_09  
+    View
+      TankUS01Camera
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_rmored_Car_Wheel_rr    
+    View
+      ArmoredTruck01Camera
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera     
+  Humvee01
+    SM_Veh_Light_Armored_Car_Glass_01
+    SM_Veh_Light_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Light_Armored_Car_Wheel_fl
+      SM_Veh_Light_Armored_Car_Wheel_fr
+      SM_Veh_Light_Armored_Car_Wheel_rl
+      SM_Veh_Light_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Light_Armored_Car_Wheel_fl
+      SM_Veh_Light_Armored_Car_Wheel_fr
+      SM_Veh_Light_Armored_Car_Wheel_rl
+      SM_Veh_Light_Armored_Car_Wheel_rr    
+    View
+      Humvee01Camera
+  Sedan01
+    SM_Veh_Car_Glass_01
+    SM_Veh_Car_SteeringW
+    WheelMeshes
+      SM_Veh_Car_01_Wheel_fl
+      SM_Veh_Car_01_Wheel_fr
+      SM_Veh_Car_01_Wheel_rl
+      SM_Veh_Car_01_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_01_Wheel_fl
+      SM_Veh_Car_01_Wheel_fr
+      SM_Veh_Car_01_Wheel_rl
+      SM_Veh_Car_01_Wheel_rr   
+    View
+      Sedan01Camera
+  SixWheelTruck01
+    SM_Veh_Truck_Glass_01
+    SM_Veh_Truck_SteeringW_01
+    SM_Veh_Truck_Trailer_01
+    WheelMeshes
+      SM_Veh_Truck_Wheel_fl
+      SM_Veh_Truck_Wheel_fr
+      SM_Veh_Truck_Wheel_rl_01
+      SM_Veh_Truck_Wheel_rl_02
+      SM_Veh_Truck_Wheel_rr_01
+      SM_Veh_Truck_Wheel_rr_02
+    WheelColliders
+      SM_Veh_Truck_Wheel_fl
+      SM_Veh_Truck_Wheel_fr
+      SM_Veh_Truck_Wheel_rl_01
+      SM_Veh_Truck_Wheel_rl_02
+      SM_Veh_Truck_Wheel_rr_01
+      SM_Veh_Truck_Wheel_rr_02   
+    View
+      SixWheelTruck01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 55: Add to: TankUS01 (TankUS01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankUS01Controller.cs) to "TankUS01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: TankUS01 (Rigidbody)
+
+
+TankUS01 Transforms:
+------------------
+
+Tank US Body: TankUS01 (Transform)
+Tank US Turret: SM_Veh_Tank_USA_Turret_01 (Transform)
+Tank US Barrel: SM_Veh_Tank_USA_Turret_Barrel_01 (Transform)
+
+
+Wheel Transforms:
+-----------------
+
+Left01 Transform: SM_Veh_Tank_USA_Track_Wheel_L_01 (Transform)
+Left02 Transform: SM_Veh_Tank_USA_Track_Wheel_L_02 (Transform)
+Left03 Transform: SM_Veh_Tank_USA_Track_Wheel_L_03 (Transform)
+Left04 Transform: SM_Veh_Tank_USA_Track_Wheel_L_04 (Transform)
+Left05 Transform: SM_Veh_Tank_USA_Track_Wheel_L_05 (Transform)
+Left06 Transform: SM_Veh_Tank_USA_Track_Wheel_L_06 (Transform)
+Left07 Transform: SM_Veh_Tank_USA_Track_Wheel_L_07 (Transform)
+Left08 Transform: SM_Veh_Tank_USA_Track_Wheel_L_08 (Transform)
+Left09 Transform: SM_Veh_Tank_USA_Track_Wheel_L_09 (Transform)
+
+Right01 Transform: SM_Veh_Tank_USA_Track_Wheel_R_01 (Transform)
+Right02 Transform: SM_Veh_Tank_USA_Track_Wheel_R_02 (Transform)
+Right03 Transform: SM_Veh_Tank_USA_Track_Wheel_R_03 (Transform)
+Right04 Transform: SM_Veh_Tank_USA_Track_Wheel_R_04 (Transform)
+Right05 Transform: SM_Veh_Tank_USA_Track_Wheel_R_05 (Transform)
+Right06 Transform: SM_Veh_Tank_USA_Track_Wheel_R_06 (Transform)
+Right07 Transform: SM_Veh_Tank_USA_Track_Wheel_R_07 (Transform)
+Right08 Transform: SM_Veh_Tank_USA_Track_Wheel_R_08 (Transform)
+Right09 Transform: SM_Veh_Tank_USA_Track_Wheel_R_09 (Transform)
+
+
+WheelColliders:
+---------------
+
+
+Left01: SM_Veh_Tank_USA_Track_Wheel_L_01 (Wheel Collider)
+Left02: SM_Veh_Tank_USA_Track_Wheel_L_02 (Wheel Collider)
+Left03: SM_Veh_Tank_USA_Track_Wheel_L_03 (Wheel Collider)
+Left04: SM_Veh_Tank_USA_Track_Wheel_L_04 (Wheel Collider)
+Left05: SM_Veh_Tank_USA_Track_Wheel_L_05 (Wheel Collider)
+Left06: SM_Veh_Tank_USA_Track_Wheel_L_06 (Wheel Collider)
+Left07: SM_Veh_Tank_USA_Track_Wheel_L_07 (Wheel Collider)
+Left08: SM_Veh_Tank_USA_Track_Wheel_L_08 (Wheel Collider)
+Left09: SM_Veh_Tank_USA_Track_Wheel_L_09 (Wheel Collider)
+
+Right01: SM_Veh_Tank_USA_Track_Wheel_R_01 (Wheel Collider)
+Right02: SM_Veh_Tank_USA_Track_Wheel_R_02 (Wheel Collider)
+Right03: SM_Veh_Tank_USA_Track_Wheel_R_03 (Wheel Collider)
+Right04: SM_Veh_Tank_USA_Track_Wheel_R_04 (Wheel Collider)
+Right05: SM_Veh_Tank_USA_Track_Wheel_R_05 (Wheel Collider)
+Right06: SM_Veh_Tank_USA_Track_Wheel_R_06 (Wheel Collider)
+Right07: SM_Veh_Tank_USA_Track_Wheel_R_07 (Wheel Collider)
+Right08: SM_Veh_Tank_USA_Track_Wheel_R_08 (Wheel Collider)
+Right09: SM_Veh_Tank_USA_Track_Wheel_R_09 (Wheel Collider)
+
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 7000
+
+
+-----------------------------------------------------------------------------------
+
+Step 56: Add to: TankUS01Camera (TankUS01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankUS01Camera.cs) to "TankUS01Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Tank US: TankUS01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 57: Add to: TankUS01 (TankUS01TrackScrolling.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankUS01TrackScrolling.cs) to "TankUS01"
+
+Adjust Settings:
+
+TankUS01 Rigidbody:
+-----------------
+
+Rigidbody: TankUS01 (Rigidbody)
+
+
+Track Scrolling:
+---------------- 
+
+Scroll Speed: 0.05
+Invert: NO
+
+Mesh Renderers:
+---------------
+
+Track Renderers: 2
+
+SM_Veh_Tank_USA_Track_L (Mesh Renderer)
+
+SM_Veh_Tank_USA_Track_R (Mesh Renderer)
+
+
+-----------------------------------------------------------------------------------
+
+Step 58: Add to: TankUS01 (TankUS01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Firstly, if you remember earlier in instructions we disabled the "Player"
+object & the "Interface" object as we noted those were not needed at the
+time, right?! Ok, well now they should be re-enabled as they are now needed.
+
+
+Attach component / script (TankUS01Entry.cs) to "TankUS01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Tank US: TankUS01
+Player: Player
+Interface Text Object: TankUS01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle making sure to extend the
+  collider a good bit out away from such so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: 0.2241634 Y: 0.9897067 Z: 0.0602622
+Size: X: 6.123734 Y: 1.472119 Z: 7.960261
+
+
+-----------------------------------------------------------------------------------
+
+Step 59: Move "TankUS01" as child of "Vehicles"
+
+-----------------------------------------------------------------------------------
+
+
+Move "TankUS01" as child of "Vehicles" as you previously did with all other
+vehicles.
+
+
+-----------------------------------------------------------------------------------
+
+
+
+Tank Russia:
+------------
+
+
+-----------------------------------------------------------------------------------
+
+Step 60.A:  Create child of "VehiclesEntry" add Text tmp: "TankRU01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "TankRU01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+
+-----------------------------------------------------------------------------------
+
+Step 60.B: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Tank_Russia_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 61: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Tank_Russia_01 => "TankRU01"
+
+Next, set the Transform:
+
+Position: X: 20 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Then move "TankRU01" into the empty: "Vehicle" as child of.
+
+-----------------------------------------------------------------------------------
+
+Step 62: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "TankRU01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 63: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "TankRU01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "TankRU01Camera":
+
+Position: X: 0 Y: 2.8 Z: -8.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 64: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "TankRU01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+
+Right:
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+SM_Veh_Tank_Russia_Track_Wheel_R_07
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+-----------------------------------
+
+Position: X: -1.559748 Y: 0.8468547 Z: 2.733236
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.5171387 Z: 1.849813
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.5171387 Z: 0.767
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.5171387 Z: -0.258
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.5171387 Z: -1.21
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.5171387 Z: -2.206517
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+-----------------------------------
+
+Position: X: -1.415374 Y: 0.8156583 Z: -3.041019
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Right:
+
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+-----------------------------------
+
+Position: X: 1.559747 Y: 0.8468553 Z: 2.733234
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.517139 Z: 1.849814
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.517139 Z: 0.79
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.517139 Z: -0.194
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.517139 Z: -1.2
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.517139 Z: -2.206516
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_07
+-----------------------------------
+
+Position: X: 1.415374 Y: 0.8156583 Z: -3.041019
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 65: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "TankRU01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+
+Right:
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+SM_Veh_Tank_Russia_Track_Wheel_R_07
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+
+Right:
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+SM_Veh_Tank_Russia_Track_Wheel_R_07
+
+
+Wheel Collider Radius:
+----------------------
+
+Left:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_L_01 "Wheel Collider" radius: 0.3202184
+Set SM_Veh_Tank_Russia_Track_Wheel_L_02 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_03 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_04 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_05 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_06 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_07 "Wheel Collider" radius: 0.3966376
+
+Right:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_R_01 "Wheel Collider" radius: 0.3202184
+Set SM_Veh_Tank_Russia_Track_Wheel_R_02 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_03 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_04 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_05 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_06 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_07 "Wheel Collider" radius: 0.3966376
+
+
+Wheel Collider Suspension Distance:
+-----------------------------------
+
+
+Left:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_L_01 "Wheel Collider" Suspension Distance: 0.2
+Set SM_Veh_Tank_Russia_Track_Wheel_L_02 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_03 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_04 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_05 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_06 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_07 "Wheel Collider" Suspension Distance: 0.17
+
+Right:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_R_01 "Wheel Collider" Suspension Distance: 0.2
+Set SM_Veh_Tank_Russia_Track_Wheel_R_02 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_03 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_04 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_05 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_06 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_07 "Wheel Collider" Suspension Distance: 0.17
+
+We will need to now edit these infos:
+
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+-----------------------------------
+
+Position: X: -1.559748 Y: 0.9968547 Z: 2.733236
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.6671387 Z: 1.849813
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.6671387 Z: 0.767
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.6671387 Z: -0.258
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.6671387 Z: -1.21
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.6671387 Z: -2.206517
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+-----------------------------------
+
+Position: X: -1.415374 Y: 0.9656583 Z: -3.041019
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Right:
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+-----------------------------------
+
+Position: X: 1.559747 Y: 0.9968553 Z: 2.733234
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.667139 Z: 1.849814
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.667139 Z: 0.79
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.667139 Z: -0.194
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.667139 Z: -1.2
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.667139 Z: -2.206516
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_07
+-----------------------------------
+
+Position: X: 1.415374 Y: 0.9656583 Z: -3.041019
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+
+Mostly Collapsed:
+
+Vehicles
+  TankUS01
+    SM_Veh_Tank_USA_Track_L
+    SM_Veh_Tank_USA_Track_R
+    SM_Veh_Tank_USA_Turret_01
+    WheelMeshes
+    WheelColliders   
+    View
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  Humvee01
+    SM_Veh_Light_Armored_Car_Glass_01
+    SM_Veh_Light_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+  Sedan01
+    SM_Veh_Car_Glass_01
+    SM_Veh_Car_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  SixWheelTruck01
+    SM_Veh_Truck_Glass_01
+    SM_Veh_Truck_SteeringW_01
+    SM_Veh_Truck_Trailer_01  
+    WheelMeshes
+    WheelColliders   
+    View
+  TankRU01
+    SM_Veh_Tank_Russia_Track_L
+    SM_Veh_Tank_Russia_Track_R
+    SM_Veh_Tank_Russia_Turret_01 
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  TankUS01
+    SM_Veh_Tank_USA_Track_L
+    SM_Veh_Tank_USA_Track_R
+    SM_Veh_Tank_USA_Turret_01
+      SM_Veh_Tank_USA_Turret_Barrel_01
+    WheelMeshes
+      SM_Veh_Tank_USA_Track_Wheel_L_01
+      SM_Veh_Tank_USA_Track_Wheel_L_02
+      SM_Veh_Tank_USA_Track_Wheel_L_03
+      SM_Veh_Tank_USA_Track_Wheel_L_04
+      SM_Veh_Tank_USA_Track_Wheel_L_05
+      SM_Veh_Tank_USA_Track_Wheel_L_06
+      SM_Veh_Tank_USA_Track_Wheel_L_07
+      SM_Veh_Tank_USA_Track_Wheel_L_08
+      SM_Veh_Tank_USA_Track_Wheel_L_09
+      SM_Veh_Tank_USA_Track_Wheel_R_01
+      SM_Veh_Tank_USA_Track_Wheel_R_02
+      SM_Veh_Tank_USA_Track_Wheel_R_03
+      SM_Veh_Tank_USA_Track_Wheel_R_04
+      SM_Veh_Tank_USA_Track_Wheel_R_05
+      SM_Veh_Tank_USA_Track_Wheel_R_06
+      SM_Veh_Tank_USA_Track_Wheel_R_07
+      SM_Veh_Tank_USA_Track_Wheel_R_08
+      SM_Veh_Tank_USA_Track_Wheel_R_09 
+    WheelColliders
+      SM_Veh_Tank_USA_Track_Wheel_L_01
+      SM_Veh_Tank_USA_Track_Wheel_L_02
+      SM_Veh_Tank_USA_Track_Wheel_L_03
+      SM_Veh_Tank_USA_Track_Wheel_L_04
+      SM_Veh_Tank_USA_Track_Wheel_L_05
+      SM_Veh_Tank_USA_Track_Wheel_L_06
+      SM_Veh_Tank_USA_Track_Wheel_L_07
+      SM_Veh_Tank_USA_Track_Wheel_L_08
+      SM_Veh_Tank_USA_Track_Wheel_L_09
+      SM_Veh_Tank_USA_Track_Wheel_R_01
+      SM_Veh_Tank_USA_Track_Wheel_R_02
+      SM_Veh_Tank_USA_Track_Wheel_R_03
+      SM_Veh_Tank_USA_Track_Wheel_R_04
+      SM_Veh_Tank_USA_Track_Wheel_R_05
+      SM_Veh_Tank_USA_Track_Wheel_R_06
+      SM_Veh_Tank_USA_Track_Wheel_R_07
+      SM_Veh_Tank_USA_Track_Wheel_R_08
+      SM_Veh_Tank_USA_Track_Wheel_R_09  
+    View
+      TankUS01Camera
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_rmored_Car_Wheel_rr    
+    View
+      ArmoredTruck01Camera
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera     
+  Humvee01
+    SM_Veh_Light_Armored_Car_Glass_01
+    SM_Veh_Light_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Light_Armored_Car_Wheel_fl
+      SM_Veh_Light_Armored_Car_Wheel_fr
+      SM_Veh_Light_Armored_Car_Wheel_rl
+      SM_Veh_Light_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Light_Armored_Car_Wheel_fl
+      SM_Veh_Light_Armored_Car_Wheel_fr
+      SM_Veh_Light_Armored_Car_Wheel_rl
+      SM_Veh_Light_Armored_Car_Wheel_rr    
+    View
+      Humvee01Camera
+  Sedan01
+    SM_Veh_Car_Glass_01
+    SM_Veh_Car_SteeringW
+    WheelMeshes
+      SM_Veh_Car_01_Wheel_fl
+      SM_Veh_Car_01_Wheel_fr
+      SM_Veh_Car_01_Wheel_rl
+      SM_Veh_Car_01_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_01_Wheel_fl
+      SM_Veh_Car_01_Wheel_fr
+      SM_Veh_Car_01_Wheel_rl
+      SM_Veh_Car_01_Wheel_rr   
+    View
+      Sedan01Camera
+  SixWheelTruck01
+    SM_Veh_Truck_Glass_01
+    SM_Veh_Truck_SteeringW_01
+    SM_Veh_Truck_Trailer_01
+    WheelMeshes
+      SM_Veh_Truck_Wheel_fl
+      SM_Veh_Truck_Wheel_fr
+      SM_Veh_Truck_Wheel_rl_01
+      SM_Veh_Truck_Wheel_rl_02
+      SM_Veh_Truck_Wheel_rr_01
+      SM_Veh_Truck_Wheel_rr_02
+    WheelColliders
+      SM_Veh_Truck_Wheel_fl
+      SM_Veh_Truck_Wheel_fr
+      SM_Veh_Truck_Wheel_rl_01
+      SM_Veh_Truck_Wheel_rl_02
+      SM_Veh_Truck_Wheel_rr_01
+      SM_Veh_Truck_Wheel_rr_02   
+    View
+      SixWheelTruck01Camera
+  TankRU01
+    SM_Veh_Tank_Russia_Track_L
+    SM_Veh_Tank_Russia_Track_R
+    SM_Veh_Tank_Russia_Turret_01
+      SM_Veh_Tank_Russia_Turret_Barrel_01
+    WheelMeshes
+      SM_Veh_Tank_Russia_Track_Wheel_L_01
+      SM_Veh_Tank_Russia_Track_Wheel_L_02
+      SM_Veh_Tank_Russia_Track_Wheel_L_03
+      SM_Veh_Tank_Russia_Track_Wheel_L_04
+      SM_Veh_Tank_Russia_Track_Wheel_L_05
+      SM_Veh_Tank_Russia_Track_Wheel_L_06
+      SM_Veh_Tank_Russia_Track_Wheel_L_07
+      SM_Veh_Tank_Russia_Track_Wheel_R_01
+      SM_Veh_Tank_Russia_Track_Wheel_R_02
+      SM_Veh_Tank_Russia_Track_Wheel_R_03
+      SM_Veh_Tank_Russia_Track_Wheel_R_04
+      SM_Veh_Tank_Russia_Track_Wheel_R_05
+      SM_Veh_Tank_Russia_Track_Wheel_R_06
+      SM_Veh_Tank_Russia_Track_Wheel_R_07
+    WheelColliders
+      SM_Veh_Tank_Russia_Track_Wheel_L_01
+      SM_Veh_Tank_Russia_Track_Wheel_L_02
+      SM_Veh_Tank_Russia_Track_Wheel_L_03
+      SM_Veh_Tank_Russia_Track_Wheel_L_04
+      SM_Veh_Tank_Russia_Track_Wheel_L_05
+      SM_Veh_Tank_Russia_Track_Wheel_L_06
+      SM_Veh_Tank_Russia_Track_Wheel_L_07
+      SM_Veh_Tank_Russia_Track_Wheel_R_01
+      SM_Veh_Tank_Russia_Track_Wheel_R_02
+      SM_Veh_Tank_Russia_Track_Wheel_R_03
+      SM_Veh_Tank_Russia_Track_Wheel_R_04
+      SM_Veh_Tank_Russia_Track_Wheel_R_05
+      SM_Veh_Tank_Russia_Track_Wheel_R_06
+      SM_Veh_Tank_Russia_Track_Wheel_R_07 
+    View
+      TankRU01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 65: Add to: TankRU01 (TankRU01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankRU01Controller.cs) to "TankRU01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: TankRU01 (Rigidbody)
+
+
+
+TankRU01 Transforms:
+------------------
+
+Tank RU Body: TankRU01 (Transform)
+Tank RU Turret: SM_Veh_Tank_Russia_Turret_01 (Transform)
+Tank RU Barrel: SM_Veh_Tank_Russia_Turret_Barrel_01 (Transform)
+
+
+Wheel Transforms:
+-----------------
+
+Left01 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_01 (Transform)
+Left02 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_02 (Transform)
+Left03 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_03 (Transform)
+Left04 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_04 (Transform)
+Left05 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_05 (Transform)
+Left06 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_06 (Transform)
+Left07 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_07 (Transform)
+
+
+Right01 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_01 (Transform)
+Right02 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_02 (Transform)
+Right03 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_03 (Transform)
+Right04 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_04 (Transform)
+Right05 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_05 (Transform)
+Right06 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_06 (Transform)
+Right07 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_07 (Transform)
+
+
+
+WheelColliders:
+---------------
+
+
+Left01: SM_Veh_Tank_Russia_Track_Wheel_L_01 (Wheel Collider)
+Left02: SM_Veh_Tank_Russia_Track_Wheel_L_02 (Wheel Collider)
+Left03: SM_Veh_Tank_Russia_Track_Wheel_L_03 (Wheel Collider)
+Left04: SM_Veh_Tank_Russia_Track_Wheel_L_04 (Wheel Collider)
+Left05: SM_Veh_Tank_Russia_Track_Wheel_L_05 (Wheel Collider)
+Left06: SM_Veh_Tank_Russia_Track_Wheel_L_06 (Wheel Collider)
+Left07: SM_Veh_Tank_Russia_Track_Wheel_L_07 (Wheel Collider)
+
+
+Right01: SM_Veh_Tank_Russia_Track_Wheel_R_01 (Wheel Collider)
+Right02: SM_Veh_Tank_Russia_Track_Wheel_R_02 (Wheel Collider)
+Right03: SM_Veh_Tank_Russia_Track_Wheel_R_03 (Wheel Collider)
+Right04: SM_Veh_Tank_Russia_Track_Wheel_R_04 (Wheel Collider)
+Right05: SM_Veh_Tank_Russia_Track_Wheel_R_05 (Wheel Collider)
+Right06: SM_Veh_Tank_Russia_Track_Wheel_R_06 (Wheel Collider)
+Right07: SM_Veh_Tank_Russia_Track_Wheel_R_07 (Wheel Collider)
+
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 7000
+
+
+-----------------------------------------------------------------------------------
+
+Step 66: Add to: TankRU01Camera (TankRU01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankRU01Camera.cs) to "TankRU01Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Tank RU: TankRU01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 67: Add to: TankUS01 (TankRU01TrackScrolling.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankRU01TrackScrolling.cs) to "TankRU01"
+
+Adjust Settings:
+
+
+TankRU01 Rigidbody :
+------------------
+
+TankRU01 (Rigidbody)
+
+Track Scrolling:
+----------------
+
+Scroll Speed: 0.05
+Invert: NO
+
+Track Renderers:
+----------------
+
+Track L: SM_Veh_Tank_Russia_Track_L (Transform)
+Track R: SM_Veh_Tank_Russia_Track_R (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 68: Add to: TankRU01 (TankRU01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Firstly, if you remember earlier in instructions we disabled the "Player"
+object & the "Interface" object as we noted those were not needed at the
+time, right?! Ok, well now they should be re-enabled as they are now needed.
+
+
+Attach component / script (TankRU01Entry.cs) to "TankRU01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Tank US: TankRU01
+Player: Player
+Interface Text Object: TankRU01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle making sure to extend the
+  collider a good bit out away from such so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
+Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+-----------------------------------------------------------------------------------
+
+Step 69: Move "TankRU01" as child of "Vehicles"
+
+-----------------------------------------------------------------------------------
+
+
+Move "TankRU01" as child of "Vehicles" as you previously did with all other
+vehicles.
+
+
+-----------------------------------------------------------------------------------
+
+
+Optional (Speedometer) setup steps:
+
+-----------------------------------------------------------------------------------
+
+Step 70: In Interface > Canvas create empty child: "VehiclesSpeed"
+
+-----------------------------------------------------------------------------------
+
+
+In: "VehiclesSpeed"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Bottom Left
+
+Pos X: 146.3
+Pos Y: 143
+
+Width: 300
+Height: 300
+
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 71: In "VehiclesSpeed" create empty child: "ArmoredTruck01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 72: In Interface > Canvas > VehiclesSpeed add UI IMG: "ArmoredTruck01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 73: In Interface > Canvas > VehiclesSpeed add IMG: "ArmoredTruck01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 74: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "ArmoredTruck01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 75: In Vehicle > ArmoredTruck01 attach script: (ArmoredTruck01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach ArmoredTruck01Speedometer script: (ArmoredTruck01Speedometer.cs) to
+Vehicle: "ArmoredTruck01"
+
+In: "ArmoredTruck01" > ArmoredTruck01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: ArmoredTruck01_Needle
+
+Speed Text: ArmoredTruck01_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: ArmoredTruck01_Speedometer
+Interface IMG01 Object: ArmoredTruck01_SpeedoGuage
+Interface IMG02 Object: ArmoredTruck01_SpeedoNeedle
+Interface Text Object: ArmoredTruck01_SpeedText
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+ArmoredTruck01Speedometer
+ArmoredTruck01_SpeedoGuage
+ArmoredTruck01_SpeedoNeedle
+ArmoredTruck01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 76: In "VehiclesSpeed" create empty child: "DunebBuggySpeedometer"
+
+-----------------------------------------------------------------------------------
+
+In: "DuneBuggy01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 77: In Interface > Canvas > VehiclesSpeed add UI IMG: "DuneBuggy01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 78: In Interface > Canvas > VehiclesSpeed add IMG: "DuneBuggy01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 79: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "DuneBuggy01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 80: In Vehicle > DuneBuggy01 attach script: (DuneBuggy01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach DuneBuggy01Speedometer script: (DuneBuggy01Speedometer.cs) to
+Vehicle: "DuneBuggy01"
+
+In: "DuneBuggy01" > DuneBuggy01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: DuneBuggy01_Needle
+
+Speed Text: DuneBuggy01_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: DuneBuggy01_Speedometer
+Interface IMG01 Object: DuneBuggy01_SpeedoGuage
+Interface IMG02 Object: DuneBuggy01_SpeedoNeedle
+Interface Text Object: DuneBuggy01_SpeedText
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+DuneBuggy01Speedometer
+DuneBuggy01_SpeedoGuage
+DuneBuggy01_SpeedoNeedle
+DuneBuggy01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 81: In "VehiclesSpeed" create empty child: "Humvee01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Humvee01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 82: In Interface > Canvas > VehiclesSpeed add UI IMG: "Humvee01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Humvee01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 83: In Interface > Canvas > VehiclesSpeed add IMG: "Humvee01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Humvee01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 84: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Humvee01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Humvee01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 85: In Vehicle > Humvee01 attach script: (Humvee01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach Humvee01Speedometer script: (Humvee01Speedometer.cs) to
+Vehicle: "Humvee01"
+
+In: "Humvee01" > Humvee01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: Humvee01_Needle
+
+Speed Text: Humvee01_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: Humvee01_Speedometer
+Interface IMG01 Object: Humvee01_SpeedoGuage
+Interface IMG02 Object: Humvee01_SpeedoNeedle
+Interface Text Object: Humvee01_SpeedText
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+Humvee01Speedometer
+Humvee01_SpeedoGuage
+Humvee01_SpeedoNeedle
+Humvee01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 86: In "VehiclesSpeed" create empty child: "Sedan01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+In: "Sedan01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 87: In Interface > Canvas > VehiclesSpeed add IMG: "Sedan01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Sedan01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 88: In Interface > Canvas > VehiclesSpeed add IMG: "Sedan01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Sedan01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 89: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Sedan01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Sedan01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 90: In Vehicle > Sedan01 attach script: (Sedan01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach Sedan01Speedometer script: (Sedan01Speedometer.cs) to Vehicle: "Sedan01"
+
+In: "Sedan01" > Sedan01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and Speed Text)
+
+Needle: Sedan01_Needle
+
+Speed Text: Sedan01_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: Sedan01_Speedometer
+Interface IMG01 Object: Sedan01_SpeedoGuage
+Interface IMG02 Object: Sedan01_SpeedoNeedle
+Interface Text Object: Sedan01_SpeedText
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+Sedan01Speedometer
+Sedan01_SpeedoGuage
+Sedan01_SpeedoNeedle
+Sedan01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 91: In "VehiclesSpeed" create empty child: "SixWheelTruck01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SixWheelTruck01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 92: In Interface > Canvas > VehiclesSpeed add IMG: "SixWheelTruck01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SixWheelTruck01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 93: In Interface > Canvas > VehiclesSpeed add IMG: "SixWheelTruck01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SixWheelTruck01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 94: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SixWheelTruck01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SixWheelTruck01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 95: In Vehicle > SixWheelTruck01 attach script: (SixWheelTruck01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SixWheelTruck01Speedometer script: (SixWheelTruck01Speedometer.cs) to
+Vehicle: "SixWheelTruck01"
+
+In: "SixWheelTruck01" > SixWheelTruck01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SixWheelTruck01_Needle
+
+Speed Text: SixWheelTruck01_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: SixWheelTruck01_Speedometer
+Interface IMG01 Object: SixWheelTruck01_SpeedoGuage
+Interface IMG02 Object: SixWheelTruck01_SpeedoNeedle
+Interface Text Object: SixWheelTruck01_SpeedText
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SixWheelTruck01Speedometer
+SixWheelTruck01_SpeedoGuage
+SixWheelTruck01_SpeedoNeedle
+SixWheelTruck01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 96: In "VehiclesSpeed" create empty child: "TankRU01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankRU01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 97: In Interface > Canvas > VehiclesSpeed add UI IMG: "TankRU01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankRU01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) 3A3E37
+
+
+-----------------------------------------------------------------------------------
+
+Step 98: In Interface > Canvas > VehiclesSpeed add IMG: "TankRU01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankRU01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 99: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "TankRU01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankRU01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) 3A3E37
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 100: In Vehicle > TankRU01 attach script: (TankRU01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach TankRU01Speedometer script: (TankRU01Speedometer.cs) to
+Vehicle: "TankRU01"
+
+In: "TankRU01" > TankRU01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: TankRU01_Needle
+
+Speet Text: TankRU01_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: TankRU01_Speedometer
+Interface IMG01 Object: TankRU01_SpeedoGuage
+Interface IMG02 Object: TankRU01_SpeedoNeedle
+Interface Text Object: TankRU01_SpeedText
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+TankRU01Speedometer
+TankRU01_SpeedoGuage
+TankRU01_SpeedoNeedle
+TankRU01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Step 101: In "VehiclesSpeed" create empty child: "TankUS01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankUS01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 102: In Interface > Canvas > VehiclesSpeed add UI IMG: "TankUS01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankUS01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) 3A3E37
+
+
+-----------------------------------------------------------------------------------
+
+Step 103: In Interface > Canvas > VehiclesSpeed add IMG: "TankUS01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankUS01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 104: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "TankUS01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "TankUS01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) 3A3E37
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 105: In Vehicle > TankUS01 attach script: (TankUS01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach TankUS01Speedometer script: (TankUS01Speedometer.cs) to
+Vehicle: "TankUS01"
+
+In: "TankUS01" > TankUS01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: TankUS01_Needle
+
+Speed Text: TankUS01_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: TankUS01_Speedometer
+Interface IMG01 Object: TankUS01_SpeedoGuage
+Interface IMG02 Object: TankUS01_SpeedoNeedle
+Interface Text Object: TankUS01_SpeedText
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+TankUS01Speedometer
+TankUS01_SpeedoGuage
+TankUS01_SpeedoNeedle
+TankUS01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
+That should about sum it up and should be about it and concludes the basic all
+Vehicle Controller types in scene manual setup steps. You can now begin to
+modify such further for your specific needs.
+
+Best of Luck!
