@@ -1,0 +1,1703 @@
+"AllArmoredTrucksDevScene-wEntry" Scene Setup Steps
+-----------------------------------------------------------------------------------
+
+Description:
+
+Create basic all Armored Truck Vehicle Controllers in scene for your Unity
+projects using vehicle models from Synty Polygon Battle Royale Asset.
+
+Player Controls:
+----------------
+
+Player Forward:   W
+Player Reverse:   S
+Player Left:      A
+Player Right:     D
+Player Jump:      Space
+Player Sprint:    Left Shift
+
+
+Vehicle Controls: 
+-----------------
+
+Vehicle Forward:  W
+Vehicle Reverse:  S
+Turn Left:        A
+Turn Right:       D
+Apply Brake:      Space
+Enter Vehicle:    E
+Exit Vehicle:     F
+
+Manual Setup Instruction:
+-------------------------
+
+
+* Simply follow the instruction for manual setup found below.
+
+
+-----------------------------------------------------------------------------------
+
+Prep Step: Create New Scene Called: "AllArmoredTrucksDevScene-wEntry"
+
+Note: if you already have some sort of a test terrain in place, well then, you
+can simple skip the steps: #1, 2 & 3 and go directly to #4.
+
+-----------------------------------------------------------------------------------
+
+Step 1: Create: "Environment" * (for Nicer Organization)
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Environment"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+First since this is just a "holder" added for better organization, let us go
+ahead & drag the "Directional Light" into "Environment".
+
+* also if you wanted you could add a "dir" called Environment and opt to place
+  your TerrainData inside that in its own Dir "TerrainData" and as such any
+  other Environment stuff respectively in as desired the "Environment" dir.
+  Just a suggestion.
+
+Also: We don't need the "Main Camera" in Sample Scene, so..., we can go ahead
+and delete it.
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: Create: "Terrain Plane"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Plane"
+
+Position: X: 0   Y: -0.03 Z: 0 
+Rotation: X: 0   Y: 0     Z: 0 
+Scale:    X: 100 Y: 1     Z: 100
+
+Rename to: "Terrain Plane"
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain Plane" into the holder "Environment" we added for just this exact
+ purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: Create: "Terrain"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Terrain"
+
+Modify via:
+
+"Terrain" Inspector: Terrain Settings
+
+Position: X: -500 Y: 0 Z: -500 
+Rotation: X: 0     Y: 0 Z: 0 
+Scale:    X: 1     Y: 1 Z: 1
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain" into the holder "Environment" we added for just this exact purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 4: Create: object "Player":
+
+-----------------------------------------------------------------------------------
+
+
+Create empty object and name such: "Player"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.9799998 Z: -10 
+Rotation: X: 0 Y: 0  Z: 0 
+Scale:    X: 1 Y: 1  Z: 1
+
+Add Tag: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: Add: empty object "View":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, create a child of the "Player" object and name
+such: "View"
+
+Transform Position: X: 0 Y: 0 Z: 0
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: Add: "Camera":
+
+-----------------------------------------------------------------------------------
+
+In "Player" object, add a Camera component as child of "View" and name
+such: "Camera"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.6 Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1
+
+Depth: "1" 
+
+Add Tag: "MainCamera"
+
+
+-----------------------------------------------------------------------------------
+
+Step 7: Edit: the "CharacterController" component:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, edit the "CharacterController" component:
+
+Height: "1.8"
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 9: Setup: Audio Source and Footstep Sounds Audio Clips:
+
+-----------------------------------------------------------------------------------
+
+In "Player" object edit: the "First Person Controller (Script)"
+
+Footstep Source: Player (AudioSource)
+
+Footsep Sounds: "4"
+
+Element 0: "Footstep01"
+Element 1: "Footstep02"
+Element 2: "Footstep03"
+Element 3: "Footstep04"
+
+
+That is it! You should now be able to run around your scene!
+
+
+But..., for now since we do not need the player controller at this point let
+us disable the player object / component in inspector for now until we need it
+
+
+-----------------------------------------------------------------------------------
+
+Step 10: Create: empty "Interface"
+
+-----------------------------------------------------------------------------------
+
+Create an empty called: "Interface"
+
+Layer: "UI"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0   Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1 
+
+
+-----------------------------------------------------------------------------------
+
+Step 11: In "Interface" Add UI: "Canvas"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" Add a UI: "Canvas"
+
+
+-----------------------------------------------------------------------------------
+
+Step 12: Create as child of "Canvas" add empty: "VehiclesEntry"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" add empty: "VehiclesEntry"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Bottom Center"
+
+Position: X: 0 Y: 50   Z: 0 
+Width: 100
+Height: 100
+
+
+-----------------------------------------------------------------------------------
+
+Step 13:  Create child of "VehiclesEntry" add Text tmp: "ArmoredTruck01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "ArmoredTruck01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 14: Create: empty "Vehicles"
+
+-----------------------------------------------------------------------------------
+
+
+Now that you disabled the interface, let us go back in your scene heirarchy and...
+
+Create Empty: "Vehicles"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your scene heirarchy at top should look like this:
+
+Environment
+Player
+Vehicle
+Interface
+EventSystem
+
+Nice and organized right?! :) Good Stuff! ;)
+
+Note: as this uses a vehicle from such and due to licensing such vehicles
+cannot be included in this repository obviously, as such the provided scripts
+and instructions thus require having / purchasing the:
+
+Synty Polygon Battle Royale Asset:
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
+
+
+-----------------------------------------------------------------------------------
+
+Step 15: Install: "Synty Polygon Battle Royal Asset"
+
+-----------------------------------------------------------------------------------
+
+
+Depending on how you purchased you can either use the package manager to
+install the asset or if you are like me and say already have local repository
+storage of purchased assets and have the package already you can install the
+asset manually.
+
+Asset package to install:
+
+ POLYGON Battle Royale - Low Poly 3D Art by Synty.unitypackage
+
+Purchase Synty Polygon Battle Royale Asset:
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
+
+
+-----------------------------------------------------------------------------------
+
+Step 16: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Armored_Car_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 17: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Armored_Car_01 => "ArmoredTruck01"
+
+Next, set the Transform:
+
+Position: X: -3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_01
+
+Then move "ArmoredTruck01" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 18: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 19: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "ArmoredTruck01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "ArmoredTruck01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 20: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Armored_Car_Wheel_fl
+---------------------------
+
+Position: X: -0.9126655 Y: 0.5421047 Z: 1.730696 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_fr
+---------------------------
+
+Position: X: 0.9126655 Y: 0.5421047 Z: 1.730696 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rl
+---------------------------
+
+Position: X: -1.048778 Y: 0.5421047 Z: -1.581318 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rr
+---------------------------
+
+Position: X: 1.048778 Y: 0.5421047 Z: -1.581318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.5407741
+Front Wheels Collider Position Y: 0.6907741 (0.5407741+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.5407741
+Rear Wheels Collider Position Y: 0.6907741 (0.5407741+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5407741
+Set both rear  "Wheel Colliders" radius: 0.5407741
+
+We will need to now edit these infos:
+
+
+SM_Veh_Armored_Car_Wheel_fl
+---------------------------
+
+Position: X: -0.9126655 Y: 0.6907741 Z: 1.730696
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_fr
+---------------------------
+
+Position: X: 0.9126655 Y: 0.6907741 Z: 1.730696
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rl
+---------------------------
+
+Position: X: -1.048778 Y: 0.6907741 Z: -1.581318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rr
+---------------------------
+
+Position: X: 1.048778 Y: 0.6907741 Z: -1.581318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_rmored_Car_Wheel_rr    
+    View
+      ArmoredTruck01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Add to: ArmoredTruck01 (ArmoredTruck01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (ArmoredTruck01Controller.cs) to "ArmoredTruck01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: ArmoredTruck01 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Armored_Car_Wheel_fl (Transform)
+Front Right: SM_Veh_Armored_Car_Wheel_fr (Transform)
+Rear Left: SM_Veh_Armored_Car_Wheel_rl (Transform)
+Rear Right: SM_Veh_Armored_Car_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Armored_Car_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Armored_Car_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Armored_Car_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Armored_Car_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 3000
+
+-----------------------------------------------------------------------------------
+
+Step 23: Add to: ArmoredTruck01Camera (ArmoredTruck01TruckCamera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (ArmoredTruck01Camera.cs) to "ArmoredTruck01Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Armored Truck: ArmoredTruck01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 24: Add to: ArmoredTruck01 (ArmoredTruck01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (ArmoredTruck01Entry.cs) to "ArmoredTruck01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Armored Truck: ArmoredTruck01
+Player: Player
+InterfaceText Object: ArmoredTruck01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
+Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+-----------------------------------------------------------------------------------
+
+Step 25: In Interface > Canvas create empty child: "VehiclesSpeed"
+
+-----------------------------------------------------------------------------------
+
+
+In: "VehiclesSpeed"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Bottom Left
+
+Pos X: 146.3
+Pos Y: 143
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 26: In "VehiclesSpeed" create empty child: "ArmoredTruck01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 27: In Interface > Canvas > VehiclesSpeed add UI IMG: "ArmoredTruck01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 28: In Interface > Canvas > VehiclesSpeed add IMG: "ArmoredTruck01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 29: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "ArmoredTruck01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 30: In Vehicle > ArmoredTruck01 attach script: (ArmoredTruck01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach ArmoredTruck01Speedometer script: (ArmoredTruck01Speedometer.cs) to
+Vehicle: "ArmoredTruck01"
+
+In: "ArmoredTruck01" > ArmoredTruck01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: ArmoredTruck01_Needle
+
+Speed Text: ArmoredTruck01_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: ArmoredTruck01_Speedometer
+Interface IMG01 Object: ArmoredTruck01_SpeedoGuage
+Interface IMG02 Object: ArmoredTruck01_SpeedoNeedle
+Interface Text Object: ArmoredTruck01_SpeedText
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+ArmoredTruck01Speedometer
+ArmoredTruck01_SpeedoGuage
+ArmoredTruck01_SpeedoNeedle
+ArmoredTruck01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_rmored_Car_Wheel_rr    
+    View
+      ArmoredTruck01Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      ArmoredTruck01Speedometer
+        ArmoredTruck01_SpeedoGuage
+        ArmoredTruck01_SpeedoNeedle
+        ArmoredTruck01_SpeedText 
+    VehiclesEntry
+      ArmoredTruck01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 31:  Create child of "VehiclesEntry" add Text tmp: "ArmoredTruck02_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "ArmoredTruck02_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input:  Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 32: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Armored_Car_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 33: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Armored_Car_01 => "ArmoredTruck02"
+
+Next, set the Transform:
+
+Position: X: 3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_02
+
+Then move "ArmoredTruck02" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 34: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck02" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 35: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "ArmoredTruck02Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "ArmoredTruck02Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 36: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck02" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Armored_Car_Wheel_fl
+---------------------------
+
+Position: X: -0.9126655 Y: 0.5421047 Z: 1.730696 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_fr
+---------------------------
+
+Position: X: 0.9126655 Y: 0.5421047 Z: 1.730696 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rl
+---------------------------
+
+Position: X: -1.048778 Y: 0.5421047 Z: -1.581318 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rr
+---------------------------
+
+Position: X: 1.048778 Y: 0.5421047 Z: -1.581318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 37: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck02" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.5407741
+Front Wheels Collider Position Y: 0.6907741 (0.5407741+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.5407741
+Rear Wheels Collider Position Y: 0.6907741 (0.5407741+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5407741
+Set both rear  "Wheel Colliders" radius: 0.5407741
+
+We will need to now edit these infos:
+
+
+SM_Veh_Armored_Car_Wheel_fl
+---------------------------
+
+Position: X: -0.9126655 Y: 0.6907741 Z: 1.730696
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_fr
+---------------------------
+
+Position: X: 0.9126655 Y: 0.6907741 Z: 1.730696
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rl
+---------------------------
+
+Position: X: -1.048778 Y: 0.6907741 Z: -1.581318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Armored_Car_Wheel_rr
+---------------------------
+
+Position: X: 1.048778 Y: 0.6907741 Z: -1.581318
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+  ArmoredTruck02
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_rmored_Car_Wheel_rr    
+    View
+      ArmoredTruck01Camera
+  ArmoredTruck02
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_rmored_Car_Wheel_rr    
+    View
+      ArmoredTruck02Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 38: Add to: ArmoredTruck02 (ArmoredTruck02Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (ArmoredTruck02Controller.cs) to "ArmoredTruck02"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: ArmoredTruck02 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Armored_Car_Wheel_fl (Transform)
+Front Right: SM_Veh_Armored_Car_Wheel_fr (Transform)
+Rear Left: SM_Veh_Armored_Car_Wheel_rl (Transform)
+Rear Right: SM_Veh_Armored_Car_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Armored_Car_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Armored_Car_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Armored_Car_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Armored_Car_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 3000
+
+
+-----------------------------------------------------------------------------------
+
+Step 39: Add to: ArmoredTruck02Camera (ArmoredTruck02TruckCamera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (ArmoredTruck02Camera.cs) to "ArmoredTruck02Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Armored Truck: ArmoredTruck02 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 40: Add to: ArmoredTruck02 (ArmoredTruck02Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (ArmoredTruck02Entry.cs) to "ArmoredTruck02"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Armored Truck: ArmoredTruck02
+Player: Player
+InterfaceText Object: ArmoredTruck02_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
+Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+-----------------------------------------------------------------------------------
+
+Step 41: In "VehiclesSpeed" create empty child: "ArmoredTruck02Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "ArmoredTruck02Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 42: In Interface > Canvas > VehiclesSpeed add UI IMG: "ArmoredTruck02_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck02_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 43: In Interface > Canvas > VehiclesSpeed add IMG: "ArmoredTruck02_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck02_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 44: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "ArmoredTruck02_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "ArmoredTruck02_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 45: In Vehicle > ArmoredTruck02 attach script: (ArmoredTruck02Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach ArmoredTruck02Speedometer script: (ArmoredTruck02Speedometer.cs) to
+Vehicle: "ArmoredTruck02"
+
+In: "ArmoredTruck02" > ArmoredTruck02 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: ArmoredTruck02_Needle
+
+Speed Text: ArmoredTruck02_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: ArmoredTruck02_Speedometer
+Interface IMG01 Object: ArmoredTruck02_SpeedoGuage
+Interface IMG02 Object: ArmoredTruck02_SpeedoNeedle
+Interface Text Object: ArmoredTruck02_SpeedText
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+ArmoredTruck02Speedometer
+ArmoredTruck02_SpeedoGuage
+ArmoredTruck02_SpeedoNeedle
+ArmoredTruck02_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View
+  ArmoredTruck02
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01  
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  ArmoredTruck01
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_rmored_Car_Wheel_rr    
+    View
+      ArmoredTruck01Camera
+  ArmoredTruck02
+    SM_Veh_Armored_Car_Glass_01
+    SM_Veh_Armored_Car_SteeringW_01
+    WheelMeshes
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_Armored_Car_Wheel_rr
+    WheelColliders
+      SM_Veh_Armored_Car_Wheel_fl
+      SM_Veh_Armored_Car_Wheel_fr
+      SM_Veh_Armored_Car_Wheel_rl
+      SM_Veh_rmored_Car_Wheel_rr    
+    View
+      ArmoredTruck02Camera      
+Interface
+  Canvas
+    VehiclesSpeed
+      ArmoredTruck01Speedometer
+        ArmoredTruck01_SpeedoGuage
+        ArmoredTruck01_SpeedoNeedle
+        ArmoredTruck01_SpeedText 
+      ArmoredTruck02Speedometer
+        ArmoredTruck02_SpeedoGuage
+        ArmoredTruck02_SpeedoNeedle
+        ArmoredTruck02_SpeedText 
+    VehiclesEntry
+      ArmoredTruck01_EntryKey
+      ArmoredTruck02_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+
+That should about sums it up and should be about it and concludes the basic
+All Armored Truck Vehicle Controllers in scene manual setup steps. You can
+now begin to modify such further for your specific needs.
+
+Best of Luck!
