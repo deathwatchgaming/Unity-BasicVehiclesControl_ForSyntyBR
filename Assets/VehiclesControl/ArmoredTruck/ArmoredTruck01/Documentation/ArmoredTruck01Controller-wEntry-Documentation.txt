@@ -390,7 +390,7 @@ Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completel
 
 Next, rename the vehicle prefabs:
 
-SM_Veh_Armored_Car_01 => "Armored Truck"
+SM_Veh_Armored_Car_01 => "ArmoredTruck01"
 
 Next, set the Transform:
 
