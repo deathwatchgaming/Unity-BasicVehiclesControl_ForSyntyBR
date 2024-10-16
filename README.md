@@ -43,15 +43,16 @@ Vehicles Currently "In Progress" & Not Yet Included:
 Other Current Possibles "In Progress" & Not Yet Included:
 ---------------------------------------------------------
 
+Possible future additions: (if and or when my limited free time and desire may allow)
 
-* Gas Station / Fuel System (5% Completed) coming soon...
-* Engine Audio (0% Completed) coming soon...
-* Horn Audio (0% Completed) coming soon...
-* Reverse Beeps Audio (0% Completed) coming soon...
-* Exhaust Particles (0% Completed) coming soon...
-* Vehicle Damage System (0% Completed) * still considering such eventually as
+* Gas Station / Fuel System (0% Completed) coming TBA...
+* Engine Audio (0% Completed) coming TBA...
+* Horn Audio (0% Completed) coming TBA...
+* Reverse Beeps Audio (0% Completed) coming TBA...
+* Exhaust Particles (0% Completed) coming TBA....
+* Vehicle Damage System (0% Completed) coming TBA... * still considering such eventually as
   a possibility since there are provided damaged vehicle prefabs in asset
-* Related Documentation(s) for above (0% completed) coming soon...
+* Related Documentation(s) for above (0% completed) coming TBA...
 
 
 Player Controls: 
@@ -151,7 +152,8 @@ Tank US: (total: 2)
 * TankUS02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-Spedometer-Documentation.txt
 
 
-* All TankUS(s) in scene setup: (...coming soon!)
+* All TankUS(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankUS/Documentation/AllTankUSControllers-wEntry-Documentation.txt
+
 
 
 Armored Truck: (total: 2)
@@ -182,7 +184,8 @@ Armored Truck: (total: 2)
 * ArmoredTruck02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck02/Documentation/ArmoredTruck02Controller-Spedometer-Documentation.txt
 
 
-* All ArmoredTruck(s) in scene setup: (...coming soon!)
+* All ArmoredTruck(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/ArmoredTruck/Documentation/AllArmoredTruckControllers-wEntry-Documentation.txt
+
 
 
 Dune Buggy: (total: 2)
@@ -214,7 +217,8 @@ Dune Buggy: (total: 2)
 * DuneBuggy02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/DuneBuggy/DuneBuggy02/Documentation/DuneBuggy02Controller-Spedometer-Documentation.txt
 
 
-* All DuneBuggy(s) in scene setup: (...coming soon!)
+* All DuneBuggy(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/DuneBuggy/Documentation/AllDuneBuggyControllers-wEntry-Documentation.txt
+
 
 
 Humvee: (total: 2)
@@ -245,7 +249,8 @@ Humvee: (total: 2)
 * Humvee02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/Humvee/Humvee02/Documentation/Humvee02Controller-Spedometer-Documentation.txt
 
 
-* All Humvee(s) in scene setup: (...coming soon!)
+* All Humvee(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/Humvee/Documentation/AllHumveeControllers-wEntry-Documentation.txt
+
 
 
 Six Wheel Truck: (total: 2)
@@ -276,7 +281,8 @@ Six Wheel Truck: (total: 2)
 * SixWheelTruck02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck02/Documentation/SixWheelTruck02Controller-Spedometer-Documentation.txt
 
 
-* All SixWheelTruck(s) in scene setup: (...coming soon!)
+* All SixWheelTruck(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/SixWheelTruck/Documentation/AllSixWheelTruckControllers-wEntry-Documentation.txt
+
 
 
 Sedan: (total: 2)
@@ -307,7 +313,8 @@ Sedan: (total: 2)
 * Sedan02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/Sedan/Sedan02/Documentation/Sedan02Controller-Spedometer-Documentation.txt
 
 
-* All Sedan(s) in scene setup: (...coming soon!)
+* All Sedan(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/Sedan/Documentation/AllSedanControllers-wEntry-Documentation.txt
+
 
 
 Tank RU: (total: 2)
@@ -338,6 +345,6 @@ Tank RU: (total: 2)
 * TankRU02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-Spedometer-Documentation.txt
 
 
-* All TankRU(s) in scene setup: (...coming soon!)
+* All TankRU(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/TankRU/Documentation/AllTankRUControllers-wEntry-Documentation.txt
 
 
