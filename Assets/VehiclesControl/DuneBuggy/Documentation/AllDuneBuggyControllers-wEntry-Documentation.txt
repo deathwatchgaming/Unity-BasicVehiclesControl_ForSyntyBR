@@ -76,7 +76,7 @@ Create New 3D Object: "Plane"
 
 Position: X: 0   Y: -0.03 Z: 0 
 Rotation: X: 0   Y: 0     Z: 0 
-Scale:    X: 100 Y: 1     Z: 100
+Scale:    X: 800 Y: 1     Z: 800
 
 Rename to: "Terrain Plane"
 
@@ -98,12 +98,22 @@ Modify via:
 
 "Terrain" Inspector: Terrain Settings
 
-Position: X: -500 Y: 0 Z: -500 
+Mesh Resolution:
+
+Terrain Width: 8000
+Terrain Length: 8000
+
+Modify via:
+
+"Terrain" Inspector: "Transform"
+
+Position: X: -4000 Y: 0 Z: -4000 
 Rotation: X: 0     Y: 0 Z: 0 
 Scale:    X: 1     Y: 1 Z: 1
 
 We can now opt to clean up for better organization, simply drag the:
 "Terrain" into the holder "Environment" we added for just this exact purpose!
+
 
 -----------------------------------------------------------------------------------
 
@@ -993,6 +1003,10 @@ Interface
       DuneBuggy01_EntryKey
 EventSystem
 
+
+-----  WRITING OF THIS DOCUMENTATION IS STILL IN PROGRESS!  -----
+
+(ie: 03 - 06)
 
 -----------------------------------------------------------------------------------
 
