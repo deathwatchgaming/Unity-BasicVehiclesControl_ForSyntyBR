@@ -412,7 +412,7 @@ SM_Veh_Tank_Russia_01 => "TankRU01"
 
 Next, set the Transform:
 
-Position: X: -15 Y: 0 Z: 0 
+Position: X: -17 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -1425,7 +1425,7 @@ SM_Veh_Tank_Russia_01 => "TankRU02"
 
 Next, set the Transform:
 
-Position: X: -9 Y: 0 Z: 0 
+Position: X: -10 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -2506,7 +2506,7 @@ SM_Veh_Tank_Russia_01 => "TankRU03"
 
 Next, set the Transform:
 
-Position: X: -3 Y: 0 Z: 0 
+Position: X: -3.5 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -3680,7 +3680,7 @@ SM_Veh_Tank_Russia_01 => "TankRU04"
 
 Next, set the Transform:
 
-Position: X: 3 Y: 0 Z: 0 
+Position: X: 3.5 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -4947,7 +4947,7 @@ SM_Veh_Tank_Russia_01 => "TankRU05"
 
 Next, set the Transform:
 
-Position: X: 9 Y: 0 Z: 0 
+Position: X: 10 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -6307,7 +6307,7 @@ SM_Veh_Tank_Russia_01 => "TankRU06"
 
 Next, set the Transform:
 
-Position: X: 15 Y: 0 Z: 0 
+Position: X: 17 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
