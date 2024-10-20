@@ -402,7 +402,7 @@ SM_Veh_Buggy_01 => "DuneBuggy01"
 
 Next, set the Transform:
 
-Position: X: -3 Y: 0 Z: 0 
+Position: X: -15 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -1004,9 +1004,3955 @@ Interface
 EventSystem
 
 
------  WRITING OF THIS DOCUMENTATION IS STILL IN PROGRESS!  -----
+-----------------------------------------------------------------------------------
 
-(ie: 03 - 06)
+Step 31:  Create child of "VehiclesEntry" add Text tmp: "DuneBuggy02_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "DuneBuggy02_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 32: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Buggy_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 33: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefab:
+
+SM_Veh_Buggy_01 => "DuneBuggy02"
+
+Next, set the Transform:
+
+Position: X: -9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_02
+
+Then move "DuneBuggy02" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 34: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy02" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 35: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "DuneBuggy02Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "DuneBuggy02Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 36: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy02" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------------
+
+Position: X: -0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------------
+
+Position: X: 0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------------
+
+Position: X: -0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------------
+
+Position: X: 0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 37: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy02" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+  SM_Veh_Buggy_Shocks_01
+    SM_Veh_Buggy_Wheel_fl
+    SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.4145404
+Front Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.4145404
+Rear Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+
+Add Component "Wheel Collider" to each:
+
+  SM_Veh_Buggy_Wheel_fl
+  SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5032759
+Set both rear  "Wheel Colliders" radius: 0.5032759
+
+
+We will need to now edit these infos:
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------
+
+Position: X: -0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------
+
+Position: X: 0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------
+
+Position: X: -0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------
+
+Position: X: 0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy02Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 38: Add to: DuneBuggy02 (DuneBuggy02Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy02Controller.cs) to "DuneBuggy02"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: DuneBuggy02 (Rigidbody)
+
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Transform)
+Front Right: SM_Veh_Buggy_Wheel_fr (Transform)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Transform)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Transform) 
+
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Wheel Collider)
+Front: Right: SM_Veh_Buggy_Wheel_fr (Wheel Collider)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Wheel Collider) 
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1000
+
+
+-----------------------------------------------------------------------------------
+
+Step 39: Add to: DuneBuggy02Camera (DuneBuggy02Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy02Camera.cs) to "DuneBuggy02Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Dune Buggy: DuneBuggy02 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 40: Add to: DuneBuggy02 (DuneBuggy02Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy02Entry.cs) to "DuneBuggy02"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Dune Buggy: DuneBuggy02
+Player: Player
+Interface Text Object: DuneBuggy02_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
+Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+  
+
+-----------------------------------------------------------------------------------
+
+Step 41: In "VehiclesSpeed" create empty child: "DunebBuggySpeedometer"
+
+-----------------------------------------------------------------------------------
+
+In: "DuneBuggy02Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 42: In Interface > Canvas > VehiclesSpeed add UI IMG: "DuneBuggy02_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy02_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 43: In Interface > Canvas > VehiclesSpeed add IMG: "DuneBuggy02_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy02_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 44: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "DuneBuggy02_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy02_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 45: In Vehicles > DuneBuggy02 attach script: (DuneBuggy02Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach DuneBuggy02Speedometer script: (DuneBuggy02Speedometer.cs) to
+Vehicle: "DuneBuggy02"
+
+In: "DuneBuggy02" > DuneBuggy02 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: DuneBuggy02_Needle
+
+Speed Text: DuneBuggy02_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: DuneBuggy02_Speedometer
+Interface IMG01 Object: DuneBuggy02_SpeedoGuage
+Interface IMG02 Object: DuneBuggy02_SpeedoNeedle
+Interface Text Object: DuneBuggy02_SpeedText
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+DuneBuggy02Speedometer
+DuneBuggy02_SpeedoGuage
+DuneBuggy02_SpeedoNeedle
+DuneBuggy02_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy02Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      DuneBuggy01Speedometer
+        DuneBuggy01_SpeedoGuage
+        DuneBuggy01_SpeedoNeedle
+        DuneBuggy01_SpeedText 
+      DuneBuggy02Speedometer
+        DuneBuggy02_SpeedoGuage
+        DuneBuggy02_SpeedoNeedle
+        DuneBuggy02_SpeedText
+    VehiclesEntry
+      DuneBuggy01_EntryKey
+      DuneBuggy02_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 46:  Create child of "VehiclesEntry" add Text tmp: "DuneBuggy03_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "DuneBuggy03_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 47: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Buggy_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 48: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefab:
+
+SM_Veh_Buggy_01 => "DuneBuggy03"
+
+Next, set the Transform:
+
+Position: X: -3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_03
+
+Then move "DuneBuggy03" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 49: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy03" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 50: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "DuneBuggy03Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "DuneBuggy03Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 51: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy03" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------------
+
+Position: X: -0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------------
+
+Position: X: 0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------------
+
+Position: X: -0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------------
+
+Position: X: 0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 52: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy03" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+  SM_Veh_Buggy_Shocks_01
+    SM_Veh_Buggy_Wheel_fl
+    SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.4145404
+Front Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.4145404
+Rear Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+
+Add Component "Wheel Collider" to each:
+
+  SM_Veh_Buggy_Wheel_fl
+  SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5032759
+Set both rear  "Wheel Colliders" radius: 0.5032759
+
+
+We will need to now edit these infos:
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------
+
+Position: X: -0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------
+
+Position: X: 0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------
+
+Position: X: -0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------
+
+Position: X: 0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy02Camera
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy03Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 53: Add to: DuneBuggy03 (DuneBuggy03Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy03Controller.cs) to "DuneBuggy03"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: DuneBuggy03 (Rigidbody)
+
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Transform)
+Front Right: SM_Veh_Buggy_Wheel_fr (Transform)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Transform)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Transform) 
+
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Wheel Collider)
+Front: Right: SM_Veh_Buggy_Wheel_fr (Wheel Collider)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Wheel Collider) 
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1000
+
+
+-----------------------------------------------------------------------------------
+
+Step 54: Add to: DuneBuggy03Camera (DuneBuggy03Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy03Camera.cs) to "DuneBuggy03Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Dune Buggy: DuneBuggy03 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 55: Add to: DuneBuggy03 (DuneBuggy03Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy03Entry.cs) to "DuneBuggy03"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Dune Buggy: DuneBuggy03
+Player: Player
+Interface Text Object: DuneBuggy03_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
+Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+  
+
+-----------------------------------------------------------------------------------
+
+Step 56: In "VehiclesSpeed" create empty child: "DunebBuggySpeedometer"
+
+-----------------------------------------------------------------------------------
+
+In: "DuneBuggy03Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 57: In Interface > Canvas > VehiclesSpeed add UI IMG: "DuneBuggy03_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy03_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 58: In Interface > Canvas > VehiclesSpeed add IMG: "DuneBuggy03_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy03_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 59: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "DuneBuggy03_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy03_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 60: In Vehicles > DuneBuggy03 attach script: (DuneBuggy03Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach DuneBuggy03Speedometer script: (DuneBuggy03Speedometer.cs) to
+Vehicle: "DuneBuggy03"
+
+In: "DuneBuggy03" > DuneBuggy03 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: DuneBuggy03_Needle
+
+Speed Text: DuneBuggy03_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: DuneBuggy03_Speedometer
+Interface IMG01 Object: DuneBuggy03_SpeedoGuage
+Interface IMG02 Object: DuneBuggy03_SpeedoNeedle
+Interface Text Object: DuneBuggy03_SpeedText
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+DuneBuggy03Speedometer
+DuneBuggy03_SpeedoGuage
+DuneBuggy03_SpeedoNeedle
+DuneBuggy03_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View     
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy02Camera
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy03Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      DuneBuggy01Speedometer
+        DuneBuggy01_SpeedoGuage
+        DuneBuggy01_SpeedoNeedle
+        DuneBuggy01_SpeedText 
+      DuneBuggy02Speedometer
+        DuneBuggy02_SpeedoGuage
+        DuneBuggy02_SpeedoNeedle
+        DuneBuggy02_SpeedText 
+      DuneBuggy03Speedometer
+        DuneBuggy03_SpeedoGuage
+        DuneBuggy03_SpeedoNeedle
+        DuneBuggy03_SpeedText
+    VehiclesEntry
+      DuneBuggy01_EntryKey    
+      DuneBuggy02_EntryKey
+      DuneBuggy03_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 61:  Create child of "VehiclesEntry" add Text tmp: "DuneBuggy04_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "DuneBuggy04_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 62: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Buggy_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 63: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefab:
+
+SM_Veh_Buggy_01 => "DuneBuggy04"
+
+Next, set the Transform:
+
+Position: X: 3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_04
+
+Then move "DuneBuggy04" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 64: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy04" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 65: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "DuneBuggy04Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "DuneBuggy04Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 66: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy04" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------------
+
+Position: X: -0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------------
+
+Position: X: 0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------------
+
+Position: X: -0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------------
+
+Position: X: 0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 67: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy04" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+  SM_Veh_Buggy_Shocks_01
+    SM_Veh_Buggy_Wheel_fl
+    SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.4145404
+Front Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.4145404
+Rear Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+
+Add Component "Wheel Collider" to each:
+
+  SM_Veh_Buggy_Wheel_fl
+  SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5032759
+Set both rear  "Wheel Colliders" radius: 0.5032759
+
+
+We will need to now edit these infos:
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------
+
+Position: X: -0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------
+
+Position: X: 0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------
+
+Position: X: -0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------
+
+Position: X: 0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy02Camera
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy03Camera      
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy04Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 68: Add to: DuneBuggy04 (DuneBuggy04Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy04Controller.cs) to "DuneBuggy04"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: DuneBuggy04 (Rigidbody)
+
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Transform)
+Front Right: SM_Veh_Buggy_Wheel_fr (Transform)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Transform)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Transform) 
+
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Wheel Collider)
+Front: Right: SM_Veh_Buggy_Wheel_fr (Wheel Collider)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Wheel Collider) 
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1000
+
+
+-----------------------------------------------------------------------------------
+
+Step 69: Add to: DuneBuggy04Camera (DuneBuggy04Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy04Camera.cs) to "DuneBuggy04Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Dune Buggy: DuneBuggy04 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 70: Add to: DuneBuggy04 (DuneBuggy04Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy04Entry.cs) to "DuneBuggy04"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Dune Buggy: DuneBuggy04
+Player: Player
+Interface Text Object: DuneBuggy04_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
+Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+  
+
+-----------------------------------------------------------------------------------
+
+Step 71: In "VehiclesSpeed" create empty child: "DunebBuggySpeedometer"
+
+-----------------------------------------------------------------------------------
+
+In: "DuneBuggy04Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 72: In Interface > Canvas > VehiclesSpeed add UI IMG: "DuneBuggy04_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy04_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 73: In Interface > Canvas > VehiclesSpeed add IMG: "DuneBuggy04_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy04_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 74: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "DuneBuggy04_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy04_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 75: In Vehicles > DuneBuggy04 attach script: (DuneBuggy04Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach DuneBuggy04Speedometer script: (DuneBuggy04Speedometer.cs) to
+Vehicle: "DuneBuggy04"
+
+In: "DuneBuggy04" > DuneBuggy04 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: DuneBuggy04_Needle
+
+Speed Text: DuneBuggy04_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: DuneBuggy04_Speedometer
+Interface IMG01 Object: DuneBuggy04_SpeedoGuage
+Interface IMG02 Object: DuneBuggy04_SpeedoNeedle
+Interface Text Object: DuneBuggy04_SpeedText
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+DuneBuggy04Speedometer
+DuneBuggy04_SpeedoGuage
+DuneBuggy04_SpeedoNeedle
+DuneBuggy04_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View        
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy02Camera
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy03Camera
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy04Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      DuneBuggy01Speedometer
+        DuneBuggy01_SpeedoGuage
+        DuneBuggy01_SpeedoNeedle
+        DuneBuggy01_SpeedText 
+      DuneBuggy02Speedometer
+        DuneBuggy02_SpeedoGuage
+        DuneBuggy02_SpeedoNeedle
+        DuneBuggy02_SpeedText
+      DuneBuggy03Speedometer
+        DuneBuggy03_SpeedoGuage
+        DuneBuggy03_SpeedoNeedle
+        DuneBuggy03_SpeedText
+      DuneBuggy04Speedometer
+        DuneBuggy04_SpeedoGuage
+        DuneBuggy04_SpeedoNeedle
+        DuneBuggy04_SpeedText
+    VehiclesEntry
+      DuneBuggy01_EntryKey    
+      DuneBuggy02_EntryKey
+      DuneBuggy03_EntryKey      
+      DuneBuggy04_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 76:  Create child of "VehiclesEntry" add Text tmp: "DuneBuggy05_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "DuneBuggy05_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 77: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Buggy_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 78: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefab:
+
+SM_Veh_Buggy_01 => "DuneBuggy05"
+
+Next, set the Transform:
+
+Position: X: 9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_05
+
+Then move "DuneBuggy05" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 79: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy05" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 80: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "DuneBuggy05Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "DuneBuggy05Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 81: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy05" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------------
+
+Position: X: -0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------------
+
+Position: X: 0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------------
+
+Position: X: -0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------------
+
+Position: X: 0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 82: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy05" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+  SM_Veh_Buggy_Shocks_01
+    SM_Veh_Buggy_Wheel_fl
+    SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.4145404
+Front Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.4145404
+Rear Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+
+Add Component "Wheel Collider" to each:
+
+  SM_Veh_Buggy_Wheel_fl
+  SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5032759
+Set both rear  "Wheel Colliders" radius: 0.5032759
+
+
+We will need to now edit these infos:
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------
+
+Position: X: -0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------
+
+Position: X: 0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------
+
+Position: X: -0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------
+
+Position: X: 0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy05
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy02Camera
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy03Camera 
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy04Camera 
+  DuneBuggy05
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy05Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 83: Add to: DuneBuggy05 (DuneBuggy05Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy05Controller.cs) to "DuneBuggy05"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: DuneBuggy05 (Rigidbody)
+
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Transform)
+Front Right: SM_Veh_Buggy_Wheel_fr (Transform)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Transform)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Transform) 
+
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Wheel Collider)
+Front: Right: SM_Veh_Buggy_Wheel_fr (Wheel Collider)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Wheel Collider) 
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1000
+
+
+-----------------------------------------------------------------------------------
+
+Step 84: Add to: DuneBuggy05Camera (DuneBuggy05Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy05Camera.cs) to "DuneBuggy05Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Dune Buggy: DuneBuggy05 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 85: Add to: DuneBuggy05 (DuneBuggy05Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy05Entry.cs) to "DuneBuggy05"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Dune Buggy: DuneBuggy05
+Player: Player
+Interface Text Object: DuneBuggy05_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
+Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+  
+
+-----------------------------------------------------------------------------------
+
+Step 86: In "VehiclesSpeed" create empty child: "DunebBuggySpeedometer"
+
+-----------------------------------------------------------------------------------
+
+In: "DuneBuggy05Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 87: In Interface > Canvas > VehiclesSpeed add UI IMG: "DuneBuggy05_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy05_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 88: In Interface > Canvas > VehiclesSpeed add IMG: "DuneBuggy05_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy05_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 89: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "DuneBuggy05_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy05_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 90: In Vehicles > DuneBuggy05 attach script: (DuneBuggy05Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach DuneBuggy05Speedometer script: (DuneBuggy05Speedometer.cs) to
+Vehicle: "DuneBuggy05"
+
+In: "DuneBuggy05" > DuneBuggy05 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: DuneBuggy05_Needle
+
+Speed Text: DuneBuggy05_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: DuneBuggy05_Speedometer
+Interface IMG01 Object: DuneBuggy05_SpeedoGuage
+Interface IMG02 Object: DuneBuggy05_SpeedoNeedle
+Interface Text Object: DuneBuggy05_SpeedText
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+DuneBuggy05Speedometer
+DuneBuggy05_SpeedoGuage
+DuneBuggy05_SpeedoNeedle
+DuneBuggy05_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy05
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy02Camera
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy03Camera
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy04Camera
+  DuneBuggy05
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy05Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      DuneBuggy01Speedometer
+        DuneBuggy01_SpeedoGuage
+        DuneBuggy01_SpeedoNeedle
+        DuneBuggy01_SpeedText 
+      DuneBuggy02Speedometer
+        DuneBuggy02_SpeedoGuage
+        DuneBuggy02_SpeedoNeedle
+        DuneBuggy02_SpeedText
+      DuneBuggy03Speedometer
+        DuneBuggy03_SpeedoGuage
+        DuneBuggy03_SpeedoNeedle
+        DuneBuggy03_SpeedText
+      DuneBuggy04Speedometer
+        DuneBuggy04_SpeedoGuage
+        DuneBuggy04_SpeedoNeedle
+        DuneBuggy04_SpeedText
+      DuneBuggy05Speedometer
+        DuneBuggy05_SpeedoGuage
+        DuneBuggy05_SpeedoNeedle
+        DuneBuggy05_SpeedText
+    VehiclesEntry
+      DuneBuggy01_EntryKey    
+      DuneBuggy02_EntryKey
+      DuneBuggy03_EntryKey
+      DuneBuggy04_EntryKey
+      DuneBuggy05_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 91:  Create child of "VehiclesEntry" add Text tmp: "DuneBuggy06_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "DuneBuggy06_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 92: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Buggy_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 93: Add: the next "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefab:
+
+SM_Veh_Buggy_01 => "DuneBuggy06"
+
+Next, set the Transform:
+
+Position: X: 15 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_06
+
+Then move "DuneBuggy06" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 94: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy06" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 95: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "DuneBuggy06Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "DuneBuggy06Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 96: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy06" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------------
+
+Position: X: -0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------------
+
+Position: X: 0.9051619 Y: -0.3026607 Z: -0.05304886
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------------
+
+Position: X: -0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------------
+
+Position: X: 0.9837266 Y: 0.5000129 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 97: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "DuneBuggy06" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+  SM_Veh_Buggy_Shocks_01
+    SM_Veh_Buggy_Wheel_fl
+    SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.4145404
+Front Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.4145404
+Rear Wheels Collider Position Y:  (0.4145404+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+
+Add Component "Wheel Collider" to each:
+
+  SM_Veh_Buggy_Wheel_fl
+  SM_Veh_Buggy_Wheel_fr
+  SM_Veh_Buggy_Wheel_rl
+  SM_Veh_Buggy_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.5032759
+Set both rear  "Wheel Colliders" radius: 0.5032759
+
+
+We will need to now edit these infos:
+
+
+SM_Veh_Buggy_Wheel_fl
+---------------------
+
+Position: X: -0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_fr
+---------------------
+
+Position: X: 0.9051619 Y: 0.650013 Z: 1.846053
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rl
+---------------------
+
+Position: X: -0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+SM_Veh_Buggy_Wheel_rr
+---------------------
+
+Position: X: 0.9837266 Y: 0.6532759 Z: -1.294653
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy05
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy06
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy02Camera
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy03Camera 
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy04Camera 
+  DuneBuggy05
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy05Camera
+  DuneBuggy06
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy06Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 98: Add to: DuneBuggy06 (DuneBuggy06Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy06Controller.cs) to "DuneBuggy06"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: DuneBuggy06 (Rigidbody)
+
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Transform)
+Front Right: SM_Veh_Buggy_Wheel_fr (Transform)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Transform)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Transform) 
+
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Buggy_Wheel_fl (Wheel Collider)
+Front: Right: SM_Veh_Buggy_Wheel_fr (Wheel Collider)      
+Rear Left: SM_Veh_Buggy_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Buggy_Wheel_rr (Wheel Collider) 
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1000
+
+
+-----------------------------------------------------------------------------------
+
+Step 99: Add to: DuneBuggy06Camera (DuneBuggy06Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy06Camera.cs) to "DuneBuggy06Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Dune Buggy: DuneBuggy06 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 100: Add to: DuneBuggy06 (DuneBuggy06Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (DuneBuggy06Entry.cs) to "DuneBuggy06"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Dune Buggy: DuneBuggy06
+Player: Player
+Interface Text Object: DuneBuggy06_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
+Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+  
+
+-----------------------------------------------------------------------------------
+
+Step 101: In "VehiclesSpeed" create empty child: "DunebBuggySpeedometer"
+
+-----------------------------------------------------------------------------------
+
+In: "DuneBuggy06Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 102: In Interface > Canvas > VehiclesSpeed add UI IMG: "DuneBuggy06_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy06_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 103: In Interface > Canvas > VehiclesSpeed add IMG: "DuneBuggy06_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy06_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 104: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "DuneBuggy06_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "DuneBuggy06_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 105: In Vehicles > DuneBuggy06 attach script: (DuneBuggy06Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach DuneBuggy06Speedometer script: (DuneBuggy06Speedometer.cs) to
+Vehicle: "DuneBuggy06"
+
+In: "DuneBuggy06" > DuneBuggy06 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: DuneBuggy06_Needle
+
+Speed Text: DuneBuggy06_SpeedText (Text Mesh Pro UGUI)
+
+Interface Parent Object: DuneBuggy06_Speedometer
+Interface IMG01 Object: DuneBuggy06_SpeedoGuage
+Interface IMG02 Object: DuneBuggy06_SpeedoNeedle
+Interface Text Object: DuneBuggy06_SpeedText
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+DuneBuggy06Speedometer
+DuneBuggy06_SpeedoGuage
+DuneBuggy06_SpeedoNeedle
+DuneBuggy06_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View 
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View
+  DuneBuggy05
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+  DuneBuggy06
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  DuneBuggy01
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy01Camera
+  DuneBuggy02
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy02Camera
+  DuneBuggy03
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy03Camera
+  DuneBuggy04
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy04Camera
+  DuneBuggy05
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy05Camera      
+  DuneBuggy06
+    SM_Veh_Buggy_SteeringW_01
+    WheelMeshes
+      SM_Veh_Buggy_Shocks_01
+        SM_Veh_Buggy_Wheel_fl
+        SM_Veh_Buggy_Wheel_fr
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr
+    WheelColliders
+      SM_Veh_Buggy_Wheel_fl
+      SM_Veh_Buggy_Wheel_fr      
+      SM_Veh_Buggy_Wheel_rl
+      SM_Veh_Buggy_Wheel_rr          
+    View
+      DuneBuggy06Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      DuneBuggy01Speedometer
+        DuneBuggy01_SpeedoGuage
+        DuneBuggy01_SpeedoNeedle
+        DuneBuggy01_SpeedText 
+      DuneBuggy02Speedometer
+        DuneBuggy02_SpeedoGuage
+        DuneBuggy02_SpeedoNeedle
+        DuneBuggy02_SpeedText
+      DuneBuggy03Speedometer
+        DuneBuggy03_SpeedoGuage
+        DuneBuggy03_SpeedoNeedle
+        DuneBuggy03_SpeedText
+      DuneBuggy04Speedometer
+        DuneBuggy04_SpeedoGuage
+        DuneBuggy04_SpeedoNeedle
+        DuneBuggy04_SpeedText
+      DuneBuggy05Speedometer
+        DuneBuggy05_SpeedoGuage
+        DuneBuggy05_SpeedoNeedle
+        DuneBuggy05_SpeedText
+      DuneBuggy06Speedometer
+        DuneBuggy06_SpeedoGuage
+        DuneBuggy06_SpeedoNeedle
+        DuneBuggy06_SpeedText
+    VehiclesEntry
+      DuneBuggy01_EntryKey    
+      DuneBuggy02_EntryKey
+      DuneBuggy03_EntryKey
+      DuneBuggy04_EntryKey
+      DuneBuggy05_EntryKey
+      DuneBuggy06_EntryKey      
+EventSystem
+
 
 -----------------------------------------------------------------------------------
 
