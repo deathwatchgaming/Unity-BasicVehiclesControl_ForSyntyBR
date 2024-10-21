@@ -21,17 +21,17 @@ The intention of these releases due to only being scripts for usage with models 
 NOTE: This project was developed while / for using Unity 2021+ & 2022+ 
 
 
-Vehicles Currently "Completed" & Included:
-------------------------------------------
+Vehicles Currently "Completed" & Included: (total: 42)
+------------------------------------------------------
 
 
-* Tank US (100% completed)
-* Armored Truck (100% completed)
-* Dune Buggy (100% completed)
-* Humvee (100% completed)
-* Six Wheel Truck (100% completed)
-* Sedan (100% completed)
-* Tank RU (100% completed)
+* Armored Truck (100% completed) (total: 6)
+* Dune Buggy (100% completed) (total: 6)
+* Humvee (100% completed) (total: 6)
+* Six Wheel Truck (100% completed) (total: 6)
+* Sedan (100% completed) (total: 6)
+* Tank RU (100% completed) (total: 6)
+* Tank US (100% completed) (total: 6)
 
 
 Vehicles Currently "In Progress" & Not Yet Included:
