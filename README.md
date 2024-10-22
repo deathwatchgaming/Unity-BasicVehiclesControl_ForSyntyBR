@@ -120,7 +120,8 @@ Vehicles Control:
 -----------------
 
 
-* All vehicles in scene setup: (...coming soon!) (42 Vehicles)
+* All vehicles in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/Documentation/AllVehicleControllers-wEntry-Documentation.txt
+
 
 * All vehicle types in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Assets/VehiclesControl/Documentation/AllController-Types-wEntry-Documentation.txt
 
