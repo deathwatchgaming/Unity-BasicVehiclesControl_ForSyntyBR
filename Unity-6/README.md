@@ -18,7 +18,7 @@ Release Intentions Note:
 
 The intention of these releases due to only being scripts for usage with models one must already own or opt to purchase and as such was known that one could not release such models with the package here the intent was to provide basic vehicle functionality as a start point as fully functional in terms of an opinion of basic but leave out optional continuances in the hopes that these will be used as starting points for folks to continue on with and improve upon. Now, some of the things intentionally left out, umm, while all simply easy to add, lets see: say, audio sources, audio clips, particle systems for exhausts and also for explosion on turret say with on trigger raycast or projectile functionality for tank turret barrel say for example on the tank controllers as leaving these initializations of such aforementioned suggestions out was indeed intentional in the hopes that the end user will continue to add those as desired and continue to improve upon the provided start points. Also note that while yes, these are great hints, tips and or suggestions, if you were thinking say of what to add next, please note though, that is not to say if and or when I may find myself to have free time say I just may or may not opt to add such or some of such at later dates if desire or free time allows. Another thing to note is that I intentionally left out adding a fuel system to these at this time because again the intent was to provide basic functional vehicle controllers as starting points.
 
-NOTE: This project was developed while / for using Unity 2021+ & 2022+ 
+NOTE: This project was developed while / for using Unity 6 
 
 
 Vehicles Currently "Completed" & Included: (total: 42)
@@ -114,6 +114,20 @@ PlayerControl:
 
 
 * Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/PlayerControl/Documentation/PlayerControl-Documentation.txt
+
+
+Unity 6 Bug (Related to Wheel colliders and Center off gravity offset)
+----------------------------------------------------------------------
+
+
+NOTE: There is currently a bug in Unity 6 that affects wheel colliders and
+center of gravity offset. This bug has been reported and is listed as a bug
+and is currently being worked on for an official fix. Until such we can
+provide a temporary resolution file to add to your vehicle to sort this out.
+
+
+Temporary Unity 6 Bug Resolution: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Temporary-Resolution/Unity-6-Temporary-Resolve-Bug.txt
+
 
 
 Vehicles Control:
