@@ -126,7 +126,7 @@ and is currently being worked on for an official fix. Until such we can
 provide a temporary resolution file to add to your vehicle to sort this out.
 
 
-Temporary Unity 6 Bug Resolution: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Temporary-Resolution/Unity-6-Temporary-Resolve-Bug.txt
+* Temporary Unity 6 Bug Resolution: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Temporary-Resolution/Unity-6-Temporary-Resolve-Bug.txt
 
 
 
