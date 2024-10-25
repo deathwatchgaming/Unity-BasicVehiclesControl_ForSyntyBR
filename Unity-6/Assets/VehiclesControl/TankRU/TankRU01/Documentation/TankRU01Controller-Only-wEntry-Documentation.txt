@@ -1,0 +1,1070 @@
+"TankRU01DevScene-wEntry" Scene Setup Steps
+-----------------------------------------------------------------------------------
+
+Description:
+
+Create a basic Vehicle Controller for your Unity projects using vehicle models
+from Synty Polygon Battle Royale Asset.
+
+
+Player Controls:
+----------------
+
+Player Forward:   W
+Player Reverse:   S
+Player Left:      A
+Player Right:     D
+Player Jump:      Space
+Player Sprint:    Left Shift
+
+
+Vehicle Controls: 
+-----------------
+
+Vehicle Forward:  W
+Vehicle Reverse:  S
+Turn Left:        A
+Turn Right:       D
+Apply Brake:      Space
+Enter Vehicle:    E
+Exit Vehicle:     F
+
+
+Note: the following controls below are specific to the tank turret and tank
+barrel movements:
+
+* Mouse X 
+* Mouse Y
+
+
+Manual Setup Instruction:
+-------------------------
+
+* Simply follow the instruction for manual setup found below.
+
+
+-----------------------------------------------------------------------------------
+
+Prep Step: Create New Scene Called: "TankRU01DevScene-wEntry"
+
+Note: if you already have some sort of a test terrain in place, well then, you
+can simple skip the steps: #1, 2 & 3 and go directly to #4.
+
+-----------------------------------------------------------------------------------
+
+Step 1: Create: "Environment" * (for Nicer Organization)
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Environment"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+First since this is just a "holder" added for better organization, let us go
+ahead & drag the "Directional Light" into "Environment".
+
+* also if you wanted you could add a "dir" called Environment and opt to place
+  your TerrainData inside that in its own Dir "TerrainData" and as such any
+  other Environment stuff respectively in as desired the "Environment" dir.
+  Just a suggestion.
+
+Also: We don't need the "Main Camera" in Sample Scene, so..., we can go ahead
+and delete it.
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: Create: "Terrain Plane"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Plane"
+
+Position: X: 0   Y: -0.03 Z: 0 
+Rotation: X: 0   Y: 0     Z: 0 
+Scale:    X: 100 Y: 1     Z: 100
+
+Rename to: "Terrain Plane"
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain Plane" into the holder "Environment" we added for just this exact
+ purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: Create: "Terrain"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Terrain"
+
+Modify via:
+
+"Terrain" Inspector: Terrain Settings
+
+Position: X: -500 Y: 0 Z: -500 
+Rotation: X: 0     Y: 0 Z: 0 
+Scale:    X: 1     Y: 1 Z: 1
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain" into the holder "Environment" we added for just this exact purpose!
+
+-----------------------------------------------------------------------------------
+
+Step 4: Create: object "Player":
+
+-----------------------------------------------------------------------------------
+
+
+Create empty object and name such: "Player"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.9799998 Z: -10 
+Rotation: X: 0 Y: 0  Z: 0 
+Scale:    X: 1 Y: 1  Z: 1
+
+Add Tag: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: Add: empty object "View":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, create a child of the "Player" object and name
+such: "View"
+
+Transform Position: X: 0 Y: 0 Z: 0
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: Add: "Camera":
+
+-----------------------------------------------------------------------------------
+
+In "Player" object, add a Camera component as child of "View" and name
+such: "Camera"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.6 Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1
+
+Depth: "1" 
+
+Add Tag: "MainCamera"
+
+
+-----------------------------------------------------------------------------------
+
+Step 7: Edit: the "CharacterController" component:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, edit the "CharacterController" component:
+
+Height: "1.8"
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 9: Setup: Audio Source and Footstep Sounds Audio Clips:
+
+-----------------------------------------------------------------------------------
+
+In "Player" object edit: the "First Person Controller (Script)"
+
+Footstep Source: Player (AudioSource)
+
+Footsep Sounds: "4"
+
+Element 0: "Footstep01"
+Element 1: "Footstep02"
+Element 2: "Footstep03"
+Element 3: "Footstep04"
+
+
+That is it! You should now be able to run around your scene!
+
+
+But..., for now since we do not need the player controller at this point let
+us disable the player object / component in inspector for now until we need it
+
+
+-----------------------------------------------------------------------------------
+
+Step 10: Create: empty "Interface"
+
+-----------------------------------------------------------------------------------
+
+Create an empty called: "Interface"
+
+Layer: "UI"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0   Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1 
+
+
+-----------------------------------------------------------------------------------
+
+Step 11: In "Interface" Add UI: "Canvas"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" Add a UI: "Canvas"
+
+
+-----------------------------------------------------------------------------------
+
+Step 12: Create as child of "Canvas" add empty: "VehiclesEntry"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" add empty: "VehiclesEntry"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Bottom Center"
+
+Position: X: 0 Y: 50   Z: 0 
+Width: 100
+Height: 100
+
+
+-----------------------------------------------------------------------------------
+
+Step 13:  Create child of "VehiclesEntry" add Text tmp: "TankRU01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "TankRU01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 14: Create: empty "Vehicle"
+
+-----------------------------------------------------------------------------------
+
+
+Now that you disabled the interface, let us go back in your scene heirarchy and...
+
+Create Empty: "Vehicle"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your scene heirarchy at top should look like this:
+
+Environment
+Player
+Vehicle
+Interface
+EventSystem
+
+Nice and organized right?! :) Good Stuff! ;)
+
+Note: as this uses a vehicle from such and due to licensing such vehicles
+cannot be included in this repository obviously, as such the provided scripts
+and instructions thus require having / purchasing the:
+
+Synty Polygon Battle Royale Asset:
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
+
+
+-----------------------------------------------------------------------------------
+
+Step 15: Install: "Synty Polygon Battle Royal Asset"
+
+-----------------------------------------------------------------------------------
+
+
+Depending on how you purchased you can either use the package manager to
+install the asset or if you are like me and say already have local repository
+storage of purchased assets and have the package already you can install the
+asset manually.
+
+Asset package to install:
+
+ POLYGON Battle Royale - Low Poly 3D Art by Synty.unitypackage
+
+Purchase Synty Polygon Battle Royale Asset:
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-battle-royale-low-poly-3d-art-by-synty-128513
+
+
+-----------------------------------------------------------------------------------
+
+Step 16: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonBattleRoyale > Prefabs > Vehicles
+
+SM_Veh_Tank_Russia_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 17: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Tank_Russia_01 => "TankRU01"
+
+Next, set the Transform:
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonBattleRoyale_Veh_01
+
+Then move "TankRU01" into the empty: "Vehicle" as child of.
+
+-----------------------------------------------------------------------------------
+
+Step 18: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "TankRU01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 19: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "TankRU01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "TankRU01Camera":
+
+Position: X: 0 Y: 2.8 Z: -8.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 20: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "TankRU01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+
+Right:
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+SM_Veh_Tank_Russia_Track_Wheel_R_07
+
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+-----------------------------------
+
+Position: X: -1.559748 Y: 0.8468547 Z: 2.733236
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.5171387 Z: 1.849813
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.5171387 Z: 0.767
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.5171387 Z: -0.258
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.5171387 Z: -1.21
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.5171387 Z: -2.206517
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+-----------------------------------
+
+Position: X: -1.415374 Y: 0.8156583 Z: -3.041019
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Right:
+
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+-----------------------------------
+
+Position: X: 1.559747 Y: 0.8468553 Z: 2.733234
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.517139 Z: 1.849814
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.517139 Z: 0.79
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.517139 Z: -0.194
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.517139 Z: -1.2
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.517139 Z: -2.206516
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_07
+-----------------------------------
+
+Position: X: 1.415374 Y: 0.8156583 Z: -3.041019
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "TankRU01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+
+Right:
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+SM_Veh_Tank_Russia_Track_Wheel_R_07
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+
+Right:
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+SM_Veh_Tank_Russia_Track_Wheel_R_07
+
+
+Wheel Collider Radius:
+----------------------
+
+Left:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_L_01 "Wheel Collider" radius: 0.3202184
+Set SM_Veh_Tank_Russia_Track_Wheel_L_02 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_03 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_04 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_05 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_06 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_L_07 "Wheel Collider" radius: 0.3966376
+
+Right:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_R_01 "Wheel Collider" radius: 0.3202184
+Set SM_Veh_Tank_Russia_Track_Wheel_R_02 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_03 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_04 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_05 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_06 "Wheel Collider" radius: 0.4486088
+Set SM_Veh_Tank_Russia_Track_Wheel_R_07 "Wheel Collider" radius: 0.3966376
+
+
+Wheel Collider Suspension Distance:
+-----------------------------------
+
+
+Left:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_L_01 "Wheel Collider" Suspension Distance: 0.2
+Set SM_Veh_Tank_Russia_Track_Wheel_L_02 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_03 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_04 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_05 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_06 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_L_07 "Wheel Collider" Suspension Distance: 0.17
+
+Right:
+
+Set SM_Veh_Tank_Russia_Track_Wheel_R_01 "Wheel Collider" Suspension Distance: 0.2
+Set SM_Veh_Tank_Russia_Track_Wheel_R_02 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_03 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_04 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_05 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_06 "Wheel Collider" Suspension Distance: 0.45
+Set SM_Veh_Tank_Russia_Track_Wheel_R_07 "Wheel Collider" Suspension Distance: 0.17
+
+We will need to now edit these infos:
+
+Left:
+
+SM_Veh_Tank_Russia_Track_Wheel_L_01
+-----------------------------------
+
+Position: X: -1.559748 Y: 0.9968547 Z: 2.733236
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_02
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.6671387 Z: 1.849813
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_03
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.6671387 Z: 0.767
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_04
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.6671387 Z: -0.258
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_05
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.6671387 Z: -1.21
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_06
+-----------------------------------
+
+Position: X: -1.505886 Y: 0.6671387 Z: -2.206517
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_L_07
+-----------------------------------
+
+Position: X: -1.415374 Y: 0.9656583 Z: -3.041019
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Right:
+
+SM_Veh_Tank_Russia_Track_Wheel_R_01
+-----------------------------------
+
+Position: X: 1.559747 Y: 0.9968553 Z: 2.733234
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_02
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.667139 Z: 1.849814
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_03
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.667139 Z: 0.79
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_04
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.667139 Z: -0.194
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_05
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.667139 Z: -1.2
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_06
+-----------------------------------
+
+Position: X: 1.505885 Y: 0.667139 Z: -2.206516
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Tank_Russia_Track_Wheel_R_07
+-----------------------------------
+
+Position: X: 1.415374 Y: 0.9656583 Z: -3.041019
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicle
+  TankRU01
+    SM_Veh_Tank_Russia_Track_L
+    SM_Veh_Tank_Russia_Track_R
+    SM_Veh_Tank_Russia_Turret_01 
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicle
+  TankRU01
+    SM_Veh_Tank_Russia_Track_L
+    SM_Veh_Tank_Russia_Track_R
+    SM_Veh_Tank_Russia_Turret_01
+      SM_Veh_Tank_Russia_Turret_Barrel_01
+    WheelMeshes
+      SM_Veh_Tank_Russia_Track_Wheel_L_01
+      SM_Veh_Tank_Russia_Track_Wheel_L_02
+      SM_Veh_Tank_Russia_Track_Wheel_L_03
+      SM_Veh_Tank_Russia_Track_Wheel_L_04
+      SM_Veh_Tank_Russia_Track_Wheel_L_05
+      SM_Veh_Tank_Russia_Track_Wheel_L_06
+      SM_Veh_Tank_Russia_Track_Wheel_L_07
+      SM_Veh_Tank_Russia_Track_Wheel_R_01
+      SM_Veh_Tank_Russia_Track_Wheel_R_02
+      SM_Veh_Tank_Russia_Track_Wheel_R_03
+      SM_Veh_Tank_Russia_Track_Wheel_R_04
+      SM_Veh_Tank_Russia_Track_Wheel_R_05
+      SM_Veh_Tank_Russia_Track_Wheel_R_06
+      SM_Veh_Tank_Russia_Track_Wheel_R_07
+    WheelColliders
+      SM_Veh_Tank_Russia_Track_Wheel_L_01
+      SM_Veh_Tank_Russia_Track_Wheel_L_02
+      SM_Veh_Tank_Russia_Track_Wheel_L_03
+      SM_Veh_Tank_Russia_Track_Wheel_L_04
+      SM_Veh_Tank_Russia_Track_Wheel_L_05
+      SM_Veh_Tank_Russia_Track_Wheel_L_06
+      SM_Veh_Tank_Russia_Track_Wheel_L_07
+      SM_Veh_Tank_Russia_Track_Wheel_R_01
+      SM_Veh_Tank_Russia_Track_Wheel_R_02
+      SM_Veh_Tank_Russia_Track_Wheel_R_03
+      SM_Veh_Tank_Russia_Track_Wheel_R_04
+      SM_Veh_Tank_Russia_Track_Wheel_R_05
+      SM_Veh_Tank_Russia_Track_Wheel_R_06
+      SM_Veh_Tank_Russia_Track_Wheel_R_07 
+    View
+      TankRU01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Add to: TankRU01 (TankRU01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankRU01Controller.cs) to "TankRU01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: TankRU01 (Rigidbody)
+
+
+
+TankRU01 Transforms:
+------------------
+
+Tank RU Body: TankRU01 (Transform)
+Tank RU Turret: SM_Veh_Tank_Russia_Turret_01 (Transform)
+Tank RU Barrel: SM_Veh_Tank_Russia_Turret_Barrel_01 (Transform)
+
+
+Wheel Transforms:
+-----------------
+
+Left01 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_01 (Transform)
+Left02 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_02 (Transform)
+Left03 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_03 (Transform)
+Left04 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_04 (Transform)
+Left05 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_05 (Transform)
+Left06 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_06 (Transform)
+Left07 Transform: SM_Veh_Tank_Russia_Track_Wheel_L_07 (Transform)
+
+
+Right01 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_01 (Transform)
+Right02 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_02 (Transform)
+Right03 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_03 (Transform)
+Right04 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_04 (Transform)
+Right05 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_05 (Transform)
+Right06 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_06 (Transform)
+Right07 Transform: SM_Veh_Tank_Russia_Track_Wheel_R_07 (Transform)
+
+
+
+WheelColliders:
+---------------
+
+
+Left01: SM_Veh_Tank_Russia_Track_Wheel_L_01 (Wheel Collider)
+Left02: SM_Veh_Tank_Russia_Track_Wheel_L_02 (Wheel Collider)
+Left03: SM_Veh_Tank_Russia_Track_Wheel_L_03 (Wheel Collider)
+Left04: SM_Veh_Tank_Russia_Track_Wheel_L_04 (Wheel Collider)
+Left05: SM_Veh_Tank_Russia_Track_Wheel_L_05 (Wheel Collider)
+Left06: SM_Veh_Tank_Russia_Track_Wheel_L_06 (Wheel Collider)
+Left07: SM_Veh_Tank_Russia_Track_Wheel_L_07 (Wheel Collider)
+
+
+Right01: SM_Veh_Tank_Russia_Track_Wheel_R_01 (Wheel Collider)
+Right02: SM_Veh_Tank_Russia_Track_Wheel_R_02 (Wheel Collider)
+Right03: SM_Veh_Tank_Russia_Track_Wheel_R_03 (Wheel Collider)
+Right04: SM_Veh_Tank_Russia_Track_Wheel_R_04 (Wheel Collider)
+Right05: SM_Veh_Tank_Russia_Track_Wheel_R_05 (Wheel Collider)
+Right06: SM_Veh_Tank_Russia_Track_Wheel_R_06 (Wheel Collider)
+Right07: SM_Veh_Tank_Russia_Track_Wheel_R_07 (Wheel Collider)
+
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 7000
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: Add to: TankRU01Camera (TankRU01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankRU01Camera.cs) to "TankRU01Camera"
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Tank RU: TankRU01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 24: Add to: TankUS (TankRU01TrackScrolling.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankRU01TrackScrolling.cs) to "TankRU01"
+
+Adjust Settings:
+
+
+TankRU01 Rigidbody :
+------------------
+
+TankRU01 (Rigidbody)
+
+Track Scrolling:
+----------------
+
+Scroll Speed: 0.05
+Invert: NO
+
+Track Renderers:
+----------------
+
+Track L: SM_Veh_Tank_Russia_Track_L (Transform)
+Track R: SM_Veh_Tank_Russia_Track_R (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 25: Add to: TankRU01 (TankRU01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (TankRU01Entry.cs) to "TankRU01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+Tank US: TankRU01
+Player: Player
+Interface Text Object: TankRU01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle making sure to extend the
+  collider a good bit out away from such so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
+Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+-----------------------------------------------------------------------------------
+
+
+Ok, hopefully I covered everything. You should now be able to run around your
+scene with your player and then enter / exit and drive your vehicle around. 
+
+Note: The next and last step would be to now follow the provided scene with
+entry speedometer setup steps to finalize all setups steps.
+
+
+-----------------------------------------------------------------------------------
+
+
+That should about sum it up and should be about it and concludes the basic
+Vehicle Controller manual setup steps. You can now begin to modify such
+further for your specific needs.
+
+Best of Luck!
