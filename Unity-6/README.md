@@ -116,7 +116,7 @@ PlayerControl:
 * Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/PlayerControl/Documentation/PlayerControl-Documentation.txt
 
 
-Unity 6 Bug (Related to Wheel colliders and Center off gravity offset)
+Unity 6 Bug (Related to Wheel Colliders and Center of Gravity Offset)
 ----------------------------------------------------------------------
 
 
