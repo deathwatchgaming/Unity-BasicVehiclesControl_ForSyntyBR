@@ -99,7 +99,7 @@ namespace VehiclesControl
 		private void FixedUpdate()
 		{
 			// Vector3 _localVelocity is _tankRU02 InverseTransformDirection _tankRU02 GetComponent Rigidbody velocity
-			Vector3 _localVelocity = _tankRU02.InverseTransformDirection(_tankRU02.GetComponent<Rigidbody>().velocity);
+			Vector3 _localVelocity = _tankRU02.InverseTransformDirection(_tankRU02.GetComponent<Rigidbody>().linearVelocity);
 			
 			// if
 			if (_localVelocity.z < -0.1f)
@@ -130,7 +130,7 @@ namespace VehiclesControl
 			} // close else
 	        
 			// float acc is_tankRU02 GetComponent Rigidbody velocity magnitude
-			float _acc = _tankRU02.GetComponent<Rigidbody>().velocity.magnitude;
+			float _acc = _tankRU02.GetComponent<Rigidbody>().linearVelocity.magnitude;
 
 			// GetComponent Camera fieldOfView is _defaultFieldOfView plus _acc times _zoomRatio times Time.deltaTime
 			GetComponent<Camera>().fieldOfView = _defaultFieldOfView + _acc * _zoomRatio * Time.deltaTime;

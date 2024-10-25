@@ -54,7 +54,7 @@ namespace VehiclesControl
         private void Update()
         {
             // _velocity is _rigidbody.velocity
-            _velocity = _rigidbody.velocity;
+            _velocity = _rigidbody.linearVelocity;
 
             // _forward is transform.forward;
             _forward = transform.forward;
