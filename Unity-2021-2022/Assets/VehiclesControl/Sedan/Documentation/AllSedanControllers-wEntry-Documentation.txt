@@ -703,6 +703,13 @@ Transforms:
 Sedan01: Sedan01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: Sedan01 (Sedan01Entry.cs)
@@ -1395,6 +1402,13 @@ Transforms:
 -----------
 
 Sedan02: Sedan02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2113,6 +2127,13 @@ Transforms:
 -----------
 
 Sedan03: Sedan03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2879,6 +2900,13 @@ Transforms:
 -----------
 
 Sedan04: Sedan04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3691,6 +3719,13 @@ Transforms:
 -----------
 
 Sedan05: Sedan05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4551,6 +4586,13 @@ Transforms:
 -----------
 
 Sedan06: Sedan06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

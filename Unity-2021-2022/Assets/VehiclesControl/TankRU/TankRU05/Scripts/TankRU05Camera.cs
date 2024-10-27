@@ -129,11 +129,11 @@ namespace VehiclesControl
 
 			} // close else
 	        
-			// float acc is_tankRU05 GetComponent Rigidbody velocity magnitude
-			float _acc = _tankRU05.GetComponent<Rigidbody>().velocity.magnitude;
+			// float autoCamControl is_tankRU05 GetComponent Rigidbody velocity magnitude
+			float _autoCamControl = _tankRU05.GetComponent<Rigidbody>().velocity.magnitude;
 
-			// GetComponent Camera fieldOfView is _defaultFieldOfView plus _acc times _zoomRatio times Time.deltaTime
-			GetComponent<Camera>().fieldOfView = _defaultFieldOfView + _acc * _zoomRatio * Time.deltaTime;
+			// GetComponent Camera fieldOfView is _defaultFieldOfView plus _autoCamControl times _zoomRatio times Time.deltaTime
+			GetComponent<Camera>().fieldOfView = _defaultFieldOfView + _autoCamControl * _zoomRatio * Time.deltaTime;
 
 		} // close private void FixedUpdate
 

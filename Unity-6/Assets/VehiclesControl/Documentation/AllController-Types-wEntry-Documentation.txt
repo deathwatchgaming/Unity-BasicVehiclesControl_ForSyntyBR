@@ -1972,6 +1972,13 @@ Transforms:
 Armored Truck: ArmoredTruck01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 40: Add to: DuneBuggy01Camera (DuneBuggy01Camera.cs)
@@ -1987,6 +1994,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2006,6 +2020,13 @@ Transforms:
 Humvee01: Humvee01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 42: Add to: Sedan01Camera (Sedan01Camera.cs)
@@ -2023,6 +2044,13 @@ Transforms:
 Sedan01: Sedan01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 43: Add to: SixWheelTruck01Camera (SixWheelTruck01Camera.cs)
@@ -2038,6 +2066,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3066,6 +3101,13 @@ Transforms:
 Tank US: TankUS01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 57: Add to: TankUS01 (TankUS01TrackScrolling.cs)
@@ -3974,6 +4016,13 @@ Transforms:
 -----------
 
 Tank RU: TankRU01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

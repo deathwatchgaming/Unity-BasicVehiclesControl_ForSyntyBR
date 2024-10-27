@@ -1062,6 +1062,13 @@ Transforms:
 Tank US: TankUS01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: TankUS01 (TankUS01TrackScrolling.cs)
@@ -2205,6 +2212,13 @@ Transforms:
 -----------
 
 Tank US: TankUS02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3435,6 +3449,13 @@ Transforms:
 -----------
 
 Tank US: TankUS03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4773,6 +4794,13 @@ Transforms:
 -----------
 
 Tank US: TankUS04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -6221,6 +6249,13 @@ Transforms:
 -----------
 
 Tank US: TankUS05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -7778,6 +7813,13 @@ Transforms:
 -----------
 
 Tank US: TankUS06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

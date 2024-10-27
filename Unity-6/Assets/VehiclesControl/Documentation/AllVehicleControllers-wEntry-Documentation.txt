@@ -700,6 +700,13 @@ Transforms:
 Armored Truck: ArmoredTruck01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: ArmoredTruck01 (ArmoredTruck01Entry.cs)
@@ -1395,6 +1402,13 @@ Transforms:
 -----------
 
 Armored Truck: ArmoredTruck02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2116,6 +2130,13 @@ Transforms:
 -----------
 
 Armored Truck: ArmoredTruck03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2883,6 +2904,13 @@ Transforms:
 -----------
 
 Armored Truck: ArmoredTruck04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3697,6 +3725,13 @@ Transforms:
 -----------
 
 Armored Truck: ArmoredTruck05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4558,6 +4593,13 @@ Transforms:
 -----------
 
 Armored Truck: ArmoredTruck06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -5473,6 +5515,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -6453,6 +6502,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -7455,6 +7511,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -8502,6 +8565,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -9594,6 +9664,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -10731,6 +10808,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -11916,6 +12000,13 @@ Transforms:
 -----------
 
 Humvee01: Humvee01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -13172,6 +13263,13 @@ Transforms:
 -----------
 
 Humvee02: Humvee02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -14452,6 +14550,13 @@ Transforms:
 -----------
 
 Humvee03: Humvee03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -15779,6 +15884,13 @@ Transforms:
 -----------
 
 Humvee04: Humvee04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -17153,6 +17265,13 @@ Transforms:
 -----------
 
 Humvee05: Humvee05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -18574,6 +18693,13 @@ Transforms:
 -----------
 
 Humvee06: Humvee06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -20035,6 +20161,13 @@ Transforms:
 -----------
 
 Sedan01: Sedan01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -21563,6 +21696,13 @@ Transforms:
 -----------
 
 Sedan02: Sedan02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -23115,6 +23255,13 @@ Transforms:
 -----------
 
 Sedan03: Sedan03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -24715,6 +24862,13 @@ Transforms:
 -----------
 
 Sedan04: Sedan04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -26361,6 +26515,13 @@ Transforms:
 -----------
 
 Sedan05: Sedan05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -28055,6 +28216,13 @@ Transforms:
 -----------
 
 Sedan06: Sedan06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -29832,6 +30000,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -31694,6 +31869,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -33592,6 +33774,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -35549,6 +35738,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -37566,6 +37762,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -39642,6 +39845,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -42021,6 +42231,13 @@ Transforms:
 -----------
 
 Tank RU: TankRU01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -44548,6 +44765,13 @@ Transforms:
 -----------
 
 Tank RU: TankRU02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -47143,6 +47367,13 @@ Transforms:
 -----------
 
 Tank RU: TankRU03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -49831,6 +50062,13 @@ Transforms:
 -----------
 
 Tank RU: TankRU04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -52612,6 +52850,13 @@ Transforms:
 -----------
 
 Tank RU: TankRU05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -55486,6 +55731,13 @@ Transforms:
 -----------
 
 Tank RU: TankRU06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -58522,6 +58774,13 @@ Transforms:
 -----------
 
 Tank US: TankUS01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -61659,6 +61918,13 @@ Transforms:
 -----------
 
 Tank US: TankUS02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -64881,6 +65147,13 @@ Transforms:
 -----------
 
 Tank US: TankUS03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -68211,6 +68484,13 @@ Transforms:
 -----------
 
 Tank US: TankUS04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -71651,6 +71931,13 @@ Transforms:
 -----------
 
 Tank US: TankUS05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -75200,6 +75487,13 @@ Transforms:
 -----------
 
 Tank US: TankUS06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

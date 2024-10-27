@@ -738,6 +738,13 @@ Transforms:
 Six Wheel Truck: SixWheelTruck01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: SixWheelTruck01 (SixWheelTruck01Entry.cs)
@@ -1482,6 +1489,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2264,6 +2278,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3105,6 +3126,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4006,6 +4034,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4966,6 +5001,13 @@ Transforms:
 -----------
 
 Six Wheel Truck: SixWheelTruck06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

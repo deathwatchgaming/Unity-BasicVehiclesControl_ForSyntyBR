@@ -710,6 +710,13 @@ Transforms:
 Humvee01: Humvee01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: Humvee01 (Humvee01Entry.cs)
@@ -1412,6 +1419,13 @@ Transforms:
 -----------
 
 Humvee02: Humvee02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2140,6 +2154,13 @@ Transforms:
 -----------
 
 Humvee03: Humvee03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2915,6 +2936,13 @@ Transforms:
 -----------
 
 Humvee04: Humvee04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3737,6 +3765,13 @@ Transforms:
 -----------
 
 Humvee05: Humvee05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4606,6 +4641,13 @@ Transforms:
 -----------
 
 Humvee06: Humvee06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

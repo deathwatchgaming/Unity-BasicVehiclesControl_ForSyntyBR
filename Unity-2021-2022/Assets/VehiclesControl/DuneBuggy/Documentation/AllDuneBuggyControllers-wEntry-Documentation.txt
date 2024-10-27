@@ -706,6 +706,13 @@ Transforms:
 Dune Buggy: DuneBuggy01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: DuneBuggy01 (DuneBuggy01Entry.cs)
@@ -1402,6 +1409,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2122,6 +2136,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2887,6 +2908,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3697,6 +3725,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4552,6 +4587,13 @@ Transforms:
 -----------
 
 Dune Buggy: DuneBuggy06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

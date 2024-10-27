@@ -690,6 +690,13 @@ Transforms:
 Armored Truck: ArmoredTruck05 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: ArmoredTruck05 (ArmoredTruck05Entry.cs)

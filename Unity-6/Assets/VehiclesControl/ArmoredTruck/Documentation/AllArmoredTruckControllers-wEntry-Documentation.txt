@@ -699,6 +699,12 @@ Transforms:
 
 Armored Truck: ArmoredTruck01 (Transform)
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
 
 -----------------------------------------------------------------------------------
 
@@ -1395,6 +1401,13 @@ Transforms:
 -----------
 
 Armored Truck: ArmoredTruck02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2116,6 +2129,13 @@ Transforms:
 -----------
 
 Armored Truck: ArmoredTruck03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2883,6 +2903,13 @@ Transforms:
 -----------
 
 Armored Truck: ArmoredTruck04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3697,6 +3724,13 @@ Transforms:
 -----------
 
 Armored Truck: ArmoredTruck05 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4558,6 +4592,13 @@ Transforms:
 -----------
 
 Armored Truck: ArmoredTruck06 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
