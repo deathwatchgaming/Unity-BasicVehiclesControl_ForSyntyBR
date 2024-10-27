@@ -3,6 +3,7 @@
  * Name: Humvee03Entry.cs
  * Author: DeathwatchGaming
  * License: MIT
+ * Unity Version(s): Unity 6+
  */
 
 // using
