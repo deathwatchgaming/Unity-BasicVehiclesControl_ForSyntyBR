@@ -120,18 +120,22 @@ Unity 6 Bug (Related to Wheel Colliders and Center of Gravity Offset)
 ----------------------------------------------------------------------
 
 
-NOTE: There is currently a bug in Unity 6 prior to Fixed in Unity 6
-(6000.025f1) that affects wheel colliders and center of gravity offset. This
-bug has been reported and is listed as a bug and is currently being worked on
-for an official fix. Until such we can provide a temporary resolution file to
-add to your vehicle to sort this out.
+NOTE: There is a bug in Unity 6 versions prior to version Unity 6
+(6000.025f1) that affects wheel colliders and center of gravity offset.
+This bug was reported and an official fix has thus after such been
+provided. 
+
+Prior to that fixed version if you have not yet upgraded to the fixed version
+we can still provide a temporary resolution file to add to your vehicle to
+sort this out.
 
 
 * Temporary Unity 6 Bug Resolution: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Temporary-Resolution/Unity-6-Temporary-Resolve-Bug.txt
 
 
 ATTENTION!!: This bug has been fixed in Unity 6 (6000.025f1) thus this
-temporary resolution is not needed if you upgrade to that version!
+temporary resolution is not needed if you upgraded or ugrade to that
+version+!
 
 
 Vehicles Control:
@@ -152,73 +156,73 @@ Armored Truck: (total: 6)
 * ArmoredTruck01 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck01/Documentation/ArmoredTruck01Controller-Only-Documentation.txt
 
 
-* ArmoredTruck01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck01/Documentation/ArmoredTruck01Controller-Spedometer-Documentation.txt
+* ArmoredTruck01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck01/Documentation/ArmoredTruck01Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck01 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck01/Documentation/ArmoredTruck01Controller-wEntry-Documentation.txt
 
 
-* ArmoredTruck01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck01/Documentation/ArmoredTruck01Controller-Spedometer-Documentation.txt
+* ArmoredTruck01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck01/Documentation/ArmoredTruck01Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck02 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck02/Documentation/ArmoredTruck02Controller-Only-Documentation.txt
 
 
-* ArmoredTruck02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck02/Documentation/ArmoredTruck02Controller-Spedometer-Documentation.txt
+* ArmoredTruck02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck02/Documentation/ArmoredTruck02Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck02 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck02/Documentation/ArmoredTruck02Controller-wEntry-Documentation.txt
 
 
-* ArmoredTruck02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck02/Documentation/ArmoredTruck02Controller-Spedometer-Documentation.txt
+* ArmoredTruck02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck02/Documentation/ArmoredTruck02Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck03 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck03/Documentation/ArmoredTruck03Controller-Only-Documentation.txt
 
 
-* ArmoredTruck03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck03/Documentation/ArmoredTruck03Controller-Spedometer-Documentation.txt
+* ArmoredTruck03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck03/Documentation/ArmoredTruck03Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck03 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck03/Documentation/ArmoredTruck03Controller-wEntry-Documentation.txt
 
 
-* ArmoredTruck03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck03/Documentation/ArmoredTruck03Controller-Spedometer-Documentation.txt
+* ArmoredTruck03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck03/Documentation/ArmoredTruck03Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck04 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck04/Documentation/ArmoredTruck04Controller-Only-Documentation.txt
 
 
-* ArmoredTruck04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck04/Documentation/ArmoredTruck04Controller-Spedometer-Documentation.txt
+* ArmoredTruck04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck04/Documentation/ArmoredTruck04Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck04 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck04/Documentation/ArmoredTruck04Controller-wEntry-Documentation.txt
 
 
-* ArmoredTruck04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck04/Documentation/ArmoredTruck04Controller-Spedometer-Documentation.txt
+* ArmoredTruck04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck04/Documentation/ArmoredTruck04Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck05 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck05/Documentation/ArmoredTruck05Controller-Only-Documentation.txt
 
 
-* ArmoredTruck05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck05/Documentation/ArmoredTruck05Controller-Spedometer-Documentation.txt
+* ArmoredTruck05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck05/Documentation/ArmoredTruck05Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck05 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck05/Documentation/ArmoredTruck05Controller-wEntry-Documentation.txt
 
 
-* ArmoredTruck05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck05/Documentation/ArmoredTruck05Controller-Spedometer-Documentation.txt
+* ArmoredTruck05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck05/Documentation/ArmoredTruck05Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck06 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck06/Documentation/ArmoredTruck06Controller-Only-Documentation.txt
 
 
-* ArmoredTruck06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck06/Documentation/ArmoredTruck06Controller-Spedometer-Documentation.txt
+* ArmoredTruck06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck06/Documentation/ArmoredTruck06Controller-Speedometer-Documentation.txt
 
 
 * ArmoredTruck06 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck06/Documentation/ArmoredTruck06Controller-wEntry-Documentation.txt
 
 
-* ArmoredTruck06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck06/Documentation/ArmoredTruck06Controller-Spedometer-Documentation.txt
+* ArmoredTruck06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/ArmoredTruck06/Documentation/ArmoredTruck06Controller-Speedometer-Documentation.txt
 
 
 * All ArmoredTruck(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/ArmoredTruck/Documentation/AllArmoredTruckControllers-wEntry-Documentation.txt
@@ -232,73 +236,73 @@ Dune Buggy: (total: 6)
 * DuneBuggy01 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy01/Documentation/DuneBuggy01-wEntry-Documentation.txt
 
 
-* DuneBuggy01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy01/Documentation/DuneBuggy01Controller-Spedometer-Documentation.txt
+* DuneBuggy01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy01/Documentation/DuneBuggy01Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy01 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy01/Documentation/DuneBuggy01-wEntry-Documentation.txt
 
 
-* DuneBuggy01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy01/Documentation/DuneBuggy01Controller-Spedometer-Documentation.txt
+* DuneBuggy01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy01/Documentation/DuneBuggy01Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy02 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy02/Documentation/DuneBuggy02-wEntry-Documentation.txt
 
 
-* DuneBuggy02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy02/Documentation/DuneBuggy02Controller-Spedometer-Documentation.txt
+* DuneBuggy02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy02/Documentation/DuneBuggy02Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy02 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy02/Documentation/DuneBuggy02-wEntry-Documentation.txt
 
 
-* DuneBuggy02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy02/Documentation/DuneBuggy02Controller-Spedometer-Documentation.txt
+* DuneBuggy02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy02/Documentation/DuneBuggy02Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy03 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy03/Documentation/DuneBuggy03-wEntry-Documentation.txt
 
 
-* DuneBuggy03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy03/Documentation/DuneBuggy03Controller-Spedometer-Documentation.txt
+* DuneBuggy03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy03/Documentation/DuneBuggy03Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy03 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy03/Documentation/DuneBuggy03-wEntry-Documentation.txt
 
 
-* DuneBuggy03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy03/Documentation/DuneBuggy03Controller-Spedometer-Documentation.txt
+* DuneBuggy03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy03/Documentation/DuneBuggy03Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy04 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy04/Documentation/DuneBuggy04-wEntry-Documentation.txt
 
 
-* DuneBuggy04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy04/Documentation/DuneBuggy04Controller-Spedometer-Documentation.txt
+* DuneBuggy04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy04/Documentation/DuneBuggy04Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy04 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy04/Documentation/DuneBuggy04-wEntry-Documentation.txt
 
 
-* DuneBuggy04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy04/Documentation/DuneBuggy04Controller-Spedometer-Documentation.txt
+* DuneBuggy04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy04/Documentation/DuneBuggy04Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy05 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy05/Documentation/DuneBuggy05-wEntry-Documentation.txt
 
 
-* DuneBuggy05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy05/Documentation/DuneBuggy05Controller-Spedometer-Documentation.txt
+* DuneBuggy05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy05/Documentation/DuneBuggy05Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy05 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy05/Documentation/DuneBuggy05-wEntry-Documentation.txt
 
 
-* DuneBuggy05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy05/Documentation/DuneBuggy05Controller-Spedometer-Documentation.txt
+* DuneBuggy05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy05/Documentation/DuneBuggy05Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy06 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy06/Documentation/DuneBuggy06-wEntry-Documentation.txt
 
 
-* DuneBuggy06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy06/Documentation/DuneBuggy06Controller-Spedometer-Documentation.txt
+* DuneBuggy06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/DuneBuggy/DuneBuggy06/Documentation/DuneBuggy06Controller-Speedometer-Documentation.txt
 
 
 * DuneBuggy06 Controller with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy06/Documentation/DuneBuggy06-wEntry-Documentation.txt
 
 
-* DuneBuggy06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy06/Documentation/DuneBuggy06Controller-Spedometer-Documentation.txt
+* DuneBuggy06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/DuneBuggy06/Documentation/DuneBuggy06Controller-Speedometer-Documentation.txt
 
 
 * All DuneBuggy(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/DuneBuggy/Documentation/AllDuneBuggyControllers-wEntry-Documentation.txt
@@ -312,73 +316,73 @@ Humvee: (total: 6)
 * Humvee01 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee01/Documentation/Humvee01Controller-Only-Documentation.txt
 
 
-* Humvee01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee01/Documentation/Humvee01Controller-Spedometer-Documentation.txt
+* Humvee01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee01/Documentation/Humvee01Controller-Speedometer-Documentation.txt
 
 
 * Humvee01 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee01/Documentation/Humvee01Controller-wEntry-Documentation.txt
 
 
-* Humvee01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee01/Documentation/Humvee01Controller-Spedometer-Documentation.txt
+* Humvee01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee01/Documentation/Humvee01Controller-Speedometer-Documentation.txt
 
 
 * Humvee02 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee02/Documentation/Humvee02Controller-Only-Documentation.txt
 
 
-* Humvee02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee02/Documentation/Humvee02Controller-Spedometer-Documentation.txt
+* Humvee02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee02/Documentation/Humvee02Controller-Speedometer-Documentation.txt
 
 
 * Humvee02 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee02/Documentation/Humvee02Controller-wEntry-Documentation.txt
 
 
-* Humvee02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee02/Documentation/Humvee02Controller-Spedometer-Documentation.txt
+* Humvee02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee02/Documentation/Humvee02Controller-Speedometer-Documentation.txt
 
 
 * Humvee03 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee03/Documentation/Humvee03Controller-Only-Documentation.txt
 
 
-* Humvee03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee03/Documentation/Humvee03Controller-Spedometer-Documentation.txt
+* Humvee03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee03/Documentation/Humvee03Controller-Speedometer-Documentation.txt
 
 
 * Humvee03 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee03/Documentation/Humvee03Controller-wEntry-Documentation.txt
 
 
-* Humvee03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee03/Documentation/Humvee03Controller-Spedometer-Documentation.txt
+* Humvee03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee03/Documentation/Humvee03Controller-Speedometer-Documentation.txt
 
 
 * Humvee04 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee04/Documentation/Humvee04Controller-Only-Documentation.txt
 
 
-* Humvee04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee04/Documentation/Humvee04Controller-Spedometer-Documentation.txt
+* Humvee04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee04/Documentation/Humvee04Controller-Speedometer-Documentation.txt
 
 
 * Humvee04 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee04/Documentation/Humvee04Controller-wEntry-Documentation.txt
 
 
-* Humvee04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee04/Documentation/Humvee04Controller-Spedometer-Documentation.txt
+* Humvee04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee04/Documentation/Humvee04Controller-Speedometer-Documentation.txt
 
 
 * Humvee05 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee05/Documentation/Humvee05Controller-Only-Documentation.txt
 
 
-* Humvee05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee05/Documentation/Humvee05Controller-Spedometer-Documentation.txt
+* Humvee05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee05/Documentation/Humvee05Controller-Speedometer-Documentation.txt
 
 
 * Humvee05 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee05/Documentation/Humvee05Controller-wEntry-Documentation.txt
 
 
-* Humvee05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee05/Documentation/Humvee05Controller-Spedometer-Documentation.txt
+* Humvee05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee05/Documentation/Humvee05Controller-Speedometer-Documentation.txt
 
 
 * Humvee06 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee06/Documentation/Humvee06Controller-Only-Documentation.txt
 
 
-* Humvee06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee06/Documentation/Humvee06Controller-Spedometer-Documentation.txt
+* Humvee06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Humvee/Humvee06/Documentation/Humvee06Controller-Speedometer-Documentation.txt
 
 
 * Humvee06 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee06/Documentation/Humvee06Controller-wEntry-Documentation.txt
 
 
-* Humvee06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee06/Documentation/Humvee06Controller-Spedometer-Documentation.txt
+* Humvee06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Humvee06/Documentation/Humvee06Controller-Speedometer-Documentation.txt
 
 
 * All Humvee(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Humvee/Documentation/AllHumveeControllers-wEntry-Documentation.txt
@@ -392,73 +396,73 @@ Six Wheel Truck: (total: 6)
 * SixWheelTruck01 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck01/Documentation/SixWheelTruck01Controller-Only-Documentation.txt
 
 
-* SixWheelTruck01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck01/Documentation/SixWheelTruck01Controller-Spedometer-Documentation.txt
+* SixWheelTruck01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck01/Documentation/SixWheelTruck01Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck01 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck01/Documentation/SixWheelTruck01Controller-wEntry-Documentation.txt
 
 
-* SixWheelTruck01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck01/Documentation/SixWheelTruck01Controller-Spedometer-Documentation.txt
+* SixWheelTruck01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck01/Documentation/SixWheelTruck01Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck02 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck02/Documentation/SixWheelTruck02Controller-Only-Documentation.txt
 
 
-* SixWheelTruck02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck02/Documentation/SixWheelTruck02Controller-Spedometer-Documentation.txt
+* SixWheelTruck02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck02/Documentation/SixWheelTruck02Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck02 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck02/Documentation/SixWheelTruck02Controller-wEntry-Documentation.txt
 
 
-* SixWheelTruck02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck02/Documentation/SixWheelTruck02Controller-Spedometer-Documentation.txt
+* SixWheelTruck02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck02/Documentation/SixWheelTruck02Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck03 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck03/Documentation/SixWheelTruck03Controller-Only-Documentation.txt
 
 
-* SixWheelTruck03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck03/Documentation/SixWheelTruck03Controller-Spedometer-Documentation.txt
+* SixWheelTruck03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck03/Documentation/SixWheelTruck03Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck03 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck03/Documentation/SixWheelTruck03Controller-wEntry-Documentation.txt
 
 
-* SixWheelTruck03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck03/Documentation/SixWheelTruck03Controller-Spedometer-Documentation.txt
+* SixWheelTruck03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck03/Documentation/SixWheelTruck03Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck04 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck04/Documentation/SixWheelTruck04Controller-Only-Documentation.txt
 
 
-* SixWheelTruck04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck04/Documentation/SixWheelTruck04Controller-Spedometer-Documentation.txt
+* SixWheelTruck04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck04/Documentation/SixWheelTruck04Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck04 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck04/Documentation/SixWheelTruck04Controller-wEntry-Documentation.txt
 
 
-* SixWheelTruck04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck04/Documentation/SixWheelTruck04Controller-Spedometer-Documentation.txt
+* SixWheelTruck04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck04/Documentation/SixWheelTruck04Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck05 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck05/Documentation/SixWheelTruck05Controller-Only-Documentation.txt
 
 
-* SixWheelTruck05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck05/Documentation/SixWheelTruck05Controller-Spedometer-Documentation.txt
+* SixWheelTruck05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck05/Documentation/SixWheelTruck05Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck05 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck05/Documentation/SixWheelTruck05Controller-wEntry-Documentation.txt
 
 
-* SixWheelTruck05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck05/Documentation/SixWheelTruck05Controller-Spedometer-Documentation.txt
+* SixWheelTruck05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck05/Documentation/SixWheelTruck05Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck06 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck06/Documentation/SixWheelTruck06Controller-Only-Documentation.txt
 
 
-* SixWheelTruck06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck06/Documentation/SixWheelTruck06Controller-Spedometer-Documentation.txt
+* SixWheelTruck06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck06/Documentation/SixWheelTruck06Controller-Speedometer-Documentation.txt
 
 
 * SixWheelTruck06 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck06/Documentation/SixWheelTruck06Controller-wEntry-Documentation.txt
 
 
-* SixWheelTruck06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck06/Documentation/SixWheelTruck06Controller-Spedometer-Documentation.txt
+* SixWheelTruck06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/SixWheelTruck06/Documentation/SixWheelTruck06Controller-Speedometer-Documentation.txt
 
 
 * All SixWheelTruck(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/SixWheelTruck/Documentation/AllSixWheelTruckControllers-wEntry-Documentation.txt
@@ -472,73 +476,73 @@ Sedan: (total: 6)
 * Sedan01 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan01/Documentation/Sedan01Controller-Only-Documentation.txt
 
 
-* Sedan01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan01/Documentation/Sedan01Controller-Spedometer-Documentation.txt
+* Sedan01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan01/Documentation/Sedan01Controller-Speedometer-Documentation.txt
 
 
 * Sedan01 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan01/Documentation/Sedan01Controller-wEntry-Documentation.txt
 
 
-* Sedan01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan01/Documentation/Sedan01Controller-Spedometer-Documentation.txt
+* Sedan01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan01/Documentation/Sedan01Controller-Speedometer-Documentation.txt
 
 
 * Sedan02 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan02/Documentation/Sedan02Controller-Only-Documentation.txt
 
 
-* Sedan02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan02/Documentation/Sedan02Controller-Spedometer-Documentation.txt
+* Sedan02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan02/Documentation/Sedan02Controller-Speedometer-Documentation.txt
 
 
 * Sedan02 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan02/Documentation/Sedan02Controller-wEntry-Documentation.txt
 
 
-* Sedan02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan02/Documentation/Sedan02Controller-Spedometer-Documentation.txt
+* Sedan02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan02/Documentation/Sedan02Controller-Speedometer-Documentation.txt
 
 
 * Sedan03 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan03/Documentation/Sedan03Controller-Only-Documentation.txt
 
 
-* Sedan03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan03/Documentation/Sedan03Controller-Spedometer-Documentation.txt
+* Sedan03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan03/Documentation/Sedan03Controller-Speedometer-Documentation.txt
 
 
 * Sedan03 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan03/Documentation/Sedan03Controller-wEntry-Documentation.txt
 
 
-* Sedan03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan03/Documentation/Sedan03Controller-Spedometer-Documentation.txt
+* Sedan03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan03/Documentation/Sedan03Controller-Speedometer-Documentation.txt
 
 
 * Sedan04 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan04/Documentation/Sedan04Controller-Only-Documentation.txt
 
 
-* Sedan04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan04/Documentation/Sedan04Controller-Spedometer-Documentation.txt
+* Sedan04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan04/Documentation/Sedan04Controller-Speedometer-Documentation.txt
 
 
 * Sedan04 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan04/Documentation/Sedan04Controller-wEntry-Documentation.txt
 
 
-* Sedan04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan04/Documentation/Sedan04Controller-Spedometer-Documentation.txt
+* Sedan04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan04/Documentation/Sedan04Controller-Speedometer-Documentation.txt
 
 
 * Sedan05 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan05/Documentation/Sedan05Controller-Only-Documentation.txt
 
 
-* Sedan05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan05/Documentation/Sedan05Controller-Spedometer-Documentation.txt
+* Sedan05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan05/Documentation/Sedan05Controller-Speedometer-Documentation.txt
 
 
 * Sedan05 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan05/Documentation/Sedan05Controller-wEntry-Documentation.txt
 
 
-* Sedan05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan05/Documentation/Sedan05Controller-Spedometer-Documentation.txt
+* Sedan05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan05/Documentation/Sedan05Controller-Speedometer-Documentation.txt
 
 
 * Sedan06 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan06/Documentation/Sedan06Controller-Only-Documentation.txt
 
 
-* Sedan06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan06/Documentation/Sedan06Controller-Spedometer-Documentation.txt
+* Sedan06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Sedan/Sedan06/Documentation/Sedan06Controller-Speedometer-Documentation.txt
 
 
 * Sedan06 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan06/Documentation/Sedan06Controller-wEntry-Documentation.txt
 
 
-* Sedan06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan06/Documentation/Sedan06Controller-Spedometer-Documentation.txt
+* Sedan06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Sedan06/Documentation/Sedan06Controller-Speedometer-Documentation.txt
 
 
 * All Sedan(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/Sedan/Documentation/AllSedanControllers-wEntry-Documentation.txt
@@ -552,73 +556,73 @@ Tank RU: (total: 6)
 * TankRU01 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Only-Documentation.txt
 
 
-* TankRU01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Spedometer-Documentation.txt
+* TankRU01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Speedometer-Documentation.txt
 
 
 * TankRU01 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Only-wEntry-Documentation.txt
 
 
-* TankRU01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Spedometer-Documentation.txt
+* TankRU01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Speedometer-Documentation.txt
 
 
 * TankRU02 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-Only-Documentation.txt
 
 
-* TankRU02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-Spedometer-Documentation.txt
+* TankRU02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-Speedometer-Documentation.txt
 
 
 * TankRU02 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-Only-wEntry-Documentation.txt
 
 
-* TankRU02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-Spedometer-Documentation.txt
+* TankRU02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-Speedometer-Documentation.txt
 
 
 * TankRU03 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU03/Documentation/TankRU03Controller-Only-Documentation.txt
 
 
-* TankRU03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU03/Documentation/TankRU03Controller-Spedometer-Documentation.txt
+* TankRU03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU03/Documentation/TankRU03Controller-Speedometer-Documentation.txt
 
 
 * TankRU03 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU03/Documentation/TankRU03Controller-Only-wEntry-Documentation.txt
 
 
-* TankRU03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU03/Documentation/TankRU03Controller-Spedometer-Documentation.txt
+* TankRU03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU03/Documentation/TankRU03Controller-Speedometer-Documentation.txt
 
 
 * TankRU04 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU04/Documentation/TankRU04Controller-Only-Documentation.txt
 
 
-* TankRU04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU04/Documentation/TankRU04Controller-Spedometer-Documentation.txt
+* TankRU04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU04/Documentation/TankRU04Controller-Speedometer-Documentation.txt
 
 
 * TankRU04 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU04/Documentation/TankRU04Controller-Only-wEntry-Documentation.txt
 
 
-* TankRU04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU04/Documentation/TankRU04Controller-Spedometer-Documentation.txt
+* TankRU04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU04/Documentation/TankRU04Controller-Speedometer-Documentation.txt
 
 
 * TankRU05 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU05/Documentation/TankRU05Controller-Only-Documentation.txt
 
 
-* TankRU05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU05/Documentation/TankRU05Controller-Spedometer-Documentation.txt
+* TankRU05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU05/Documentation/TankRU05Controller-Speedometer-Documentation.txt
 
 
 * TankRU05 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Only-wEntry-Documentation.txt
 
 
-* TankRU05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU05/Documentation/TankRU05Controller-Spedometer-Documentation.txt
+* TankRU05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU05/Documentation/TankRU05Controller-Speedometer-Documentation.txt
 
 
 * TankRU06 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU06/Documentation/TankRU06Controller-Only-Documentation.txt
 
 
-* TankRU06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU06/Documentation/TankRU06Controller-Spedometer-Documentation.txt
+* TankRU06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankRU/TankRU06/Documentation/TankRU06Controller-Speedometer-Documentation.txt
 
 
 * TankRU06 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU06/Documentation/TankRU06Controller-Only-wEntry-Documentation.txt
 
 
-* TankRU06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU06/Documentation/TankRU06Controller-Spedometer-Documentation.txt
+* TankRU06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/TankRU06/Documentation/TankRU06Controller-Speedometer-Documentation.txt
 
 
 * All TankRU(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankRU/Documentation/AllTankRUControllers-wEntry-Documentation.txt
@@ -632,73 +636,73 @@ Tank US: (total: 6)
 * TankUS01 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS01/Documentation/TankUS01Controller-Only-Documentation.txt
 
 
-* TankUS01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS01/Documentation/TankUS01Controller-Spedometer-Documentation.txt
+* TankUS01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS01/Documentation/TankUS01Controller-Speedometer-Documentation.txt
 
 
 * TankUS01 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS01/Documentation/TankUS01Controller-Only-wEntry-Documentation.txt
 
 
-* TankUS01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS01/Documentation/TankUS01Controller-Spedometer-Documentation.txt
+* TankUS01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS01/Documentation/TankUS01Controller-Speedometer-Documentation.txt
 
 
 * TankUS02 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-Only-Documentation.txt
 
 
-* TankUS02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-Spedometer-Documentation.txt
+* TankUS02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-Speedometer-Documentation.txt
 
 
 * TankUS02 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-Only-wEntry-Documentation.txt
 
 
-* TankUS02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-Spedometer-Documentation.txt
+* TankUS02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-Speedometer-Documentation.txt
 
 
 * TankUS03 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS03/Documentation/TankUS03Controller-Only-Documentation.txt
 
 
-* TankUS03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS03/Documentation/TankUS03Controller-Spedometer-Documentation.txt
+* TankUS03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS03/Documentation/TankUS03Controller-Speedometer-Documentation.txt
 
 
 * TankUS03 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS03/Documentation/TankUS03Controller-Only-wEntry-Documentation.txt
 
 
-* TankUS03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS03/Documentation/TankUS03Controller-Spedometer-Documentation.txt
+* TankUS03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS03/Documentation/TankUS03Controller-Speedometer-Documentation.txt
 
 
 * TankUS04 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS04/Documentation/TankUS04Controller-Only-Documentation.txt
 
 
-* TankUS04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS04/Documentation/TankUS04Controller-Spedometer-Documentation.txt
+* TankUS04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS04/Documentation/TankUS04Controller-Speedometer-Documentation.txt
 
 
 * TankUS04 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS04/Documentation/TankUS04Controller-Only-wEntry-Documentation.txt
 
 
-* TankUS04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS04/Documentation/TankUS04Controller-Spedometer-Documentation.txt
+* TankUS04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS04/Documentation/TankUS04Controller-Speedometer-Documentation.txt
 
 
 * TankUS05 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS05/Documentation/TankUS05Controller-Only-Documentation.txt
 
 
-* TankUS05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS05/Documentation/TankUS05Controller-Spedometer-Documentation.txt
+* TankUS05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS05/Documentation/TankUS05Controller-Speedometer-Documentation.txt
 
 
 * TankUS05 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS05/Documentation/TankUS05Controller-Only-wEntry-Documentation.txt
 
 
-* TankUS05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS05/Documentation/TankUS05Controller-Spedometer-Documentation.txt
+* TankUS05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS05/Documentation/TankUS05Controller-Speedometer-Documentation.txt
 
 
 * TankUS06 Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS06/Documentation/TankUS06Controller-Only-Documentation.txt
 
 
-* TankUS06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS06/Documentation/TankUS06Controller-Spedometer-Documentation.txt
+* TankUS06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/TankUS/TankUS06/Documentation/TankUS06Controller-Speedometer-Documentation.txt
 
 
 * TankUS06 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS06/Documentation/TankUS06Controller-Only-wEntry-Documentation.txt
 
 
-* TankUS06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS06/Documentation/TankUS06Controller-Spedometer-Documentation.txt
+* TankUS06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/TankUS06/Documentation/TankUS06Controller-Speedometer-Documentation.txt
 
 
 * All TankUS(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/Documentation/AllTankUSControllers-wEntry-Documentation.txt

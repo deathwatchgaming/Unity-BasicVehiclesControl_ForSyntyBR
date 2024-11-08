@@ -290,6 +290,12 @@ namespace VehiclesControl
 
 			// _tankRU03TurretRotation is _tankRU03Turret.transform.eulerAngles
 			_tankRU03TurretRotation = _tankRU03Turret.transform.eulerAngles;
+
+			// Cursor lockState is CursorLockMode Locked
+			Cursor.lockState = CursorLockMode.Locked;
+
+			// Cursor visible is false
+			Cursor.visible = false;
 	        
 		} // close private void Awake
 

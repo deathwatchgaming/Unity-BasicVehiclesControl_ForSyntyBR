@@ -290,7 +290,7 @@ namespace VehiclesControl
 
 			// _tankRU02TurretRotation is _tankRU02Turret.transform.eulerAngles
 			_tankRU02TurretRotation = _tankRU02Turret.transform.eulerAngles;
-	        
+      
 		} // close private void Awake
 
 		// private void Start
