@@ -1,6 +1,6 @@
 /*
- * File: Dune Buggy 06 Only Speedometer
- * Name: DuneBuggy06OnlySpeedometer.cs
+ * File: Sedan 06 Only Speedometer
+ * Name: Sedan06OnlySpeedometer.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
@@ -14,16 +14,16 @@ using UnityEngine.UI;
 // namespace VehiclesControl
 namespace VehiclesControl
 {
-    // public enum DuneBuggy06OnlySpeedUnit
-	public enum DuneBuggy06OnlySpeedUnit
+    // public enum Sedan06OnlySpeedUnit
+	public enum Sedan06OnlySpeedUnit
 	{
 		mph,
 		kmh	
 
-	} // close public enum DuneBuggy06OnlySpeedUnit
+	} // close public enum Sedan06OnlySpeedUnit
 
-	// public class DuneBuggy06OnlySpeedometer 
-	public class DuneBuggy06OnlySpeedometer : MonoBehaviour
+	// public class Sedan06OnlySpeedometer 
+	public class Sedan06OnlySpeedometer : MonoBehaviour
 	{
 		// Speedometer
 		[Header("Speedometer")]
@@ -60,8 +60,8 @@ namespace VehiclesControl
 			[SerializeField] private string _previousText;
 
 			[Tooltip("The speed measurement unit")]
-			// DuneBuggy06OnlySpeedUnit _speedUnit	
-			[SerializeField] private DuneBuggy06OnlySpeedUnit _speedUnit;
+			// Sedan06OnlySpeedUnit _speedUnit	
+			[SerializeField] private Sedan06OnlySpeedUnit _speedUnit;
 
 			[Tooltip("The interface speed amount text")]
 			// TMP_Text speedText
@@ -70,8 +70,8 @@ namespace VehiclesControl
 		// float _currentSpeed
 		float _currentSpeed;
 
-		// DuneBuggy06Controller _duneBuggy06Script
-		private DuneBuggy06Controller _duneBuggy06Script;
+		// Sedan06Controller _sedan06Script
+		private Sedan06Controller _sedan06Script;
 
 		// Rigidbody _rigidbody
 		private Rigidbody _rigidbody;
@@ -79,8 +79,8 @@ namespace VehiclesControl
 		// private void Start
 		private void Start()
 		{
-			// _duneBuggy06Script is GetComponent DuneBuggy06Controller
-			_duneBuggy06Script = GetComponent<DuneBuggy06Controller>();
+			// _sedan06Script is GetComponent Sedan06Controller
+			_sedan06Script = GetComponent<Sedan06Controller>();
 
 			// _rigidbody
 			_rigidbody = GetComponent<Rigidbody>();	
@@ -90,8 +90,8 @@ namespace VehiclesControl
 		// private void Update
 		private void Update()
 		{
-			// if _speedUnit equals DuneBuggy06OnlySpeedUnit.mph
-			if (_speedUnit == DuneBuggy06OnlySpeedUnit.mph)
+			// if _speedUnit equals Sedan06OnlySpeedUnit.mph
+			if (_speedUnit == Sedan06OnlySpeedUnit.mph)
 			{
 				// 2.23694 is the constant to convert a value from m/s to mph
 
@@ -101,7 +101,7 @@ namespace VehiclesControl
 				// _speedText.text
 				_speedText.text = _previousText + _currentSpeed.ToString() + " mph";
 
-			} // close if _speedUnit equals DuneBuggy06OnlySpeedUnit.mph
+			} // close if _speedUnit equals Sedan06OnlySpeedUnit.mph
 
 			// else 
 			else 
@@ -143,6 +143,6 @@ namespace VehiclesControl
 
 		} // close private void UpdateSpeedoNeedle				
 
-	} // close public class DuneBuggy06OnlySpeedometer
+	} // close public class Sedan06OnlySpeedometer
 
 } // close namespace VehiclesControl

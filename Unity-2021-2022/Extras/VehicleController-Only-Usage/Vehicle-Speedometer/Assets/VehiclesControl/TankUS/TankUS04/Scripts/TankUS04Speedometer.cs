@@ -1,8 +1,9 @@
 /*
- * File: TankUS 04 Speedometer
- * Name: TankUS04Speedometer.cs
+ * File: TankUS 04 Only Speedometer
+ * Name: TankUS04OnlySpeedometer.cs
  * Author: DeathwatchGaming
  * License: MIT
+ * Unity Version(s): Unity 2021+ - 2022+
  */
 
 // using
@@ -14,16 +15,16 @@ using UnityEngine.UI;
 // namespace VehiclesControl
 namespace VehiclesControl
 {
-    // public enum TankUS04SpeedUnit
-	public enum TankUS04SpeedUnit
+    // public enum TankUS04OnlySpeedUnit
+	public enum TankUS04OnlySpeedUnit
 	{
 		mph,
 		kmh	
 
-	} // close public enum TankUS04SpeedUnit
+	} // close public enum TankUS04OnlySpeedUnit
 
-	// public class TankUS04Speedometer 
-	public class TankUS04Speedometer : MonoBehaviour
+	// public class TankUS04OnlySpeedometer 
+	public class TankUS04OnlySpeedometer : MonoBehaviour
 	{
 		// Speedometer
 		[Header("Speedometer")]
@@ -60,8 +61,8 @@ namespace VehiclesControl
 			[SerializeField] private string _previousText;
 
 			[Tooltip("The speed measurement unit")]
-			// TankUS04SpeedUnit _speedUnit	
-			[SerializeField] private TankUS04SpeedUnit _speedUnit;
+			// TankUS04OnlySpeedUnit _speedUnit	
+			[SerializeField] private TankUS04OnlySpeedUnit _speedUnit;
 
 			[Tooltip("The interface speed amount text")]
 			// TMP_Text speedText
@@ -90,8 +91,8 @@ namespace VehiclesControl
 		// private void Update
 		private void Update()
 		{
-			// if _speedUnit equals TankUS04SpeedUnit.mph
-			if (_speedUnit == TankUS04SpeedUnit.mph)
+			// if _speedUnit equals TankUS04OnlySpeedUnit.mph
+			if (_speedUnit == TankUS04OnlySpeedUnit.mph)
 			{
 				// 2.23694 is the constant to convert a value from m/s to mph
 
@@ -101,7 +102,7 @@ namespace VehiclesControl
 				// _speedText.text
 				_speedText.text = _previousText + _currentSpeed.ToString() + " mph";
 
-			} // close if _speedUnit equals TankUS04SpeedUnit.mph
+			} // close if _speedUnit equals TankUS04OnlySpeedUnit.mph
 
 			// else 
 			else 
@@ -143,6 +144,6 @@ namespace VehiclesControl
 
 		} // close private void UpdateSpeedoNeedle				
 
-	} // close public class TankUS04Speedometer
+	} // close public class TankUS04OnlySpeedometer
 
 } // close namespace VehiclesControl
