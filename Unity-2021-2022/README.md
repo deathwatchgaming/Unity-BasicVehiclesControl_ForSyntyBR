@@ -548,7 +548,7 @@ Tank RU: (total: 6)
 * TankRU01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Only-Speedometer-Documentation.txt
 
 
-* TankRU01 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Only-wEntry-Documentation.txt
+* TankRU01 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-wEntry-Documentation.txt
 
 
 * TankRU01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Speedometer-Documentation.txt
@@ -560,7 +560,7 @@ Tank RU: (total: 6)
 * TankRU02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-Only-Speedometer-Documentation.txt
 
 
-* TankRU02 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-Only-wEntry-Documentation.txt
+* TankRU02 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-wEntry-Documentation.txt
 
 
 * TankRU02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU02/Documentation/TankRU02Controller-Speedometer-Documentation.txt
@@ -572,7 +572,7 @@ Tank RU: (total: 6)
 * TankRU03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU03/Documentation/TankRU03Controller-Only-Speedometer-Documentation.txt
 
 
-* TankRU03 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU03/Documentation/TankRU03Controller-Only-wEntry-Documentation.txt
+* TankRU03 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU03/Documentation/TankRU03Controller-wEntry-Documentation.txt
 
 
 * TankRU03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU03/Documentation/TankRU03Controller-Speedometer-Documentation.txt
@@ -584,7 +584,7 @@ Tank RU: (total: 6)
 * TankRU04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU04/Documentation/TankRU04Controller-Only-Speedometer-Documentation.txt
 
 
-* TankRU04 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU04/Documentation/TankRU04Controller-Only-wEntry-Documentation.txt
+* TankRU04 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU04/Documentation/TankRU04Controller-wEntry-Documentation.txt
 
 
 * TankRU04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU04/Documentation/TankRU04Controller-Speedometer-Documentation.txt
@@ -596,7 +596,7 @@ Tank RU: (total: 6)
 * TankRU05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU05/Documentation/TankRU05Controller-Only-Speedometer-Documentation.txt
 
 
-* TankRU05 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-Only-wEntry-Documentation.txt
+* TankRU05 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU01/Documentation/TankRU01Controller-wEntry-Documentation.txt
 
 
 * TankRU05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU05/Documentation/TankRU05Controller-Speedometer-Documentation.txt
@@ -608,7 +608,7 @@ Tank RU: (total: 6)
 * TankRU06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU06/Documentation/TankRU06Controller-Only-Speedometer-Documentation.txt
 
 
-* TankRU06 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU06/Documentation/TankRU06Controller-Only-wEntry-Documentation.txt
+* TankRU06 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU06/Documentation/TankRU06Controller-wEntry-Documentation.txt
 
 
 * TankRU06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankRU/TankRU06/Documentation/TankRU06Controller-Speedometer-Documentation.txt
@@ -628,7 +628,7 @@ Tank US: (total: 6)
 * TankUS01 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS01/Documentation/TankUS01Controller-Only-Speedometer-Documentation.txt
 
 
-* TankUS01 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS01/Documentation/TankUS01Controller-Only-wEntry-Documentation.txt
+* TankUS01 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS01/Documentation/TankUS01Controller-wEntry-Documentation.txt
 
 
 * TankUS01 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS01/Documentation/TankUS01Controller-Speedometer-Documentation.txt
@@ -640,7 +640,7 @@ Tank US: (total: 6)
 * TankUS02 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-Only-Speedometer-Documentation.txt
 
 
-* TankUS02 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-Only-wEntry-Documentation.txt
+* TankUS02 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-wEntry-Documentation.txt
 
 
 * TankUS02 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS02/Documentation/TankUS02Controller-Speedometer-Documentation.txt
@@ -652,7 +652,7 @@ Tank US: (total: 6)
 * TankUS03 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS03/Documentation/TankUS03Controller-Only-Speedometer-Documentation.txt
 
 
-* TankUS03 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS03/Documentation/TankUS03Controller-Only-wEntry-Documentation.txt
+* TankUS03 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS03/Documentation/TankUS03Controller-wEntry-Documentation.txt
 
 
 * TankUS03 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS03/Documentation/TankUS03Controller-Speedometer-Documentation.txt
@@ -664,7 +664,7 @@ Tank US: (total: 6)
 * TankUS04 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS04/Documentation/TankUS04Controller-Only-Speedometer-Documentation.txt
 
 
-* TankUS04 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS04/Documentation/TankUS04Controller-Only-wEntry-Documentation.txt
+* TankUS04 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS04/Documentation/TankUS04Controller-wEntry-Documentation.txt
 
 
 * TankUS04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS04/Documentation/TankUS04Controller-Speedometer-Documentation.txt
@@ -676,7 +676,7 @@ Tank US: (total: 6)
 * TankUS05 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS05/Documentation/TankUS05Controller-Only-Speedometer-Documentation.txt
 
 
-* TankUS05 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS05/Documentation/TankUS05Controller-Only-wEntry-Documentation.txt
+* TankUS05 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS05/Documentation/TankUS05Controller-wEntry-Documentation.txt
 
 
 * TankUS05 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS05/Documentation/TankUS05Controller-Speedometer-Documentation.txt
@@ -688,7 +688,7 @@ Tank US: (total: 6)
 * TankUS06 Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS06/Documentation/TankUS06Controller-Only-Speedometer-Documentation.txt
 
 
-* TankUS06 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS06/Documentation/TankUS06Controller-Only-wEntry-Documentation.txt
+* TankUS06 Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS06/Documentation/TankUS06Controller-wEntry-Documentation.txt
 
 
 * TankUS06 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-2021-2022/Assets/VehiclesControl/TankUS/TankUS06/Documentation/TankUS06Controller-Speedometer-Documentation.txt

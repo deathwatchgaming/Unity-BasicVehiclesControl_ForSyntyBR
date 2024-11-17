@@ -1,4 +1,4 @@
-"TankRU01DevScene-wEntry" Scene Setup Steps
+"TankRU05DevScene-wEntry" Scene Setup Steps
 -----------------------------------------------------------------------------------
 
 Description:
@@ -45,7 +45,7 @@ Manual Setup Instruction:
 
 -----------------------------------------------------------------------------------
 
-Prep Step: Create New Scene Called: "TankRU01DevScene-wEntry"
+Prep Step: Create New Scene Called: "TankRU05DevScene-wEntry"
 
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
@@ -267,11 +267,11 @@ Height: 100
 
 -----------------------------------------------------------------------------------
 
-Step 13:  Create child of "VehiclesEntry" add Text tmp: "TankRU01_EntryKey"
+Step 13:  Create child of "VehiclesEntry" add Text tmp: "TankRU05_EntryKey"
 
 -----------------------------------------------------------------------------------
 
-Create as a child of "VehiclesEntry" add TextMeshPro Text: "TankRU01_EntryKey"
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "TankRU05_EntryKey"
 
 Layer: "UI"
 
@@ -398,7 +398,7 @@ Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completel
 
 Next, rename the vehicle prefabs:
 
-SM_Veh_Tank_Russia_01 => "TankRU01"
+SM_Veh_Tank_Russia_01 => "TankRU05"
 
 Next, set the Transform:
 
@@ -406,9 +406,9 @@ Position: X: 0 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
-Material: PolygonBattleRoyale_Veh_01
+Material: PolygonBattleRoyale_Veh_05
 
-Then move "TankRU01" into the empty: "Vehicle" as child of.
+Then move "TankRU05" into the empty: "Vehicle" as child of.
 
 -----------------------------------------------------------------------------------
 
@@ -417,7 +417,7 @@ Step 18: Add: empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In "TankRU01" add empty as child named "View"
+In "TankRU05" add empty as child named "View"
 
 Set the Transform of "View":
 
@@ -433,13 +433,13 @@ Step 19: Add: "Camera" in empty "View" as child
 -----------------------------------------------------------------------------------
 
 
-In the empty: "View" add "Camera" component named: "TankRU01Camera"
+In the empty: "View" add "Camera" component named: "TankRU05Camera"
 
 Tag: Untagged
 
 Depth: 0
 
-Set the Transform of "TankRU01Camera":
+Set the Transform of "TankRU05Camera":
 
 Position: X: 0 Y: 2.8 Z: -8.4 
 Rotation: X: 0 Y: 0 Z: 0 
@@ -453,7 +453,7 @@ Step 20: Add: empty "WheelMeshes" as child
 -----------------------------------------------------------------------------------
 
 
-In "TankRU01" add empty as child named "WheelMeshes"
+In "TankRU05" add empty as child named "WheelMeshes"
 
 Set the Transform of "WheelMeshes":
 
@@ -603,7 +603,7 @@ Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
 -----------------------------------------------------------------------------------
 
 
-In "TankRU01" duplicate "WheelMeshes" & rename to "WheelColliders"
+In "TankRU05" duplicate "WheelMeshes" & rename to "WheelColliders"
 
 Set the Transform of "WheelColliders":
 
@@ -841,7 +841,7 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicle
-  TankRU01
+  TankRU05
     SM_Veh_Tank_Russia_Track_L
     SM_Veh_Tank_Russia_Track_R
     SM_Veh_Tank_Russia_Turret_01 
@@ -852,7 +852,7 @@ Vehicle
 Fully Expanded:
 
 Vehicle
-  TankRU01
+  TankRU05
     SM_Veh_Tank_Russia_Track_L
     SM_Veh_Tank_Russia_Track_R
     SM_Veh_Tank_Russia_Turret_01
@@ -888,31 +888,31 @@ Vehicle
       SM_Veh_Tank_Russia_Track_Wheel_R_06
       SM_Veh_Tank_Russia_Track_Wheel_R_07 
     View
-      TankRU01Camera
+      TankRU05Camera
 
 
 -----------------------------------------------------------------------------------
 
-Step 22: Add to: TankRU01 (TankRU01Controller.cs)
+Step 22: Add to: TankRU05 (TankRU05Controller.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (TankRU01Controller.cs) to "TankRU01"
+Attach component / script (TankRU05Controller.cs) to "TankRU05"
 
 Adjust the following settings:
 
 Require Components:
 -------------------
 
-Rigidbody: TankRU01 (Rigidbody)
+Rigidbody: TankRU05 (Rigidbody)
 
 
 
-TankRU01 Transforms:
+TankRU05 Transforms:
 ------------------
 
-Tank RU Body: TankRU01 (Transform)
+Tank RU Body: TankRU05 (Transform)
 Tank RU Turret: SM_Veh_Tank_Russia_Turret_01 (Transform)
 Tank RU Barrel: SM_Veh_Tank_Russia_Turret_Barrel_01 (Transform)
 
@@ -969,37 +969,37 @@ Set Rigibody Mass: 7000
 
 -----------------------------------------------------------------------------------
 
-Step 23: Add to: TankRU01Camera (TankRU01Camera.cs)
+Step 23: Add to: TankRU05Camera (TankRU05Camera.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (TankRU01Camera.cs) to "TankRU01Camera"
+Attach component / script (TankRU05Camera.cs) to "TankRU05Camera"
 
 Adjust Settings:
 
 Transforms:
 -----------
 
-Tank RU: TankRU01 (Transform)
+Tank RU: TankRU05 (Transform)
 
 
 -----------------------------------------------------------------------------------
 
-Step 24: Add to: TankUS (TankRU01TrackScrolling.cs)
+Step 24: Add to: TankUS (TankRU05TrackScrolling.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (TankRU01TrackScrolling.cs) to "TankRU01"
+Attach component / script (TankRU05TrackScrolling.cs) to "TankRU05"
 
 Adjust Settings:
 
 
-TankRU01 Rigidbody :
+TankRU05 Rigidbody :
 ------------------
 
-TankRU01 (Rigidbody)
+TankRU05 (Rigidbody)
 
 Track Scrolling:
 ----------------
@@ -1016,12 +1016,12 @@ Track R: SM_Veh_Tank_Russia_Track_R (Transform)
 
 -----------------------------------------------------------------------------------
 
-Step 25: Add to: TankRU01 (TankRU01Entry.cs)
+Step 25: Add to: TankRU05 (TankRU05Entry.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach component / script (TankRU01Entry.cs) to "TankRU01"
+Attach component / script (TankRU05Entry.cs) to "TankRU05"
 
 Adjust the following settings:
 
@@ -1029,9 +1029,9 @@ Adjust the following settings:
 Game Objects:
 -------------
 
-Tank US: TankRU01
+Tank US: TankRU05
 Player: Player
-Interface Text Object: TankRU01_EntryKey
+Interface Text Object: TankRU05_EntryKey
 
 
 In Box Collider:
@@ -1052,13 +1052,16 @@ Size: X: 5.877605 Y: 1.871178 Z: 8.895684
 
 -----------------------------------------------------------------------------------
 
+Note: The next step would be to now follow the provided scene with entry
+speedometer setup steps.
 
-Ok, hopefully I covered everything. You should now be able to run around your
-scene with your player and then enter / exit and drive your vehicle around. 
+Lastly, you need to next follow the Player and Vehicle Compass setup steps to
+finalize the setup steps!
 
-Note: The next and last step would be to now follow the provided scene with
-entry speedometer setup steps to finalize all setups steps.
-
+Ok, hopefully I covered everything. After completion of those steps you should
+then be able to run around your scene with your player and then enter / exit
+and drive your vehicle around and see your direction by player and vehicle
+compass.
 
 -----------------------------------------------------------------------------------
 
