@@ -487,7 +487,23 @@ scene with your vehicle.
 
 Note: The next and last step would be to now follow the provided vehicle
 specific controller only in scene setup add speedometer setup steps found via
-the extras folder to finalize all setups steps. 
+the documentation folder to finalize all setups steps. 
+
+
+-----------------------------------------------------------------------------------
+
+Optional: (Controller only) Compass Usage
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, if you would like to have the compass for controller only usage
+you need to next follow the Vehicle Compass (Controller Only) setup steps to
+finalize that part of the setup steps found via the NavigationControl
+specific vehicle directory documentation folder ie:
+
+
+Sedan06-Controller-Only-Compass-Documentation
 
 
 -----------------------------------------------------------------------------------
