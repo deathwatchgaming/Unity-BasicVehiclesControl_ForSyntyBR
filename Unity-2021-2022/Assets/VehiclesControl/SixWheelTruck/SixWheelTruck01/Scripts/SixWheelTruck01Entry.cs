@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The sixWheelTruck 01 compass")]
+            // SixWheelTruck01Compass _sixWheelTruck01Compass
+            [SerializeField] private SixWheelTruck01Compass _sixWheelTruck01Compass;  
+
+        //public static SixWheelTruck01Entry _sixWheelTruck01Entry;
         
         // private void Start
         private void Start() 
         {
+            //_sixWheelTruck01Entry = this;
+            
             // _sixWheelTruck01Script is GetComponent SixWheelTruck01Controller
             _sixWheelTruck01Script = GetComponent<SixWheelTruck01Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _sixWheelTruck01Compass enabled is false
+            _sixWheelTruck01Compass.enabled = false;
+
+            // _sixWheelTruck01Compass compassEnabled is false
+            _sixWheelTruck01Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The SixWheelTruck01 compass is disabled");
 
         } // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inSixWheelTruck01 is false
                 _inSixWheelTruck01 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _sixWheelTruck01Compass enabled is false
+                _sixWheelTruck01Compass.enabled = false;
+
+                // _sixWheelTruck01Compass compassEnabled is false
+                _sixWheelTruck01Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The SixWheelTruck01 compass is disabled");         
 
             } // close if _inSixWheelTruck01 and Input GetKey KeyCode _exitKey
 
@@ -196,6 +252,26 @@ namespace VehiclesControl
 
                 // _inSixWheelTruck01 is true
                 _inSixWheelTruck01 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _sixWheelTruck01Compass enabled is true
+                _sixWheelTruck01Compass.enabled = true;
+
+                // _sixWheelTruck01Compass compassEnabled is true
+                _sixWheelTruck01Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The SixWheelTruck01 compass is enabled");                
 
             } // close if not _inSixWheelTruck01 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 

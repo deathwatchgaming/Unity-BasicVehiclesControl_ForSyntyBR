@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The tankRU 05 compass")]
+            // TankRU05Compass _tankRU05Compass
+            [SerializeField] private TankRU05Compass _tankRU05Compass;  
+
+        //public static TankRU05Entry _tankRU05Entry;
         
         // private void Start
         private void Start() 
         {
+            //_tankRU05Entry = this;
+            
             // _tankRU05Script is GetComponent TankRU05Controller
             _tankRU05Script = GetComponent<TankRU05Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _tankRU05Compass enabled is false
+            _tankRU05Compass.enabled = false;
+
+            // _tankRU05Compass compassEnabled is false
+            _tankRU05Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The TankRU05 compass is disabled");
 
         } // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inTankRU05 is false
                 _inTankRU05 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _tankRU05Compass enabled is false
+                _tankRU05Compass.enabled = false;
+
+                // _tankRU05Compass compassEnabled is false
+                _tankRU05Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The TankRU05 compass is disabled");         
 
             } // close if _inTankRU05 and Input GetKey KeyCode _exitKey
 
@@ -196,6 +252,26 @@ namespace VehiclesControl
 
                 // _inTankRU05 is true
                 _inTankRU05 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _tankRU05Compass enabled is true
+                _tankRU05Compass.enabled = true;
+
+                // _tankRU05Compass compassEnabled is true
+                _tankRU05Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The TankRU05 compass is enabled");                
 
             } // close if not _inTankRU05 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 

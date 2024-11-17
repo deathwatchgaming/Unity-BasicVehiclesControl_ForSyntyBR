@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The armoredTruck 04 compass")]
+            // ArmoredTruck04Compass _armoredTruck04Compass
+            [SerializeField] private ArmoredTruck04Compass _armoredTruck04Compass;  
+
+        //public static ArmoredTruck04Entry _armoredTruck04Entry;
         
         // private void Start
         private void Start() 
         {
+            //_armoredTruck04Entry = this;
+            
             // _armoredTruck04Script is GetComponent ArmoredTruck04Controller
             _armoredTruck04Script = GetComponent<ArmoredTruck04Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _armoredTruck04Compass enabled is false
+            _armoredTruck04Compass.enabled = false;
+
+            // _armoredTruck04Compass compassEnabled is false
+            _armoredTruck04Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The ArmoredTruck04 compass is disabled");
 
     	} // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inArmoredTruck04 is false
                 _inArmoredTruck04 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _armoredTruck04Compass enabled is false
+                _armoredTruck04Compass.enabled = false;
+
+                // _armoredTruck04Compass compassEnabled is false
+                _armoredTruck04Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The ArmoredTruck04 compass is disabled");         
 
             } // close if _inArmoredTruck04 and Input GetKey KeyCode _exitKey
 
@@ -196,6 +252,26 @@ namespace VehiclesControl
 
                 // _inArmoredTruck04 is true
                 _inArmoredTruck04 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _armoredTruck04Compass enabled is true
+                _armoredTruck04Compass.enabled = true;
+
+                // _armoredTruck04Compass compassEnabled is true
+                _armoredTruck04Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The ArmoredTruck04 compass is enabled");                
 
             } // close if not _inArmoredTruck04 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 

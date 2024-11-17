@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The sedan 05 compass")]
+            // Sedan05Compass _sedan05Compass
+            [SerializeField] private Sedan05Compass _sedan05Compass;  
+
+        //public static Sedan05Entry _sedan05Entry;
         
         // private void Start
         private void Start() 
         {
+            //_sedan05Entry = this;
+            
             // _sedan05Script is GetComponent Sedan05Controller
             _sedan05Script = GetComponent<Sedan05Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _sedan05Compass enabled is false
+            _sedan05Compass.enabled = false;
+
+            // _sedan05Compass compassEnabled is false
+            _sedan05Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The Sedan05 compass is disabled");
 
         } // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inSedan05 is false
                 _inSedan05 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _sedan05Compass enabled is false
+                _sedan05Compass.enabled = false;
+
+                // _sedan05Compass compassEnabled is false
+                _sedan05Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Sedan05 compass is disabled");         
 
             } // close if _inSedan05 and Input GetKey KeyCode _exitKey
 
@@ -196,6 +252,26 @@ namespace VehiclesControl
 
                 // _inSedan05 is true
                 _inSedan05 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _sedan05Compass enabled is true
+                _sedan05Compass.enabled = true;
+
+                // _sedan05Compass compassEnabled is true
+                _sedan05Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Sedan05 compass is enabled");                
 
             } // close if not _inSedan05 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 

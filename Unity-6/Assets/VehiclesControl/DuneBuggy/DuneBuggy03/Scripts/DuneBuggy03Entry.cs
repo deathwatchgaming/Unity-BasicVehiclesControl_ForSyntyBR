@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The duneBuggy 03 compass")]
+            // DuneBuggy03Compass _duneBuggy03Compass
+            [SerializeField] private DuneBuggy03Compass _duneBuggy03Compass;  
+
+        //public static DuneBuggy03Entry _duneBuggy03Entry;
                 
         // private void Start
         private void Start() 
         {
+            //_duneBuggy03Entry = this;
+
             // _duneBuggy03Script is GetComponent DuneBuggy03Controller
             _duneBuggy03Script = GetComponent<DuneBuggy03Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _duneBuggy03Compass enabled is false
+            _duneBuggy03Compass.enabled = false;
+
+            // _duneBuggy03Compass compassEnabled is false
+            _duneBuggy03Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The DuneBuggy03 compass is disabled");
 
         } // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inDuneBuggy03 is false
                 _inDuneBuggy03 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _duneBuggy03Compass enabled is false
+                _duneBuggy03Compass.enabled = false;
+
+                // _duneBuggy03Compass compassEnabled is false
+                _duneBuggy03Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The DuneBuggy03 compass is disabled");         
 
             } // close if _inDuneBuggy03 and Input GetKey KeyCode _exitKey
 
@@ -197,6 +253,26 @@ namespace VehiclesControl
                 // _inDuneBuggy03 is true
                 _inDuneBuggy03 = true;
 
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _duneBuggy03Compass enabled is true
+                _duneBuggy03Compass.enabled = true;
+
+                // _duneBuggy03Compass compassEnabled is true
+                _duneBuggy03Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The DuneBuggy03 compass is enabled");
+                
             } // close if not _inDuneBuggy03 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
         } // close private void OnTriggerStay Collider other

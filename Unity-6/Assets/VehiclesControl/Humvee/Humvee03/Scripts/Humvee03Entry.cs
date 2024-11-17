@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The humvee 03 compass")]
+            // Humvee03Compass _humvee03Compass
+            [SerializeField] private Humvee03Compass _humvee03Compass;  
+
+        //public static Humvee03Entry _humvee03Entry;
         
         // private void Start
         private void Start() 
         {
+            //_humvee03Entry = this;
+            
             // _humvee03Script is GetComponent Humvee03Controller
             _humvee03Script = GetComponent<Humvee03Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _humvee03Compass enabled is false
+            _humvee03Compass.enabled = false;
+
+            // _humvee03Compass compassEnabled is false
+            _humvee03Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The Humvee03 compass is disabled");
 
         } // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inHumvee03 is false
                 _inHumvee03 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _humvee03Compass enabled is false
+                _humvee03Compass.enabled = false;
+
+                // _humvee03Compass compassEnabled is false
+                _humvee03Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Humvee03 compass is disabled");         
 
             } // close if _inHumvee03 and Input GetKey KeyCode _exitKey
 
@@ -196,6 +252,26 @@ namespace VehiclesControl
 
                 // _inHumvee03 is true
                 _inHumvee03 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _humvee03Compass enabled is true
+                _humvee03Compass.enabled = true;
+
+                // _humvee03Compass compassEnabled is true
+                _humvee03Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Humvee03 compass is enabled");                
 
             } // close if not _inHumvee03 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 

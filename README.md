@@ -34,6 +34,16 @@ Vehicles Currently "Completed" & Included: (total: 42)
 * Tank US (100% completed) (total: 6)
 
 
+
+Other Currently "Completed" & Included:
+---------------------------------------
+
+
+* Player & Vehicles Compass
+
+
+ 
+
 Vehicles Currently "In Progress" & Not Yet Included:
 ----------------------------------------------------
 
@@ -48,7 +58,6 @@ Other Current Possibles "In Progress" & Not Yet Included:
 Possible future additions: (if and or when my limited free time and desire may allow)
 
 
-* Player & Vehicles Compass (50% Completed) coming Soon..
 * Gas Station / Fuel System (0% Completed) coming TBA...
 * Engine Audio (0% Completed) coming TBA...
 * Horn Audio (0% Completed) coming TBA...

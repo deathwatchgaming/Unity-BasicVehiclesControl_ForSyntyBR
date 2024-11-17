@@ -34,6 +34,15 @@ Vehicles Currently "Completed" & Included: (total: 42)
 * Tank US (100% completed) (total: 6)
 
 
+
+Other Currently "Completed" & Included:
+---------------------------------------
+
+
+* Player & Vehicles Compass
+
+
+ 
 Vehicles Currently "In Progress" & Not Yet Included:
 ----------------------------------------------------
 
@@ -47,7 +56,7 @@ Other Current Possibles "In Progress" & Not Yet Included:
 
 Possible future additions: (if and or when my limited free time and desire may allow)
 
-* Player & Vehicles Compass (50% Completed) coming Soon..
+
 * Gas Station / Fuel System (0% Completed) coming TBA...
 * Engine Audio (0% Completed) coming TBA...
 * Horn Audio (0% Completed) coming TBA...
@@ -708,4 +717,281 @@ Tank US: (total: 6)
 
 
 * All TankUS(s) in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/VehiclesControl/TankUS/Documentation/AllTankUSControllers-wEntry-Documentation.txt
+
+
+
+
+Player and Vehicles Compass:
+----------------------------
+
+
+All vehicles with entry:
+
+* All Vehicles with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
+
+* All Vehicles types in scene with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Documentation/Compass-2-Documentation.txt
+
+* All Armored Trucks with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/Compass-Documentation.txt
+
+* All Dune Buggys with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/Compass-Documentation.txt
+
+* All Humvees with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Compass-Documentation.txt
+
+* All Sedans with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Compass-Documentation.txt
+
+* All Six Wheel Trucks with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/Compass-Documentation.txt
+
+* All Tank RUs with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/Compass-Documentation.txt
+
+* All Tank USs with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/Compass-Documentation.txt
+
+
+Individual Vehicles:
+
+ArmoredTruck:
+
+Vehicles with entry:
+
+
+* ArmoredTruck 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck01-Individual-Compass-Documentation.txt
+
+* ArmoredTruck 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck02-Individual-Compass-Documentation.txt
+
+* ArmoredTruck 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck03-Individual-Compass-Documentation.txt
+
+* ArmoredTruck 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck04-Individual-Compass-Documentation.txt
+
+* ArmoredTruck 05 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck05-Individual-Compass-Documentation.txt
+
+* ArmoredTruck 06 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck06-Individual-Compass-Documentation.txt
+
+
+
+Vehicles without entry:
+
+* ArmoredTruck 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck01-Controller-Only-Compass-Documentation.txt
+
+* ArmoredTruck 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck02-Controller-Only-Compass-Documentation.txt
+
+* ArmoredTruck 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck03-Controller-Only-Compass-Documentation.txt
+
+* ArmoredTruck 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck04-Controller-Only-Compass-Documentation.txt
+
+* ArmoredTruck 05 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck05-Controller-Only-Compass-Documentation.txt
+
+* ArmoredTruck 06 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/ArmoredTruck/Documentation/ArmoredTruck06-Controller-Only-Compass-Documentation.txt
+
+
+
+DuneBuggy:
+
+Vehicles with entry:
+
+
+* DuneBuggy 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy01-Individual-Compass-Documentation.txt
+
+* DuneBuggy 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy02-Individual-Compass-Documentation.txt
+
+* DuneBuggy 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy03-Individual-Compass-Documentation.txt
+
+* DuneBuggy 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy04-Individual-Compass-Documentation.txt
+
+* DuneBuggy 05 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy05-Individual-Compass-Documentation.txt
+
+* DuneBuggy 06 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy06-Individual-Compass-Documentation.txt
+
+
+
+Vehicles without entry:
+
+* DuneBuggy 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy01-Controller-Only-Compass-Documentation.txt
+
+* DuneBuggy 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy02-Controller-Only-Compass-Documentation.txt
+
+* DuneBuggy 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy03-Controller-Only-Compass-Documentation.txt
+
+* DuneBuggy 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy04-Controller-Only-Compass-Documentation.txt
+
+* DuneBuggy 05 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy05-Controller-Only-Compass-Documentation.txt
+
+* DuneBuggy 06 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/DuneBuggy/Documentation/DuneBuggy06-Controller-Only-Compass-Documentation.txt
+
+
+
+Humvee:
+
+Vehicles with entry:
+
+
+* Humvee 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee01-Individual-Compass-Documentation.txt
+
+* Humvee 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee02-Individual-Compass-Documentation.txt
+
+* Humvee 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee03-Individual-Compass-Documentation.txt
+
+* Humvee 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee04-Individual-Compass-Documentation.txt
+
+* Humvee 05 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee05-Individual-Compass-Documentation.txt
+
+* Humvee 06 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee06-Individual-Compass-Documentation.txt
+
+
+
+Vehicles without entry:
+
+* Humvee 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee01-Controller-Only-Compass-Documentation.txt
+
+* Humvee 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee02-Controller-Only-Compass-Documentation.txt
+
+* Humvee 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee03-Controller-Only-Compass-Documentation.txt
+
+* Humvee 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee04-Controller-Only-Compass-Documentation.txt
+
+* Humvee 05 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee05-Controller-Only-Compass-Documentation.txt
+
+* Humvee 06 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Humvee/Documentation/Humvee06-Controller-Only-Compass-Documentation.txt
+
+
+
+Sedan:
+
+Vehicles with entry:
+
+
+* Sedan 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan01-Individual-Compass-Documentation.txt
+
+* Sedan 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan02-Individual-Compass-Documentation.txt
+
+* Sedan 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan03-Individual-Compass-Documentation.txt
+
+* Sedan 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan04-Individual-Compass-Documentation.txt
+
+* Sedan 05 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan05-Individual-Compass-Documentation.txt
+
+* Sedan 06 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan06-Individual-Compass-Documentation.txt
+
+
+
+Vehicles without entry:
+
+* Sedan 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan01-Controller-Only-Compass-Documentation.txt
+
+* Sedan 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan02-Controller-Only-Compass-Documentation.txt
+
+* Sedan 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan03-Controller-Only-Compass-Documentation.txt
+
+* Sedan 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan04-Controller-Only-Compass-Documentation.txt
+
+* Sedan 05 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan05-Controller-Only-Compass-Documentation.txt
+
+* Sedan 06 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Sedan/Documentation/Sedan06-Controller-Only-Compass-Documentation.txt
+
+
+
+SixWheelTruck:
+
+Vehicles with entry:
+
+
+* SixWheelTruck 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck01-Individual-Compass-Documentation.txt
+
+* SixWheelTruck 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck02-Individual-Compass-Documentation.txt
+
+* SixWheelTruck 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck03-Individual-Compass-Documentation.txt
+
+* SixWheelTruck 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck04-Individual-Compass-Documentation.txt
+
+* SixWheelTruck 05 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck05-Individual-Compass-Documentation.txt
+
+* SixWheelTruck 06 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck06-Individual-Compass-Documentation.txt
+
+
+
+Vehicles without entry:
+
+* SixWheelTruck 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck01-Controller-Only-Compass-Documentation.txt
+
+* SixWheelTruck 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck02-Controller-Only-Compass-Documentation.txt
+
+* SixWheelTruck 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck03-Controller-Only-Compass-Documentation.txt
+
+* SixWheelTruck 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck04-Controller-Only-Compass-Documentation.txt
+
+* SixWheelTruck 05 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck05-Controller-Only-Compass-Documentation.txt
+
+* SixWheelTruck 06 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/SixWheelTruck/Documentation/SixWheelTruck06-Controller-Only-Compass-Documentation.txt
+
+
+
+TankRU:
+
+Vehicles with entry:
+
+
+* TankRU 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU01-Individual-Compass-Documentation.txt
+
+* TankRU 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU02-Individual-Compass-Documentation.txt
+
+* TankRU 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU03-Individual-Compass-Documentation.txt
+
+* TankRU 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU04-Individual-Compass-Documentation.txt
+
+* TankRU 05 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU05-Individual-Compass-Documentation.txt
+
+* TankRU 06 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU06-Individual-Compass-Documentation.txt
+
+
+
+Vehicles without entry:
+
+* TankRU 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU01-Controller-Only-Compass-Documentation.txt
+
+* TankRU 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU02-Controller-Only-Compass-Documentation.txt
+
+* TankRU 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU03-Controller-Only-Compass-Documentation.txt
+
+* TankRU 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU04-Controller-Only-Compass-Documentation.txt
+
+* TankRU 05 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU05-Controller-Only-Compass-Documentation.txt
+
+* TankRU 06 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankRU/Documentation/TankRU06-Controller-Only-Compass-Documentation.txt
+
+
+
+TankUS:
+
+Vehicles with entry:
+
+
+* TankUS 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS01-Individual-Compass-Documentation.txt
+
+* TankUS 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS02-Individual-Compass-Documentation.txt
+
+* TankUS 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS03-Individual-Compass-Documentation.txt
+
+* TankUS 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS04-Individual-Compass-Documentation.txt
+
+* TankUS 05 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS05-Individual-Compass-Documentation.txt
+
+* TankUS 06 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS06-Individual-Compass-Documentation.txt
+
+
+
+Vehicles without entry:
+
+* TankUS 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS01-Controller-Only-Compass-Documentation.txt
+
+* TankUS 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS02-Controller-Only-Compass-Documentation.txt
+
+* TankUS 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS03-Controller-Only-Compass-Documentation.txt
+
+* TankUS 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS04-Controller-Only-Compass-Documentation.txt
+
+* TankUS 05 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS05-Controller-Only-Compass-Documentation.txt
+
+* TankUS 06 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/TankUS/Documentation/TankUS06-Controller-Only-Compass-Documentation.txt
+
+
+
+
 
