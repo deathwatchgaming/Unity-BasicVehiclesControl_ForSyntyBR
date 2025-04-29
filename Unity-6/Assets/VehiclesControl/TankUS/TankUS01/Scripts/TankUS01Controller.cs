@@ -272,21 +272,6 @@ namespace VehiclesControl
 			// float _rigidbodyMass is 7000
 			[SerializeField] private float _rigidbodyMass = 7000f;
 
-			// _currentAcceleration is 0
-			private float _currentAcceleration = 0f;
-
-			// _currentBrakeForce is 0
-			private float _currentBrakeForce = 0f;
-
-			// _barrelElevation is 0
-			private float _barrelElevation = 0f;		
-
-			// Vector3 _tankUS01Rotation
-			private Vector3 _tankUS01BodyRotation;
-
-			// Vector3 _tankUS01TurretRotation
-			private Vector3 _tankUS01TurretRotation;
-
 		// Speed
 		[Header("Speed")]
 
@@ -297,6 +282,21 @@ namespace VehiclesControl
 			[Tooltip("The maximum speed amount")]
 			// float _maxSpeed
 			[SerializeField] private float _maxSpeed = 180;	
+
+		// _currentAcceleration is 0
+		private float _currentAcceleration = 0f;
+
+		// _currentBrakeForce is 0
+		private float _currentBrakeForce = 0f;
+
+		// _barrelElevation is 0
+		private float _barrelElevation = 0f;		
+
+		// Vector3 _tankUS01Rotation
+		private Vector3 _tankUS01BodyRotation;
+
+		// Vector3 _tankUS01TurretRotation
+		private Vector3 _tankUS01TurretRotation;
 
 		// private void Awake
 		private void Awake()
@@ -350,28 +350,70 @@ namespace VehiclesControl
 		// private void FixedUpdate
 		private void FixedUpdate()
 		{
+			// Handle Acceleration
+			HandleAcceleration();
+
+			// Handle Braking
+			HandleBraking();
+
+			// Update Wheel Meshes
+			UpdateWheelMeshes();
+
+		} // close private void FixedUpdate
+
+		// private void HandleSpeed
+		private void HandleSpeed()
+		{
+			// Take care of speed unit type and max speed
+
+			// float _speed
+			float _speed = _rigidbody.linearVelocity.magnitude;
+
+			// _speedType equals TankUS01SpeedType.mph
+			if (_speedType == TankUS01SpeedType.mph)
+			{
+				// 2.23694 is the constant to convert a value from m/s to mph
+
+				// _speed
+				_speed *= 2.23694f;
+
+				// if _speed > _maxSpeed
+				if (_speed > _maxSpeed)
+				{
+					// _rigidbody.velocity
+					_rigidbody.linearVelocity = (_maxSpeed/2.23694f) * _rigidbody.linearVelocity.normalized;
+
+				} // close if _speed > _maxSpeed
+                        
+			} // close if _speedType equals TankUS01SpeedType.mph
+
+			// else if _speedType equals TankUS01SpeedType.kmh
+			else if (_speedType == TankUS01SpeedType.kmh)
+			{
+				// 3.6 is the constant to convert a value from m/s to km/h
+				
+				// _speed
+				_speed *= 3.6f;
+
+				// if _speed > _maxSpeed
+				if (_speed > _maxSpeed)
+				{
+					// _rigidbody.velocity
+					_rigidbody.linearVelocity = (_maxSpeed/3.6f) * _rigidbody.linearVelocity.normalized;
+
+				} // close if _speed > _maxSpeed
+                       
+			} // close else if _speedType equals TankUS01SpeedType.kmh
+            
+		} // close private void HandleSpeed
+		
+		// private void HandleAcceleration
+		private void HandleAcceleration()
+		{
 			// Get the forward and reverse acceleration from vertical axis (W and S keys)
 	        
 			// _currentAcceleration is _acceleration times Input GetAxis Vertical
 			_currentAcceleration = _acceleration * Input.GetAxis(_verticalMoveInput);
-
-			// If we are pressing the _brakeKey then give currentBrakingForce a value
-
-			// if Input GetKey KeyCode _brakeKey
-			if (Input.GetKey(_brakeKey))
-			{
-				// _currentBrakeForce is _brakingForce
-				_currentBrakeForce = _brakingForce;
-
-			} // close if Input GetKey KeyCode _brakeKey
-	        
-			// else 
-			else
-			{
-				// _currentBrakeForce is 0
-				_currentBrakeForce = 0f;
-
-			} // close else
 
 			// Apply acceleration to the wheels
 
@@ -437,6 +479,29 @@ namespace VehiclesControl
 			// _right09 motorTorque is _currentAcceleration
 			_right09.motorTorque = _currentAcceleration;
 
+		} // close private void HandleAcceleration
+
+		// private void HandleBraking
+		private void HandleBraking()
+		{
+			// If we are pressing the _brakeKey then give currentBrakingForce a value
+
+			// if Input GetKey KeyCode _brakeKey
+			if (Input.GetKey(_brakeKey))
+			{
+				// _currentBrakeForce is _brakingForce
+				_currentBrakeForce = _brakingForce;
+
+			} // close if Input GetKey KeyCode _brakeKey
+	        
+			// else 
+			else
+			{
+				// _currentBrakeForce is 0
+				_currentBrakeForce = 0f;
+
+			} // close else
+
 			// Apply braking force to all of the wheels
 
 			// Left Wheels
@@ -495,8 +560,45 @@ namespace VehiclesControl
 			_right08.brakeTorque = _currentBrakeForce;
 
 			// _right09 brakeTorque is _currentBrakeForce
-			_right09.brakeTorque = _currentBrakeForce;	
+			_right09.brakeTorque = _currentBrakeForce;
+			
+		} // close private void HandleBraking
 
+		// private void HandleSteering
+		private void HandleSteering()
+		{
+			// Take care of the tank body steering
+		
+			// _tankUS01Rotation.transform.eulerAngles is _tankUS01Rotation
+			_tankUS01Body.transform.eulerAngles = _tankUS01BodyRotation;
+
+			// _tankUS01Rotation.y is Input GetAxis _horizontalMoveInput times _tankUS01RotationSpeed
+			_tankUS01BodyRotation.y += Input.GetAxis(_horizontalMoveInput) * _tankUS01RotationSpeed;
+
+			// Take care of the tank turret steering
+		
+			// _tankUS01Turret.transform.eulerAngles is _tankUS01TurretRotation
+			_tankUS01Turret.transform.eulerAngles = _tankUS01TurretRotation;
+
+			// _tankUS01TurretRotation.y is Input GetAxis _mouseXInput times _turretRotationSpeed
+			_tankUS01TurretRotation.y += Input.GetAxis(_mouseXInput) * _turretRotationSpeed;
+
+			// Take care of the tank barrel elevation control
+            
+			// _barrelVert is Input GetAxis _mouseYInput
+			float _barrelVert = Input.GetAxis(_mouseYInput);
+
+			// _barrelElevation is Mathf Clamp _barrelElevation plus _barrelVert, _barrelMin, _barrelMax
+			_barrelElevation = Mathf.Clamp(_barrelElevation+_barrelVert, _barrelMin, _barrelMax);
+
+			// _tankUS01Barrel.localRotation is Quaternion Euler _barrelElevation, 0, 0
+			_tankUS01Barrel.localRotation = Quaternion.Euler(_barrelElevation, 0, 0);
+
+		} // close private void HandleSteering
+
+		// private void UpdateWheelMeshes
+		private void UpdateWheelMeshes()
+		{
 			// Update the wheel meshes
 
 			// Left Wheels
@@ -555,9 +657,9 @@ namespace VehiclesControl
 			UpdateRightWheel(_right08, _right08Transform); 
 
 			// UpdateRightWheel _right09 _right09Transform
-			UpdateRightWheel(_right09, _right09Transform); 
+			UpdateRightWheel(_right09, _right09Transform);
 
-		} // close private void FixedUpdate
+		} // close private void UpdateWheelMeshes
 
 		// private void UpdateLeftWheel WheelCollider _leftCollider Transform _leftTransform
 		private void UpdateLeftWheel(WheelCollider _leftCollider, Transform _leftTransform)
@@ -606,84 +708,6 @@ namespace VehiclesControl
 			_rightTransform.rotation = _rightRotation;
 
 		} // close private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
-
-		// private void HandleSpeed
-		private void HandleSpeed()
-		{
-			// Take care of speed unit type and max speed
-
-			// float _speed
-			float _speed = _rigidbody.linearVelocity.magnitude;
-
-			// _speedType equals TankUS01SpeedType.mph
-			if (_speedType == TankUS01SpeedType.mph)
-			{
-				// 2.23694 is the constant to convert a value from m/s to mph
-
-				// _speed
-				_speed *= 2.23694f;
-
-				// if _speed > _maxSpeed
-				if (_speed > _maxSpeed)
-				{
-					// _rigidbody.velocity
-					_rigidbody.linearVelocity = (_maxSpeed/2.23694f) * _rigidbody.linearVelocity.normalized;
-
-				} // close if _speed > _maxSpeed
-                        
-			} // close if _speedType equals TankUS01SpeedType.mph
-
-			// else if _speedType equals TankUS01SpeedType.kmh
-			else if (_speedType == TankUS01SpeedType.kmh)
-			{
-				// 3.6 is the constant to convert a value from m/s to km/h
-				
-				// _speed
-				_speed *= 3.6f;
-
-				// if _speed > _maxSpeed
-				if (_speed > _maxSpeed)
-				{
-					// _rigidbody.velocity
-					_rigidbody.linearVelocity = (_maxSpeed/3.6f) * _rigidbody.linearVelocity.normalized;
-
-				} // close if _speed > _maxSpeed
-                       
-			} // close else if _speedType equals TankUS01SpeedType.kmh
-            
-		} // close private void HandleSpeed
-
-		// private void HandleSteering
-		private void HandleSteering()
-		{						
-			// Take care of the tank body steering
-		
-			// _tankUS01Rotation.transform.eulerAngles is _tankUS01Rotation
-			_tankUS01Body.transform.eulerAngles = _tankUS01BodyRotation;
-
-			// _tankUS01Rotation.y is Input GetAxis _horizontalMoveInput times _tankUS01RotationSpeed
-			_tankUS01BodyRotation.y += Input.GetAxis(_horizontalMoveInput) * _tankUS01RotationSpeed;
-
-			// Take care of the tank turret steering
-		
-			// _tankUS01Turret.transform.eulerAngles is _tankUS01TurretRotation
-			_tankUS01Turret.transform.eulerAngles = _tankUS01TurretRotation;
-
-			// _tankUS01TurretRotation.y is Input GetAxis _mouseXInput times _turretRotationSpeed
-			_tankUS01TurretRotation.y += Input.GetAxis(_mouseXInput) * _turretRotationSpeed;
-
-			// Take care of the tank barrel elevation control
-            
-			// _barrelVert is Input GetAxis _mouseYInput
-			float _barrelVert = Input.GetAxis(_mouseYInput);
-
-			// _barrelElevation is Mathf Clamp _barrelElevation plus _barrelVert, _barrelMin, _barrelMax
-			_barrelElevation = Mathf.Clamp(_barrelElevation+_barrelVert, _barrelMin, _barrelMax);
-
-			// _tankUS01Barrel.localRotation is Quaternion Euler _barrelElevation, 0, 0
-			_tankUS01Barrel.localRotation = Quaternion.Euler(_barrelElevation, 0, 0);
-            
-		} // close private void HandleSteering
 
 	} // close public class TankUS01Controller
 

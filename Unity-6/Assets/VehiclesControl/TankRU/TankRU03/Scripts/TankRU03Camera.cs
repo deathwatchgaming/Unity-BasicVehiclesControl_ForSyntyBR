@@ -1,5 +1,5 @@
 /*
- * File: Tank RU 03 Camera
+ * File: TankRU 03 Camera
  * Name: TankRU03Camera.cs
  * Author: DeathwatchGaming
  * License: MIT
@@ -18,7 +18,7 @@ namespace VehiclesControl
 		// Transforms
 		[Header("Transforms")]
 
-			[Tooltip("The tank ru 03 transform")]
+			[Tooltip("The TankRU 03 transform")]
 			// Transform _tankRU03
 			[SerializeField] private Transform _tankRU03;
         

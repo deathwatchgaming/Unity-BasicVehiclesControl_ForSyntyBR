@@ -120,15 +120,6 @@ namespace VehiclesControl
 			// float _rigidbodyMass is 3000
 			[SerializeField] private float _rigidbodyMass = 3000f;
 
-			// _currentAcceleration is 0
-			private float _currentAcceleration = 0f;
-
-			// _currentBrakeForce is 0 
-			private float _currentBrakeForce = 0f;
-		    
-			// _currentTurnAngle is 0 
-			private float _currentTurnAngle = 0f;
-
 		// Speed
 		[Header("Speed")]
 
@@ -139,7 +130,16 @@ namespace VehiclesControl
 			[Tooltip("The maximum speed amount")]
 			// float _maxSpeed
 			[SerializeField] private float _maxSpeed = 180;		
-	    
+
+		// _currentAcceleration is 0
+		private float _currentAcceleration = 0f;
+
+		// _currentBrakeForce is 0 
+		private float _currentBrakeForce = 0f;
+		    
+		// _currentTurnAngle is 0 
+		private float _currentTurnAngle = 0f;
+
 		// private void Awake
 		private void Awake()
 		{
@@ -178,11 +178,93 @@ namespace VehiclesControl
 		// private void FixedUpdate
 		private void FixedUpdate()
 		{
+			// Handle Acceleration
+			HandleAcceleration();
+
+			// Handle Braking
+			HandleBraking();
+
+			// Handle Steering
+			HandleSteering();
+
+			// Update Wheel Meshes
+			UpdateWheelMeshes();
+
+		} // close private void FixedUpdate
+
+		// private void HandleSpeed
+		private void HandleSpeed()
+		{
+			// Take care of speed unit type and max speed
+
+			// float _speed
+			float _speed = _rigidbody.linearVelocity.magnitude;
+
+			// _speedType equals ArmoredTruck06SpeedType.mph
+			if (_speedType == ArmoredTruck06SpeedType.mph)
+			{
+				// 2.23694 is the constant to convert a value from m/s to mph
+
+				// _speed
+				_speed *= 2.23694f;
+
+				// if _speed > _maxSpeed
+				if (_speed > _maxSpeed)
+				{
+					// _rigidbody.velocity
+					_rigidbody.linearVelocity = (_maxSpeed/2.23694f) * _rigidbody.linearVelocity.normalized;
+
+				} // close if _speed > _maxSpeed
+                        
+			} // close if _speedType equals ArmoredTruck06SpeedType.mph
+
+			// else if _speedType equals ArmoredTruck06SpeedType.kmh
+			else if (_speedType == ArmoredTruck06SpeedType.kmh)
+			{
+				// 3.6 is the constant to convert a value from m/s to km/h
+				
+				// _speed
+				_speed *= 3.6f;
+
+				// if _speed > _maxSpeed
+				if (_speed > _maxSpeed)
+				{
+					// _rigidbody.velocity
+					_rigidbody.linearVelocity = (_maxSpeed/3.6f) * _rigidbody.linearVelocity.normalized;
+
+				} // close if _speed > _maxSpeed
+                       
+			} // close else if _speedType equals ArmoredTruck06SpeedType.kmh
+
+		} // close private void HandleSpeed
+		
+		// private void HandleAcceleration
+		private void HandleAcceleration()
+		{
 			// Get the forward and reverse acceleration from vertical axis (W and S keys)
 	        
 			// _currentAcceleration is _acceleration times Input GetAxis Vertical
 			_currentAcceleration = _acceleration * Input.GetAxis(_verticalMoveInput);
 
+			// Apply acceleration to all of the wheels
+	        
+			// frontLeft motorTorque is _currentAcceleration
+			_frontLeft.motorTorque = _currentAcceleration;
+
+			// _frontRight motorTorque is _currentAcceleration
+			_frontRight.motorTorque = _currentAcceleration;
+
+			// _rearLeft motorTorque is _currentAcceleration
+			_rearLeft.motorTorque = _currentAcceleration;
+
+			// _rearRight motorTorque is _currentAcceleration
+			_rearRight.motorTorque = _currentAcceleration;
+
+		} // close private void HandleAcceleration
+
+		// private void HandleBraking
+		private void HandleBraking()
+		{
 			// If we are pressing the _brakeKey give _currentBrakingForce a value
 
 			// if Input GetKey KeyCode _brakeKey
@@ -201,20 +283,6 @@ namespace VehiclesControl
 
 			} // close else
 
-			// Apply acceleration to all of the wheels
-	        
-			// frontLeft motorTorque is _currentAcceleration
-			_frontLeft.motorTorque = _currentAcceleration;
-
-			// _frontRight motorTorque is _currentAcceleration
-			_frontRight.motorTorque = _currentAcceleration;
-
-			// _rearLeft motorTorque is _currentAcceleration
-			_rearLeft.motorTorque = _currentAcceleration;
-
-			// _rearRight motorTorque is _currentAcceleration
-			_rearRight.motorTorque = _currentAcceleration;
-
 			// Apply braking force to all of the wheels
 
 			// _frontLeft brakeTorque is _currentBrakeForce
@@ -229,6 +297,11 @@ namespace VehiclesControl
 			// _rearRight brakeTorque is _currentBrakeForce
 			_rearRight.brakeTorque = _currentBrakeForce;
 
+		} // close private void HandleBraking
+
+		// private void HandleSteering
+		private void HandleSteering()
+		{
 			// Take care of the front wheels steering
 
 			// _currentTurnAngle is _maxTurnAngle times Input GetAxis Horizontal
@@ -240,7 +313,12 @@ namespace VehiclesControl
 			// _frontRight steerAngle is _currentTurnAngle
 			_frontRight.steerAngle = _currentTurnAngle;
 
-			// Update the wheel meshes
+		} // close private void HandleSteering
+
+		// private void UpdateWheelMeshes
+		private void UpdateWheelMeshes()
+		{
+ 			// Update the wheel meshes
 
 			// UpdateLeftWheel _frontLeft _frontLeftTransform
 			UpdateLeftWheel(_frontLeft, _frontLeftTransform);
@@ -253,8 +331,8 @@ namespace VehiclesControl
 	        
 			// UpdateRightWheel _rearRight _rearRightTransform
 			UpdateRightWheel(_rearRight, _rearRightTransform);
-	                      
-		} // close private void FixedUpdate
+
+		} // close private void UpdateWheelMeshes
 
 		// private void UpdateLeftWheel WheelCollider _leftCollider Transform _leftTransform
 		private void UpdateLeftWheel(WheelCollider _leftCollider, Transform _leftTransform)
@@ -303,52 +381,6 @@ namespace VehiclesControl
 			_rightTransform.rotation = _rightRotation;
 
 		} // close private void UpdateRightWheel WheelCollider _rightCollider Transform _rightTransform
-
-		// private void HandleSpeed
-		private void HandleSpeed()
-		{
-			// Take care of speed unit type and max speed
-
-			// float _speed
-			float _speed = _rigidbody.linearVelocity.magnitude;
-
-			// _speedType equals ArmoredTruck06SpeedType.mph
-			if (_speedType == ArmoredTruck06SpeedType.mph)
-			{
-				// 2.23694 is the constant to convert a value from m/s to mph
-
-				// _speed
-				_speed *= 2.23694f;
-
-				// if _speed > _maxSpeed
-				if (_speed > _maxSpeed)
-				{
-					// _rigidbody.velocity
-					_rigidbody.linearVelocity = (_maxSpeed/2.23694f) * _rigidbody.linearVelocity.normalized;
-
-				} // close if _speed > _maxSpeed
-                        
-			} // close if _speedType equals ArmoredTruck06SpeedType.mph
-
-			// else if _speedType equals ArmoredTruck06SpeedType.kmh
-			else if (_speedType == ArmoredTruck06SpeedType.kmh)
-			{
-				// 3.6 is the constant to convert a value from m/s to km/h
-				
-				// _speed
-				_speed *= 3.6f;
-
-				// if _speed > _maxSpeed
-				if (_speed > _maxSpeed)
-				{
-					// _rigidbody.velocity
-					_rigidbody.linearVelocity = (_maxSpeed/3.6f) * _rigidbody.linearVelocity.normalized;
-
-				} // close if _speed > _maxSpeed
-                       
-			} // close else if _speedType equals ArmoredTruck06SpeedType.kmh
-
-		} // close private void HandleSpeed
 
 	} // close public class ArmoredTruck06Controller
 
