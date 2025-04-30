@@ -22,9 +22,12 @@ The intention of these releases due to only being scripts for usage with models 
 
 NOTE: This project was developed while / for using Unity 2021+ & 2022+ & Unity 6
 
-NOTE: This currently still uses the Old Input System, so as such depending on
-what version of Unity you may be using it may be necessary to make sure such
-or both is enabled in project settings.
+
+Old_Input_System Directory NOTE:
+
+Provided variants: ( 2021+ / 2022+ variant & Unity 6+ variant )
+
+NOTE: These currently still use the "Old Input System", so as such depending on what version of Unity you may be using it may be necessary to make sure such or both is enabled in project settings.
 
 
 Vehicles Currently "Completed" & Included: (total: 42)
@@ -127,8 +130,11 @@ Manual Setup Instruction:
 Simply follow the linkages found below  for documentation information / instruction respective to the version say for example either Unity 2021+ & Unity 2022+ or Unity 6....
 
 
-* Unity 20221+ & 2022+ => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/tree/main/Unity-2021-2022
+Old_Input_System Variants:
 
 
-* Unity 6 => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Unity-6
+* Unity 2021+ & 2022+ => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/tree/main/Old_Input_System/Unity-2021-2022
+
+
+* Unity 6 => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/Old_Input_System/Unity-6
 
