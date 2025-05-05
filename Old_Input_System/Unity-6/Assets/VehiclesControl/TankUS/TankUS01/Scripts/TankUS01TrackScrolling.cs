@@ -96,7 +96,8 @@ namespace VehiclesControl
             foreach (var _meshRenderer in _trackRenderers)
             {
                 // _meshRenderer materials[] mainTexturOffset is Vector2 _offset, 0f
-                _meshRenderer.materials[0].mainTextureOffset = new Vector2(_offset, 0f);
+                //_meshRenderer.materials[0].mainTextureOffset = new Vector2(_offset, 0f);
+                _meshRenderer.materials[0].mainTextureOffset = new Vector2(0f, _offset);
 
             } // close foreach var _meshRenderer in _trackRenderers
 
