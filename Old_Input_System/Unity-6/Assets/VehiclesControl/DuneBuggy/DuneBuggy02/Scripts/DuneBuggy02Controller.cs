@@ -120,15 +120,6 @@ namespace VehiclesControl
 			// float _rigidbodyMass is 1500
 			[SerializeField] private float _rigidbodyMass = 1500f;			
 
-			// _currentAcceleration is 0
-			private float _currentAcceleration = 0f;
-
-			// _currentBrakeForce is 0
-			private float _currentBrakeForce = 0f;
-		    
-			// _currentTurnAngle is 0 
-			private float _currentTurnAngle = 0f;
-
 		// Speed
 		[Header("Speed")]
 
@@ -140,6 +131,15 @@ namespace VehiclesControl
 			// float _maxSpeed
 			[SerializeField] private float _maxSpeed = 180;	
 
+		// _currentAcceleration is 0
+		private float _currentAcceleration = 0f;
+
+		// _currentBrakeForce is 0
+		private float _currentBrakeForce = 0f;
+		    
+		// _currentTurnAngle is 0 
+		private float _currentTurnAngle = 0f;
+			
 		// private void Awake
 		private void Awake()
 		{
