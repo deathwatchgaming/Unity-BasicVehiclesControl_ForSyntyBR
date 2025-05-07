@@ -28,6 +28,9 @@ Provided variant: ( 2021+ / 2022+ variant)
 NOTE: This currently uses the "New Input System", so as such depending on what version of Unity you may be using it may be necessary to make sure such or both is enabled in project settings.
 
 
+New Input System Documentations NOTE: Currently the included documentations are from the old files that still need editing to reflect any changes in setup for new input usages, as such there are many files to edit thus it will be time consuming and will be completed if and or when limited free time allows. In the meantime onbe can simply ignore and parts related to input customizations and then refer to Input Actions mentioned below for now...
+
+
 New_Input_System Directory Documentations NOTE: If there is any confusion with any documentation during setup in regards to "Input Actions", just note the following "Input Action Assets" found below:
 
 For player:
