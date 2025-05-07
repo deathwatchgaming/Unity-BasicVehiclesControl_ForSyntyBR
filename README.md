@@ -224,4 +224,6 @@ New_Input_System Variants:
 * Unity 2021+ & 2022+ => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/tree/main/New_Input_System/Unity-2021-2022
 
 
-* Unity 6 => Files, ReadMe, docs: coming soon..
+* Unity 6 => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyBR/blob/main/New_Input_System/Unity-6
+
+

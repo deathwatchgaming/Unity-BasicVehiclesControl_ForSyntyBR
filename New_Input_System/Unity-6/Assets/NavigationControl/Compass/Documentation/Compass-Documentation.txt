@@ -1,0 +1,1857 @@
+Player & Vehicles Compasses Setup
+--------------------------------------------------------------------------------
+
+
+Manual Setup Instruction:
+-------------------------
+
+
+* Simply follow the instruction for manual setup found below.
+
+
+------------------------------------------------------------------------------------
+
+Step 1: Interface -> Canvas
+
+------------------------------------------------------------------------------------
+
+
+1.A) Inside "Interface", modify UI: -> "Canvas"
+
+Note: You can set your canvas up how you want, that is why I did not comment much 
+      on such. Same goes fo uvRect on things within the UI canvas as that is perhaps 
+      personal prefs and for these instructions one assumed one would just start with 
+      the default middle center such and tweak such from there.
+
+     * Such is up to the end-user and their prefs, but just so noone says I left it 
+     out, so here is just one "Canvas" example:
+
+      UI Scaler: 
+      ----------
+
+      UI Scale Mode: Scale With Screen Size
+      Reference Resolution: X: 1920 Y: 1080
+      Match: 0 (Width)
+      Reference Pixels Per: 1920
+
+      
+1.B) Inside the "Canvas", create a new empty called: "Compass"
+     * Note: This will house all the compass related stuff
+
+1.C) Add / Modify Details for "Compass":
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: 357 Y: -229 Z: 0
+Width: 100
+Height: 100     
+
+
+------------------------------------------------------------------------------------
+
+Step 2: Add: Text Mesh Pro Text
+
+------------------------------------------------------------------------------------
+
+
+2.A) Inside "Compass", create a UI: -> "Text Mesh Pro (TMP)" and rename it 
+     to: "Compass_DegreeText" *
+
+     * Layer should also be "UI"
+
+2.B) Add / Modify Details for "Compass_DegreeText":
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 338 Z: 0
+Width: 200
+Height: 200
+
+Text: 360
+Font: LiberationSans SDF
+Material Preset: LiberationSans SDF Material
+Font Style: Bold
+Font Size: 48
+Vertex Color: Hex: #FFFFFF
+Alignment: Center & Top
+Overflow: Overflow
+
+
+------------------------------------------------------------------------------------
+
+Step 3: Add: RawImage 1
+
+------------------------------------------------------------------------------------
+
+
+3.A) Inside "Compass", create a UI: -> RawImage
+
+3.B) Rename the "RawImage" to: "Compass_Background"
+
+3.C) In Inspector Edit the following as follows:
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 486 Z: 0
+Width: 1152
+Height: 77
+Scale: X: 0.875 Y: 1 Z: 1
+
+3.D)Add / Import the actual image to your project: "CompassBackground.png"
+
+Change the folllowing settings as such:
+
+ Texture Type: Sprite (2D and UI)
+ Texture Shape: 2D
+ Compression: None
+
+ Then select "Apply" to apply the changes.
+
+ 3.E) Lastly, now we need to add the actual image we just imported.
+
+      So go back into Interface -> Canvas - Compass -> "Compass_Background"
+      via "Inspector" and find: "RawImage"
+
+      Change the folllowing settings as such:
+
+ Texture: "CompassBackground.png"
+
+ Color: set "rgba" as follows:
+
+ R: 127
+ G: 127
+ B: 127
+ A: 25     
+
+
+------------------------------------------------------------------------------------
+
+Step 4: Add: RawImage 2
+
+------------------------------------------------------------------------------------
+
+
+4.A) Inside "Compass", create a UI: -> RawImage
+
+4.B) Rename the "RawImage" to: "Compass_Foreground"
+
+4.C) In Inspector Edit the following as follows:
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 486 Z: 0
+Width: 1152
+Height: 77
+Scale: X: 1 Y: 1 Z: 1
+
+4.D) Add / Import the actual image to your project: "CompassForeground.png"
+
+Change the folllowing settings as such:
+
+ Texture Type: Sprite (2D and UI)
+ Texture Shape: 2D
+ Compression: None
+ Wrap Mode: Repeat * 
+
+ * Note: This is very important for compass to rotate / display correctly!
+
+ Then select "Apply" to apply the changes.
+
+ 4.E) Lastly, now we need to add the actual image we just imported.
+
+      So go back into Interface -> Canvas -> Compass -> "Compass_Foreground"
+      via "Inspector" and find: "RawImage"
+
+      Change the folllowing settings as such:
+
+ Texture: "CompassForeground.png"    
+
+
+------------------------------------------------------------------------------------
+
+Step 5: Add: Component / Script: PlayerCompass.cs
+
+------------------------------------------------------------------------------------
+
+
+5.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "PlayerCompass.cs"
+
+5.B) Ok, now fill out the related settings:
+
+For -> PlayerCompass (Script):
+--------------------------------
+
+Script: PlayerCompass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Player: Player (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Check this 
+
+
+------------------------------------------------------------------------------------
+
+Step 6: Add: Component / Script: ArmoredTruck01Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+6.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "ArmoredTruck01Compass.cs"
+
+6.B) Ok, now fill out the related settings:
+
+For -> ArmoredTruck01Compass (Script):
+---------------------------------------
+
+Script: ArmoredTruck01Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+ArmoredTruck 01: ArmoredTruck01 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 7: Add: Component / Script: ArmoredTruck02Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+7.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "ArmoredTruck02Compass.cs"
+
+7.B) Ok, now fill out the related settings:
+
+For -> ArmoredTruck02Compass (Script):
+---------------------------------------
+
+Script: ArmoredTruck02Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+ArmoredTruck 02: ArmoredTruck02 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 8: Add: Component / Script: ArmoredTruck03Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+8.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "ArmoredTruck03Compass.cs"
+
+8.B) Ok, now fill out the related settings:
+
+For -> ArmoredTruck03Compass (Script):
+---------------------------------------
+
+Script: ArmoredTruck03Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+ArmoredTruck 03: ArmoredTruck03 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 9: Add: Component / Script: ArmoredTruck04Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+9.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "ArmoredTruck04Compass.cs"
+
+9.B) Ok, now fill out the related settings:
+
+For -> ArmoredTruck04Compass (Script):
+---------------------------------------
+
+Script: ArmoredTruck04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+ArmoredTruck 04: ArmoredTruck04 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 10: Add: Component / Script: ArmoredTruck05Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+10.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "ArmoredTruck05Compass.cs"
+
+10.B) Ok, now fill out the related settings:
+
+For -> ArmoredTruck05Compass (Script):
+---------------------------------------
+
+Script: ArmoredTruck05Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+ArmoredTruck 05: ArmoredTruck05 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 11: Add: Component / Script: ArmoredTruck06Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+11.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "ArmoredTruck06Compass.cs"
+
+11.B) Ok, now fill out the related settings:
+
+For -> ArmoredTruck06Compass (Script):
+---------------------------------------
+
+Script: ArmoredTruck04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+ArmoredTruck 06: ArmoredTruck06 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 12: Add: Component / Script: DuneBuggy01Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+12.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "DuneBuggy01Compass.cs"
+
+12.B) Ok, now fill out the related settings:
+
+For -> DuneBuggy01Compass (Script):
+---------------------------------------
+
+Script: DuneBuggy01Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+DuneBuggy 01: DuneBuggy01 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 13: Add: Component / Script: DuneBuggy02Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+13.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "DuneBuggy02Compass.cs"
+
+13.B) Ok, now fill out the related settings:
+
+For -> DuneBuggy02Compass (Script):
+---------------------------------------
+
+Script: DuneBuggy02Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+DuneBuggy 02: DuneBuggy02 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 14: Add: Component / Script: DuneBuggy03Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+14.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "DuneBuggy03Compass.cs"
+
+14.B) Ok, now fill out the related settings:
+
+For -> DuneBuggy03Compass (Script):
+---------------------------------------
+
+Script: DuneBuggy03Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+DuneBuggy 03: DuneBuggy03 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 15: Add: Component / Script: DuneBuggy04Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+15.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "DuneBuggy04Compass.cs"
+
+15.B) Ok, now fill out the related settings:
+
+For -> DuneBuggy04Compass (Script):
+---------------------------------------
+
+Script: DuneBuggy04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+DuneBuggy 04: DuneBuggy04 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 16: Add: Component / Script: DuneBuggy05Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+16.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "DuneBuggy05Compass.cs"
+
+16.B) Ok, now fill out the related settings:
+
+For -> DuneBuggy05Compass (Script):
+---------------------------------------
+
+Script: DuneBuggy05Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+DuneBuggy 05: DuneBuggy05 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 17: Add: Component / Script: DuneBuggy06Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+17.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "DuneBuggy06Compass.cs"
+
+17.B) Ok, now fill out the related settings:
+
+For -> DuneBuggy06Compass (Script):
+---------------------------------------
+
+Script: DuneBuggy04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+DuneBuggy 06: DuneBuggy06 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 18: Add: Component / Script: Humvee01Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+18.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Humvee01Compass.cs"
+
+18.B) Ok, now fill out the related settings:
+
+For -> Humvee01Compass (Script):
+---------------------------------------
+
+Script: Humvee01Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Humvee 01: Humvee01 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 19: Add: Component / Script: Humvee02Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+19.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Humvee02Compass.cs"
+
+19.B) Ok, now fill out the related settings:
+
+For -> Humvee02Compass (Script):
+---------------------------------------
+
+Script: Humvee02Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Humvee 02: Humvee02 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 20: Add: Component / Script: Humvee03Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+20.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Humvee03Compass.cs"
+
+20.B) Ok, now fill out the related settings:
+
+For -> Humvee03Compass (Script):
+---------------------------------------
+
+Script: Humvee03Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Humvee 03: Humvee03 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 21: Add: Component / Script: Humvee04Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+21.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Humvee04Compass.cs"
+
+21.B) Ok, now fill out the related settings:
+
+For -> Humvee04Compass (Script):
+---------------------------------------
+
+Script: Humvee04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Humvee 04: Humvee04 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 22: Add: Component / Script: Humvee05Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+22.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Humvee05Compass.cs"
+
+22.B) Ok, now fill out the related settings:
+
+For -> Humvee05Compass (Script):
+---------------------------------------
+
+Script: Humvee05Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Humvee 05: Humvee05 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 23: Add: Component / Script: Humvee06Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+23.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Humvee06Compass.cs"
+
+23.B) Ok, now fill out the related settings:
+
+For -> Humvee06Compass (Script):
+---------------------------------------
+
+Script: Humvee04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Humvee 06: Humvee06 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 24: Add: Component / Script: Sedan01Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+24.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Sedan01Compass.cs"
+
+24.B) Ok, now fill out the related settings:
+
+For -> Sedan01Compass (Script):
+---------------------------------------
+
+Script: Sedan01Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Sedan 01: Sedan01 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 25: Add: Component / Script: Sedan02Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+25.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Sedan02Compass.cs"
+
+25.B) Ok, now fill out the related settings:
+
+For -> Sedan02Compass (Script):
+---------------------------------------
+
+Script: Sedan02Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Sedan 02: Sedan02 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 26: Add: Component / Script: Sedan03Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+26.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Sedan03Compass.cs"
+
+26.B) Ok, now fill out the related settings:
+
+For -> Sedan03Compass (Script):
+---------------------------------------
+
+Script: Sedan03Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Sedan 03: Sedan03 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 27: Add: Component / Script: Sedan04Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+27.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Sedan04Compass.cs"
+
+27.B) Ok, now fill out the related settings:
+
+For -> Sedan04Compass (Script):
+---------------------------------------
+
+Script: Sedan04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Sedan 04: Sedan04 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 28: Add: Component / Script: Sedan05Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+28.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Sedan05Compass.cs"
+
+28.B) Ok, now fill out the related settings:
+
+For -> Sedan05Compass (Script):
+---------------------------------------
+
+Script: Sedan05Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Sedan 05: Sedan05 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 29: Add: Component / Script: Sedan06Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+29.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "Sedan06Compass.cs"
+
+29.B) Ok, now fill out the related settings:
+
+For -> Sedan06Compass (Script):
+---------------------------------------
+
+Script: Sedan04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Sedan 06: Sedan06 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 30: Add: Component / Script: SixWheelTruck01Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+30.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "SixWheelTruck01Compass.cs"
+
+30.B) Ok, now fill out the related settings:
+
+For -> SixWheelTruck01Compass (Script):
+---------------------------------------
+
+Script: SixWheelTruck01Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+SixWheelTruck 01: SixWheelTruck01 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 31: Add: Component / Script: SixWheelTruck02Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+31.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "SixWheelTruck02Compass.cs"
+
+31.B) Ok, now fill out the related settings:
+
+For -> SixWheelTruck02Compass (Script):
+---------------------------------------
+
+Script: SixWheelTruck02Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+SixWheelTruck 02: SixWheelTruck02 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 32: Add: Component / Script: SixWheelTruck03Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+32.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "SixWheelTruck03Compass.cs"
+
+32.B) Ok, now fill out the related settings:
+
+For -> SixWheelTruck03Compass (Script):
+---------------------------------------
+
+Script: SixWheelTruck03Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+SixWheelTruck 03: SixWheelTruck03 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 33: Add: Component / Script: SixWheelTruck04Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+33.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "SixWheelTruck04Compass.cs"
+
+33.B) Ok, now fill out the related settings:
+
+For -> SixWheelTruck04Compass (Script):
+---------------------------------------
+
+Script: SixWheelTruck04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+SixWheelTruck 04: SixWheelTruck04 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 34: Add: Component / Script: SixWheelTruck05Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+34.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "SixWheelTruck05Compass.cs"
+
+34.B) Ok, now fill out the related settings:
+
+For -> SixWheelTruck05Compass (Script):
+---------------------------------------
+
+Script: SixWheelTruck05Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+SixWheelTruck 05: SixWheelTruck05 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 35: Add: Component / Script: SixWheelTruck06Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+35.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "SixWheelTruck06Compass.cs"
+
+35.B) Ok, now fill out the related settings:
+
+For -> SixWheelTruck06Compass (Script):
+---------------------------------------
+
+Script: SixWheelTruck04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+SixWheelTruck 06: SixWheelTruck06 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 36: Add: Component / Script: TankRU01Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+36.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankRU01Compass.cs"
+
+36.B) Ok, now fill out the related settings:
+
+For -> TankRU01Compass (Script):
+---------------------------------------
+
+Script: TankRU01Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankRU 01: TankRU01 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 37: Add: Component / Script: TankRU02Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+37.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankRU02Compass.cs"
+
+37.B) Ok, now fill out the related settings:
+
+For -> TankRU02Compass (Script):
+---------------------------------------
+
+Script: TankRU02Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankRU 02: TankRU02 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 38: Add: Component / Script: TankRU03Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+38.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankRU03Compass.cs"
+
+38.B) Ok, now fill out the related settings:
+
+For -> TankRU03Compass (Script):
+---------------------------------------
+
+Script: TankRU03Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankRU 03: TankRU03 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 39: Add: Component / Script: TankRU04Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+39.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankRU04Compass.cs"
+
+39.B) Ok, now fill out the related settings:
+
+For -> TankRU04Compass (Script):
+---------------------------------------
+
+Script: TankRU04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankRU 04: TankRU04 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 40: Add: Component / Script: TankRU05Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+40.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankRU05Compass.cs"
+
+40.B) Ok, now fill out the related settings:
+
+For -> TankRU05Compass (Script):
+---------------------------------------
+
+Script: TankRU05Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankRU 05: TankRU05 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 41: Add: Component / Script: TankRU06Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+41.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankRU06Compass.cs"
+
+41.B) Ok, now fill out the related settings:
+
+For -> TankRU06Compass (Script):
+---------------------------------------
+
+Script: TankRU04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankRU 06: TankRU06 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 42: Add: Component / Script: TankUS01Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+42.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankUS01Compass.cs"
+
+42.B) Ok, now fill out the related settings:
+
+For -> TankUS01Compass (Script):
+---------------------------------------
+
+Script: TankUS01Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankUS 01: TankUS01 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 43: Add: Component / Script: TankUS02Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+43.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankUS02Compass.cs"
+
+43.B) Ok, now fill out the related settings:
+
+For -> TankUS02Compass (Script):
+---------------------------------------
+
+Script: TankUS02Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankUS 02: TankUS02 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 44: Add: Component / Script: TankUS03Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+44.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankUS03Compass.cs"
+
+44.B) Ok, now fill out the related settings:
+
+For -> TankUS03Compass (Script):
+---------------------------------------
+
+Script: TankUS03Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankUS 03: TankUS03 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 45: Add: Component / Script: TankUS04Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+45.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankUS04Compass.cs"
+
+45.B) Ok, now fill out the related settings:
+
+For -> TankUS04Compass (Script):
+---------------------------------------
+
+Script: TankUS04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankUS 04: TankUS04 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 46: Add: Component / Script: TankUS05Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+46.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankUS05Compass.cs"
+
+46.B) Ok, now fill out the related settings:
+
+For -> TankUS05Compass (Script):
+---------------------------------------
+
+Script: TankUS05Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankUS 05: TankUS05 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 47: Add: Component / Script: TankUS06Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+47.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "TankUS06Compass.cs"
+
+47.B) Ok, now fill out the related settings:
+
+For -> TankUS06Compass (Script):
+---------------------------------------
+
+Script: TankUS04Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+TankUS 06: TankUS06 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Uncheck this 
+
+
+------------------------------------------------------------------------------------
+
+Step 48: Edit Settings in: ArmoredTruck01Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+ArmoredTruck 01 Compass: Compass (ArmoredTruck 01 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 49: Edit Settings in: ArmoredTruck02Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+ArmoredTruck 02 Compass: Compass (ArmoredTruck 02 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 50: Edit Settings in: ArmoredTruck03Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+ArmoredTruck 03 Compass: Compass (ArmoredTruck 03 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 51: Edit Settings in: ArmoredTruck04Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+ArmoredTruck 04 Compass: Compass (ArmoredTruck 04 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 52: Edit Settings in: ArmoredTruck05Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+ArmoredTruck 05 Compass: Compass (ArmoredTruck 05 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 53: Edit Settings in: ArmoredTruck06Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+ArmoredTruck 06 Compass: Compass (ArmoredTruck 06 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 54: Edit Settings in: DuneBuggy01Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+DuneBuggy 01 Compass: Compass (DuneBuggy 01 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 55: Edit Settings in: DuneBuggy02Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+DuneBuggy 02 Compass: Compass (DuneBuggy 02 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 56: Edit Settings in: DuneBuggy03Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+DuneBuggy 03 Compass: Compass (DuneBuggy 03 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 57: Edit Settings in: DuneBuggy04Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+DuneBuggy 04 Compass: Compass (DuneBuggy 04 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 58: Edit Settings in: DuneBuggy05Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+DuneBuggy 05 Compass: Compass (DuneBuggy 05 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 59: Edit Settings in: DuneBuggy06Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+DuneBuggy 06 Compass: Compass (DuneBuggy 06 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 60: Edit Settings in: Humvee01Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Humvee 01 Compass: Compass (Humvee 01 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 61: Edit Settings in: Humvee02Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Humvee 02 Compass: Compass (Humvee 02 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 62: Edit Settings in: Humvee03Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Humvee 03 Compass: Compass (Humvee 03 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 63: Edit Settings in: Humvee04Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Humvee 04 Compass: Compass (Humvee 04 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 64: Edit Settings in: Humvee05Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Humvee 05 Compass: Compass (Humvee 05 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 65: Edit Settings in: Humvee06Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Humvee 06 Compass: Compass (Humvee 06 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 66: Edit Settings in: Sedan01Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Sedan 01 Compass: Compass (Sedan 01 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 67: Edit Settings in: Sedan02Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Sedan 02 Compass: Compass (Sedan 02 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 68: Edit Settings in: Sedan03Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Sedan 03 Compass: Compass (Sedan 03 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 69: Edit Settings in: Sedan04Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Sedan 04 Compass: Compass (Sedan 04 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 70: Edit Settings in: Sedan05Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Sedan 05 Compass: Compass (Sedan 05 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 71: Edit Settings in: Sedan06Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+Sedan 06 Compass: Compass (Sedan 06 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 72: Edit Settings in: SixWheelTruck01Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+SixWheelTruck 01 Compass: Compass (SixWheelTruck 01 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 73: Edit Settings in: SixWheelTruck02Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+SixWheelTruck 02 Compass: Compass (SixWheelTruck 02 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 74: Edit Settings in: SixWheelTruck03Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+SixWheelTruck 03 Compass: Compass (SixWheelTruck 03 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 75: Edit Settings in: SixWheelTruck04Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+SixWheelTruck 04 Compass: Compass (SixWheelTruck 04 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 76: Edit Settings in: SixWheelTruck05Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+SixWheelTruck 05 Compass: Compass (SixWheelTruck 05 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 77: Edit Settings in: SixWheelTruck06Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+SixWheelTruck 06 Compass: Compass (SixWheelTruck 06 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 78: Edit Settings in: TankRU01Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankRU 01 Compass: Compass (TankRU 01 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 79: Edit Settings in: TankRU02Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankRU 02 Compass: Compass (TankRU 02 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 80: Edit Settings in: TankRU03Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankRU 03 Compass: Compass (TankRU 03 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 81: Edit Settings in: TankRU04Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankRU 04 Compass: Compass (TankRU 04 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 82: Edit Settings in: TankRU05Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankRU 05 Compass: Compass (TankRU 05 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 83: Edit Settings in: TankRU06Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankRU 06 Compass: Compass (TankRU 06 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 84: Edit Settings in: TankUS01Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankUS 01 Compass: Compass (TankUS 01 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 85: Edit Settings in: TankUS02Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankUS 02 Compass: Compass (TankUS 02 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 86: Edit Settings in: TankUS03Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankUS 03 Compass: Compass (TankUS 03 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 87: Edit Settings in: TankUS04Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankUS 04 Compass: Compass (TankUS 04 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 88: Edit Settings in: TankUS05Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankUS 05 Compass: Compass (TankUS 05 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 89: Edit Settings in: TankUS06Entry (Script)
+
+------------------------------------------------------------------------------------
+
+
+Compass
+-------
+
+Player Compass: Compass (Player Compass)
+TankUS 06 Compass: Compass (TankUS 06 Compass)
+
+
+------------------------------------------------------------------------------------
+
+Step 90: Finally, let us simply resize the compass
+
+------------------------------------------------------------------------------------
+
+
+In Interface -> Canvas -> Compass
+
+
+Compass:
+
+Rect Transform
+--------------
+
+Top & Center
+
+Position: X: 357 Y: -516 Z: 0
+
+
+
+In Interface -> Canvas -> Compass -> Compass_Background
+
+
+Compass_Background:
+
+
+Rect Transform
+--------------
+
+Width: 1920
+
+
+
+In Interface -> Canvas -> Compass -> Compass_Foreground
+
+
+Compass_Foreground:
+
+
+Rect Transform
+--------------
+
+Width: 1920
+
+
+----------------------------------------------------------------------------------------
+
+
+FINAL NOTE: In each of your vehicles camera (scripts) you may need or opt or
+not to adjust some settings to suit your likings more say things like for
+example: Distance, height, field of view, etc, etc... This is entirely up to
+you if you desire to do such or not...
+
+
+----------------------------------------------------------------------------------------
+
+
+Alright, now that is it for that! Simple enough, right?! Best of Luck!
+
