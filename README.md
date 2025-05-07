@@ -114,12 +114,27 @@ Player Controls:
   Note: The following found below are related to the provided playercontrol script for usage example if say using vehicle entry script.
 
 
+Old_Input_System:
+
+
 * Player Forward:   W
 * Player Reverse:   S
 * Player Left:      A
 * Player Right:     D
 * Player Jump:      Space
 * Player Sprint:    Left Shift
+
+
+New_Input_System:
+
+
+* Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+* Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+* Player Left:      A [Keyboard] / Left Stick [Gamepad]
+* Player Right:     D [Keyboard] / Left Stick [Gamepad]
+* Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+* Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+* Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Vehicle Controls: 
@@ -129,11 +144,24 @@ Vehicle Controls:
   Note: The following below are related to both variations either standalone vehicle controller usage and entry script usage.
 
 
+Old_Input_System:
+
+
 * Vehicle Forward:  W
 * Vehicle Reverse:  S
 * Turn Left:        A
 * Turn Right:       D
 * Apply Brake:      Space
+
+
+New_Input_System:
+
+
+* Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+* Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+* Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+* Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+* Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad] 
 
 
 Entry Script: 
@@ -142,14 +170,35 @@ Entry Script:
   Note: The following found below are specific only when entry script is applied.
 
 
+Old_Input_System:
+
+
 * Enter Vehicle:    E
 * Exit Vehicle:     F
 
 
+New_Input_System:
+
+
+* Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+* Exit Vehicle:       F [Keyboard] / Button South [Gamepad] 
+
+
 Note: Additional specific only to Tanks US & RU are the following controls specific to the tank turret and tank barrel movements:
+
+
+Old_Input_System:
+
 
 * Mouse X 
 * Mouse Y
+
+
+New_Input_System:
+
+
+* Turret & Barrel: Delta [Mouse] / Right Stick [Gamepad]
+
 
 
 Manual Setup Instruction:
