@@ -1,5 +1,5 @@
 /*
- * File: TankUS 04 Controller
+ * File: TankUS 04 Controller (New Input System)
  * Name: TankUS04Controller.cs
  * Author: DeathwatchGaming
  * License: MIT
@@ -9,6 +9,7 @@
 // using
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -30,29 +31,6 @@ namespace VehiclesControl
 	// public class TankUS04Controller
 	public class TankUS04Controller : MonoBehaviour
 	{
-		// Input Customizations
-		[Header("Input Customizations")]
-
-			[Tooltip("The vertical movement input string")]
-			// string _verticalMoveInput is Vertical
-			[SerializeField] private string _verticalMoveInput = "Vertical";	
-
-			[Tooltip("The horizontal movement input string")]
-			// string _horizontalMoveInput is Horizontal
-			[SerializeField] private string _horizontalMoveInput = "Horizontal";
-
-			[Tooltip("The mouse x input string")]
-			// string _mouseXInput is Mouse X
-			[SerializeField] private string _mouseXInput = "Mouse X";
-
-			[Tooltip("The mouse y input string")]
-			// string _mouseXInput is Mouse Y
-			[SerializeField] private string _mouseYInput = "Mouse Y";
-
-			[Tooltip("The brake input keycode key")]
-			// KeyCode _brakeKey is KeyCode Space
-			[SerializeField] private KeyCode _brakeKey = KeyCode.Space;
-
 		// Require Components
 		[Header("Require Components")]
 
@@ -283,6 +261,31 @@ namespace VehiclesControl
 			// float _maxSpeed
 			[SerializeField] private float _maxSpeed = 180;	
 
+		// Input Actions
+		[Header("Input Actions")]
+
+			[Tooltip("The input action asset")]
+			// InputActionAsset _tankControls
+			[SerializeField] private InputActionAsset _tankControls;
+
+		// InputAction _moveAction
+		private InputAction _moveAction;
+
+		// Vector2 _moveInput
+		private Vector2 _moveInput;
+
+		// InputAction _moveTurretAction
+		private InputAction _moveTurretAction;
+
+		// Vector2 _moveTurretInput
+		private Vector2 _moveTurretInput;		
+
+		// InputAction _brakeAction
+		private InputAction _brakeAction;
+
+		// bool _brakeValue
+		private bool _brakeValue;
+
 		// _currentAcceleration is 0
 		private float _currentAcceleration = 0f;
 
@@ -322,8 +325,63 @@ namespace VehiclesControl
 
 			// _tankUS04TurretRotation is _tankUS04Turret.transform.eulerAngles
 			_tankUS04TurretRotation = _tankUS04Turret.transform.eulerAngles;
-	        
+
+			// Input Actions
+
+			// _moveAction
+			_moveAction = _tankControls.FindActionMap("Tank").FindAction("Move");
+
+			// _moveTurretAction
+			_moveTurretAction = _tankControls.FindActionMap("Tank").FindAction("MoveTurret");
+
+			// _brakeAction
+			_brakeAction = _tankControls.FindActionMap("Tank").FindAction("Brake");
+
+			// _moveAction performed
+			_moveAction.performed += context => _moveInput = context.ReadValue<Vector2>();
+
+			// _moveAction canceled
+			_moveAction.canceled += context => _moveInput = Vector2.zero;
+
+			// _moveTurretAction performed
+			_moveTurretAction.performed += context => _moveTurretInput = context.ReadValue<Vector2>();
+
+			// _moveTurretAction canceled
+			_moveTurretAction.canceled += context => _moveTurretInput = Vector2.zero;
+
 		} // close private void Awake
+
+		// private void OnEnable
+		private void OnEnable()
+		{
+			// Input Actions Enable
+
+			// _moveAction Enable
+			_moveAction.Enable();
+
+			// _moveTurretAction Enable
+			_moveTurretAction.Enable();
+
+			// _brakeAction Enable
+			_brakeAction.Enable();
+
+		} // close private void OnEnable
+
+		// private void OnDisable
+		private void OnDisable()
+		{
+			// Input Actions Disable
+			
+			// _moveAction Disable
+			_moveAction.Disable();
+
+			// _moveTurretAction Disable
+			_moveTurretAction.Disable();
+
+			// _brakeAction Disable
+			_brakeAction.Disable();
+
+		} // close private void OnDisable
 
 		// private void Start
 		private void Start()
@@ -344,7 +402,12 @@ namespace VehiclesControl
 
 			// Handle Steering
 			HandleSteering();
-            
+
+			// Handle Braking Input
+			
+			// _brakeValue is _brakeAction IsPressed
+			_brakeValue = _brakeAction.IsPressed();
+			            
 		} // close private void Update
 
 		// private void FixedUpdate
@@ -413,7 +476,7 @@ namespace VehiclesControl
 			// Get the forward and reverse acceleration from vertical axis (W and S keys)
 	        
 			// _currentAcceleration is _acceleration times Input GetAxis Vertical
-			_currentAcceleration = _acceleration * Input.GetAxis(_verticalMoveInput);
+			_currentAcceleration = _acceleration * _moveInput.y;
 
 			// Apply acceleration to the wheels
 
@@ -487,7 +550,7 @@ namespace VehiclesControl
 			// If we are pressing the _brakeKey then give currentBrakingForce a value
 
 			// if Input GetKey KeyCode _brakeKey
-			if (Input.GetKey(_brakeKey))
+			if (_brakeValue)
 			{
 				// _currentBrakeForce is _brakingForce
 				_currentBrakeForce = _brakingForce;
@@ -573,7 +636,7 @@ namespace VehiclesControl
 			_tankUS04Body.transform.eulerAngles = _tankUS04BodyRotation;
 
 			// _tankUS04Rotation.y is Input GetAxis _horizontalMoveInput times _tankUS04RotationSpeed
-			_tankUS04BodyRotation.y += Input.GetAxis(_horizontalMoveInput) * _tankUS04RotationSpeed;
+			_tankUS04BodyRotation.y += _moveInput.x * _tankUS04RotationSpeed;
 
 			// Take care of the tank turret steering
 		
@@ -581,12 +644,12 @@ namespace VehiclesControl
 			_tankUS04Turret.transform.eulerAngles = _tankUS04TurretRotation;
 
 			// _tankUS04TurretRotation.y is Input GetAxis _mouseXInput times _turretRotationSpeed
-			_tankUS04TurretRotation.y += Input.GetAxis(_mouseXInput) * _turretRotationSpeed;
+			_tankUS04TurretRotation.y += _moveTurretInput.x * _turretRotationSpeed;
 
 			// Take care of the tank barrel elevation control
             
 			// _barrelVert is Input GetAxis _mouseYInput
-			float _barrelVert = Input.GetAxis(_mouseYInput);
+			float _barrelVert = _moveTurretInput.y;
 
 			// _barrelElevation is Mathf Clamp _barrelElevation plus _barrelVert, _barrelMin, _barrelMax
 			_barrelElevation = Mathf.Clamp(_barrelElevation+_barrelVert, _barrelMin, _barrelMax);
