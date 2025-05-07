@@ -1,5 +1,5 @@
 /*
- * File: Tank RU 03 Entry
+ * File: Tank RU 03 Entry (New Input System) 
  * Name: TankRU03Entry.cs
  * Author: DeathwatchGaming
  * License: MIT
@@ -8,8 +8,9 @@
 
 // using
 using UnityEngine;
-using System.Collections;
 using NavigationControl;
+using System.Collections;
+using UnityEngine.InputSystem;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -20,17 +21,6 @@ namespace VehiclesControl
     // public class TankRU03Entry 
     public class TankRU03Entry : MonoBehaviour
     {   
-        // Input Customizations
-        [Header("Input Customizations")] 
-
-            [Tooltip("The vehicle entry key code")]
-            // KeyCode _enterKey
-            [SerializeField] private KeyCode _enterKey = KeyCode.E;
-
-            [Tooltip("The vehicle exit key code")]
-            // KeyCode _exitKey
-            [SerializeField] private KeyCode _exitKey = KeyCode.F;
-
         // Game Objects
         [Header("Game Objects")]
 
@@ -59,7 +49,37 @@ namespace VehiclesControl
             [Tooltip("The active state bool")]
             // bool _inTankRU03 is false
             [SerializeField] private bool _inTankRU03 = false;
-        
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The tankRU 03 compass")]
+            // TankRU03Compass _tankRU03Compass
+            [SerializeField] private TankRU03Compass _tankRU03Compass; 
+
+        // Input Actions
+        [Header("Input Actions")] 
+
+            [Tooltip("The input action asset")]
+            // InputActionAsset _tankControls
+            [SerializeField] private InputActionAsset _tankControls;
+
+        // InputAction _tankEnterAction
+        private InputAction _tankEnterAction;
+
+        // InputAction _tankExitAction
+        private InputAction _tankExitAction;
+
+        // bool _enterButton
+        private bool _enterButton;
+
+        // bool _exitButton
+        private bool _exitButton;
+
         // TankRU03Controller _tankRU03Script
         private TankRU03Controller _tankRU03Script;
 
@@ -99,21 +119,43 @@ namespace VehiclesControl
             // return
             return null;
 
-        } // close GameObject FindInActiveObjectByName
-
-        // Compass
-        [Header("Compass")]
-
-            [Tooltip("The player compass")]
-            // PlayerCompass _playerCompass
-            [SerializeField] private PlayerCompass _playerCompass;
-            
-            [Tooltip("The tankRU 03 compass")]
-            // TankRU03Compass _tankRU03Compass
-            [SerializeField] private TankRU03Compass _tankRU03Compass;  
+        } // close GameObject FindInActiveObjectByName 
 
         //public static TankRU03Entry _tankRU03Entry;
-        
+
+        // private void Awake
+        private void Awake()
+        {
+            // _tankEnterAction
+            _tankEnterAction = _tankControls.FindActionMap("Tank").FindAction("Enter");
+
+            // _tankExitAction
+            _tankExitAction = _tankControls.FindActionMap("Tank").FindAction("Exit");
+
+        } // close private void Awake
+
+        // private void OnEnable
+        private void OnEnable()
+        {
+            // _tankEnterAction Enable
+            _tankEnterAction.Enable();
+
+            // _tankExitAction Enable
+            _tankExitAction.Enable();
+
+        } // close private void OnEnable
+
+        // private void OnDisable
+        private void OnDisable()
+        {
+            // _tankEnterAction Disable
+            _tankEnterAction.Disable();
+
+            // _tankExitAction Disable
+            _tankExitAction.Disable();  
+
+        } // close private void OnDisable
+
         // private void Start
         private void Start() 
         {
@@ -173,8 +215,30 @@ namespace VehiclesControl
         // private void Update
         private void Update()
         {
+            // if_tankEnterAction triggered
+            if (_tankEnterAction.triggered)
+            {
+                // _enterButton is true
+                _enterButton = true;
+
+                // _exitButton is false
+                _exitButton = false;
+
+            } // close if_tankEnterAction triggered
+
+            // if _tankExitAction triggered
+            if (_tankExitAction.triggered)
+            {
+                // _enterButton is false
+                _enterButton = false;
+
+                // _exitButton is true
+                _exitButton = true;
+
+            } // close if _tankExitAction triggered
+            
             // if _inTankRU03 and Input GetKey KeyCode _exitKey
-            if (_inTankRU03 && Input.GetKey(_exitKey))
+            if (_inTankRU03 && _exitButton == true)
             {
                 // _player SetActive is true
                 _player.SetActive(true);
@@ -230,7 +294,7 @@ namespace VehiclesControl
             } // close if not _inTankRU03 and gameObject tag is Player
             
             // if not _inTankRU03 and gameObject tag is Player and Input GetKey KeyCode _enterKey
-            if (!_inTankRU03 && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
+            if (!_inTankRU03 && other.gameObject.tag == "Player" && _enterButton == true)
             {
                 // _interfaceTextObject SetActive is false
                 _interfaceTextObject.SetActive(false);

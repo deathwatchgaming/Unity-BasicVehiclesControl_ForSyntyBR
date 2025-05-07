@@ -1,5 +1,5 @@
 /*
- * File: Sedan 06 Entry
+ * File: Sedan 06 Entry (New Input System)
  * Name: Sedan06Entry.cs
  * Author: DeathwatchGaming
  * License: MIT
@@ -8,8 +8,9 @@
 
 // using
 using UnityEngine;
-using System.Collections;
 using NavigationControl;
+using System.Collections;
+using UnityEngine.InputSystem;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -20,17 +21,6 @@ namespace VehiclesControl
     // public class Sedan06Entry 
     public class Sedan06Entry : MonoBehaviour
     {   
-        // Input Customizations
-        [Header("Input Customizations")] 
-
-            [Tooltip("The vehicle entry key code")]
-            // KeyCode _enterKey
-            [SerializeField] private KeyCode _enterKey = KeyCode.E;
-
-            [Tooltip("The vehicle exit key code")]
-            // KeyCode _exitKey
-            [SerializeField] private KeyCode _exitKey = KeyCode.F;
-
         // Game Objects
         [Header("Game Objects")]
 
@@ -59,7 +49,37 @@ namespace VehiclesControl
             [Tooltip("The active state bool")]
             // bool _inSedan06 is false
             [SerializeField] private bool _inSedan06 = false;
-        
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The sedan 06 compass")]
+            // Sedan06Compass _sedan06Compass
+            [SerializeField] private Sedan06Compass _sedan06Compass;
+
+        // Input Actions
+        [Header("Input Actions")] 
+
+            [Tooltip("The input action asset")]
+            // InputActionAsset _carControls
+            [SerializeField] private InputActionAsset _carControls;
+
+        // InputAction _carEnterAction
+        private InputAction _carEnterAction;
+
+        // InputAction _carExitAction
+        private InputAction _carExitAction;
+
+        // bool _enterButton
+        private bool _enterButton;
+
+        // bool _exitButton
+        private bool _exitButton;
+
         // Sedan06Controller _sedan06Script
         private Sedan06Controller _sedan06Script;
 
@@ -99,21 +119,43 @@ namespace VehiclesControl
             // return
             return null;
 
-        } // close GameObject FindInActiveObjectByName
-
-        // Compass
-        [Header("Compass")]
-
-            [Tooltip("The player compass")]
-            // PlayerCompass _playerCompass
-            [SerializeField] private PlayerCompass _playerCompass;
-            
-            [Tooltip("The sedan 06 compass")]
-            // Sedan06Compass _sedan06Compass
-            [SerializeField] private Sedan06Compass _sedan06Compass;  
+        } // close GameObject FindInActiveObjectByName  
 
         //public static Sedan06Entry _sedan06Entry;
-        
+
+        // private void Awake
+        private void Awake()
+        {
+            // _carEnterAction
+            _carEnterAction = _carControls.FindActionMap("Car").FindAction("Enter");
+
+            // _carExitAction
+            _carExitAction = _carControls.FindActionMap("Car").FindAction("Exit");
+
+        } // close private void Awake
+
+        // private void OnEnable
+        private void OnEnable()
+        {
+            // _carEnterAction Enable
+            _carEnterAction.Enable();
+
+            // _carExitAction Enable
+            _carExitAction.Enable();
+
+        } // close private void OnEnable
+
+        // private void OnDisable
+        private void OnDisable()
+        {
+            // _carEnterAction Disable
+            _carEnterAction.Disable();
+
+            // _carExitAction Disable
+            _carExitAction.Disable();  
+
+        } // close private void OnDisable
+
         // private void Start
         private void Start() 
         {
@@ -173,8 +215,30 @@ namespace VehiclesControl
         // private void Update
         private void Update()
         {
+            // if_carEnterAction triggered
+            if (_carEnterAction.triggered)
+            {
+                // _enterButton is true
+                _enterButton = true;
+
+                // _exitButton is false
+                _exitButton = false;
+
+            } // close if_carEnterAction triggered
+
+            // if _carExitAction triggered
+            if (_carExitAction.triggered)
+            {
+                // _enterButton is false
+                _enterButton = false;
+
+                // _exitButton is true
+                _exitButton = true;
+
+            } // close if _carExitAction triggered
+            
             // if _inSedan06 and Input GetKey KeyCode _exitKey
-            if (_inSedan06 && Input.GetKey(_exitKey))
+            if (_inSedan06 && _exitButton == true)
             {
                 // _player SetActive is true
                 _player.SetActive(true);
@@ -230,7 +294,7 @@ namespace VehiclesControl
             } // close if not _inSedan06 and gameObject tag is Player
             
             // if not _inSedan06 and gameObject tag is Player and Input GetKey KeyCode _enterKey
-            if (!_inSedan06 && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
+            if (!_inSedan06 && other.gameObject.tag == "Player" && _enterButton == true)
             {
                 // _interfaceTextObject SetActive is false
                 _interfaceTextObject.SetActive(false);
