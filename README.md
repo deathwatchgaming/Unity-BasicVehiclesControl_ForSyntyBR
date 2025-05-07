@@ -32,7 +32,7 @@ NOTE: These currently still use the "Old Input System", so as such depending on 
 
 New_Input_System Variant Directory NOTE:
 
-Provided variants: ( 2021+ / 2022+ variant & Unity 6+ variant)
+Provided variants: ( 2021+ / 2022+ variant & Unity 6+ variant )
 
 
 NOTE: This currently uses the "New Input System", so as such depending on what version of Unity you may be using it may be necessary to make sure such or both is enabled in project settings.
