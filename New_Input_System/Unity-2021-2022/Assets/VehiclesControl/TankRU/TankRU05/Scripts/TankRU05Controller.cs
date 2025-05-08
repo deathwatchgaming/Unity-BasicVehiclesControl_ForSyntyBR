@@ -319,6 +319,38 @@ namespace VehiclesControl
 
 		} // close private void Awake
 
+		// private void OnEnable
+		private void OnEnable()
+		{
+			// Input Actions Enable
+
+			// _moveAction Enable
+			_moveAction.Enable();
+
+			// _moveTurretAction Enable
+			_moveTurretAction.Enable();
+
+			// _brakeAction Enable
+			_brakeAction.Enable();
+
+		} // close private void OnEnable
+
+		// private void OnDisable
+		private void OnDisable()
+		{
+			// Input Actions Disable
+			
+			// _moveAction Disable
+			_moveAction.Disable();
+
+			// _moveTurretAction Disable
+			_moveTurretAction.Disable();
+
+			// _brakeAction Disable
+			_brakeAction.Disable();
+
+		} // close private void OnDisable
+		
 		// private void Start
 		private void Start()
 		{
