@@ -9,24 +9,32 @@ using vehicle models from Synty Polygon Battle Royale Asset.
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
-Enter Vehicle:    E
-Exit Vehicle:     F
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+
+Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:       F [Keyboard] / Button South [Gamepad] 
+
+
+Note: Additional specific only to Tanks US & RU are the following controls specific to the tank turret and tank barrel movements:
+
+Turret & Barrel: Delta [Mouse] / Right Stick [Gamepad]
+
 
 Manual Setup Instruction:
 -------------------------
@@ -171,7 +179,22 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
-Step 7: Edit: the "CharacterController" component:
+Step 7: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+Input Actions:
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -179,16 +202,6 @@ Step 7: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -1797,6 +1810,11 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 35: Add to: DuneBuggy01 (DuneBuggy01Controller.cs)
@@ -1835,6 +1853,10 @@ In Rigidbody:
 -------------
 
 Set Rigibody Mass: 1000
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1875,6 +1897,11 @@ In Rigidbody:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 37: Add to: Sedan01 (Sedan01Controller.cs)
@@ -1911,6 +1938,11 @@ In Rigidbody:
 -------------
 
 Set Rigibody Mass: 1500
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1953,6 +1985,13 @@ In Rigidbody:
 -------------
 
 Set Rigibody Mass: 3500
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 
 -----------------------------------------------------------------------------------
 
@@ -2115,6 +2154,12 @@ Edit Collider: YES!*
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 45: Add to: DuneBuggy01 (DuneBuggy01Entry.cs)
@@ -2149,6 +2194,12 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2186,6 +2237,11 @@ Center: X: 0.0003892779 Y: 0.9888325 Z: -0.05741239
 Size: X: 3.561238 Y: 1.514789 Z: 1.951702
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 47: Add to: SixWheelTruck01 (SixWheelTruck01Entry.cs)
@@ -2221,6 +2277,11 @@ Center: X: 0.007755756 Y: 1.946628 Z: 2.775195
 Size: X: 4.208336 Y: 2.19522 Z: 1.470402
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 48: Add to: Sedan01 (Sedan01Entry.cs)
@@ -2254,6 +2315,11 @@ Edit Collider: YES!*
 
 Center: X: -0.06134325 Y: 0.8881476 Z: 0.1162676
 Size: X: 3.262136 Y: 1.416598 Z: 1.655701
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3084,6 +3150,11 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 56: Add to: TankUS01Camera (TankUS01Camera.cs)
@@ -3180,6 +3251,12 @@ Edit Collider: YES!*
 
 Center: X: 0.2241634 Y: 0.9897067 Z: 0.0602622
 Size: X: 6.123734 Y: 1.472119 Z: 7.960261
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4001,6 +4078,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 66: Add to: TankRU01Camera (TankRU01Camera.cs)
@@ -4094,6 +4177,14 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 
 -----------------------------------------------------------------------------------
 
@@ -4313,6 +4404,11 @@ ArmoredTruck01_SpeedoNeedle
 ArmoredTruck01_SpeedText
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 76: In "VehiclesSpeed" create empty child: "DunebBuggySpeedometer"
@@ -4474,6 +4570,11 @@ DuneBuggy01Speedometer
 DuneBuggy01_SpeedoGuage
 DuneBuggy01_SpeedoNeedle
 DuneBuggy01_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4639,6 +4740,11 @@ Humvee01_SpeedoNeedle
 Humvee01_SpeedText
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 86: In "VehiclesSpeed" create empty child: "Sedan01Speedometer"
@@ -4798,6 +4904,11 @@ Sedan01Speedometer
 Sedan01_SpeedoGuage
 Sedan01_SpeedoNeedle
 Sedan01_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4965,6 +5076,11 @@ SixWheelTruck01_SpeedoNeedle
 SixWheelTruck01_SpeedText
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 96: In "VehiclesSpeed" create empty child: "TankRU01Speedometer"
@@ -5129,6 +5245,11 @@ TankRU01_SpeedoNeedle
 TankRU01_SpeedText
 
 
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 101: In "VehiclesSpeed" create empty child: "TankUS01Speedometer"
@@ -5291,6 +5412,11 @@ TankUS01Speedometer
 TankUS01_SpeedoGuage
 TankUS01_SpeedoNeedle
 TankUS01_SpeedText
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------

@@ -9,24 +9,32 @@ projects using vehicle models from Synty Polygon Battle Royale Asset.
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
-Enter Vehicle:    E
-Exit Vehicle:     F
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+
+Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:       F [Keyboard] / Button South [Gamepad] 
+
+
+Note: Additional specific only to Tanks US & RU are the following controls specific to the tank turret and tank barrel movements:
+
+Turret & Barrel: Delta [Mouse] / Right Stick [Gamepad]
+
 
 Manual Setup Instruction:
 -------------------------
@@ -172,7 +180,22 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
-Step 7: Edit: the "CharacterController" component:
+Step 7: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+Input Actions:
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -180,16 +203,6 @@ Step 7: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -682,6 +695,12 @@ In Rigidbody:
 
 Set Rigibody Mass: 3000
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 23: Add to: ArmoredTruck01Camera (ArmoredTruck01TruckCamera.cs)
@@ -741,6 +760,11 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -943,6 +967,10 @@ ArmoredTruck01Speedometer
 ArmoredTruck01_SpeedoGuage
 ArmoredTruck01_SpeedoNeedle
 ArmoredTruck01_SpeedText
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1386,6 +1414,11 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 39: Add to: ArmoredTruck02Camera (ArmoredTruck02TruckCamera.cs)
@@ -1445,6 +1478,11 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1624,6 +1662,11 @@ ArmoredTruck02Speedometer
 ArmoredTruck02_SpeedoGuage
 ArmoredTruck02_SpeedoNeedle
 ArmoredTruck02_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2114,6 +2157,11 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 54: Add to: ArmoredTruck03Camera (ArmoredTruck03TruckCamera.cs)
@@ -2173,6 +2221,10 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2352,6 +2404,11 @@ ArmoredTruck03Speedometer
 ArmoredTruck03_SpeedoGuage
 ArmoredTruck03_SpeedoNeedle
 ArmoredTruck03_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2888,6 +2945,11 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 69: Add to: ArmoredTruck04Camera (ArmoredTruck04TruckCamera.cs)
@@ -2947,6 +3009,11 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3126,6 +3193,11 @@ ArmoredTruck04Speedometer
 ArmoredTruck04_SpeedoGuage
 ArmoredTruck04_SpeedoNeedle
 ArmoredTruck04_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3709,6 +3781,11 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 84: Add to: ArmoredTruck05Camera (ArmoredTruck05TruckCamera.cs)
@@ -3768,6 +3845,11 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3947,6 +4029,11 @@ ArmoredTruck05Speedometer
 ArmoredTruck05_SpeedoGuage
 ArmoredTruck05_SpeedoNeedle
 ArmoredTruck05_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4577,6 +4664,11 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 99: Add to: ArmoredTruck06Camera (ArmoredTruck06TruckCamera.cs)
@@ -4636,6 +4728,11 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4815,6 +4912,11 @@ ArmoredTruck06Speedometer
 ArmoredTruck06_SpeedoGuage
 ArmoredTruck06_SpeedoNeedle
 ArmoredTruck06_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -5500,6 +5602,11 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 114: Add to: DuneBuggy01Camera (DuneBuggy01Camera.cs)
@@ -5558,6 +5665,11 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -5757,6 +5869,11 @@ DuneBuggy01Speedometer
 DuneBuggy01_SpeedoGuage
 DuneBuggy01_SpeedoNeedle
 DuneBuggy01_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -6487,6 +6604,11 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 130: Add to: DuneBuggy02Camera (DuneBuggy02Camera.cs)
@@ -6546,6 +6668,11 @@ Edit Collider: YES!*
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
   
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
@@ -6721,6 +6848,10 @@ DuneBuggy02Speedometer
 DuneBuggy02_SpeedoGuage
 DuneBuggy02_SpeedoNeedle
 DuneBuggy02_SpeedText
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -7496,6 +7627,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
+
 -----------------------------------------------------------------------------------
 
 Step 145: Add to: DuneBuggy03Camera (DuneBuggy03Camera.cs)
@@ -7554,6 +7691,11 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -7730,6 +7872,12 @@ DuneBuggy03Speedometer
 DuneBuggy03_SpeedoGuage
 DuneBuggy03_SpeedoNeedle
 DuneBuggy03_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
 
 
 -----------------------------------------------------------------------------------
@@ -8550,6 +8698,11 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 160: Add to: DuneBuggy04Camera (DuneBuggy04Camera.cs)
@@ -8608,6 +8761,11 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -8784,6 +8942,11 @@ DuneBuggy04Speedometer
 DuneBuggy04_SpeedoGuage
 DuneBuggy04_SpeedoNeedle
 DuneBuggy04_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -9649,6 +9812,11 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 175: Add to: DuneBuggy05Camera (DuneBuggy05Camera.cs)
@@ -9707,6 +9875,11 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -9883,6 +10056,11 @@ DuneBuggy05Speedometer
 DuneBuggy05_SpeedoGuage
 DuneBuggy05_SpeedoNeedle
 DuneBuggy05_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -10793,6 +10971,11 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 190: Add to: DuneBuggy06Camera (DuneBuggy06Camera.cs)
@@ -10851,6 +11034,11 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -11027,6 +11215,11 @@ DuneBuggy06Speedometer
 DuneBuggy06_SpeedoGuage
 DuneBuggy06_SpeedoNeedle
 DuneBuggy06_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -11985,6 +12178,11 @@ In Rigidbody:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 205: Add to: Humvee01Camera (Humvee01Camera.cs)
@@ -12043,6 +12241,11 @@ Edit Collider: YES!*
 
 Center: X: 0.0003892779 Y: 0.9888325 Z: -0.05741239
 Size: X: 3.561238 Y: 1.514789 Z: 1.951702
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -12243,6 +12446,11 @@ Humvee01Speedometer
 Humvee01_SpeedoGuage
 Humvee01_SpeedoNeedle
 Humvee01_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -13248,6 +13456,11 @@ In Rigidbody:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 221: Add to: Humvee02Camera (Humvee02Camera.cs)
@@ -13306,6 +13519,11 @@ Edit Collider: YES!*
 
 Center: X: 0.0003892779 Y: 0.9888325 Z: -0.05741239
 Size: X: 3.561238 Y: 1.514789 Z: 1.951702
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -13483,6 +13701,11 @@ Humvee02Speedometer
 Humvee02_SpeedoGuage
 Humvee02_SpeedoNeedle
 Humvee02_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -14534,6 +14757,10 @@ In Rigidbody:
 
 Set Rigibody Mass: 2500
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
@@ -14594,6 +14821,11 @@ Edit Collider: YES!*
 Center: X: 0.0003892779 Y: 0.9888325 Z: -0.05741239
 Size: X: 3.561238 Y: 1.514789 Z: 1.951702
   
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
@@ -14770,6 +15002,11 @@ Humvee03Speedometer
 Humvee03_SpeedoGuage
 Humvee03_SpeedoNeedle
 Humvee03_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -15869,6 +16106,11 @@ In Rigidbody:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 251: Add to: Humvee04Camera (Humvee04Camera.cs)
@@ -15928,6 +16170,12 @@ Edit Collider: YES!*
 Center: X: 0.0003892779 Y: 0.9888325 Z: -0.05741239
 Size: X: 3.561238 Y: 1.514789 Z: 1.951702
   
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
@@ -16104,6 +16352,12 @@ Humvee04Speedometer
 Humvee04_SpeedoGuage
 Humvee04_SpeedoNeedle
 Humvee04_SpeedText
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -17250,6 +17504,11 @@ In Rigidbody:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 266: Add to: Humvee05Camera (Humvee05Camera.cs)
@@ -17309,6 +17568,12 @@ Edit Collider: YES!*
 Center: X: 0.0003892779 Y: 0.9888325 Z: -0.05741239
 Size: X: 3.561238 Y: 1.514789 Z: 1.951702
   
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 
 -----------------------------------------------------------------------------------
 
@@ -17485,6 +17750,11 @@ Humvee05Speedometer
 Humvee05_SpeedoGuage
 Humvee05_SpeedoNeedle
 Humvee05_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -18678,6 +18948,11 @@ In Rigidbody:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 241: Add to: Humvee06Camera (Humvee06Camera.cs)
@@ -18737,6 +19012,11 @@ Edit Collider: YES!*
 Center: X: 0.0003892779 Y: 0.9888325 Z: -0.05741239
 Size: X: 3.561238 Y: 1.514789 Z: 1.951702
   
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
@@ -18913,6 +19193,11 @@ Humvee06Speedometer
 Humvee06_SpeedoGuage
 Humvee06_SpeedoNeedle
 Humvee06_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -20146,6 +20431,12 @@ In Rigidbody:
 
 Set Rigibody Mass: 1500
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 256: Add to: Sedan01Camera (Sedan01Camera.cs)
@@ -20204,6 +20495,11 @@ Edit Collider: YES!*
 
 Center: X: -0.06134325 Y: 0.8881476 Z: 0.1162676
 Size: X: 3.262136 Y: 1.416598 Z: 1.655701
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -20401,6 +20697,11 @@ Sedan01Speedometer
 Sedan01_SpeedoGuage
 Sedan01_SpeedoNeedle
 Sedan01_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -21681,6 +21982,12 @@ In Rigidbody:
 
 Set Rigibody Mass: 1500
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 272: Add to: Sedan02Camera (Sedan02Camera.cs)
@@ -21739,6 +22046,12 @@ Edit Collider: YES!*
 
 Center: X: -0.06134325 Y: 0.8881476 Z: 0.1162676
 Size: X: 3.262136 Y: 1.416598 Z: 1.655701
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
 
 
 -----------------------------------------------------------------------------------
@@ -21913,6 +22226,11 @@ Sedan02Speedometer
 Sedan02_SpeedoGuage
 Sedan02_SpeedoNeedle
 Sedan02_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -23240,6 +23558,12 @@ In Rigidbody:
 
 Set Rigibody Mass: 1500
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 287: Add to: Sedan03Camera (Sedan03Camera.cs)
@@ -23298,6 +23622,11 @@ Edit Collider: YES!*
 
 Center: X: -0.06134325 Y: 0.8881476 Z: 0.1162676
 Size: X: 3.262136 Y: 1.416598 Z: 1.655701
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -23472,6 +23801,11 @@ Sedan03Speedometer
 Sedan03_SpeedoGuage
 Sedan03_SpeedoNeedle
 Sedan03_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -24847,6 +25181,13 @@ In Rigidbody:
 
 Set Rigibody Mass: 1500
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
+
 -----------------------------------------------------------------------------------
 
 Step 302: Add to: Sedan04Camera (Sedan04Camera.cs)
@@ -24905,6 +25246,11 @@ Edit Collider: YES!*
 
 Center: X: -0.06134325 Y: 0.8881476 Z: 0.1162676
 Size: X: 3.262136 Y: 1.416598 Z: 1.655701
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -25079,6 +25425,11 @@ Sedan04Speedometer
 Sedan04_SpeedoGuage
 Sedan04_SpeedoNeedle
 Sedan04_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -26500,6 +26851,13 @@ In Rigidbody:
 
 Set Rigibody Mass: 1500
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
+
 -----------------------------------------------------------------------------------
 
 Step 317: Add to: Sedan05Camera (Sedan05Camera.cs)
@@ -26558,6 +26916,11 @@ Edit Collider: YES!*
 
 Center: X: -0.06134325 Y: 0.8881476 Z: 0.1162676
 Size: X: 3.262136 Y: 1.416598 Z: 1.655701
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -26732,6 +27095,11 @@ Sedan05Speedometer
 Sedan05_SpeedoGuage
 Sedan05_SpeedoNeedle
 Sedan05_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -28201,6 +28569,12 @@ In Rigidbody:
 
 Set Rigibody Mass: 1500
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 332: Add to: Sedan06Camera (Sedan06Camera.cs)
@@ -28259,6 +28633,11 @@ Edit Collider: YES!*
 
 Center: X: -0.06134325 Y: 0.8881476 Z: 0.1162676
 Size: X: 3.262136 Y: 1.416598 Z: 1.655701
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -28433,6 +28812,11 @@ Sedan06Speedometer
 Sedan06_SpeedoGuage
 Sedan06_SpeedoNeedle
 Sedan06_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -29985,6 +30369,11 @@ In Rigidbody:
 Set Rigibody Mass: 3500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 347: Add to: SixWheelTruck01Camera (SixWheelTruck01Camera.cs)
@@ -30043,6 +30432,11 @@ Edit Collider: YES!*
 
 Center: X: 0.007755756 Y: 1.946628 Z: 2.775195
 Size: X: 4.208336 Y: 2.19522 Z: 1.470402
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -30243,6 +30637,11 @@ SixWheelTruck01Speedometer
 SixWheelTruck01_SpeedoGuage
 SixWheelTruck01_SpeedoNeedle
 SixWheelTruck01_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -31854,6 +32253,11 @@ In Rigidbody:
 Set Rigibody Mass: 3500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 343: Add to: SixWheelTruck02Camera (SixWheelTruck02Camera.cs)
@@ -31912,6 +32316,11 @@ Edit Collider: YES!*
 
 Center: X: 0.007755756 Y: 1.946628 Z: 2.775195
 Size: X: 4.208336 Y: 2.19522 Z: 1.470402
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -32089,6 +32498,12 @@ SixWheelTruck02Speedometer
 SixWheelTruck02_SpeedoGuage
 SixWheelTruck02_SpeedoNeedle
 SixWheelTruck02_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
 
 
 -----------------------------------------------------------------------------------
@@ -33759,6 +34174,11 @@ In Rigidbody:
 Set Rigibody Mass: 3500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 358: Add to: SixWheelTruck03Camera (SixWheelTruck03Camera.cs)
@@ -33817,6 +34237,11 @@ Edit Collider: YES!*
 
 Center: X: 0.007755756 Y: 1.946628 Z: 2.775195
 Size: X: 4.208336 Y: 2.19522 Z: 1.470402
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -33994,6 +34419,11 @@ SixWheelTruck03Speedometer
 SixWheelTruck03_SpeedoGuage
 SixWheelTruck03_SpeedoNeedle
 SixWheelTruck03_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -35723,6 +36153,11 @@ In Rigidbody:
 Set Rigibody Mass: 3500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 373: Add to: SixWheelTruck04Camera (SixWheelTruck04Camera.cs)
@@ -35781,6 +36216,12 @@ Edit Collider: YES!*
 
 Center: X: 0.007755756 Y: 1.946628 Z: 2.775195
 Size: X: 4.208336 Y: 2.19522 Z: 1.470402
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
 
 
 -----------------------------------------------------------------------------------
@@ -35958,6 +36399,11 @@ SixWheelTruck04Speedometer
 SixWheelTruck04_SpeedoGuage
 SixWheelTruck04_SpeedoNeedle
 SixWheelTruck04_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -37747,6 +38193,11 @@ In Rigidbody:
 Set Rigibody Mass: 3500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 388: Add to: SixWheelTruck05Camera (SixWheelTruck05Camera.cs)
@@ -37805,6 +38256,11 @@ Edit Collider: YES!*
 
 Center: X: 0.007755756 Y: 1.946628 Z: 2.775195
 Size: X: 4.208336 Y: 2.19522 Z: 1.470402
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -37982,6 +38438,11 @@ SixWheelTruck05Speedometer
 SixWheelTruck05_SpeedoGuage
 SixWheelTruck05_SpeedoNeedle
 SixWheelTruck05_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -39830,6 +40291,11 @@ In Rigidbody:
 Set Rigibody Mass: 3500
 
 
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 403: Add to: SixWheelTruck06Camera (SixWheelTruck06Camera.cs)
@@ -39888,6 +40354,11 @@ Edit Collider: YES!*
 
 Center: X: 0.007755756 Y: 1.946628 Z: 2.775195
 Size: X: 4.208336 Y: 2.19522 Z: 1.470402
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -40065,6 +40536,11 @@ SixWheelTruck06Speedometer
 SixWheelTruck06_SpeedoGuage
 SixWheelTruck06_SpeedoNeedle
 SixWheelTruck06_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -42216,6 +42692,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 418: Add to: TankRU01Camera (TankRU01Camera.cs)
@@ -42304,6 +42786,12 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -42506,6 +42994,10 @@ TankRU01_SpeedoGuage
 TankRU01_SpeedoNeedle
 TankRU01_SpeedText
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -44750,6 +45242,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 435: Add to: TankRU02Camera (TankRU02Camera.cs)
@@ -44838,6 +45336,12 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -45015,6 +45519,11 @@ TankRU02Speedometer
 TankRU02_SpeedoGuage
 TankRU02_SpeedoNeedle
 TankRU02_SpeedText
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -47352,6 +47861,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 451: Add to: TankRU03Camera (TankRU03Camera.cs)
@@ -47440,6 +47955,12 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -47617,6 +48138,12 @@ TankRU03Speedometer
 TankRU03_SpeedoGuage
 TankRU03_SpeedoNeedle
 TankRU03_SpeedText
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -50047,6 +50574,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 467: Add to: TankRU04Camera (TankRU04Camera.cs)
@@ -50135,6 +50668,11 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -50312,6 +50850,11 @@ TankRU04Speedometer
 TankRU04_SpeedoGuage
 TankRU04_SpeedoNeedle
 TankRU04_SpeedText
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -52835,6 +53378,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 483: Add to: TankRU05Camera (TankRU05Camera.cs)
@@ -52923,6 +53472,12 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -53100,6 +53655,11 @@ TankRU05Speedometer
 TankRU05_SpeedoGuage
 TankRU05_SpeedoNeedle
 TankRU05_SpeedText
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -55716,6 +56276,11 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 499: Add to: TankRU06Camera (TankRU06Camera.cs)
@@ -55804,6 +56369,12 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -55981,6 +56552,11 @@ TankRU06Speedometer
 TankRU06_SpeedoGuage
 TankRU06_SpeedoNeedle
 TankRU06_SpeedText
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -58759,6 +59335,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 515: Add to: TankUS01Camera (TankUS01Camera.cs)
@@ -58850,6 +59432,11 @@ Edit Collider: YES!*
 
 Center: X: 0.2241634 Y: 0.9897067 Z: 0.0602622
 Size: X: 6.123734 Y: 1.472119 Z: 7.960261
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -59052,6 +59639,11 @@ TankUS01Speedometer
 TankUS01_SpeedoGuage
 TankUS01_SpeedoNeedle
 TankUS01_SpeedText
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -61903,6 +62495,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 532: Add to: TankUS02Camera (TankUS02Camera.cs)
@@ -61994,6 +62592,12 @@ Edit Collider: YES!*
 
 Center: X: 0.2241634 Y: 0.9897067 Z: 0.0602622
 Size: X: 6.123734 Y: 1.472119 Z: 7.960261
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -62172,6 +62776,11 @@ TankUS02Speedometer
 TankUS02_SpeedoGuage
 TankUS02_SpeedoNeedle
 TankUS02_SpeedText
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -65132,6 +65741,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 547: Add to: TankUS03Camera (TankUS03Camera.cs)
@@ -65223,6 +65838,12 @@ Edit Collider: YES!*
 
 Center: X: 0.2241634 Y: 0.9897067 Z: 0.0602622
 Size: X: 6.123734 Y: 1.472119 Z: 7.960261
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -65401,6 +66022,12 @@ TankUS03Speedometer
 TankUS03_SpeedoGuage
 TankUS03_SpeedoNeedle
 TankUS03_SpeedText
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -68469,6 +69096,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 563: Add to: TankUS04Camera (TankUS04Camera.cs)
@@ -68560,6 +69193,12 @@ Edit Collider: YES!*
 
 Center: X: 0.2241634 Y: 0.9897067 Z: 0.0602622
 Size: X: 6.123734 Y: 1.472119 Z: 7.960261
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -68738,6 +69377,11 @@ TankUS04Speedometer
 TankUS04_SpeedoGuage
 TankUS04_SpeedoNeedle
 TankUS04_SpeedText
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -71916,6 +72560,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 579: Add to: TankUS05Camera (TankUS05Camera.cs)
@@ -72007,6 +72657,12 @@ Edit Collider: YES!*
 
 Center: X: 0.2241634 Y: 0.9897067 Z: 0.0602622
 Size: X: 6.123734 Y: 1.472119 Z: 7.960261
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -72185,6 +72841,12 @@ TankUS05Speedometer
 TankUS05_SpeedoGuage
 TankUS05_SpeedoNeedle
 TankUS05_SpeedText
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -75472,6 +76134,11 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 595: Add to: TankUS06Camera (TankUS06Camera.cs)
@@ -75563,6 +76230,12 @@ Edit Collider: YES!*
 
 Center: X: 0.2241634 Y: 0.9897067 Z: 0.0602622
 Size: X: 6.123734 Y: 1.472119 Z: 7.960261
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -75741,6 +76414,11 @@ TankUS06Speedometer
 TankUS06_SpeedoGuage
 TankUS06_SpeedoNeedle
 TankUS06_SpeedText
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
