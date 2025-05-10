@@ -9,24 +9,27 @@ projects using vehicle models from Synty Polygon Battle Royale Asset.
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
-Enter Vehicle:    E
-Exit Vehicle:     F
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+
+Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:       F [Keyboard] / Button South [Gamepad]
+
 
 Manual Setup Instruction:
 -------------------------
@@ -170,7 +173,22 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
-Step 7: Edit: the "CharacterController" component:
+Step 7: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+Input Actions:
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -178,16 +196,6 @@ Step 7: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -689,6 +697,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 23: Add to: DuneBuggy01Camera (DuneBuggy01Camera.cs)
@@ -747,6 +761,11 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -946,6 +965,11 @@ DuneBuggy01Speedometer
 DuneBuggy01_SpeedoGuage
 DuneBuggy01_SpeedoNeedle
 DuneBuggy01_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1394,6 +1418,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 39: Add to: DuneBuggy02Camera (DuneBuggy02Camera.cs)
@@ -1452,6 +1482,12 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -1628,6 +1664,12 @@ DuneBuggy02Speedometer
 DuneBuggy02_SpeedoGuage
 DuneBuggy02_SpeedoNeedle
 DuneBuggy02_SpeedText
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2121,6 +2163,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 54: Add to: DuneBuggy03Camera (DuneBuggy03Camera.cs)
@@ -2179,6 +2227,12 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -2355,6 +2409,12 @@ DuneBuggy03Speedometer
 DuneBuggy03_SpeedoGuage
 DuneBuggy03_SpeedoNeedle
 DuneBuggy03_SpeedText
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2893,6 +2953,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 69: Add to: DuneBuggy04Camera (DuneBuggy04Camera.cs)
@@ -2952,6 +3018,11 @@ Edit Collider: YES!*
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
   
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
@@ -3127,6 +3198,12 @@ DuneBuggy04Speedometer
 DuneBuggy04_SpeedoGuage
 DuneBuggy04_SpeedoNeedle
 DuneBuggy04_SpeedText
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3710,6 +3787,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 84: Add to: DuneBuggy05Camera (DuneBuggy05Camera.cs)
@@ -3768,6 +3851,11 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -3944,6 +4032,12 @@ DuneBuggy05Speedometer
 DuneBuggy05_SpeedoGuage
 DuneBuggy05_SpeedoNeedle
 DuneBuggy05_SpeedText
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4572,6 +4666,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 99: Add to: DuneBuggy06Camera (DuneBuggy06Camera.cs)
@@ -4594,7 +4694,6 @@ You can keep settings as is or tweak them to your likings! *
 * ie: (tweak camera height)
 
 Height: 3.16
-
 
 -----------------------------------------------------------------------------------
 
@@ -4630,6 +4729,12 @@ Edit Collider: YES!*
 
 Center: X: -0.03706616 Y: 1.066822 Z: 0.02607679
 Size: X: 4.030926 Y: 1.303131 Z: 1.31885
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
   
 
 -----------------------------------------------------------------------------------
@@ -4806,6 +4911,12 @@ DuneBuggy06Speedometer
 DuneBuggy06_SpeedoGuage
 DuneBuggy06_SpeedoNeedle
 DuneBuggy06_SpeedText
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------

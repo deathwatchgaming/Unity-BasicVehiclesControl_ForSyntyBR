@@ -9,24 +9,26 @@ projects using vehicle models from Synty Polygon Battle Royale Asset.
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
-Enter Vehicle:    E
-Exit Vehicle:     F
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:       F [Keyboard] / Button South [Gamepad] 
+
 
 Manual Setup Instruction:
 -------------------------
@@ -172,7 +174,22 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
-Step 7: Edit: the "CharacterController" component:
+Step 7: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+Input Actions:
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -180,16 +197,6 @@ Step 7: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -682,6 +689,13 @@ In Rigidbody:
 
 Set Rigibody Mass: 3000
 
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 23: Add to: ArmoredTruck01Camera (ArmoredTruck01TruckCamera.cs)
@@ -740,6 +754,11 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -942,6 +961,12 @@ ArmoredTruck01Speedometer
 ArmoredTruck01_SpeedoGuage
 ArmoredTruck01_SpeedoNeedle
 ArmoredTruck01_SpeedText
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1385,6 +1410,12 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 39: Add to: ArmoredTruck02Camera (ArmoredTruck02TruckCamera.cs)
@@ -1444,6 +1475,12 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1623,6 +1660,11 @@ ArmoredTruck02Speedometer
 ArmoredTruck02_SpeedoGuage
 ArmoredTruck02_SpeedoNeedle
 ArmoredTruck02_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2113,6 +2155,12 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 54: Add to: ArmoredTruck03Camera (ArmoredTruck03TruckCamera.cs)
@@ -2172,6 +2220,12 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2351,6 +2405,12 @@ ArmoredTruck03Speedometer
 ArmoredTruck03_SpeedoGuage
 ArmoredTruck03_SpeedoNeedle
 ArmoredTruck03_SpeedText
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2887,6 +2947,12 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 69: Add to: ArmoredTruck04Camera (ArmoredTruck04TruckCamera.cs)
@@ -2946,6 +3012,12 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3125,6 +3197,11 @@ ArmoredTruck04Speedometer
 ArmoredTruck04_SpeedoGuage
 ArmoredTruck04_SpeedoNeedle
 ArmoredTruck04_SpeedText
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3708,6 +3785,12 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 84: Add to: ArmoredTruck05Camera (ArmoredTruck05TruckCamera.cs)
@@ -3767,6 +3850,12 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3946,6 +4035,12 @@ ArmoredTruck05Speedometer
 ArmoredTruck05_SpeedoGuage
 ArmoredTruck05_SpeedoNeedle
 ArmoredTruck05_SpeedText
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4576,6 +4671,12 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 99: Add to: ArmoredTruck06Camera (ArmoredTruck06TruckCamera.cs)
@@ -4635,6 +4736,12 @@ Edit Collider: YES!*
 
 Center: X: 0.05058646 Y: 1.296817 Z: -0.1289468
 Size: X: 3.328609 Y: 1.51396 Z: 1.540893
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4814,6 +4921,12 @@ ArmoredTruck06Speedometer
 ArmoredTruck06_SpeedoGuage
 ArmoredTruck06_SpeedoNeedle
 ArmoredTruck06_SpeedText
+
+
+
+Input Actions:
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------

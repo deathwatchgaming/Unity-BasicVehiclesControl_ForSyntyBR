@@ -10,31 +10,33 @@ projects using vehicle models from Synty Polygon Battle Royale Asset.
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
-Enter Vehicle:    E
-Exit Vehicle:     F
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad] 
+
+
+Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:       F [Keyboard] / Button South [Gamepad]
 
 
 Note: the following controls below are specific to the tank turret and tank
 barrel movements:
 
-* Mouse X 
-* Mouse Y
+Turret & Barrel: Delta [Mouse] / Right Stick [Gamepad]
 
 
 Manual Setup Instruction:
@@ -180,7 +182,22 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
-Step 7: Edit: the "CharacterController" component:
+Step 7: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+Input Actions:
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -188,16 +205,6 @@ Step 7: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -977,6 +984,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 23: Add to: TankRU01Camera (TankRU01Camera.cs)
@@ -1065,6 +1078,12 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1267,6 +1286,10 @@ TankRU01_SpeedoGuage
 TankRU01_SpeedoNeedle
 TankRU01_SpeedText
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2041,6 +2064,11 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 40: Add to: TankRU02Camera (TankRU02Camera.cs)
@@ -2129,6 +2157,11 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2306,6 +2339,12 @@ TankRU02Speedometer
 TankRU02_SpeedoGuage
 TankRU02_SpeedoNeedle
 TankRU02_SpeedText
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3173,6 +3212,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 56: Add to: TankRU03Camera (TankRU03Camera.cs)
@@ -3261,6 +3306,13 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
 
 
 -----------------------------------------------------------------------------------
@@ -3438,6 +3490,13 @@ TankRU03Speedometer
 TankRU03_SpeedoGuage
 TankRU03_SpeedoNeedle
 TankRU03_SpeedText
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
 
 
 -----------------------------------------------------------------------------------
@@ -4398,6 +4457,13 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
+
 -----------------------------------------------------------------------------------
 
 Step 72: Add to: TankRU04Camera (TankRU04Camera.cs)
@@ -4486,6 +4552,12 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4663,6 +4735,12 @@ TankRU04Speedometer
 TankRU04_SpeedoGuage
 TankRU04_SpeedoNeedle
 TankRU04_SpeedText
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -5716,6 +5794,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 88: Add to: TankRU05Camera (TankRU05Camera.cs)
@@ -5804,6 +5888,12 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -5981,6 +6071,12 @@ TankRU05Speedometer
 TankRU05_SpeedoGuage
 TankRU05_SpeedoNeedle
 TankRU05_SpeedText
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -7127,6 +7223,12 @@ In Rigidbody:
 Set Rigibody Mass: 7000
 
 
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 104: Add to: TankRU06Camera (TankRU06Camera.cs)
@@ -7215,6 +7317,12 @@ Edit Collider: YES!*
 
 Center: X: -0.3847775 Y: 1.137009 Z: -0.2547669
 Size: X: 5.877605 Y: 1.871178 Z: 8.895684
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -7392,6 +7500,12 @@ TankRU06Speedometer
 TankRU06_SpeedoGuage
 TankRU06_SpeedoNeedle
 TankRU06_SpeedText
+
+
+
+Input Actions:
+
+Tank Controls: TankControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
