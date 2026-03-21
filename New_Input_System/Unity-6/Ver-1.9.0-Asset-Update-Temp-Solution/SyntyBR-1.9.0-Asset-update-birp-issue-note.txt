@@ -1,0 +1,17 @@
+The Version 1.9.0 update of Synty BR Asset has an issue currently at least with built-in pipeline where the main texture is not set in the new synty / generic basic shader, shader graph shader, thus creating a _MainTex not defined error with the tank tracks and the tank scrolling scripts.....
+
+For now we can do a manual workaround to get that sorted....
+
+1) View a tank model prefab for example so we can quickly find the attached generic shader, ie:synty / generic basic shader  > edit
+
+2) Select Albedo Map in blackboard
+
+3) Right click Albedo Map and select set as main texture
+
+4) Close / Save
+
+
+Note: On initial look of a converted to urp project this was not an issue at time of looking because that assigns a different shader and the shader that was assigned from that ie: Universal Render Pipeline / Lit  is a scripted shader that allows you to open the actual shader file via edit button and if you viewed that script you would noticed this:  
+[MainTexture] _BaseMap("Albedo", 2D) = "white" {}
+
+Thus that is why there is no issue with that one at time of looking as the main texture is defined as you can see.
