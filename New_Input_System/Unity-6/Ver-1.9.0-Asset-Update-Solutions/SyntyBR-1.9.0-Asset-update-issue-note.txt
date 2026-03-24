@@ -15,3 +15,11 @@ Note: On initial look of a converted to urp project this was not an issue at tim
 [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
 
 Thus that is why there is no issue with that one at time of looking as the main texture is defined as you can see.
+
+Here is a scripted alternate solution if desired you can change in track scrolling code like so:
+
+        foreach (var _meshRenderer in _trackRenderers)
+        {
+            //_meshRenderer.materials[0].mainTextureOffset = new Vector2(0f, _offset);
+            _meshRenderer.materials[0].SetTextureOffset("_Albedo_Map", new Vector2(0f, _offset));
+        }
